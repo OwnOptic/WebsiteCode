@@ -1,0 +1,8 @@
+{
+    "catalogue": [
+        { "id": 61, "title": "Étiquetage et récupération d'actifs multimédias", "industry": "Médias et divertissement", "technology": "Power Automate", "miniDescription": "Utilisez l'IA pour étiqueter et cataloguer automatiquement votre vaste bibliothèque d'actifs numériques, les rendant instantanément consultables en langage naturel.", "iframeUrl": "#/placeholder" },
+        { "id": 62, "title": "Prédiction et intervention sur le désabonnement des abonnés", "industry": "Médias et divertissement", "technology": "Power Automate", "miniDescription": "Utilisez l'IA pour prédire quels abonnés risquent de résilier et déclenchez automatiquement des offres de rétention ciblées pour les conserver.", "iframeUrl": "#/placeholder" },
+        { "id": 63, "title": "Traitement des commandes de vente publicitaire", "industry": "Médias et divertissement", "technology": "Power Automate", "miniDescription": "Automatisez l'ensemble du processus de la commande à l'encaissement pour les ventes publicitaires, des vérifications d'inventaire et des approbations à la réservation et à la facturation.", "iframeUrl": "#/placeholder" },
+        { "id": 64, "title": "Calcul des paiements de redevances", "industry": "Médias et divertissement", "technology": "Power Automate", "miniDescription": "Automatisez le calcul complexe et la génération de relevés pour les paiements de redevances aux artistes, écrivains et partenaires.", "iframeUrl": "#/placeholder" }
+    ]
+}

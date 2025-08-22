@@ -1,0 +1,140 @@
+{
+  "seo": {
+    "home": {
+      "title": "Elliot Margot | AI & Power Platform Consultant",
+      "description": "As a premier AI & Power Platform consultant, I help businesses transform operations by designing and deploying custom Generative AI and automation solutions."
+    },
+    "about": {
+      "title": "About Elliot Margot | AI & Automation Specialist",
+      "description": "Discover my professional journey in AI consulting and business process automation, from leading Generative AI chatbot development to architecting enterprise-grade solutions with Power Platform."
+    },
+    "contact": {
+      "title": "Contact Elliot Margot | AI & Automation Consulting",
+      "description": "Get in touch to discuss your AI, Power Platform, and automation needs. Let's collaborate on your next digital transformation project."
+    },
+    "experience": {
+      "title": "Professional Experience | Elliot Margot, AI Consultant",
+      "description": "Explore my detailed work history, from AI consulting at Witivio to leading Generative AI chatbot development at Assura, showcasing a journey of innovation and impact."
+    },
+    "education": {
+      "title": "Academic Background | Elliot Margot",
+      "description": "Explore my academic journey in business management and psychology, which forms the interdisciplinary foundation of my strategic approach to AI and automation."
+    },
+    "certificates": {
+      "title": "Certificates & Diplomas | Elliot Margot",
+      "description": "Browse a comprehensive list of my professional certifications in AI, Project Management, Product Management, and Cybersecurity, with links to verify each qualification."
+    },
+    "useCases": {
+      "title": "AI Use Case Library | Elliot Margot's Portfolio",
+      "description": "Explore a comprehensive library of real-world AI and Automation use cases, showcasing practical applications of Generative AI, Copilot Studio, and Power Automate."
+    },
+    "blog": {
+      "title": "Blog | Insights on Generative AI & Automation by Elliot Margot",
+      "description": "Read my latest articles on Generative AI, process automation, Microsoft Power Platform, and the future of enterprise technology."
+    },
+    "projects": {
+      "title": "Projects | Elliot Margot's AI Portfolio",
+      "description": "A curated collection of key projects and thought leadership pieces demonstrating practical applications of AI strategy, Generative AI, and Power Platform automation."
+    },
+    "techStack": {
+      "title": "My Tech Stack | AI & Power Platform Expertise",
+      "description": "A curated overview of the core platforms, technologies, and methodologies I use to build enterprise-grade AI and business process automation solutions."
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Me",
+    "contact": "Contact",
+    "experience": "Experience",
+    "education": "Education",
+    "certificates": "Certificates",
+    "useCases": "Use Cases",
+    "blog": "Blog",
+    "projects": "Projects",
+    "techStack": "Tech Stack"
+  },
+  "footer": {
+    "copyright": "© {year} Elliot Margot. All Rights Reserved.",
+    "siteMap": "Site Map",
+    "contactMe": {
+      "title": "Contact Me",
+      "description": "Have a project in mind or want to collaborate? I'd love to hear from you.",
+      "buttonText": "Get in Touch"
+    }
+  },
+  "useCases": {
+    "header": {
+      "title": "Interactive Use Case Library",
+      "subtitle": "Practical AI & Automation Solutions Across Industries"
+    },
+    "overview": {
+      "title": "Explore by Industry",
+      "distributionTitle": "Solutions by Industry",
+      "distributionSubtitle": "A summary of the number of detailed use cases available for each industry. Click a card to filter the explorer below.",
+      "allIndustries": "All Industries",
+      "totalUseCases": "Total Use Cases"
+    },
+    "explorer": {
+      "title": "Use Case Explorer",
+      "subtitle": "Select an industry and/or technology to filter the use cases, or use the search bar to find specific topics.",
+      "searchPlaceholder": "Search by keyword...",
+      "noResultsTitle": "No Matching Use Cases",
+      "noResultsSubtitle": "Try adjusting your filters or search term."
+    },
+    "card": {
+      "idPrefix": "UC #"
+    },
+    "modal": {
+      "technicalLevel": "Technical Level",
+      "problemTitle": "Problem / Scenario",
+      "valueTitle": "Business Value",
+      "roiTitle": "The ROI Corner",
+      "pocTitle": "How to Build a Quick Proof of Concept",
+      "share": "Share",
+      "linkCopied": "Link Copied!",
+      "interactiveDemoTitle": "Interactive Demo"
+    },
+    "filters": {
+      "allTech": "All Technologies",
+      "cases": "Cases"
+    }
+  },
+  "blog": {
+    "header": {
+      "title": "Blog",
+      "subtitle": "Insights on AI, Process Automation, and Business Technology"
+    },
+    "readMore": "Read Article",
+    "filterByTag": "Filter by Tag",
+    "allTags": "All Tags",
+    "noResults": "No posts found matching your criteria.",
+    "backToAll": "← Back to All Posts",
+    "searchPlaceholder": "Search articles...",
+    "relatedPostsTitle": "You Might Also Like"
+  },
+  "projects": {
+    "learnMore": "Learn More"
+  },
+  "geminiBot": {
+    "headerTitle": "EllioBot",
+    "placeholder": "Ask about my experience, skills, or projects...",
+    "initialMessage": "Hello! I'm EllioBot, your AI guide to Elliot Margot's portfolio. How can I help you today?"
+  },
+  "invoiceDemo": {
+    "title": "Automated Invoice Processing",
+    "mockDescription": "This is a mock demonstration. Click 'Extract Data' to see a simulation of how Gemini analyzes the sample invoice below and returns structured JSON data.",
+    "sampleInvoiceLabel": "Sample Invoice:",
+    "processButton": "Extract Data",
+    "processing": "Processing with Gemini...",
+    "extractedDataTitle": "Extracted Data"
+  },
+  "contact": {
+    "status": {
+      "generating": "Generating message...",
+      "redirecting": "Redirecting...",
+      "success": "Success! Please check your email client to send.",
+      "error": "Please fill in all fields.",
+      "apiError": "Could not generate email. Please try again."
+    }
+  }
+}

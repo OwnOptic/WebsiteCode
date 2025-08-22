@@ -1,0 +1,50 @@
+{
+  "experience": {
+    "header": {
+      "title": "Work Experience",
+      "subtitle": "My professional journey has been shaped by a commitment to growth, innovation, and a focus on impactful outcomes."
+    },
+    "timeline": [
+      {
+        "role": "AI & Power Platform Consultant",
+        "company": "Witivio, Lausanne",
+        "period": "August 2024 – Present",
+        "points": [
+          "Design and deploy enterprise-grade AI solutions, leading to an average 30% reduction in manual processing for key clients.",
+          "Architect and build custom Copilots in Microsoft Teams that serve over 10,000 users, improving information access and employee self-service.",
+          "Lead strategic client workshops to identify high-value automation opportunities, contributing to a 20% growth in project pipeline.",
+          "Specialize in integrating Generative AI models to solve complex business problems."
+        ]
+      },
+      {
+        "role": "Product Owner ChatBot & Testing Lead",
+        "company": "Assura, Lausanne",
+        "period": "April 2023 – July 2024",
+        "points": [
+          "Owned the product vision and roadmap for an AI chatbot, boosting customer satisfaction by 25% and reducing call center volume by 15%.",
+          "Managed the end-to-end product lifecycle, achieving a 3x improvement in first-contact resolution and a 96% intent recognition accuracy.",
+          "Led Agile/DevOps ceremonies and collaborated with stakeholders to drive a 43% sales uplift through chatbot-integrated campaigns."
+        ]
+      },
+      {
+        "role": "Digital Insurance Advisor",
+        "company": "Assura, Lausanne",
+        "period": "June 2021 – March 2023",
+        "points": [
+          "Provided multilingual customer support, using NLP to reduce LiveChat response times by 10%.",
+          "Improved customer interaction quality and increased NPS by 5% by developing multilingual LiveChat templates.",
+          "Conducted UAT and provided high-volume post-launch support for a new client portal."
+        ]
+      },
+      {
+        "role": "Sanitary Soldier (Specialist)",
+        "company": "Swiss Army",
+        "period": "March 2017 – Present",
+        "points": [
+          "Support the health and operational effectiveness of an artillery unit by combining medical and telecommunication skills.",
+          "Provide critical logistical and medical support in high-pressure situations."
+        ]
+      }
+    ]
+  }
+}

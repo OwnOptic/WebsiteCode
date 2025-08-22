@@ -1,0 +1,18 @@
+{
+  "contact": {
+    "title": "Contactez-moi",
+    "subtitle": "Vous avez un projet en tête, souhaitez collaborer ou simplement dire bonjour ? J'aimerais beaucoup avoir de vos nouvelles. Remplissez le formulaire ci-dessous et je vous répondrai dès que possible.",
+    "form": {
+      "name": "Votre Nom",
+      "email": "Votre Email",
+      "message": "Votre Message",
+      "submit": "Envoyer le Message"
+    },
+    "status": {
+      "sending": "Envoi en cours...",
+      "success": "Merci ! Votre message a été envoyé avec succès.",
+      "error": "Veuillez remplir tous les champs.",
+      "apiError": "Désolé, une erreur est survenue lors de l'envoi de votre message. Veuillez réessayer plus tard."
+    }
+  }
+}

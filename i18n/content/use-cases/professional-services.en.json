@@ -1,0 +1,11 @@
+{
+    "catalogue": [
+        { "id": 35, "title": "From 'Closed-Won' to Kickoff in Minutes: Automating Project Setup", "industry": "Professional Services", "technology": "Power Automate", "miniDescription": "Seamlessly transition a deal from 'Closed-Won' in your CRM to a fully provisioned, ready-to-start project in minutes.", "iframeUrl": "#/placeholder" },
+        { "id": 36, "title": "The Digital Gatekeeper: Automating Client Conflict Checks", "industry": "Professional Services", "technology": "Power Automate", "miniDescription": "Automate and standardize the critical client conflict check process, providing speed, certainty, and mitigating catastrophic risk.", "iframeUrl": "#/placeholder" },
+        { "id": 37, "title": "The Instant Auditor: An AI-Powered Bot for Time and Expense Policies", "industry": "Professional Services", "technology": "Copilot Studio", "miniDescription": "Build an AI-powered Copilot that provides immediate, accurate, and consistent answers to all employee questions about time and expense policies.", "iframeUrl": "#/placeholder" },
+        { "id": 53, "title": "Consultant Onboarding & Offboarding", "industry": "Professional Services", "technology": "Power Automate", "miniDescription": "Automate the full lifecycle of external consultants, from access provisioning to secure and timely offboarding.", "iframeUrl": "#/placeholder" },
+        { "id": 54, "title": "Project Setup Automation", "industry": "Professional Services", "technology": "Power Automate", "miniDescription": "Automate the creation of a standard, best-practice project environment in Microsoft Teams and SharePoint for every new client engagement.", "iframeUrl": "#/placeholder" },
+        { "id": 55, "title": "Client Conflict Check", "industry": "Professional Services", "technology": "Power Automate", "miniDescription": "Automate and standardize the critical client conflict check process, providing speed, certainty, and mitigating catastrophic risk.", "iframeUrl": "#/placeholder" },
+        { "id": 56, "title": "Time & Expense Policy Query Bot", "industry": "Professional Services", "technology": "Copilot Studio", "miniDescription": "Build an AI-powered Copilot that provides immediate, accurate, and consistent answers to all employee questions about time and expense policies.", "iframeUrl": "#/placeholder" }
+    ]
+}

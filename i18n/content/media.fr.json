@@ -1,0 +1,65 @@
+{
+  "media": {
+    "header": {
+      "title": "Médias & Conférences",
+      "subtitle": "Partager des idées et interagir avec la communauté technologique à travers des articles, des podcasts et des événements."
+    },
+    "publications": {
+      "title": "Articles Publiés",
+      "items": [
+        {
+          "title": "Le véritable ROI de l'IA dans le service client d'entreprise",
+          "outlet": "TechInnovate Journal",
+          "date": "Août 2025",
+          "description": "Une analyse approfondie de la manière dont les chatbots et l'automatisation alimentés par l'IA vont au-delà de la simple réduction des coûts pour devenir des moteurs importants de revenus et de fidélisation de la clientèle.",
+          "url": "#"
+        },
+        {
+          "title": "Du manuel à l'automatisé : une étude de cas Power Automate en Process Mining",
+          "outlet": "Medium",
+          "date": "Mai 2025",
+          "description": "Une présentation pratique de la manière dont une compagnie d'assurance de taille moyenne a utilisé Power Automate et le process mining pour découvrir et automatiser un flux de travail manuel caché et coûteux.",
+          "url": "#"
+        }
+      ]
+    },
+    "podcasts": {
+      "title": "Apparitions en Podcast",
+      "items": [
+        {
+          "title": "L'avenir du Low-Code avec Elliot Margot",
+          "outlet": "The Automation Revolution, Épisode #42",
+          "date": "Juillet 2025",
+          "description": "Une conversation sur l'impact stratégique des plateformes comme Power Automate et Copilot Studio sur l'agilité des entreprises et la transformation numérique.",
+          "url": "#"
+        },
+        {
+          "title": "Construire des chatbots empathiques : au-delà du script",
+          "outlet": "AI in Practice, Épisode #11",
+          "date": "Mars 2025",
+          "description": "Discussion sur les principes de la conception centrée sur l'humain en IA et comment créer des chatbots utiles, empathiques et efficaces.",
+          "url": "#"
+        }
+      ]
+    },
+    "speaking": {
+      "title": "Conférences",
+      "items": [
+        {
+          "title": "Au-delà des bases : orchestration avancée avec Power Automate",
+          "outlet": "Conférence Power Platform 2025, Las Vegas",
+          "date": "Septembre 2025",
+          "description": "Une session technique sur la conception de solutions d'automatisation complexes, résilientes et évolutives à l'aide des fonctionnalités avancées et des modèles architecturaux de Power Automate.",
+          "url": "#"
+        },
+        {
+          "title": "Table ronde : l'éthique de l'IA en entreprise",
+          "outlet": "Sommet IA & Automatisation 2024, Genève",
+          "date": "Novembre 2024",
+          "description": "Participation à une table ronde d'experts discutant des défis et des responsabilités de la mise en œuvre éthique et responsable de l'IA dans les environnements professionnels.",
+          "url": "#"
+        }
+      ]
+    }
+  }
+}

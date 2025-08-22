@@ -1,0 +1,65 @@
+{
+  "media": {
+    "header": {
+      "title": "Media & Speaking",
+      "subtitle": "Sharing insights and engaging with the technology community through articles, podcasts, and events."
+    },
+    "publications": {
+      "title": "Published Articles",
+      "items": [
+        {
+          "title": "The True ROI of AI in Enterprise Customer Service",
+          "outlet": "TechInnovate Journal",
+          "date": "August 2025",
+          "description": "An in-depth analysis of how AI-powered chatbots and automation are moving beyond simple cost-cutting to become significant drivers of revenue and customer loyalty.",
+          "url": "#"
+        },
+        {
+          "title": "From Manual to Automated: A Power Automate Case Study in Process Mining",
+          "outlet": "Medium",
+          "date": "May 2025",
+          "description": "A practical walkthrough of how a mid-sized insurance company used Power Automate and process mining to uncover and automate a hidden, high-cost manual workflow.",
+          "url": "#"
+        }
+      ]
+    },
+    "podcasts": {
+      "title": "Podcast Appearances",
+      "items": [
+        {
+          "title": "The Future of Low-Code with Elliot Margot",
+          "outlet": "The Automation Revolution, Episode #42",
+          "date": "July 2025",
+          "description": "A conversation about the strategic impact of platforms like Power Automate and Copilot Studio on enterprise agility and digital transformation.",
+          "url": "#"
+        },
+        {
+          "title": "Building Empathetic Chatbots: Beyond the Script",
+          "outlet": "AI in Practice, Episode #11",
+          "date": "March 2025",
+          "description": "Discussing the principles of human-centric design in AI and how to build chatbots that are helpful, empathetic, and effective.",
+          "url": "#"
+        }
+      ]
+    },
+    "speaking": {
+      "title": "Speaking Engagements",
+      "items": [
+        {
+          "title": "Beyond the Basics: Advanced Orchestration with Power Automate",
+          "outlet": "Power Platform Conference 2025, Las Vegas",
+          "date": "September 2025",
+          "description": "A technical session on designing complex, resilient, and scalable automation solutions using advanced Power Automate features and architectural patterns.",
+          "url": "#"
+        },
+        {
+          "title": "Panel Discussion: The Ethics of AI in the Enterprise",
+          "outlet": "AI & Automation Summit 2024, Geneva",
+          "date": "November 2024",
+          "description": "Participated in a panel of experts discussing the challenges and responsibilities of implementing AI ethically and responsibly in business environments.",
+          "url": "#"
+        }
+      ]
+    }
+  }
+}

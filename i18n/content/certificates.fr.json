@@ -1,0 +1,65 @@
+{
+  "certificates": {
+    "header": {
+      "title": "Certificats & Diplômes",
+      "subtitle": "Une quête continue de connaissances, alliant sens des affaires et applications pratiques en gestion de projet, IA et cybersécurité."
+    },
+    "timeline": [
+      {
+        "category": "Gestion de Projet",
+        "items": [
+          { "name": "Certificat Professionnel Google Project Management", "level": "Avancé", "url": "https://coursera.org/verify/professional-cert/H8TC282KY2HG" },
+          { "name": "Professional Scrum Product Owner I (PSPO I)", "level": "Avancé", "url": "https://scrum.org/certificates/1173288" },
+          { "name": "Google Agile Project Management", "level": "Intermédiaire", "url": "https://coursera.org/verify/BX3GDRSCV4JW" },
+          { "name": "Google Lancement de Projet : Démarrer un Projet Réussi", "level": "Débutant", "url": "https://coursera.org/verify/RSM6RA34QZVT" },
+          { "name": "Google Planification de Projet : Mettre Tout en Place", "level": "Débutant", "url": "https://coursera.org/verify/TWDLXXB4BELP" },
+          { "name": "Google Exécution de Projet : Diriger le Projet", "level": "Débutant", "url": "https://coursera.org/verify/2ZRST8QG56MP" },
+          { "name": "Google Fondamentaux de la Gestion de Projet", "level": "Débutant", "url": "https://coursera.org/verify/PLFV9DX6C7JM" },
+          { "name": "Google Capstone : Appliquer la Gestion de Projet dans le Monde Réel", "level": "Débutant", "url": "https://coursera.org/verify/G64ELWF5Q6TK" }
+        ]
+      },
+      {
+        "category": "Intelligence Artificielle (IA) & Apprentissage Automatique (ML)",
+        "items": [
+          { "name": "Profil Professionnel IA Coursera", "level": "Avancé", "url": "https://www.coursera.org/learner/elliot-margot-ai-pro" },
+          { "name": "Parcours d'Apprentissage Introduction à l'IA Générative", "level": "Avancé", "url": "https://coursera.org/verify/specialization/KS2DCZRW9KJ0" },
+          { "name": "IBM AI Workflow : Ingénierie des Caractéristiques et Détection de Biais", "level": "Avancé", "url": "https://coursera.org/verify/IGJ4CFCPGOND" },
+          { "name": "IBM AI Workflow : Analyse de Données et Test d'Hypothèses", "level": "Avancé", "url": "https://coursera.org/verify/G417607041IP" },
+          { "name": "IBM AI Workflow : Apprentissage Automatique, Reconnaissance Visuelle et NLP", "level": "Avancé", "url": "https://coursera.org/verify/F7F5WFH0IOWZ" },
+          { "name": "IBM AI Workflow : Priorités Commerciales et Ingestion de Données", "level": "Avancé", "url": "https://coursera.org/verify/MYLB9HWMMMYK" },
+          { "name": "IBM AI Workflow : Déploiement de Modèles d'Entreprise", "level": "Avancé", "url": "https://coursera.org/verify/3Y2RPNIF4ZO0" },
+          { "name": "Praticien IBM Enterprise Design Thinking", "level": "Intermédiaire", "url": "https://www.credly.com/go/xzOKue6A" },
+          { "name": "IBM IA Générative : Bases de l'Ingénierie de Prompt", "level": "Débutant", "url": "https://coursera.org/verify/O9RJ3QCSGZMP" },
+          { "name": "IBM IA Générative : Introduction et Applications", "level": "Débutant", "url": "https://coursera.org/verify/SSWD1LDVAGYA" },
+          { "name": "IBM IA Générative : Modèles de Fondation et Plateformes", "level": "Débutant", "url": "https://coursera.org/verify/N2LFERJ4FNVE" },
+          { "name": "Google Introduction aux Grands Modèles de Langage", "level": "Débutant", "url": "https://coursera.org/verify/4HJ9KS2R6CXB" },
+          { "name": "Google Introduction à l'IA Responsable", "level": "Débutant", "url": "https://coursera.org/verify/OK6VX9IH8TOS" },
+          { "name": "Google IA Responsable : Appliquer les Principes de l'IA avec Google Cloud", "level": "Débutant", "url": "https://coursera.org/verify/FALFAVOSAKTIW" },
+          { "name": "Introduction à l'Intelligence Artificielle (IA)", "level": "Débutant", "url": "https://coursera.org/verify/KPVE6R80D7HD" },
+          { "name": "IBM Enterprise Design Thinking - Essentiels d'Équipe pour l'IA", "level": "Débutant", "url": "https://www.credly.com/go/FE6LeQwx" }
+        ]
+      },
+      {
+        "category": "Gestion de Produit",
+        "items": [
+          { "name": "IA Générative : Dynamisez Votre Carrière en Gestion de Produit", "level": "Avancé", "url": "https://coursera.org/verify/SVLXBAMYBP9W" },
+          { "name": "Gestion de Produit : Créer des Produits Basés sur l'IA", "level": "Débutant", "url": "https://coursera.org/verify/DRZDCQIOPNQM" },
+          { "name": "Gestion de Produit : Fondamentaux & Collaboration avec les Parties Prenantes", "level": "Débutant", "url": "https://coursera.org/verify/705DGLWY1T20" },
+          { "name": "Gestion de Produit : Stratégie et Plan de Produit Initial", "level": "Débutant", "url": "https://coursera.org/verify/J37Z8C29PBIP" },
+          { "name": "Gestion de Produit : Une Introduction", "level": "Débutant", "url": "https://coursera.org/verify/35ZW4RI212KZ" },
+          { "name": "Gestion de Produit : Développer et Livrer un Nouveau Produit", "level": "Débutant", "url": "https://coursera.org/verify/AQGJWELV0QP9" }
+        ]
+      },
+      {
+        "category": "Cybersécurité",
+        "items": [
+          { "name": "Sécurité Réseau Avancée", "level": "Avancé", "url": "https://coursera.org/verify/specialization/SWG513LHSGFD" },
+          { "name": "Pare-feu de Nouvelle Génération et Prévention des Intrusions", "level": "Intermédiaire", "url": "https://coursera.org/verify/9BL3T15PLC1B" },
+          { "name": "Sécurisation des Réseaux Cloud et Hybrides", "level": "Intermédiaire", "url": "https://coursera.org/verify/PNAQF9HERYKE" },
+          { "name": "Chasse aux Menaces Avancée et Réponse aux Incidents", "level": "Intermédiaire", "url": "https://coursera.org/verify/51FOLVSCM9OT" },
+          { "name": "Google Fondamentaux de la Cybersécurité", "level": "Débutant", "url": "https://coursera.org/verify/NZI5DM88P79P" }
+        ]
+      }
+    ]
+  }
+}

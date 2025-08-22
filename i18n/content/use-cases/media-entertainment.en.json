@@ -1,0 +1,8 @@
+{
+    "catalogue": [
+        { "id": 61, "title": "Media Asset Tagging & Retrieval", "industry": "Media & Entertainment", "technology": "Power Automate", "miniDescription": "Use AI to automatically tag and catalog your vast library of digital assets, making them instantly searchable via natural language.", "iframeUrl": "#/placeholder" },
+        { "id": 62, "title": "Subscriber Churn Prediction & Intervention", "industry": "Media & Entertainment", "technology": "Power Automate", "miniDescription": "Use AI to predict which subscribers are at risk of canceling and automatically trigger targeted retention offers to keep them.", "iframeUrl": "#/placeholder" },
+        { "id": 63, "title": "Ad Sales Order Processing", "industry": "Media & Entertainment", "technology": "Power Automate", "miniDescription": "Automate the entire order-to-cash process for ad sales, from inventory checks and approvals to booking and invoicing.", "iframeUrl": "#/placeholder" },
+        { "id": 64, "title": "Royalty Payment Calculation", "industry": "Media & Entertainment", "technology": "Power Automate", "miniDescription": "Automate the complex calculation and statement generation for royalty payments to artists, writers, and partners.", "iframeUrl": "#/placeholder" }
+    ]
+}

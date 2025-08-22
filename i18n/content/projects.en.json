@@ -1,0 +1,36 @@
+{
+    "projects": {
+        "header": {
+            "title": "Projects & Articles",
+            "subtitle": "A collection of key projects and thought leadership pieces demonstrating practical applications of AI and automation strategy."
+        },
+        "items": [
+            {
+                "imgSrc": "https://raw.githubusercontent.com/OwnOptic/Website-storage/main/Gemini_Generated_Image_449bsw449bsw449b.png",
+                "title": "AI Ethics Strategy for Insurance",
+                "description": "A strategic project analyzing the ethical implications of AI in insurance, delivering a roadmap for fair and unbiased automation in claims processing and underwriting using responsible AI principles.",
+                "link": "#/projects/ai-ethics-insurance",
+                "slug": "ai-ethics-insurance"
+            },
+            {
+                "imgSrc": "https://raw.githubusercontent.com/OwnOptic/Website-storage/main/AI%20Hackathon%20lighthouse.jfif",
+                "title": "AI Hackathon: Winning Insurance Assistant",
+                "description": "A hackathon-winning proof-of-concept for a Generative AI assistant, built with Copilot Studio, designed to help insurance agents find complex policy information instantly.",
+                "link": "#/projects/ai-hackathon-google",
+                "slug": "ai-hackathon-google"
+            },
+            {
+                "imgSrc": "https://raw.githubusercontent.com/OwnOptic/Website-storage/main/The%20Digital%20Conductor.881Z.png",
+                "title": "Automated Invoice Processing Demo",
+                "description": "An interactive demonstration of a Power Automate flow that uses multimodal Generative AI to read and extract structured data from invoices, showcasing advanced BPA capabilities.",
+                "link": "#/use-cases#uc21"
+            },
+            {
+                "imgSrc": "https://raw.githubusercontent.com/OwnOptic/Website-storage/main/AI%20onboarding%20agent%20-%20header.png",
+                "title": "The AI Onboarding Assistant Playbook",
+                "description": "An article detailing the strategy for transforming employee onboarding into a streamlined and efficient experience with a custom AI-powered assistant built on Power Platform.",
+                "link": "#/blog/playbook-ai-onboarding-assistant"
+            }
+        ]
+    }
+}

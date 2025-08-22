@@ -1,0 +1,50 @@
+{
+  "experience": {
+    "header": {
+      "title": "Expérience Professionnelle",
+      "subtitle": "Mon parcours professionnel a été façonné par un engagement envers la croissance, l'innovation et une concentration sur des résultats percutants."
+    },
+    "timeline": [
+      {
+        "role": "Consultant IA & Power Platform",
+        "company": "Witivio, Lausanne",
+        "period": "Août 2024 – Aujourd'hui",
+        "points": [
+          "Concevoir et déployer des solutions d'IA d'entreprise, entraînant une réduction moyenne de 30% du traitement manuel pour les clients clés.",
+          "Architecturer et créer des Copilots personnalisés dans Microsoft Teams qui servent plus de 10 000 utilisateurs, améliorant l'accès à l'information et le self-service des employés.",
+          "Animer des ateliers stratégiques avec les clients pour identifier des opportunités d'automatisation à forte valeur, contribuant à une croissance de 20% du pipeline de projets.",
+          "Se spécialiser dans l'intégration de modèles d'IA générative pour résoudre des problèmes commerciaux complexes."
+        ]
+      },
+      {
+        "role": "Product Owner ChatBot & Responsable des Tests",
+        "company": "Assura, Lausanne",
+        "period": "Avril 2023 – Juillet 2024",
+        "points": [
+          "Détenu la vision produit et la feuille de route pour un chatbot IA, augmentant la satisfaction client de 25% et réduisant le volume du centre d'appels de 15%.",
+          "Géré le cycle de vie du produit de bout en bout, obtenant une amélioration de 3x de la résolution au premier contact et une précision de reconnaissance d'intention de 96%.",
+          "Dirigé les cérémonies Agile/DevOps et collaboré avec les parties prenantes pour générer une augmentation des ventes de 43% grâce à des campagnes intégrées au chatbot."
+        ]
+      },
+      {
+        "role": "Conseiller en Assurance Digitale",
+        "company": "Assura, Lausanne",
+        "period": "Juin 2021 – Mars 2023",
+        "points": [
+          "Fourni un support client multilingue, en utilisant le NLP pour réduire les temps de réponse du LiveChat de 10%.",
+          "Amélioré la qualité des interactions client et augmenté le NPS de 5% en développant des modèles de LiveChat multilingues.",
+          "Réalisé des UAT et fourni un support post-lancement à haut volume pour un nouveau portail client."
+        ]
+      },
+      {
+        "role": "Soldat Sanitaire (Spécialiste)",
+        "company": "Armée Suisse",
+        "period": "Mars 2017 – Aujourd'hui",
+        "points": [
+          "Soutenir la santé et l'efficacité opérationnelle d'une unité d'artillerie en combinant des compétences médicales et de télécommunication.",
+          "Fournir un soutien logistique et médical essentiel dans des situations de haute pression."
+        ]
+      }
+    ]
+  }
+}

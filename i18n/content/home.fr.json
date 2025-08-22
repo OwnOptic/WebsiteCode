@@ -1,0 +1,49 @@
+{
+  "hero": {
+    "name": "Elliot Margot",
+    "subtitle": "Conseil expert en IA & Power Platform. Je conçois et déploie des solutions d'IA Générative et d'automatisation personnalisées qui génèrent de réels résultats commerciaux."
+  },
+  "homePage": {
+    "expertise": {
+      "title": "Mon Expertise Principale",
+      "items": [
+        {
+          "title": "Solutions d'IA Personnalisées",
+          "description": "Je crée et déploie des chatbots et agents virtuels intelligents avec Copilot Studio et l'IA Générative pour améliorer la productivité interne et le service client."
+        },
+        {
+          "title": "Automatisation Intelligente",
+          "description": "Je conçois des automatisations de processus métier (BPA) puissantes avec Power Automate pour rationaliser les flux, réduire les tâches manuelles et connecter les systèmes."
+        },
+        {
+          "title": "Stratégie & Conseil en IA",
+          "description": "Je fournis des conseils stratégiques et développe des feuilles de route IA pour garantir que les investissements dans Power Platform et l'IA Générative s'alignent sur les objectifs métier."
+        }
+      ]
+    },
+    "projects": {
+      "title": "Travaux en Vedette",
+      "learnMore": "En savoir plus",
+      "items": [
+        {
+          "imgSrc": "https://raw.githubusercontent.com/OwnOptic/Website-storage/main/Gemini_Generated_Image_449bsw449bsw449b.png",
+          "title": "Stratégie d'Éthique de l'IA pour l'Assurance",
+          "description": "Un projet stratégique analysant les implications éthiques de l'IA dans l'assurance, fournissant une feuille de route pour une automatisation juste utilisant les principes de l'IA responsable.",
+          "link": "#/projects/ai-ethics-insurance"
+        },
+        {
+          "imgSrc": "https://raw.githubusercontent.com/OwnOptic/Website-storage/main/AI%20Hackathon%20lighthouse.jfif",
+          "title": "Hackathon IA : Assistant d'Assurance Gagnant",
+          "description": "Une preuve de concept lauréate d'un hackathon pour un assistant d'IA Générative, conçu pour aider les agents d'assurance à trouver des informations complexes.",
+          "link": "#/projects/ai-hackathon-google"
+        },
+        {
+          "imgSrc": "https://raw.githubusercontent.com/OwnOptic/Website-storage/main/AI%20onboarding%20agent%20-%20header.png",
+          "title": "Playbook de l'Assistant d'Intégration IA",
+          "description": "Un article détaillant la stratégie pour transformer l'intégration des employés avec un assistant IA personnalisé construit sur Power Platform.",
+          "link": "#/blog/playbook-ai-onboarding-assistant"
+        }
+      ]
+    }
+  }
+}

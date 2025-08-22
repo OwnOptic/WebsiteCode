@@ -1,0 +1,46 @@
+{
+  "education": {
+    "header": {
+      "title": "Education",
+      "subtitle": "My academic journey has been a continuous pursuit of knowledge and a foundation for my professional growth, blending business acumen with practical, real-world applications."
+    },
+    "timeline": [
+      {
+        "degree": "Bachelor of Arts in Management",
+        "institution": "Webster University, Geneva",
+        "period": "August 2019 – May 2021",
+        "points": [
+          "Graduated with honors, focusing on strategic planning and marketing strategy.",
+          "Completed a Minor in Marketing, developing a strong foundation in consumer behavior and market analysis.",
+          "Thesis project focused on the impact of digital transformation on customer service models."
+        ]
+      },
+      {
+        "degree": "Business Administration Studies",
+        "institution": "Université de Fribourg, Fribourg",
+        "period": "October 2017 – January 2019",
+        "points": [
+          "Completed foundational coursework in economics, accounting, and business law.",
+          "Received ECTS credits to continue towards further education."
+        ]
+      },
+      {
+        "degree": "Psychology Studies",
+        "institution": "Leiden University, Netherlands",
+        "period": "October 2015 – June 2016",
+        "points": [
+          "Explored the principles of human behaviour and cognitive processes.",
+          "Completed courses in areas such as developmental psychology and research methods."
+        ]
+      },
+      {
+        "degree": "Irish Baccalaureate",
+        "institution": "St. Columba's College, Dublin, Ireland",
+        "period": "2011 – 2015",
+        "points": [
+          "Achieved Irish Baccalaureate qualification, providing a strong foundation for higher education."
+        ]
+      }
+    ]
+  }
+}

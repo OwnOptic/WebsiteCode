@@ -1,0 +1,46 @@
+{
+  "education": {
+    "header": {
+      "title": "Formation",
+      "subtitle": "Mon parcours académique a été une quête continue de connaissances et le fondement de ma croissance professionnelle, alliant sens des affaires et applications pratiques du monde réel."
+    },
+    "timeline": [
+      {
+        "degree": "Bachelor of Arts en Management",
+        "institution": "Webster University, Genève",
+        "period": "Août 2019 – Mai 2021",
+        "points": [
+          "Diplômé avec mention, spécialisé en planification stratégique et stratégie marketing.",
+          "Obtention d'une mineure en Marketing, développant une base solide en comportement du consommateur et analyse de marché.",
+          "Projet de thèse axé sur l'impact de la transformation numérique sur les modèles de service client."
+        ]
+      },
+      {
+        "degree": "Études en Administration des Affaires",
+        "institution": "Université de Fribourg, Fribourg",
+        "period": "Octobre 2017 – Janvier 2019",
+        "points": [
+          "Cours fondamentaux en économie, comptabilité et droit des affaires.",
+          "Obtention de crédits ECTS pour la poursuite des études supérieures."
+        ]
+      },
+      {
+        "degree": "Études en Psychologie",
+        "institution": "Université de Leiden, Pays-Bas",
+        "period": "Octobre 2015 – Juin 2016",
+        "points": [
+          "Exploration des principes du comportement humain et des processus cognitifs.",
+          "Cours suivis dans des domaines tels que la psychologie du développement et les méthodes de recherche."
+        ]
+      },
+      {
+        "degree": "Baccalauréat Irlandais",
+        "institution": "St. Columba's College, Dublin, Irlande",
+        "period": "2011 – 2015",
+        "points": [
+          "Obtention du baccalauréat irlandais, offrant une base solide pour l'enseignement supérieur."
+        ]
+      }
+    ]
+  }
+}

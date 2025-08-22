@@ -1,0 +1,45 @@
+{
+  "about": {
+    "header": {
+      "title": "About Me",
+      "subtitle": "A Multi-lingual AI Consultant Driving Innovation with Data and Custom Solutions"
+    },
+    "intro": {
+      "title": "A results-oriented AI Consultant...",
+      "p1": "...with a proven track record of architecting and deploying high-impact AI and automation solutions. My expertise lies in transforming complex business challenges into scalable, intelligent systems using the Microsoft Power Platform and Generative AI. I thrive on bridging the gap between technical possibilities and strategic business goals, leading cross-functional teams to deliver measurable results and drive digital transformation."
+    },
+    "journey": {
+      "title": "My Journey",
+      "ctaExperience": "Full Professional Experience",
+      "ctaEducation": "View Education",
+      "items": [
+        {
+          "role": "AI & Power Platform Consultant",
+          "company": "Witivio, Lausanne | August 2024 – Present",
+          "description": "Designing and deploying enterprise-grade Generative AI solutions for key clients across Europe."
+        },
+        {
+          "role": "Product Owner ChatBot & Testing Lead",
+          "company": "Assura, Lausanne | April 2023 – July 2024",
+          "description": "Owned the product vision and roadmap for a Generative AI chatbot, boosting customer satisfaction by 25%."
+        },
+        {
+          "role": "Digital Insurance Advisor",
+          "company": "Assura, Lausanne | June 2021 – March 2023",
+          "description": "Engaged directly with clients, understanding their needs and mastering digital tools for process automation."
+        }
+      ]
+    },
+    "skills": {
+      "title": "Key Skills and Strengths",
+      "items": [
+        { "name": "Generative AI & LLMs", "description": "Expert in designing and implementing solutions with Generative AI, including prompt engineering and custom Copilot development." },
+        { "name": "Microsoft Power Platform", "description": "Advanced proficiency in Power Automate, Copilot Studio, and Power Apps for enterprise-grade automation and applications." },
+        { "name": "AI Strategy & Consulting", "description": "Leading client workshops to define AI strategy, identify use cases, and create actionable roadmaps for digital transformation." },
+        { "name": "Agile Product Ownership", "description": "Proven expertise in product vision, backlog management, and leading development sprints to deliver value incrementally." },
+        { "name": "Business Process Automation (BPA)", "description": "Deep experience in analyzing, redesigning, and automating complex business workflows from end to end." },
+        { "name": "Systems Integration", "description": "Skilled in connecting disparate systems via APIs to create unified, seamless automated processes." }
+      ]
+    }
+  }
+}

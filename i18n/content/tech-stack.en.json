@@ -1,0 +1,44 @@
+{
+    "techStack": {
+        "header": {
+            "title": "My Tech Stack",
+            "subtitle": "The platforms, tools, and methodologies I use to build effective and scalable enterprise solutions."
+        },
+        "categories": [
+            {
+                "title": "Core Platforms & AI",
+                "icon": "PlatformIcon",
+                "items": [
+                    { "name": "Microsoft Power Automate", "description": "My primary tool for designing and orchestrating complex, end-to-end business process automations (BPA), building robust API integrations, and delivering scalable workflow solutions." },
+                    { "name": "Microsoft Copilot Studio", "description": "Used to build enterprise-grade conversational AI assistants and custom copilots that leverage Generative AI plugins to perform complex actions and streamline user interactions." },
+                    { "name": "Microsoft Power Apps", "description": "For creating custom, low-code applications that serve as intuitive, user-friendly interfaces for sophisticated automated workflows and data management." },
+                    { "name": "Microsoft Azure AI", "description": "Leveraging services like Azure OpenAI and Azure AI Language to add advanced intelligence, such as natural language understanding and summarization, to enterprise solutions." },
+                    { "name": "Google Gemini API", "description": "Integrating cutting-edge multimodal and Generative AI capabilities for tasks like content generation, structured data extraction from images, and complex reasoning." },
+                    { "name": "Dataverse", "description": "For creating scalable and secure data models that provide a robust foundation for enterprise-grade Power Platform solutions, ensuring data integrity and governance." }
+                ]
+            },
+            {
+                "title": "Frontend & Dev Tools",
+                "icon": "CloudIcon",
+                "items": [
+                    { "name": "React & TypeScript", "description": "The foundation for building modern, performant, and type-safe user interfaces and single-page applications, ensuring a high-quality user experience." },
+                    { "name": "HTML5 & CSS3", "description": "Core web technologies used to structure content semantically and create responsive, accessible, and visually appealing designs that work across all devices." },
+                    { "name": "TailwindCSS", "description": "A utility-first CSS framework that enables rapid UI development, consistent styling, and maintainable design systems without leaving the HTML." },
+                    { "name": "Git & GitHub", "description": "Essential for robust version control, effective team collaboration, and managing codebases through branching, merging, and pull requests." },
+                    { "name": "VS Code", "description": "My primary code editor, highly customized with extensions and settings for maximum efficiency in web, Power Platform, and AI development." },
+                    { "name": "Postman", "description": "An indispensable tool for testing, documenting, and interacting with RESTful APIs, crucial for the integration phase of any automation project." }
+                ]
+            },
+            {
+                "title": "Strategic Methodologies",
+                "icon": "DevToolsIcon",
+                "items": [
+                    { "name": "Agile & Scrum", "description": "Applying the Agile mindset and Scrum framework to deliver projects iteratively, ensuring continuous feedback, stakeholder collaboration, and rapid value delivery." },
+                    { "name": "Product Ownership", "description": "Taking full ownership of the product vision, managing and prioritizing the backlog, and making data-driven decisions to maximize business value and ROI." },
+                    { "name": "Design Thinking", "description": "Utilizing a human-centric approach to problem-solving that focuses on empathy, ideation, and rapid prototyping to create solutions that users love." },
+                    { "name": "Process Mining & Analysis", "description": "Leveraging data to analyze and visualize business processes, allowing for the identification of bottlenecks, inefficiencies, and high-impact automation opportunities." }
+                ]
+            }
+        ]
+    }
+}

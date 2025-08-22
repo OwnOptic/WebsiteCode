@@ -1,0 +1,65 @@
+{
+  "certificates": {
+    "header": {
+      "title": "Certificates & Diplomas",
+      "subtitle": "A continuous pursuit of knowledge, blending business acumen with practical, real-world applications in Project Management, AI, and Cybersecurity."
+    },
+    "timeline": [
+      {
+        "category": "Project Management",
+        "items": [
+          { "name": "Google Project Management Professional Certificate", "level": "Advanced", "url": "https://coursera.org/verify/professional-cert/H8TC282KY2HG" },
+          { "name": "Professional Scrum Product Owner I (PSPO I)", "level": "Advanced", "url": "https://scrum.org/certificates/1173288" },
+          { "name": "Google Agile Project Management", "level": "Intermediate", "url": "https://coursera.org/verify/BX3GDRSCV4JW" },
+          { "name": "Google Project Initiation: Starting a Successful Project", "level": "Beginner", "url": "https://coursera.org/verify/RSM6RA34QZVT" },
+          { "name": "Google Project Planning: Putting It All Together", "level": "Beginner", "url": "https://coursera.org/verify/TWDLXXB4BELP" },
+          { "name": "Google Project Execution: Running the Project", "level": "Beginner", "url": "https://coursera.org/verify/2ZRST8QG56MP" },
+          { "name": "Google Foundations of Project Management", "level": "Beginner", "url": "https://coursera.org/verify/PLFV9DX6C7JM" },
+          { "name": "Google Capstone: Applying Project Management in the Real World", "level": "Beginner", "url": "https://coursera.org/verify/G64ELWF5Q6TK" }
+        ]
+      },
+      {
+        "category": "Artificial Intelligence (AI) & Machine Learning (ML)",
+        "items": [
+          { "name": "Coursera AI Professional Profile", "level": "Advanced", "url": "https://www.coursera.org/learner/elliot-margot-ai-pro" },
+          { "name": "Introduction to Generative AI Learning Path", "level": "Advanced", "url": "https://coursera.org/verify/specialization/KS2DCZRW9KJ0" },
+          { "name": "IBM AI Workflow: Feature Engineering and Bias Detection", "level": "Advanced", "url": "https://coursera.org/verify/IGJ4CFCPGOND" },
+          { "name": "IBM AI Workflow: Data Analysis and Hypothesis Testing", "level": "Advanced", "url": "https://coursera.org/verify/G417607041IP" },
+          { "name": "IBM AI Workflow: Machine Learning, Visual Recognition and NLP", "level": "Advanced", "url": "https://coursera.org/verify/F7F5WFH0IOWZ" },
+          { "name": "IBM AI Workflow: Business Priorities and Data Ingestion", "level": "Advanced", "url": "https://coursera.org/verify/MYLB9HWMMMYK" },
+          { "name": "IBM AI Workflow: Enterprise Model Deployment", "level": "Advanced", "url": "https://coursera.org/verify/3Y2RPNIF4ZO0" },
+          { "name": "IBM Enterprise Design Thinking Practitioner", "level": "Intermediate", "url": "https://www.credly.com/go/xzOKue6A" },
+          { "name": "IBM Generative AI: Prompt Engineering Basics", "level": "Beginner", "url": "https://coursera.org/verify/O9RJ3QCSGZMP" },
+          { "name": "IBM Generative AI: Introduction and Applications", "level": "Beginner", "url": "https://coursera.org/verify/SSWD1LDVAGYA" },
+          { "name": "IBM Generative AI: Foundation Models and Platforms", "level": "Beginner", "url": "https://coursera.org/verify/N2LFERJ4FNVE" },
+          { "name": "Google Introduction to Large Language Models", "level": "Beginner", "url": "https://coursera.org/verify/4HJ9KS2R6CXB" },
+          { "name": "Google Introduction to Responsible AI", "level": "Beginner", "url": "https://coursera.org/verify/OK6VX9IH8TOS" },
+          { "name": "Google Responsible AI: Applying AI Principles with Google Cloud", "level": "Beginner", "url": "https://coursera.org/verify/FALFAVOSAKTIW" },
+          { "name": "Introduction to Artificial Intelligence (AI)", "level": "Beginner", "url": "https://coursera.org/verify/KPVE6R80D7HD" },
+          { "name": "IBM Enterprise Design Thinking - Team Essentials for AI", "level": "Beginner", "url": "https://www.credly.com/go/FE6LeQwx" }
+        ]
+      },
+      {
+        "category": "Product Management",
+        "items": [
+          { "name": "Generative AI: Supercharge Your Product Management Career", "level": "Advanced", "url": "https://coursera.org/verify/SVLXBAMYBP9W" },
+          { "name": "Product Management: Building AI-Powered Products", "level": "Beginner", "url": "https://coursera.org/verify/DRZDCQIOPNQM" },
+          { "name": "Product Management: Foundations & Stakeholder Collaboration", "level": "Beginner", "url": "https://coursera.org/verify/705DGLWY1T20" },
+          { "name": "Product Management: Initial Product Strategy and Plan", "level": "Beginner", "url": "https://coursera.org/verify/J37Z8C29PBIP" },
+          { "name": "Product Management: An Introduction", "level": "Beginner", "url": "https://coursera.org/verify/35ZW4RI212KZ" },
+          { "name": "Product Management: Developing and Delivering a New Product", "level": "Beginner", "url": "https://coursera.org/verify/AQGJWELV0QP9" }
+        ]
+      },
+      {
+        "category": "Cybersecurity",
+        "items": [
+          { "name": "Advanced Network Security", "level": "Advanced", "url": "https://coursera.org/verify/specialization/SWG513LHSGFD" },
+          { "name": "Next-Generation Firewalls and Intrusion Prevention", "level": "Intermediate", "url": "https://coursera.org/verify/9BL3T15PLC1B" },
+          { "name": "Securing Cloud and Hybrid Networks", "level": "Intermediate", "url": "https://coursera.org/verify/PNAQF9HERYKE" },
+          { "name": "Advanced Threat Hunting and Incident Response", "level": "Intermediate", "url": "https://coursera.org/verify/51FOLVSCM9OT" },
+          { "name": "Google Foundations of Cybersecurity", "level": "Beginner", "url": "https://coursera.org/verify/NZI5DM88P79P" }
+        ]
+      }
+    ]
+  }
+}

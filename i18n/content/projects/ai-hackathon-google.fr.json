@@ -1,0 +1,41 @@
+{
+    "title": "Hackathon IA : Assistant d'Assurance Gagnant",
+    "subtitle": "Une preuve de concept lauréate d'un hackathon pour un assistant d'IA Générative, construit avec Copilot Studio, pour aider les agents d'assurance à trouver des informations complexes.",
+    "heroImageUrl": "https://lh6.googleusercontent.com/lJrKFGBWYuOj3Ke2TKc0rp7eWavkuufdoNb0sdDNtXtykahUROcMi5Ncx8xeuqEWVk4ymi4L4g_YG4K69Fzn4rBMW7mGa4q9rnxRHJIEWLcoF0d4fjlx-97kWamkiQpWurarxef7irw=w16383",
+    "overview": {
+        "client": "Hackathon Google & Assura",
+        "industry": "Assurance",
+        "timeline": "48 Heures",
+        "techStack": "Copilot Studio, IA Générative"
+    },
+    "contentSections": [
+        {
+            "title": "Introduction",
+            "htmlContent": "<p>Lors du Hackathon IA d'Assura, notre équipe a relevé le défi de créer des solutions innovantes pour améliorer l'expérience utilisateur dans le domaine de l'assurance. Nous avons conçu et développé une preuve de concept (POC) de chatbot visant à simplifier le processus complexe de sélection du bon plan d'assurance, en tirant parti de l'IA, et plus particulièrement du modèle Gemini 1.5 Pro, pour fournir des recommandations personnalisées. L'infrastructure a été fournie par Google Cloud Platform (GCP).</p>"
+        },
+        {
+            "title": "Énoncé du Problème",
+            "htmlContent": "<p>Choisir la police d'assurance appropriée peut être une tâche écrasante pour de nombreux utilisateurs en raison de la diversité des options, du jargon technique et du manque de conseils personnalisés. Les utilisateurs ont souvent du mal à naviguer entre les différents plans, ce qui entraîne confusion, frustration et potentiellement le choix d'un plan inadapté à leurs besoins spécifiques.</p><img src=\"https://lh6.googleusercontent.com/Uqlb1gzNd7c8wfV9aAmwNm0mPpsqyciFuW3NSOjRmip4qzjDIdxCzD1bk1iKZXXNSPZSqRC8VdC5xy3szZkxP9TY8jdAo4uGBPpLp0Mc4-kP31j4sfttPqAcWmdR5eJMhvwZFjRC544ZsXDf0XTczGgoj2FOdwW0Crs0cvPgK7jdHGqnfPDDxQ=w1280\" alt=\"Photo de l'équipe au hackathon\" class=\"my-8 rounded-lg shadow-md\">"
+        },
+        {
+            "title": "Notre Solution",
+            "htmlContent": "<p>Notre POC de chatbot offre une interface conversationnelle alimentée par l'IA qui guide les utilisateurs à travers un processus étape par étape pour identifier leurs besoins spécifiques en assurance. En posant une série de questions ciblées et en analysant les réponses des utilisateurs, grâce au modèle Gemini 1.5 Pro, le chatbot fournit des recommandations d'assurance personnalisées, simplifiant ainsi le processus de prise de décision complexe.</p><img src=\"https://lh4.googleusercontent.com/hJvrreWlMh0Vzsc07tkxAWuPmNj20E_wZmFH4IKh7cHZeD5xTCxXpq5jZwrEILlX8R_z1ezEeexPv618XuJX5gJEfD6SvJi1Sl470ru4woXz11A9Z-oYSoFafIEL2wKSBStPD-U6PIKZy55r0RKW-Xo5wsiJKWIfg7K22Xy9ZlEjkdWiKysuNg=w1280\" alt=\"Diapositive de présentation du hackathon\" class=\"my-8 rounded-lg shadow-md\">"
+        },
+        {
+            "title": "Caractéristiques et Fonctionnalités Clés",
+            "htmlContent": "<ul><li><strong>Interface Conversationnelle :</strong> Utilise le traitement du langage naturel (NLP), alimenté par Gemini 1.5 Pro, pour comprendre les demandes des utilisateurs et fournir des réponses contextuelles.</li><li><strong>Recommandations Personnalisées :</strong> Analyse les réponses des utilisateurs pour identifier les polices d'assurance appropriées en fonction de leurs besoins, de leur budget et de leur profil de risque.</li><li><strong>Explications Simplifiées :</strong> Explique les termes d'assurance complexes dans un langage simple et facile à comprendre.</li><li><strong>Guidage Interactif :</strong> Guide les utilisateurs à travers un processus de prise de décision structuré à l'aide d'invites interactives.</li><li><strong>Multilingue :</strong> Le chatbot est conçu pour prendre en charge le français, l'anglais et l'allemand, améliorant ainsi l'accessibilité et l'expérience utilisateur.</li><li><strong>Basé sur les Données :</strong> S'appuie sur une large base de données de polices d'assurance pour faire correspondre avec précision les meilleures polices aux besoins des utilisateurs.</li></ul>"
+        },
+        {
+            "title": "Processus de Conception et de Développement",
+            "htmlContent": "<p>Notre équipe a suivi une approche itérative de conception et de développement, en se concentrant sur les principes de conception centrée sur l'utilisateur. Nous avons utilisé des méthodologies agiles pour prototyper et tester rapidement le chatbot, en intégrant les commentaires des utilisateurs et en nous adaptant en conséquence. Nous avons principalement exploité le modèle Gemini 1.5 Pro pour ses capacités avancées.</p><img src=\"https://lh3.googleusercontent.com/7btILvNMCSpBztyi4hjd6jRbHp5Zr--xeaL56Ztu5_IR378cQ4q1gVuEvqU1fJxJmGLuXdbTlCdnB1GwQLX6evh1x4SnFDd78-xQo5T_aDog_O9seXPC-9GgBGA-c2xOPIIkjuQ-oUqvL-UjLXlLIJWvO-7-LlWn2AZUyKFc8UybOjpvlebCjw=w1280\" alt=\"Groupe travaillant au hackathon\" class=\"my-8 rounded-lg shadow-md\">"
+        },
+        {
+            "title": "Résultats",
+            "htmlContent": "<p>Bien qu'encore en phase de preuve de concept, notre chatbot a démontré efficacement sa capacité à fournir aux utilisateurs des recommandations d'assurance personnalisées tout en simplifiant le processus de prise de décision, en exploitant la puissance de Gemini 1.5 Pro. Le chatbot a fourni des solutions précises et a été jugé convivial lors des tests initiaux.</p>"
+        },
+        {
+            "title": "Leçons Apprises",
+            "htmlContent": "<p>Cette expérience de hackathon a fourni des informations précieuses sur les défis et les opportunités du développement de solutions basées sur l'IA pour le secteur de l'assurance. Nous avons appris l'importance de comprendre les besoins des utilisateurs, d'itérer rapidement, d'utiliser des modèles avancés comme Gemini 1.5 Pro et d'employer des méthodes robustes pour les retours utilisateurs. Nous sommes également désormais conscients des complexités du travail en équipe interfonctionnelle pour développer rapidement un produit.</p>"
+        }
+    ]
+}

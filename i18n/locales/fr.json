@@ -1,0 +1,140 @@
+{
+  "seo": {
+    "home": {
+      "title": "Elliot Margot | Consultant IA & Power Platform",
+      "description": "En tant que consultant expert en IA et Power Platform, j'aide les entreprises à transformer leurs opérations en déployant des solutions d'IA Générative et d'automatisation personnalisées."
+    },
+    "about": {
+      "title": "À propos d'Elliot Margot | Spécialiste IA & Automatisation",
+      "description": "Découvrez mon parcours en conseil IA et automatisation des processus, de la direction de projets de chatbot IA Générative à l'architecture de solutions d'entreprise avec Power Platform."
+    },
+    "contact": {
+      "title": "Contacter Elliot Margot | Conseil en IA & Automatisation",
+      "description": "Contactez-moi pour discuter de vos besoins en IA, Power Platform et automatisation. Collaborons sur votre prochain projet de transformation numérique."
+    },
+    "experience": {
+      "title": "Expérience Professionnelle | Elliot Margot, Consultant IA",
+      "description": "Découvrez mon parcours professionnel détaillé, du conseil en IA chez Witivio à la direction du développement de chatbots IA Générative chez Assura, illustrant un chemin d'innovation."
+    },
+    "education": {
+      "title": "Formation Académique | Elliot Margot",
+      "description": "Découvrez mon parcours académique en gestion d'entreprise et psychologie, qui constitue le socle interdisciplinaire de mon approche stratégique de l'IA et de l'automatisation."
+    },
+    "certificates": {
+      "title": "Certificats & Diplômes | Elliot Margot",
+      "description": "Parcourez une liste complète de mes certifications professionnelles en IA, gestion de projet, gestion de produit et cybersécurité, avec des liens pour vérifier chaque qualification."
+    },
+    "useCases": {
+      "title": "Bibliothèque de Cas d'Usage IA | Portfolio d'Elliot Margot",
+      "description": "Explorez une bibliothèque complète de cas d'usage réels en IA et Automatisation, présentant des applications pratiques de l'IA Générative, Copilot Studio et Power Automate."
+    },
+    "blog": {
+      "title": "Blog | Perspectives sur l'IA Générative & l'Automatisation par Elliot Margot",
+      "description": "Lisez mes derniers articles sur l'IA Générative, l'automatisation des processus, Microsoft Power Platform et l'avenir de la technologie d'entreprise."
+    },
+    "projects": {
+      "title": "Projets | Portfolio IA d'Elliot Margot",
+      "description": "Une collection de projets clés et d'articles de fond démontrant des applications pratiques de la stratégie IA, de l'IA Générative et de l'automatisation Power Platform."
+    },
+    "techStack": {
+      "title": "Ma Stack Technologique | Expertise IA & Power Platform",
+      "description": "Un aperçu des plateformes, technologies et méthodologies que j'utilise pour créer des solutions d'IA et d'automatisation des processus métier d'entreprise."
+    }
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "contact": "Contact",
+    "experience": "Expérience",
+    "education": "Formation",
+    "certificates": "Certificats",
+    "useCases": "Cas d'Usage",
+    "blog": "Blog",
+    "projects": "Projets",
+    "techStack": "Stack Tech"
+  },
+  "footer": {
+    "copyright": "© {year} Elliot Margot. Tous droits réservés.",
+    "siteMap": "Plan du site",
+    "contactMe": {
+      "title": "Contactez-moi",
+      "description": "Vous avez un projet en tête ou souhaitez collaborer ? Je serais ravi d'échanger avec vous.",
+      "buttonText": "Prendre Contact"
+    }
+  },
+  "useCases": {
+    "header": {
+      "title": "Bibliothèque Interactive de Cas d'Usage",
+      "subtitle": "Solutions Pratiques d'IA & d'Automatisation pour Tous les Secteurs"
+    },
+    "overview": {
+      "title": "Explorer par Secteur",
+      "distributionTitle": "Solutions par Secteur",
+      "distributionSubtitle": "Un résumé du nombre de cas d'usage détaillés disponibles pour chaque secteur. Cliquez sur une carte pour filtrer l'explorateur ci-dessous.",
+      "allIndustries": "Tous les secteurs",
+      "totalUseCases": "Cas d'usage totaux"
+    },
+    "explorer": {
+      "title": "Explorateur de Cas d'Usage",
+      "subtitle": "Sélectionnez un secteur et/ou une technologie pour filtrer les cas d'usage, ou utilisez la barre de recherche pour trouver des sujets spécifiques.",
+      "searchPlaceholder": "Rechercher par mot-clé...",
+      "noResultsTitle": "Aucun cas d'usage correspondant",
+      "noResultsSubtitle": "Essayez d'ajuster vos filtres ou votre terme de recherche."
+    },
+    "card": {
+      "idPrefix": "CU #"
+    },
+    "modal": {
+      "technicalLevel": "Niveau Technique",
+      "problemTitle": "Problème / Scénario",
+      "valueTitle": "Valeur Commerciale",
+      "roiTitle": "Le Coin du ROI",
+      "pocTitle": "Comment Construire une Preuve de Concept Rapide",
+      "share": "Partager",
+      "linkCopied": "Lien copié !",
+      "interactiveDemoTitle": "Démo Interactive"
+    },
+    "filters": {
+      "allTech": "Toutes les technologies",
+      "cases": "Cas"
+    }
+  },
+  "blog": {
+    "header": {
+      "title": "Blog",
+      "subtitle": "Perspectives sur l'IA, l'automatisation des processus et la technologie d'entreprise"
+    },
+    "readMore": "Lire l'article",
+    "filterByTag": "Filtrer par Tag",
+    "allTags": "Tous les Tags",
+    "noResults": "Aucun article trouvé correspondant à vos critères.",
+    "backToAll": "← Retour à tous les articles",
+    "searchPlaceholder": "Rechercher des articles...",
+    "relatedPostsTitle": "Vous pourriez aussi aimer"
+  },
+  "projects": {
+    "learnMore": "En savoir plus"
+  },
+  "geminiBot": {
+    "headerTitle": "EllioBot",
+    "placeholder": "Posez des questions sur mon expérience, mes compétences...",
+    "initialMessage": "Bonjour ! Je suis EllioBot, votre guide IA pour le portfolio d'Elliot Margot. Comment puis-je vous aider aujourd'hui ?"
+  },
+  "invoiceDemo": {
+    "title": "Traitement Automatisé des Factures",
+    "mockDescription": "Ceci est une démonstration fictive. Cliquez sur 'Extraire les Données' pour voir une simulation de la manière dont Gemini analyse l'exemple de facture ci-dessous et renvoie des données JSON structurées.",
+    "sampleInvoiceLabel": "Exemple de Facture :",
+    "processButton": "Extraire les Données",
+    "processing": "Traitement avec Gemini...",
+    "extractedDataTitle": "Données Extraites"
+  },
+    "contact": {
+    "status": {
+      "generating": "Génération du message...",
+      "redirecting": "Redirection...",
+      "success": "Succès ! Veuillez vérifier votre client de messagerie pour envoyer.",
+      "error": "Veuillez remplir tous les champs.",
+      "apiError": "Impossible de générer l'e-mail. Veuillez réessayer."
+    }
+  }
+}

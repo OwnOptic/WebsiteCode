@@ -1,0 +1,45 @@
+{
+  "about": {
+    "header": {
+      "title": "À propos de moi",
+      "subtitle": "Un consultant IA multilingue qui stimule l'innovation avec des données et des solutions sur mesure"
+    },
+    "intro": {
+      "title": "Un consultant IA axé sur les résultats...",
+      "p1": "...avec une expérience avérée dans l'architecture et le déploiement de solutions d'IA et d'automatisation à fort impact. Mon expertise consiste à transformer des défis commerciaux complexes en systèmes évolutifs et intelligents en utilisant la Microsoft Power Platform et l'IA Générative. Je m'épanouis à combler le fossé entre les possibilités techniques et les objectifs stratégiques, en dirigeant des équipes interfonctionnelles pour fournir des résultats mesurables et piloter la transformation numérique."
+    },
+    "journey": {
+      "title": "Mon Parcours",
+      "ctaExperience": "Expérience Professionnelle Complète",
+      "ctaEducation": "Voir ma Formation",
+      "items": [
+        {
+          "role": "Consultant IA & Power Platform",
+          "company": "Witivio, Lausanne | Août 2024 – Aujourd'hui",
+          "description": "Conception et déploiement de solutions d'IA Générative d'entreprise pour des clients clés à travers l'Europe."
+        },
+        {
+          "role": "Product Owner ChatBot & Responsable des Tests",
+          "company": "Assura, Lausanne | Avril 2023 – Juillet 2024",
+          "description": "Responsable de la vision produit et de la feuille de route pour un chatbot à IA Générative, augmentant la satisfaction client de 25%."
+        },
+        {
+          "role": "Conseiller en Assurance Digitale",
+          "company": "Assura, Lausanne | Juin 2021 – Mars 2023",
+          "description": "Interaction directe avec les clients, compréhension de leurs besoins et maîtrise des outils numériques pour l'automatisation des processus."
+        }
+      ]
+    },
+    "skills": {
+      "title": "Compétences et Atouts Clés",
+      "items": [
+        { "name": "IA Générative & LLMs", "description": "Expert en conception et mise en œuvre de solutions avec l'IA Générative, y compris l'ingénierie de prompts et le développement de Copilots personnalisés." },
+        { "name": "Microsoft Power Platform", "description": "Maîtrise avancée de Power Automate, Copilot Studio et Power Apps pour l'automatisation et les applications d'entreprise." },
+        { "name": "Stratégie & Conseil en IA", "description": "Animation d'ateliers clients pour définir la stratégie IA, identifier les cas d'usage et créer des feuilles de route exploitables pour la transformation numérique." },
+        { "name": "Product Ownership Agile", "description": "Expertise avérée en matière de vision produit, de gestion du backlog et de direction de sprints de développement pour livrer de la valeur de manière incrémentale." },
+        { "name": "Automatisation des Processus Métier (BPA)", "description": "Vaste expérience dans l'analyse, la refonte et l'automatisation de flux de travail métier complexes de bout en bout." },
+        { "name": "Intégration de Systèmes", "description": "Compétent pour connecter des systèmes hétérogènes via des API afin de créer des processus automatisés unifiés et transparents." }
+      ]
+    }
+  }
+}

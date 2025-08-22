@@ -1,0 +1,117 @@
+Image Repository: OwnOptic/Website-storage
+Here is a list of all the images found in the OwnOptic/Website-storage GitHub repository, along with their direct links and descriptions.
+AI Hackathon lighthouse.jfif
+●	Link: https://raw.githubusercontent.com/OwnOptic/Website-storage/main/AI%20Hackathon%20lighthouse.jfif
+●	Description: A vibrant, artistic rendering of a lighthouse on a rocky shore, with a colorful, swirling sky suggesting a sunset or sunrise.
+AI Tree and nature interconnected.png
+●	Link: https://raw.githubusercontent.com/OwnOptic/Website-storage/main/AI%20Tree%20and%20nature%20interconnected.png
+●	Description: A stylized illustration of a large, green tree with its roots forming a network, symbolizing the interconnectedness of nature and technology.
+AI hackathon our group.png
+●	Link: https://raw.githubusercontent.com/OwnOptic/Website-storage/main/AI%20hackathon%20our%20group.png
+●	Description: A group photo of four people smiling, likely a team at an AI hackathon, posing in a casual indoor setting.
+AI hackathon presentaiton.png
+●	Link: https://raw.githubusercontent.com/OwnOptic/Website-storage/main/AI%20hackathon%20presentaiton.png
+●	Description: A person presenting on stage at what appears to be a hackathon or tech event, with a presentation slide visible in the background.
+AI onboarding agent - AI Builder model .png
+●	Link: https://raw.githubusercontent.com/OwnOptic/Website-storage/main/AI%20onboarding%20agent%20-%20AI%20Builder%20model%20.png
+●	Description: A screenshot of a user interface, likely a tool for building AI models, showing a flowchart or diagram related to an 'AI onboarding agent'.
+AI onboarding agent - Coversation flow.png
+●	Link: https://raw.githubusercontent.com/OwnOptic/Website-storage/main/AI%20onboarding%20agent%20-%20Coversation%20flow.png
+●	Description: A diagram illustrating the conversational flow of an AI onboarding agent, showing different stages and user interactions.
+AI onboarding agent - Tools list.png
+●	Link: https://raw.githubusercontent.com/OwnOptic/Website-storage/main/AI%20onboarding%20agent%20-%20Tools%20list.png
+●	Description: A screenshot showing a list of tools or plugins for an AI agent, including 'Get user information', 'List user tasks', and 'Search for documents'.
+AI onboarding agent - conversation Sarah.png
+●	Link: https://raw.githubusercontent.com/OwnOptic/Website-storage/main/AI%20onboarding%20agent%20-%20conversation%20Sarah.png
+●	Description: A screenshot of a chat interface showing a conversation with an AI onboarding agent named Sarah.
+AI onboarding agent - header.png
+●	Link: https://raw.githubusercontent.com/OwnOptic/Website-storage/main/AI%20onboarding%20agent%20-%20header.png
+●	Description: A header graphic for an 'AI Onboarding Agent', featuring a stylized, colorful brain icon and the text 'OwnOptic'.
+AI onboarding agent Flow1.png
+●	Link: https://raw.githubusercontent.com/OwnOptic/Website-storage/main/AI%20onboarding%20agent%20Flow1.png
+●	Description: A flowchart diagram illustrating a part of the AI onboarding agent's process, with nodes and connecting arrows.
+AI onboarding agent Flow2.png
+●	Link: https://raw.githubusercontent.com/OwnOptic/Website-storage/main/AI%20onboarding%20agent%20Flow2.png
+●	Description: A continuation of the flowchart for the AI onboarding agent, detailing more steps in the automated process.
+AI onboarding agent Flow3.png
+●	Link: https://raw.githubusercontent.com/OwnOptic/Website-storage/main/AI%20onboarding%20agent%20Flow3.png
+●	Description: Another section of the AI onboarding agent's workflow diagram, showing complex conditional logic and steps.
+AI onboarding agent Flow4.png
+●	Link: https://raw.githubusercontent.com/OwnOptic/Website-storage/main/AI%20onboarding%20agent%20Flow4.png
+●	Description: The final part of the detailed flowchart for the AI onboarding agent's process.
+AI onboarding agent icon.png
+●	Link: https://raw.githubusercontent.com/OwnOptic/Website-storage/main/AI%20onboarding%20agent%20icon.png
+●	Description: A simple, clean icon for the AI onboarding agent, featuring a stylized brain graphic with colorful accents.
+AI onboarding agent mermaid intro.png
+●	Link: https://raw.githubusercontent.com/OwnOptic/Website-storage/main/AI%20onboarding%20agent%20mermaid%20intro.png
+●	Description: A code snippet or diagram using Mermaid syntax to define the introduction flow of the AI onboarding agent.
+Augmented Intelligence.png
+●	Link: https://raw.githubusercontent.com/OwnOptic/Website-storage/main/Augmented%20Intelligence.png
+●	Description: A graphic with the text 'Augmented Intelligence' over a background of interconnected nodes and lines, representing a neural network.
+Building the Bot.png
+●	Link: https://raw.githubusercontent.com/OwnOptic/Website-storage/main/Building%20the%20Bot.png
+●	Description: A presentation slide or graphic with the title 'Building the Bot', likely outlining the development process of an AI agent.
+Data Point Bokeh.png
+●	Link: https://raw.githubusercontent.com/OwnOptic/Website-storage/main/Data%20Point%20Bokeh.png
+●	Description: An abstract background image with out-of-focus points of light (bokeh effect), creating a sense of digital data or energy.
+Gemini_Generated_Image_449bsw449bsw449b.png
+●	Link: https://raw.githubusercontent.com/OwnOptic/Website-storage/main/Gemini_Generated_Image_449bsw449bsw449b.png
+●	Description: An AI-generated image showing a futuristic, abstract composition with glowing lines and geometric shapes.
+Gemini_Generated_Image_5at9q35at9q35at9.png
+●	Link: https://raw.githubusercontent.com/OwnOptic/Website-storage/main/Gemini_Generated_Image_5at9q35at9q35at9.png
+●	Description: Another AI-generated image with an abstract, technological theme, featuring vibrant colors and complex patterns.
+Gemini_Generated_Image_6j2dyy6j2dyy6j2d.png
+●	Link: https://raw.githubusercontent.com/OwnOptic/Website-storage/main/Gemini_Generated_Image_6j2dyy6j2dyy6j2d.png
+●	Description: An abstract AI-generated image with swirling patterns of light and color, evoking a sense of digital energy.
+Gemini_Generated_Image_nt5ubknt5ubknt5u.png
+●	Link: https://raw.githubusercontent.com/OwnOptic/Website-storage/main/Gemini_Generated_Image_nt5ubknt5ubknt5u.png
+●	Description: A futuristic, AI-generated graphic with a blend of organic and geometric shapes in a vibrant color palette.
+Gemini_Generated_Image_t5gj2nt5gj2nt5gj.png
+●	Link: https://raw.githubusercontent.com/OwnOptic/Website-storage/main/Gemini_Generated_Image_t5gj2nt5gj2nt5gj.png
+●	Description: An abstract digital artwork created by an AI, featuring complex textures and a dynamic composition.
+Gemini_Generated_Image_xar87axar87axar8.png
+●	Link: https://raw.githubusercontent.com/OwnOptic/Website-storage/main/Gemini_Generated_Image_xar87axar87axar8.png
+●	Description: An AI-generated visual with a high-tech feel, characterized by glowing elements and intricate details.
+Human-Bot Interaction.png
+●	Link: https://raw.githubusercontent.com/OwnOptic/Website-storage/main/Human-Bot%20Interaction.png
+●	Description: A conceptual graphic illustrating the interaction between a human and a robot or AI, symbolizing collaboration.
+Masterful and Fun.png
+●	Link: https://raw.githubusercontent.com/OwnOptic/Website-storage/main/Masterful%20and%20Fun.png
+●	Description: A presentation slide or graphic with the title "Masterful and Fun," likely used to describe a product or experience.
+Subtle Neural Web.309Z.png
+●	Link: https://raw.githubusercontent.com/OwnOptic/Website-storage/main/Subtle%20Neural%20Web.309Z.png
+●	Description: An abstract background image depicting a subtle, web-like pattern of interconnected nodes, representing a neural network.
+The AI-Powered Assistant.png
+●	Link: https://raw.githubusercontent.com/OwnOptic/Website-storage/main/The%20AI-Powered%20Assistant.png
+●	Description: A graphic or slide title for "The AI-Powered Assistant," likely introducing a section about AI assistance technology.
+The Abstract Brain of AI.png
+●	Link: https://raw.githubusercontent.com/OwnOptic/Website-storage/main/The%20Abstract%20Brain%20of%20AI.png
+●	Description: An artistic and conceptual illustration of a brain, representing the complex inner workings of artificial intelligence.
+The Automated Workflow in Action.png
+●	Link: https://raw.githubusercontent.com/OwnOptic/Website-storage/main/The%20Automated%20Workflow%20in%20Action.png
+●	Description: A visual representation, possibly a diagram or screenshot, showing an automated process or workflow.
+The Collaborative Interface.png
+●	Link: https://raw.githubusercontent.com/OwnOptic/Website-storage/main/The%20Collaborative%20Interface.png
+●	Description: A graphic or screenshot showcasing a user interface designed for collaboration between multiple users or between a user and an AI.
+The Data-Driven Decision.png
+●	Link: https://raw.githubusercontent.com/OwnOptic/Website-storage/main/The%20Data-Driven%20Decision.png
+●	Description: A conceptual image representing the process of making decisions based on data analysis, often depicted with charts and graphs.
+The Digital Conductor.881Z.png
+●	Link: https://raw.githubusercontent.com/OwnOptic/Website-storage/main/The%20Digital%20Conductor.881Z.png
+●	Description: An abstract image symbolizing the orchestration of digital processes, much like a conductor leading an orchestra.
+The Future of Work.294Z.png
+●	Link: https://raw.githubusercontent.com/OwnOptic/Website-storage/main/The%20Future%20of%20Work.294Z.png
+●	Description: A conceptual graphic illustrating the future of the workplace, often involving themes of automation, AI, and remote collaboration.
+The Mobile Automation Power.png
+●	Link: https://raw.githubusercontent.com/OwnOptic/Website-storage/main/The%20Mobile%20Automation%20Power.png
+●	Description: An image that conveys the power of automation on mobile devices, possibly showing a phone or tablet with process flows.
+The Seamless Integration.657Z.png
+●	Link: https://raw.githubusercontent.com/OwnOptic/Website-storage/main/The%20Seamless%20Integration.657Z.png
+●	Description: A visual metaphor for smooth and effortless integration between different systems or technologies, perhaps with interlocking shapes.
+The Starlight Weaver.png
+●	Link: https://raw.githubusercontent.com/OwnOptic/Website-storage/main/The%20Starlight%20Weaver.png
+●	Description: A beautiful, abstract image with a celestial or cosmic theme, suggesting the weaving of stars or light.
+
+Profile picture of Elliot Margot
+Image link:
+https://github.com/OwnOptic/Website-storage/blob/main/img%20cv.jpg?raw=true

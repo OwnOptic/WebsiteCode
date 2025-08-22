@@ -1,0 +1,36 @@
+{
+    "projects": {
+        "header": {
+            "title": "Projets & Articles",
+            "subtitle": "Une collection de projets clés et d'articles de fond démontrant les applications pratiques de la stratégie d'IA et d'automatisation."
+        },
+        "items": [
+            {
+                "imgSrc": "https://raw.githubusercontent.com/OwnOptic/Website-storage/main/Gemini_Generated_Image_449bsw449bsw449b.png",
+                "title": "Stratégie d'Éthique de l'IA pour l'Assurance",
+                "description": "Un projet stratégique analysant les implications éthiques de l'IA dans l'assurance, fournissant une feuille de route pour une automatisation juste utilisant les principes de l'IA responsable.",
+                "link": "#/projects/ai-ethics-insurance",
+                "slug": "ai-ethics-insurance"
+            },
+            {
+                "imgSrc": "https://raw.githubusercontent.com/OwnOptic/Website-storage/main/AI%20Hackathon%20lighthouse.jfif",
+                "title": "Hackathon IA : Assistant d'Assurance Gagnant",
+                "description": "Une preuve de concept lauréate d'un hackathon pour un assistant à IA Générative, construit avec Copilot Studio, pour aider les agents d'assurance à trouver des informations complexes.",
+                "link": "#/projects/ai-hackathon-google",
+                "slug": "ai-hackathon-google"
+            },
+            {
+                "imgSrc": "https://raw.githubusercontent.com/OwnOptic/Website-storage/main/The%20Digital%20Conductor.881Z.png",
+                "title": "Démo de Traitement Automatisé des Factures",
+                "description": "Une démonstration interactive d'un flux Power Automate qui utilise l'IA Générative multimodale pour lire et extraire des données structurées de factures, illustrant des capacités de BPA avancées.",
+                "link": "#/use-cases#uc21"
+            },
+            {
+                "imgSrc": "https://raw.githubusercontent.com/OwnOptic/Website-storage/main/AI%20onboarding%20agent%20-%20header.png",
+                "title": "Le Playbook de l'Assistant d'Intégration IA",
+                "description": "Un article détaillant la stratégie pour transformer l'intégration des employés en une expérience rationalisée avec un assistant IA personnalisé construit sur Power Platform.",
+                "link": "#/blog/playbook-ai-onboarding-assistant"
+            }
+        ]
+    }
+}

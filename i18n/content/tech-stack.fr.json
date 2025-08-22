@@ -1,0 +1,44 @@
+{
+    "techStack": {
+        "header": {
+            "title": "Ma Stack Technologique",
+            "subtitle": "Les plateformes, outils et méthodologies que j'utilise pour créer des solutions d'entreprise efficaces et évolutives."
+        },
+        "categories": [
+            {
+                "title": "Plateformes Principales & IA",
+                "icon": "PlatformIcon",
+                "items": [
+                    { "name": "Microsoft Power Automate", "description": "Mon outil principal pour orchestrer des automatisations de processus métier (BPA) complexes, construire des intégrations d'API robustes et fournir des solutions de flux de travail évolutives." },
+                    { "name": "Microsoft Copilot Studio", "description": "Utilisé pour créer des assistants IA conversationnels d'entreprise et des copilotes personnalisés qui exploitent des plugins d'IA Générative pour effectuer des actions complexes." },
+                    { "name": "Microsoft Power Apps", "description": "Pour créer des applications low-code personnalisées qui servent d'interfaces intuitives pour des flux de travail automatisés sophistiqués et la gestion de données." },
+                    { "name": "Microsoft Azure AI", "description": "Tirer parti de services comme Azure OpenAI et Azure AI Language pour ajouter une intelligence avancée, telle que la compréhension du langage naturel, aux solutions d'entreprise." },
+                    { "name": "API Google Gemini", "description": "Intégration de capacités d'IA Générative et multimodale de pointe pour des tâches comme la génération de contenu et l'extraction de données structurées à partir d'images." },
+                    { "name": "Dataverse", "description": "Pour créer des modèles de données évolutifs et sécurisés qui fournissent une base robuste pour les solutions Power Platform d'entreprise, garantissant l'intégrité des données." }
+                ]
+            },
+            {
+                "title": "Frontend & Outils de Développement",
+                "icon": "CloudIcon",
+                "items": [
+                    { "name": "React & TypeScript", "description": "La base pour construire des interfaces utilisateur et des applications web modernes, performantes et sécurisées, garantissant une expérience utilisateur de haute qualité." },
+                    { "name": "HTML5 & CSS3", "description": "Technologies web de base utilisées pour structurer le contenu sémantiquement et créer des designs réactifs, accessibles et visuellement attrayants." },
+                    { "name": "TailwindCSS", "description": "Un framework CSS utilitaire qui permet un développement rapide de l'interface utilisateur et un style cohérent sans quitter le HTML." },
+                    { "name": "Git & GitHub", "description": "Essentiel pour un contrôle de version robuste, une collaboration d'équipe efficace et la gestion des bases de code via des branches et des pull requests." },
+                    { "name": "VS Code", "description": "Mon éditeur de code principal, hautement personnalisé pour une efficacité maximale dans le développement web, Power Platform et IA." },
+                    { "name": "Postman", "description": "Un outil indispensable pour tester, documenter et interagir avec les API RESTful, crucial pour la phase d'intégration de tout projet d'automatisation." }
+                ]
+            },
+            {
+                "title": "Méthodologies Stratégiques",
+                "icon": "DevToolsIcon",
+                "items": [
+                    { "name": "Agile & Scrum", "description": "Appliquer l'état d'esprit Agile et le cadre Scrum pour livrer des projets de manière itérative, garantissant un retour continu et une livraison de valeur rapide." },
+                    { "name": "Product Ownership", "description": "Prendre en charge la vision du produit, gérer et prioriser le backlog, et prendre des décisions basées sur les données pour maximiser la valeur commerciale et le ROI." },
+                    { "name": "Design Thinking", "description": "Utiliser une approche centrée sur l'humain pour la résolution de problèmes, axée sur l'empathie, l'idéation et le prototypage rapide pour créer des solutions que les utilisateurs aiment." },
+                    { "name": "Process Mining & Analyse", "description": "Exploiter les données pour analyser et visualiser les processus métier, permettant l'identification des goulots d'étranglement et des opportunités d'automatisation à fort impact." }
+                ]
+            }
+        ]
+    }
+}
