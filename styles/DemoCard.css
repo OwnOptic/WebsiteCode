@@ -1,0 +1,160 @@
+@keyframes border-pulse-default {
+    0% { border-color: #a78bfa; }
+    100% { border-color: #8b5cf6; }
+}
+@keyframes border-pulse-highlight {
+    0% { border-color: #fcd34d; }
+    100% { border-color: #fbbf24; }
+}
+@keyframes border-pulse-futuristic {
+    0% { border-color: #22d3ee; }
+    50% { border-color: #06b6d4; }
+    100% { border-color: #0891b2; }
+}
+
+.demo-card-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 32rem; /* max-w-lg */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4px; /* for border gradient effect */
+    border-radius: 1.5rem; /* rounded-3xl */
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+    overflow: hidden;
+    transform: perspective(1000px);
+    transition: transform 0.7s ease, box-shadow 0.7s ease;
+}
+.demo-card-wrapper:hover {
+    transform: perspective(1000px) translateY(-2px) scale(1.02);
+}
+
+.background-glow {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0.1;
+    filter: blur(24px);
+    transition: opacity 0.7s;
+}
+.demo-card-wrapper:hover .background-glow {
+    opacity: 0.2;
+}
+
+.demo-card-content {
+    position: relative;
+    z-index: 10;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 1.25rem; /* slightly smaller to show border */
+}
+
+.demo-card-description {
+    margin-bottom: 2rem;
+    max-width: 28rem;
+}
+
+.demo-card-instruction {
+    margin-top: 1.5rem;
+    max-width: 24rem;
+    text-align: center;
+    font-size: 0.875rem;
+}
+
+/* Default Variant */
+.demo-card-wrapper.default {
+    background: linear-gradient(to right, #a78bfa, #8b5cf6);
+    box-shadow: 0 25px 50px -12px rgba(139, 92, 246, 0.25);
+}
+.demo-card-wrapper.default:hover {
+    box-shadow: 0 25px 50px -12px rgba(139, 92, 246, 0.4);
+    animation: border-pulse-default 2s infinite alternate ease-in-out;
+}
+.demo-card-content.default {
+    background-color: #111827; /* gray-900 */
+}
+.demo-card-description.default {
+    color: #f9fafb; /* gray-50 */
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+.demo-card-instruction.default {
+    color: #9ca3af; /* gray-400 */
+}
+
+/* Compact Variant */
+.demo-card-wrapper.compact {
+    background: #4b5563; /* gray-600 */
+    box-shadow: 0 25px 50px -12px rgba(75, 85, 99, 0.25);
+}
+.demo-card-wrapper.compact:hover {
+    box-shadow: 0 25px 50px -12px rgba(75, 85, 99, 0.4);
+}
+.demo-card-content.compact {
+    padding: 1.5rem;
+    background-color: #1f2937; /* gray-800 */
+}
+.demo-card-description.compact {
+    color: #d1d5db; /* gray-300 */
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+.demo-card-instruction.compact {
+    color: #6b7280; /* gray-500 */
+}
+
+/* Highlight Variant */
+.demo-card-wrapper.highlight {
+    background: linear-gradient(to right, #fcd34d, #fbbf24);
+    box-shadow: 0 25px 50px -12px rgba(251, 191, 36, 0.25);
+}
+.demo-card-wrapper.highlight:hover {
+    box-shadow: 0 25px 50px -12px rgba(251, 191, 36, 0.4);
+    animation: border-pulse-highlight 2s infinite alternate ease-in-out;
+}
+.demo-card-content.highlight {
+    background: linear-gradient(135deg, #422006, #2c1a0c);
+}
+.demo-card-description.highlight {
+    color: #fef3c7; /* yellow-100 */
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.demo-card-instruction.highlight {
+    color: #fde68a; /* yellow-200 */
+}
+
+/* Futuristic Variant */
+.demo-card-wrapper.futuristic {
+    background: linear-gradient(to right, #22d3ee, #0891b2);
+    box-shadow: 0 25px 50px -12px rgba(6, 182, 212, 0.25);
+    transform: perspective(1000px) rotateY(1deg);
+}
+.demo-card-wrapper.futuristic:hover {
+    box-shadow: 0 25px 50px -12px rgba(6, 182, 212, 0.4);
+    transform: perspective(1000px) rotateY(0deg) translateY(-2px) scale(1.02);
+    animation: border-pulse-futuristic 3s infinite alternate ease-in-out;
+}
+.demo-card-content.futuristic {
+    background-color: #0c1a3e;
+}
+.demo-card-description.futuristic {
+    color: #a5f3fc; /* cyan-200 */
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: 0.05em;
+}
+.demo-card-instruction.futuristic {
+    color: #7dd3fc; /* sky-300 */
+    font-family: 'Roboto Mono', monospace;
+}
+
+@media (min-width: 768px) {
+    .demo-card-description.default, .demo-card-description.compact { font-size: 1.5rem; }
+    .demo-card-description.highlight, .demo-card-description.futuristic { font-size: 1.875rem; }
+    .demo-card-content.default, .demo-card-content.highlight, .demo-card-content.futuristic { padding: 2.5rem; }
+}

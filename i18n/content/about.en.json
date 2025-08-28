@@ -1,12 +1,16 @@
+
 {
   "about": {
     "header": {
       "title": "About Me",
-      "subtitle": "A Multi-lingual AI Consultant Driving Innovation with Data and Custom Solutions"
+      "subtitle": "A Multi-lingual AI Product Owner Driving Innovation with Data and Custom Solutions"
+    },
+    "heroV2": {
+        "imageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109047/Gemini_Generated_Image_449bsw449bsw449b_xuoa7t.png"
     },
     "intro": {
-      "title": "A results-oriented AI Consultant...",
-      "p1": "...with a proven track record of architecting and deploying high-impact AI and automation solutions. My expertise lies in transforming complex business challenges into scalable, intelligent systems using the Microsoft Power Platform and Generative AI. I thrive on bridging the gap between technical possibilities and strategic business goals, leading cross-functional teams to deliver measurable results and drive digital transformation."
+      "title": "My Objective:",
+      "p1": "To secure a challenging AI Product Owner role where I can leverage my expertise in AI/ML, agile methodologies, and data-driven decision-making to develop innovative, user-centric AI-powered products and drive significant business impact."
     },
     "journey": {
       "title": "My Journey",
@@ -14,32 +18,109 @@
       "ctaEducation": "View Education",
       "items": [
         {
-          "role": "AI & Power Platform Consultant",
-          "company": "Witivio, Lausanne | August 2024 – Present",
-          "description": "Designing and deploying enterprise-grade Generative AI solutions for key clients across Europe."
+          "role": "AI Consultant",
+          "company": "Witivio",
+          "period": "April 2024 – Present",
+          "description": "Specializing in the implementation of AI Agents and Microsoft Power Platform solutions, designing custom architectures, managing client relationships, and driving digital transformation.",
+          "imageUrl": "https://www.salon-intranet.com/logo/7efb633c8de1d45logo-hd_witivio.png",
+          "techStack": ["AI Agents", "Power Platform", "Client Management"]
         },
         {
-          "role": "Product Owner ChatBot & Testing Lead",
-          "company": "Assura, Lausanne | April 2023 – July 2024",
-          "description": "Owned the product vision and roadmap for a Generative AI chatbot, boosting customer satisfaction by 25%."
+          "role": "Product Owner ChatBot & Testing lead",
+          "company": "Assura, Lausanne",
+          "period": "April 2023 – Present",
+          "description": "Defined product vision for Assura's Chatbot, using user research to identify AI-driven enhancements, resulting in a 25% increase in customer satisfaction and a 43% sales uplift.",
+          "imageUrl": "https://images.seeklogo.com/logo-png/46/2/assura-logo-png_seeklogo-462524.png",
+          "techStack": ["AI Product Management", "Agile/DevOps", "Roadmap Strategy"]
         },
         {
           "role": "Digital Insurance Advisor",
-          "company": "Assura, Lausanne | June 2021 – March 2023",
-          "description": "Engaged directly with clients, understanding their needs and mastering digital tools for process automation."
+          "company": "Assura, Lausanne",
+          "period": "June 2021 – April 2023",
+          "description": "Provided multilingual customer support, using NLP to improve LiveChat messages and reducing response times by 10%, which contributed to a 5% increase in NPS.",
+          "imageUrl": "https://images.seeklogo.com/logo-png/46/2/assura-logo-png_seeklogo-462524.png",
+          "techStack": ["Customer Support", "NLP", "Data Analysis"]
+        },
+        {
+          "role": "Internship – Executive assistant",
+          "company": "Campus One SARL",
+          "period": "August 2020 – May 2021",
+          "description": "Provided administrative, IT, and technical support for daily operations, managing customer relations in a multicultural environment.",
+          "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple112/v4/9c/76/7d/9c767da0-2c47-2274-30ec-a6f5fa991835/AppIcon-0-0-1x_U007emarketing-0-0-0-10-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/256x256bb.jpg",
+          "techStack": ["Administrative Support", "IT Support", "Customer Relations"]
         }
       ]
     },
+    "latestProject": {
+      "title": "Latest Project",
+      "subtitle": "Google Hackathon: AI-Powered Insurance Assistant",
+      "description": "Led a team in developing a Proof of Concept (POC) AI chatbot using Gemini 1.5 Pro on Google Cloud Platform over 2 days. Defined functionality, data requirements, and user interface. Developed and tested the AI model, providing personalized insurance recommendations."
+    },
+    "github": {
+      "title": "My Open Source Contributions",
+      "profile": {
+        "username": "OwnOptic",
+        "avatarUrl": "https://github.com/OwnOptic.png",
+        "bio": "AI Consultant at Witivio, a Microsoft Partner. Passionate about leveraging AI for business transformation and innovative solutions.",
+        "followers": "12",
+        "following": "20",
+        "profileUrl": "https://github.com/OwnOptic"
+      }
+    },
     "skills": {
-      "title": "Key Skills and Strengths",
-      "items": [
-        { "name": "Generative AI & LLMs", "description": "Expert in designing and implementing solutions with Generative AI, including prompt engineering and custom Copilot development." },
-        { "name": "Microsoft Power Platform", "description": "Advanced proficiency in Power Automate, Copilot Studio, and Power Apps for enterprise-grade automation and applications." },
-        { "name": "AI Strategy & Consulting", "description": "Leading client workshops to define AI strategy, identify use cases, and create actionable roadmaps for digital transformation." },
-        { "name": "Agile Product Ownership", "description": "Proven expertise in product vision, backlog management, and leading development sprints to deliver value incrementally." },
-        { "name": "Business Process Automation (BPA)", "description": "Deep experience in analyzing, redesigning, and automating complex business workflows from end to end." },
-        { "name": "Systems Integration", "description": "Skilled in connecting disparate systems via APIs to create unified, seamless automated processes." }
-      ]
+      "title": "Key Skills and Strengths"
+    },
+    "cardGrid": {
+        "cards": [
+            {
+                "variant": "simple",
+                "category": "Core Competency",
+                "title": "AI & Machine Learning",
+                "description": "Deep Learning, NLP, Computer Vision, Generative AI, MLOps, Data Analysis, Hypothesis Testing, and Bias Detection.",
+                "buttonText": "See Projects",
+                "link": "#/projects?category=gen-ai-llms"
+            },
+            {
+                "variant": "simple",
+                "category": "Core Competency",
+                "title": "AI Product Management",
+                "description": "Expertise in Strategy, Roadmap Development, Backlog Management, Prioritization, Agile/Scrum, and Data-Driven Decision-Making.",
+                "buttonText": "See Experience",
+                "link": "#/experience"
+            },
+            {
+                "variant": "simple",
+                "category": "Core Competency",
+                "title": "Technical Skills",
+                "description": "UX/UI Design, DevOps, Web Mastering, Performance Reporting, and API Integration with platforms like Google Cloud and WordPress.",
+                "buttonText": "See Tech Stack",
+                "link": "#/tech-stack"
+            },
+            {
+                "variant": "simple",
+                "category": "Core Competency",
+                "title": "Tools & Frameworks",
+                "description": "Proficient with TensorFlow, PyTorch, scikit-learn, AWS AI Services, Azure AI Services, MLOps tools, and MS Office Suite.",
+                "buttonText": "See Tech Stack",
+                "link": "#/tech-stack"
+            },
+            {
+                "variant": "simple",
+                "category": "Core Competency",
+                "title": "Testing Expertise",
+                "description": "Specialized in Test Planning and Execution, UAT, E2E Testing, Functional Testing, and Test Automation.",
+                "buttonText": "See Experience",
+                "link": "#/experience"
+            },
+            {
+                "variant": "simple",
+                "category": "Core Competency",
+                "title": "Languages",
+                "description": "Native speaker proficiency in German, English, and French, enabling effective communication in multicultural environments.",
+                "buttonText": "Contact Me",
+                "link": "#/contact"
+            }
+        ]
     }
   }
 }

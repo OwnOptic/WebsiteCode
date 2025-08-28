@@ -19,7 +19,7 @@ const ProjectCard: React.FC<ProjectItemProps> = ({ imgSrc, title, description, l
     return (
         <a href={link} onClick={handleNav} className="block group">
             <div className="bg-white rounded-lg overflow-hidden custom-shadow flex flex-col h-full transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
-                <img src={imgSrc} alt={title} className="w-full h-64 object-cover" loading="lazy" width="400" height="256" />
+                <img src={imgSrc} alt={title} className="w-full h-80 object-cover" loading="lazy" width="400" height="320" />
                 <div className="p-6 flex flex-col flex-grow">
                     <h4 className="text-[1.563rem] font-semibold text-[var(--primary-text)] mb-3 leading-[1.4]">{title}</h4>
                     <p className="text-[var(--secondary-text)] text-[1rem] leading-[1.6] mb-4 flex-grow">{description}</p>

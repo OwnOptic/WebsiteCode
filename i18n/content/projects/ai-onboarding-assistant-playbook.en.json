@@ -1,0 +1,110 @@
+{
+    "title": "Playbook: The AI Onboarding Assistant",
+    "subtitle": "A step-by-step guide to building an enterprise-grade onboarding solution with Copilot Studio, Power Automate, and AI Builder.",
+    "heroImageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109031/AI_onboarding_agent_-_header_e5gnbt.png",
+    "overview": {
+        "industry": "Cross-Industry Solutions",
+        "timeline": "Playbook",
+        "techStack": "Copilot Studio, Power Automate, AI Builder"
+    },
+    "content": [
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "The Onboarding Story: A Manager's Experience"
+        },
+        {
+            "type": "html",
+            "value": "<p>Sarah, a busy manager, needs to onboard a new team member, Mark. Instead of a manual 20-step checklist, she uses the “AI Onboarding Assistant” in Microsoft Teams.</p><ol><li><b>The Prompt:</b> Sarah starts a chat: “I need to onboard a new employee.”</li><li><b>The Interaction:</b> The agent asks for Mark's CV. After she uploads it, the AI extracts his details, which Sarah quickly confirms. She provides his job title and start date.</li><li><b>The Automation:</b> The moment Sarah confirms the details, the agent initiates the full backend process. Mark receives a professional, branded email with his contract, which he can sign on his phone in seconds, creating an excellent first impression. Once signed, his M365 account is created, IT is ticketed for his equipment, and all relevant departments are notified.</li><li><b>The Resolution:</b> An hour later, Sarah gets a single email confirming the entire process is complete. A task that used to take half a day was finished in a two-minute conversation.</li></ol>"
+        },
+        {
+            "type": "linkedin-article-button",
+            "text": "Read the Full Playbook on LinkedIn",
+            "href": "https://www.linkedin.com/pulse/playbook-ai-onboarding-assistant-elliot-margot-4ukuc/?trackingId=Gkih8%2BIlS1%2BQiFXZbc31uQ%3D%3D"
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Solution at a Glance"
+        },
+        {
+            "type": "html",
+            "value": "<p>This solution consists of three core phases, powered by a set of interconnected components.</p>"
+        },
+        {
+            "type": "image",
+            "variant": "simple-caption",
+            "src": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109030/AI_onboarding_agent_-_Coversation_flow_ekt7sq.png",
+            "alt": "Diagram showing the conversational flow of the AI onboarding agent",
+            "caption": "Mapping the conversational flow for a seamless user experience."
+        },
+        {
+            "type": "html",
+            "value": "<h3>Core Components:</h3><ul><li>1 Copilot Studio Agent: The conversational interface for the manager.</li><li>4 Power Automate Flows: The automation engine for all backend tasks.</li><li>1 AI Builder Model: The intelligence for reading and understanding CVs.</li></ul><h3>The Three Phases:</h3><ol><li><b>Data Extraction:</b> The agent receives the CV and uses AI to extract the new hire’s information.</li><li><b>Contract Generation:</b> The agent uses the confirmed information to create and send the employment contract for signature.</li><li><b>User Onboarding:</b> Once the contract is signed, automated flows create the user’s M365 account and notify all relevant departments.</li></ol>"
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "The Implementation Guide"
+        },
+        {
+            "type": "html",
+            "value": "<p>This module provides the detailed, step-by-step instructions to build the entire solution.</p>"
+        },
+        {
+            "type": "heading",
+            "level": 4,
+            "text": "Step 1: Train the AI to Read CVs (AI Builder)"
+        },
+        {
+            "type": "html",
+            "value": "<p>This is the intelligence that reads Mark's CV after Sarah uploads it.</p><ol><li>Navigate to the Power Apps portal and select AI Builder > Explore.</li><li>Choose the “Extract custom information from documents” model.</li><li>Define the fields you want the AI to find: Full Name, Personal Email, Phone Number, Home Address.</li><li>Upload at least five sample CVs and tag the documents by highlighting the text that corresponds to each field. This is how the model learns.</li><li>Once tagged, Train and Publish your model.</li></ol>"
+        },
+        {
+            "type": "image",
+            "variant": "simple-caption",
+            "src": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109028/AI_onboarding_agent_-_AI_Builder_model_vgmhbj.png",
+            "alt": "AI Builder Model Setup",
+            "caption": "Training the AI Builder model to accurately extract data from CVs."
+        },
+        {
+            "type": "heading",
+            "level": 4,
+            "text": "Step 2: Automate the Full Workflow (Power Automate)"
+        },
+        {
+            "type": "html",
+            "value": "<p>The solution relies on a series of interconnected Power Automate flows that handle everything from contract generation to user creation. A parent flow is triggered by the Copilot, which then calls child flows to perform specific tasks, creating a modular and maintainable architecture.</p>"
+        },
+        {
+            "type": "technology-spotlight",
+            "technologies": [
+                { "name": "Microsoft AI Builder", "description": "Used to create a custom document processing model that extracts structured data from unstructured CVs." },
+                { "name": "Power Fx", "description": "Used within Power Apps and Copilot Studio for low-code logic, like validating user input before triggering a flow." }
+            ]
+        },
+        {
+            "type": "image",
+            "variant": "simple-caption",
+            "src": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109034/AI_onboarding_agent_Flow1_exqdav.png",
+            "alt": "Diagram of the Power Automate flows",
+            "caption": "The parent and child flow architecture ensures a modular and scalable automation."
+        },
+        {
+            "type": "heading",
+            "level": 4,
+            "text": "Step 3: Build the Conversational Front-End (Copilot Studio)"
+        },
+        {
+            "type": "html",
+            "value": "<p>Finally, we build the Copilot agent that Sarah will interact with in Teams. This involves creating a topic that guides the manager through the process, calls the Power Automate flows as plugins, and provides clear feedback at every step.</p>"
+        },
+        {
+            "type": "image",
+            "variant": "simple-caption",
+            "src": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109029/AI_onboarding_agent_-_conversation_Sarah_qoitcy.png",
+            "alt": "Final conversation with the AI Onboarding Assistant",
+            "caption": "The final user interaction, turning a complex process into a simple conversation."
+        }
+    ]
+}

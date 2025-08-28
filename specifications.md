@@ -10,9 +10,9 @@ This is a modern, single-page application (SPA) portfolio for Elliot Margot, an 
 
 - **Frontend Framework:** React 18
 - **Language:** TypeScript
-- **Styling:** TailwindCSS (via CDN) & CSS Variables
+- **Styling:** Custom CSS with a component-scoped architecture
 - **AI Integration:** Google Gemini API
-- **Content Management:** Custom React Context with a headless CMS architecture
+- **Content Management:** Custom React Context with a headless CMS architecture using flat JSON files.
 - **Module Loading:** ES Modules with `importmap`
 
 ---
@@ -22,147 +22,123 @@ This is a modern, single-page application (SPA) portfolio for Elliot Margot, an 
 The application uses a clean, scalable structure that decouples content from the application itself.
 
 - **`index.html`:** The single entry point for the application.
-- **`index.tsx`:** Renders the React application into the DOM.
+- **`index.tsx`:** Renders the React application into the DOM and wraps it with Providers.
 - **`App.tsx`:** The root component. It contains the routing logic, manages SEO for static and dynamic pages, and assembles the main layout.
-- **`analytics.ts`:** A wrapper for Google Analytics `gtag` calls, providing a consistent API for tracking page views and custom events.
 - **`/components`:** Contains all reusable UI components.
-  - **`GeminiBot.tsx`:** A context-aware chatbot powered by the Gemini API with advanced tool-use capabilities.
-  - **`UseCaseCatalogue.tsx`:** The interactive library of use cases.
-  - **`UseCaseDetail.tsx`:** The modal component for displaying detailed use case information, which can include interactive demos.
-  - **`InvoiceDemo.tsx`:** An example of a live, interactive demo that calls the Gemini API to perform multimodal data extraction.
-  - **`/icons`:** Contains reusable SVG icons as React components, including `BrandLogo.tsx`.
-- **`/pages`:** Contains top-level components that represent a full page view.
-  - **`ProjectDetailPage.tsx`:** A dynamic page that renders a single, detailed project case study based on a URL slug.
+- **`/pages`:** Contains top-level components that represent a full page view (e.g., `HomePage.tsx`, `AboutPage.tsx`).
 - **`/i18n`:** Contains all logic and data for internationalization.
-  - **`/locales`:** Stores `en.json` and `fr.json` files containing **UI strings only** (e.g., navigation, button text, static labels).
+  - **`/locales`:** Stores `en.json` and `fr.json` files containing **UI strings only**.
   - **`/content`:** Contains all page-specific content, simulating a headless CMS.
-      - **`/projects`:** Contains individual JSON files for each detailed project case study.
-      - **`/use-cases`:** Contains JSON files for each industry's use cases.
-      - **`about.en.json`, `blog.en.json`, etc.:** Root content files for each section.
+- **`/styles`:** Contains all custom stylesheets, typically one per component.
+  - **`global.css`:** Defines root CSS variables (including the color palette), a modern CSS reset, and base element styles.
 
 ---
 
 ## 3. Core Functionality Deep Dive
 
-### 3.1. Routing & SEO
+### 3.1. Dynamic Content & "Page Builder" Architecture
 
-- **Mechanism:** The app uses a hash-based routing system managed in `App.tsx`. The routing logic is specifically designed to handle single-page application behavior correctly, ignoring sub-hashes (e.g., `#uc21`) when determining the primary page to render.
-- **Deep-linking & Filtering:** The system supports deep-linking with sub-hashes to open specific content (like a use case modal) and URL query parameters (e.g., `.../#/use-cases?industry=Insurance`) to control component state, such as the filters in the Use Case Catalogue.
-- **Dynamic Routes:** The system supports dynamic routes for blog posts (`/#/blog/:slug`) and project case studies (`/#/projects/:slug`). The router extracts the `slug` parameter and passes it to the appropriate page component. All project links across the site, including on the homepage and the main projects page, are now fully integrated with the dynamic routing system.
-- **Dynamic SEO Management:** An effect hook in `App.tsx` dynamically updates the document's `title` and `meta description` on every route change. For static routes, it uses metadata from the i18n files. For dynamic routes, it finds the specific content (e.g., a blog post or project) and uses its title and summary for the SEO metadata, ensuring every page is individually indexable by search engines.
+- **Layout Engine:** The `ProjectDetailLayout.tsx` component acts as a "page builder," dynamically rendering a page's layout based on an array of structured content blocks from a JSON file.
+- **Content as Data:** Each project's content is defined by a JSON file in `/i18n/content/projects/`. The content is an array of objects, where each object specifies a `type` (corresponding to a React component) and the `props` for that component. This allows for rich, varied article layouts without changing the page's code.
 
-### 3.2. Headless CMS Architecture (i18n)
+### 3.2. Gemini API Integration
 
-- **Mechanism:** The i18n system (`I18nProvider`) acts as a powerful content aggregator that simulates a headless CMS.
-- **Functionality:**
-  - On language change, `I18nProvider` fetches and merges multiple JSON files: the core UI strings, all primary page content files, and all use case files. This architecture **completely decouples content from the application code**, making content updates safe and simple.
-- **`useI18n` Hook:** The `t(key)` function works seamlessly with the merged object, allowing components to access any piece of content or UI string with a single, consistent API.
+#### **`GeminiBot.tsx` (ElliotBot Co-Pilot)**
+- **Context-Awareness:** Constructs a detailed system prompt by pulling data from the i18n content and is aware of the user's current route to offer proactive assistance.
+- **Tool-Use:** Can trigger actions like navigating to pages or filtering the use case library based on conversational commands.
+- **Streaming Responses:** Uses `chat.sendMessageStream` for a fluid, real-time user experience.
+- **Multimodal Bug Reporting:** Users can attach a screenshot when reporting a bug. The bot sends both the user's text and the image to the Gemini API. The AI analyzes the image, describes it, and includes this description in the generated bug report, providing richer context for debugging.
 
-### 3.3. Gemini API Integration
-
-The application leverages the Google Gemini API for two key features, demonstrating advanced AI capabilities.
-
-#### **`GeminiBot.tsx` (EllioBot Co-Pilot)**
-A floating chatbot that acts as an AI guide and co-pilot for the portfolio.
-
-- **Context-Awareness:** On initialization, it constructs a detailed system prompt by pulling data directly from the loaded i18n content (about, experience, skills). This makes the bot highly knowledgeable about the site's content.
-- **Streaming Responses:** The bot uses the `chat.sendMessageStream` method to provide real-time, token-by-token responses, creating a fluid and engaging "typing" effect for the user.
-- **Tool-Use ("Co-Pilot" Functionality):** The bot is engineered to perform actions.
-    - **Mechanism:** The system prompt defines a set of "tools" (`navigateTo`, `filterUseCases`) and instructs the Gemini model to respond with a specific JSON object when it determines a tool should be used.
-    - **Execution:** The frontend code in `GeminiBot.tsx` parses the final streamed message. If it's a valid JSON tool call, it executes the corresponding function (e.g., setting `window.location.hash`) and provides a confirmation message to the user.
-
-#### **`InvoiceDemo.tsx` (Interactive Demo)**
-A live demonstration within the Use Case library that showcases Gemini's multimodal and data extraction capabilities.
-
-- **Multimodal Input:** It sends both an image (a sample invoice) and a text prompt to the Gemini API in a single `generateContent` request.
-- **Structured Output:** It uses the `responseSchema` feature to instruct the model to return a structured JSON object containing the extracted invoice data. This provides a compelling, real-time example of AI's data extraction capabilities.
-
-### 3.4. Analytics
-
-- **Mechanism:** A simple, centralized analytics service is defined in `analytics.ts`. It acts as a wrapper for Google Analytics `gtag.js` calls.
-- **Functions:**
-  - `init()`: Called once when the app starts.
-  - `trackPageView(path, title)`: Called from `App.tsx` on every route change to track page views for SPA navigation.
-  - `trackEvent(name, params)`: Called from various components to track specific user interactions, such as opening the chatbot, viewing a use case, or filtering the catalogue.
-
-### 3.5. SEO & Discoverability
-
-- **Sitemap:** A `sitemap.xml` file is included in the project root. Its purpose is to inform search engine crawlers of all available URLs on the site, including static pages and dynamic blog post routes, to ensure proper indexing.
-- **Note:** The `sitemap.xml` file in the repository contains placeholder URLs and **must** be updated with the final production domain during deployment (see Production Deployment Guide below).
+#### **`AIDinoGame.tsx` (Gemini Rush)**
+- **Mechanism:** A live test of the `gemini-2.5-flash` model's instant binary decision-making capabilities.
+- **Low-Latency Configuration:** Optimized for speed by disabling thinking (`thinkingConfig: { thinkingBudget: 0 }`).
 
 ---
 
-## 4. Development & Maintenance Guidelines
+## 4. Style Guide
 
-### 4.1. Content Management
+### 4.1. Color Palette
 
-- **UI Strings vs. Page Content:**
-  - **UI Strings** (reusable text, navigation, labels) go in `/i18n/locales`.
-  - **Page Content** (timelines, project details, use cases, page-specific text) go in the `/i18n/content` directory.
+| Usage                   | CSS Variable                 | Light Mode Hex | Dark Mode Hex |
+| ----------------------- | ---------------------------- | -------------- | ------------- |
+| Primary Background      | `--primary-background`       | `#FFFFFF`      | `#111827`     |
+| Surface Background      | `--surface-background`       | `#F9FAFB`      | `#1F2937`     |
+| Border Color            | `--border-color`             | `#E5E7EB`      | `#374151`     |
+| Light Border Color      | `--border-color-light`       | `#F3F4F6`      | `#4B5563`     |
+| Primary Text/Headings   | `--primary-text`             | `#111827`      | `#F9FAFB`     |
+| Secondary Text          | `--secondary-text`           | `#4B5563`      | `#9CA3AF`     |
+| Interactive Elements    | `--interactive-blue`         | `#4F46E5`      | `#6366F1`     |
+| Interactive Hover       | `--interactive-hover`        | `#4338CA`      | `#818CF8`     |
+| Brand Orange            | `--primary-brand-orange`     | `#F26F21`      | `#F97316`     |
+| Brand Blue              | `--secondary-brand-blue`     | `#2A3B4E`      | `#38BDF8`     |
+| Footer Background       | `--footer-background`        | `#111827`      | `#0D1117`     |
+| Footer Text             | `--footer-text`              | `#FFFFFF`      | `#F9FAFB`     |
+| Footer Copyright        | `--footer-copyright`         | `#9CA3AF`      | `#6B7280`     |
 
-- **Adding a New Page:**
-  1.  Create the page component in `/pages`.
-  2.  Add a new content object for the page in a new file (e.g., `i18n/content/newpage.en.json`).
-  3.  Update `i18n/I18nContext.tsx` to fetch and merge the new content file.
-  4.  Add SEO metadata for the new page in the `/i18n/locales` files.
-  5.  Add the new route to `staticRoutes` in `App.tsx`.
-  6.  Add links in `Header.tsx` and `Footer.tsx`.
+### 4.2. Typography
 
-- **Featuring Content on the Homepage:**
-  - The 'Featured Work' section on the homepage is managed in `/i18n/content/home.en.json` and `home.fr.json` under the `homePage.projects` key. This section can feature a mix of projects, articles, or key use cases. To feature an item, add a new object to the `items` array with `imgSrc`, `title`, `description`, and a `link` pointing to the canonical URL (e.g., `#/projects/my-project-slug`).
+#### **Primary Font: Inter**
+Used for all body text, UI elements, and general content.
 
-- **Adding a Blog Post:**
-  1.  Add a new JSON object to the `posts` array inside the `blog` content file (e.g., `/i18n/content/blog.en.json`).
-  2.  Ensure the `slug` is unique and URL-friendly. No other code changes are needed.
+| Element                   | Weight          | Size       |
+| ------------------------- | --------------- | ---------- |
+| `<h1>` (Main Page Title)  | Bold (700)      | `3.052rem` |
+| `<h2>` (Section Titles)   | Bold (700)      | `2.441rem` |
+| `<p>`, `<li>`               | Regular (400)   | `1rem`     |
 
-- **Adding a Project Case Study:**
-  1.  Create new content files for each language in the `/i18n/content/projects/` directory (e.g., `my-new-project.en.json`).
-  2.  The file must follow the established JSON schema: `title`, `subtitle`, `heroImageUrl`, an `overview` object, and an array of `contentSections`.
-  3.  **Image Sourcing:** Images for `heroImageUrl` and within the `htmlContent` should be sourced from the asset list in `data/portfolioData.txt`. When embedding images within `htmlContent`, use a standard `<img>` tag and add `class="my-8 rounded-lg shadow-md"` for consistent styling. For example: `<img src="https://path/to/image.png" alt="Descriptive text" class="my-8 rounded-lg shadow-md">`.
-  4.  Add a corresponding summary object to the `items` array in the main `/i18n/content/projects.en.json` file. This object must include the `slug`, which must match the filename without the language and extension.
-  5.  The application's dynamic routing and content loading system will automatically generate the new page. No code changes in React components are required.
+#### **Secondary Font: Lora**
+Used for headings (`<h3>`) on project detail pages for an editorial feel.
 
-### 4.2. Branding & UI
+| Element             | Weight          | Size      |
+| ------------------- | --------------- | --------- |
+| Project Page `<h3>` | Semi-bold (600) | `2rem`    |
+| Project Page `<p>`  | Regular (400)   | `1.125rem`|
 
-- **Logo:** The official brand logo is implemented in `components/icons/BrandLogo.tsx`. Use this component wherever the brand mark is needed to ensure consistency.
-- **Styling:** Adhere to the color and typography variables defined in `:root` in `index.html`. New components should leverage TailwindCSS classes and these CSS variables.
-
----
-
-## 5. Production Deployment Guide
-
-This checklist should be followed when preparing the application for a production environment.
-
-### 5.1. Finalize SEO & Analytics
-- **[CRITICAL] Update Sitemap:** Open `sitemap.xml` and replace all instances of the placeholder URL (`https://www.example.com`) with the final production domain (`https://www.e-margot.ch`).
-- **[CRITICAL] Update Google Analytics ID:** In `index.html` and `analytics.ts`, replace the placeholder `G-XXXXXXXXXX` with the actual Google Analytics Measurement ID for the production domain.
-
-### 5.2. Submit Sitemap to Search Engines
-Once your site is live at its final domain, you should submit your sitemap to Google to ensure all pages are indexed correctly and to monitor your site's performance in search results.
-
-1.  **Access Google Search Console:** Log in to [Google Search Console](https://search.google.com/search-console) with your Google account.
-2.  **Add Your Property:** If you haven't already, add your website's domain (`https://www.e-margot.ch`) as a new property and follow the steps to verify ownership.
-3.  **Navigate to Sitemaps:** In the left-hand menu, under the "Indexing" section, click on "Sitemaps".
-4.  **Submit the Sitemap:** In the "Add a new sitemap" section, enter the path to your sitemap file: `sitemap.xml`. The full URL should be `https://www.e-margot.ch/sitemap.xml`.
-5.  **Click Submit:** Google will now periodically crawl and index the URLs listed in your sitemap. You can return to this section to check the status and see if any issues are discovered.
-
-### 5.3. Configure Environment
-- **[CRITICAL] Set Gemini API Key:** The application requires the `process.env.API_KEY` environment variable to be set in the production hosting environment. This is essential for all AI features to function.
-
-### 5.4. Pre-flight Checks
-- **Functionality:** Perform a full regression test of all key features: routing, language switching, chatbot interactions (including tool-use), and the use case catalogue.
-- **Cross-Browser Compatibility:** Test the application on the latest versions of major browsers (Chrome, Firefox, Safari, Edge).
-- **Responsiveness:** Verify that the layout is correct across a range of device sizes, from mobile to desktop.
-- **Performance:** Run a performance audit (e.g., using Lighthouse) to check for any major issues with loading speed or runtime performance.
+### 4.3. Dark Mode
+The application features a full dark mode. A theme toggle button is located in the header, allowing users to switch between light and dark themes. The user's preference is saved in `localStorage` and will be applied on subsequent visits. The system also respects the user's operating system preference (`prefers-color-scheme`) for the initial visit.
 
 ---
 
-## 6. Known Issues & Technical Debt
+## 5. Component Library (Selected)
 
-This section documents known bugs or areas of technical debt that are slated for future improvement.
+A library of reusable components that can be rendered by the "Page Builder" engine.
 
-### 6.1. Navigation Bug from Project Detail Page
+- **`FaqAccordion.tsx`**
+  - **Description:** A clean, modern accordion for displaying Q&A content with smooth open/close animations.
+  - **Props:** `items: { question: string; answer: string; }[]`
 
-- **Status:** **Resolved**. Tracked in `backlog.md` as EPIC 43.
-- **Description:** A critical bug was identified where navigating from a project detail page (e.g., `/#/projects/ai-ethics-insurance`) back to the main projects listing page (`/#/projects`) caused a fatal JavaScript error: `Uncaught TypeError: posts.forEach is not a function`.
-- **Root Cause Analysis & Fix:** The error was traced to the `t()` function in `I18nContext.tsx`. When a nested translation key (e.g., `blog.posts`) was not found, the function would incorrectly return the key itself as a string. Components expecting an array and using a fallback (e.g., `t('blog.posts') || []`) would then receive the string `"blog.posts"` instead of an empty array, causing a crash when an array method like `.forEach()` was called. The issue was resolved by modifying the `t()` function to return `undefined` on failure. This ensures that the `|| []` fallback now works as intended, making the entire content-loading system more robust against missing translation keys.
+- **`MythVsFact.tsx`**
+  - **Description:** A component for clearly distinguishing between a myth and a fact using distinct color-coding.
+  - **Props:** `myth: string`, `fact: string`
+
+- **`ProTip.tsx`**
+  - **Description:** A callout box for highlighting professional tips or important advice, featuring a lightbulb icon.
+  - **Props:** `content: string`
+  
+- **`CodeBlock.tsx`**
+  - **Description:** A professionally styled component for displaying code snippets with a "macOS-style" window theme and syntax highlighting.
+  - **Props:** `code: string`, `language: string`, `theme: 'window' | 'default'`
+  
+- **`DemoCard.tsx`**
+  - **Description:** A prominent, interactive card used to launch interactive demos. Features glowing hover effects and a "Play" button.
+  - **Props:** `description: string`, `buttonText: string`, `onClick: () => void`
+
+- **`Card.tsx`**
+  - **Description:** A versatile card component with multiple variants (`simple`, `project-overview`, `carousel`) for displaying linked content.
+  - **Props:** `variant`, `imageUrl`, `category`, `title`, `description`, `link`, etc.
+
+---
+
+## 6. Development & Maintenance Guidelines
+
+### 6.1. Content Management
+- **UI Strings vs. Page Content:** UI strings (e.g., button labels, navigation) go in `/i18n/locales`. All page-specific, authored content goes in `/i18n/content`.
+- **Adding a Project:**
+  1.  Create a new JSON file in `/i18n/content/projects/` (e.g., `my-new-project.en.json`).
+  2.  Author the `content` array using the available component types listed in the `ProjectDetailLayout.tsx` component map.
+  3.  Add a corresponding summary object to `i18n/content/projects.en.json`, ensuring the `slug` matches the filename.
+
+### 6.2. Styling
+- **Methodology:** Use a component-scoped CSS approach. Each component should have its own stylesheet in the `/styles` directory.
+- **Global Styles:** Use `styles/global.css` for root CSS variables, a CSS reset, and base element styles only. Avoid adding component-specific styles here.
+- **Naming Convention:** Use a BEM-like naming convention (`block-name__element-name--modifier-name`) for clarity and to avoid style conflicts.

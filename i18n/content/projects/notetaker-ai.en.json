@@ -1,0 +1,72 @@
+{
+    "title": "NoteTaker AI: Intelligent Note-Taking & Knowledge Management",
+    "subtitle": "A privacy-first, offline-capable, intelligent workspace that uses generative AI to transcribe, summarize, and organize your notes.",
+    "heroImageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756108979/The_Seamless_Integration.657Z_wosybg.png",
+    "overview": {
+        "industry": "Productivity Software",
+        "timeline": "Open Source Project",
+        "techStack": "React, TypeScript, Gemini API, IndexedDB"
+    },
+    "content": [
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "High-Level Concept"
+        },
+        {
+            "type": "html",
+            "value": "<p>NoteTaker AI is a <strong>privacy-first, offline-capable, intelligent note-taking application</strong> that acts as a user's 'second brain.' It transforms unstructured information from meetings and documents into organized, accessible knowledge using the power of generative AI. It is designed for the privacy-conscious professional, student, researcher, or creative who deals with a high volume of information and desires a tool that actively helps in sense-making.</p>"
+        },
+        {
+            "type": "icon-feature-list",
+            "variant": "two-columns",
+            "items": [
+                { "icon": "CheckShieldIcon", "title": "Absolute Privacy & Ownership", "description": "All your data is stored exclusively in your browser's IndexedDB. There is no backend server. We never see or store your notes. You own your data completely." },
+                { "icon": "MobileIcon", "title": "Uninterrupted Offline Access", "description": "The application is fully functional without an internet connection. Notes can be created, edited, and organized offline. AI features are queued and run when you're back online." },
+                { "icon": "BrainIcon", "title": "AI-Powered Organization", "description": "Leverages the Google Gemini API to understand, organize, and enrich your notes, turning raw text into structured knowledge automatically." }
+            ]
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Core Features"
+        },
+        {
+            "type": "html",
+            "value": "<h4>AI-Powered Analysis</h4><p>When a note is created or a meeting is transcribed, the AI automatically analyzes the content to provide a suite of insights:</p><ul><li><strong>Automatic Categorization:</strong> The AI assigns a project and subject to each note.</li><li><strong>Summaries:</strong> Generates both a concise and a detailed summary for long notes and meetings.</li><li><strong>To-Do Extraction:</strong> Pulls actionable to-do items from your text so you don’t miss anything.</li><li><strong>Key People & Decisions:</strong> Identifies people mentioned and highlights any key decisions made.</li><li><strong>Intelligent Tagging:</strong> Assigns relevant tags for easy filtering and discovery of related content.</li></ul><h4>Productivity Tools</h4><ul><li><strong>Live Transcription:</strong> Capture conversations in real-time with the 'Start a Meeting' feature.</li><li><strong>File Upload & OCR:</strong> Upload PDFs, images, or DOCX files. The AI performs OCR and organizes them into notes.</li><li><strong>Advanced Search:</strong> Search across title, content, summaries, and tags to find anything instantly.</li></ul>"
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Technical Architecture: A Privacy-First Approach"
+        },
+        {
+            "type": "html",
+            "value": "<p>The application is a pure Single-Page Application (SPA) with no proprietary backend server. All logic, rendering, and data management happen in the user's browser.</p>"
+        },
+        {
+            "type": "learning-box",
+            "title": "Local-First Data Storage",
+            "content": "<p>All user data (notes, projects, API keys) resides entirely on the user's local machine within the browser's sandboxed <strong>IndexedDB</strong> storage. This is the bedrock of the app's privacy and offline-first model. The app can function completely without an internet connection.</p>"
+        },
+        {
+            "type": "code",
+            "language": "typescript",
+            "theme": "window",
+            "code": "import { openDB } from 'idb';\n\nconst dbPromise = openDB('NoteTakerDB', 1, {\n  upgrade(db) {\n    db.createObjectStore('notes', { keyPath: 'id' });\n    db.createObjectStore('projects', { keyPath: 'id' });\n    db.createObjectStore('userSettings', { keyPath: 'id' });\n  },\n});\n\n// All data operations are local, ensuring privacy and offline access."
+        },
+        {
+            "type": "html",
+            "value": "<p>The AI Service Layer is the sole gateway for all AI interactions. Note content is sent from the user's browser directly to the Google Gemini API over HTTPS. It is never proxied through any third-party server, ensuring a secure and private connection between the user and the AI model.</p>"
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Project Status & Future"
+        },
+        {
+            "type": "html",
+            "value": "<p>NoteTaker AI is currently a conceptual open-source project. The goal is to provide a powerful, privacy-respecting productivity tool that leverages the best of modern web technologies and generative AI. Future plans include implementing a local-first AI mode using models like Llama 3 via Ollama, and expanding the Student Productivity Suite with more advanced features.</p>"
+        }
+    ]
+}

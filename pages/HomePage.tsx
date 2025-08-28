@@ -1,18 +1,52 @@
 import React from 'react';
-import Hero from '../components/Hero';
-import HomeExpertise from '../components/HomeExpertise';
-import HomeProjects from '../components/HomeProjects';
+import AnimatedHero from '../components/AnimatedHero';
+import IconFeatureList from '../components/IconFeatureList';
+import CardGrid from '../components/CardGrid';
+import { useI18n } from '../i18n/useI18n';
+import GitHubUserCard from '../components/GitHubUserCard';
+import type { BreadcrumbLink } from '../types';
+import TextImage from '../components/TextImage';
 
-const HomePage: React.FC = () => {
+interface HomePageProps {
+    breadcrumbs: BreadcrumbLink[];
+}
+
+const HomePage: React.FC<HomePageProps> = ({ breadcrumbs }) => {
+    const { t } = useI18n();
+    const homeData = t('homePage');
+
+    if (!homeData) return null;
+
+    const { animatedHero, expertise, approach, projects, github } = homeData;
+
     return (
         <>
-            <Hero />
-            <div className="py-24 md:py-32 bg-[var(--surface-background)]">
-                <HomeExpertise />
-            </div>
-             <div className="py-24 md:py-32">
-                <HomeProjects />
-            </div>
+            <AnimatedHero {...animatedHero} />
+            <section>
+                <IconFeatureList 
+                    title={expertise.title}
+                    items={expertise.items}
+                    variant="two-columns"
+                />
+            </section>
+            {approach && (
+                <TextImage {...approach} />
+            )}
+             <section>
+                <CardGrid 
+                    title={projects.title}
+                    cards={projects.cards}
+                />
+            </section>
+            {github && (
+                <section>
+                    <div className="home-github-container">
+                        <h2 className="home-github-title">{github.title}</h2>
+                        <div className="home-github-divider"></div>
+                        <GitHubUserCard {...github.profile} />
+                    </div>
+                </section>
+            )}
         </>
     );
 };

@@ -1,62 +1,120 @@
-import React from 'react';
+import React, { useState, useMemo } from 'react';
 import { useI18n } from '../i18n/useI18n';
+import Breadcrumb from './Breadcrumb';
+import type { BreadcrumbLink } from '../types';
+import { Card } from './Card';
+import GitHubRepoCard from './GitHubRepoCard';
+import '../styles/Projects.css';
 
-interface ProjectItemProps {
+interface Project {
     imgSrc: string;
     title: string;
     description: string;
     link: string;
+    categoryKey: string;
 }
 
-const ProjectCard: React.FC<ProjectItemProps> = ({ imgSrc, title, description, link }) => {
-    const { t } = useI18n();
-    
-    const handleNav = (e: React.MouseEvent<HTMLAnchorElement>) => {
-        e.preventDefault();
-        window.location.hash = link;
-    };
+interface GitHubRepo {
+    repoName: string;
+    description: string;
+    stars: string;
+    forks: string;
+    language?: string;
+    repoUrl: string;
+}
 
-    return (
-        <a href={link} onClick={handleNav} className="block group">
-            <div className="bg-white rounded-lg overflow-hidden custom-shadow flex flex-col h-full transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
-                <img src={imgSrc} alt={title} className="w-full h-80 object-cover" loading="lazy" width="400" height="320" />
-                <div className="p-8 flex flex-col flex-grow">
-                    <h3 className="text-2xl font-semibold text-[var(--primary-text)] mb-3 leading-[1.3]">{title}</h3>
-                    <p className="text-[var(--secondary-text)] leading-relaxed mb-6 flex-grow">{description}</p>
-                    <span className="font-semibold text-[var(--interactive-blue)] group-hover:text-[var(--interactive-hover)] transition-colors self-start">
-                        {t('projects.learnMore')} &rarr;
-                    </span>
-                </div>
-            </div>
-        </a>
-    );
-};
+interface ProjectsProps {
+    breadcrumbs: BreadcrumbLink[];
+}
 
-const Projects: React.FC = () => {
+const Projects: React.FC<ProjectsProps> = ({ breadcrumbs }) => {
     const { t } = useI18n();
     const headerData = t('projects.header');
-    const projectsData = t('projects.items') || [];
+    const projectsData = (t('projects.items') || []) as Project[];
+    const githubHeader = t('projects.githubHeader');
+    const githubProjects = (t('projects.githubProjects') || []) as GitHubRepo[];
+    const categories = t('projects.categories') || {};
+
+    const [activeCategory, setActiveCategory] = useState('all');
+
+    const filteredProjects = useMemo(() => {
+        if (activeCategory === 'all') {
+            return projectsData;
+        }
+        return projectsData.filter(p => p.categoryKey === activeCategory);
+    }, [projectsData, activeCategory]);
 
     const headerStyle = {
         backgroundImage: `url('https://raw.githubusercontent.com/OwnOptic/Website-storage/main/Augmented%20Intelligence.png')`
     };
 
     return (
-        <div className="bg-[var(--surface-background)] min-h-screen">
-            <header className="relative h-[45vh] min-h-[350px] flex items-center justify-center text-center text-white">
-                <div className="absolute inset-0 bg-cover bg-center brightness-50" style={headerStyle}></div>
-                <div className="relative z-10 p-4">
-                    <h1 className="text-4xl md:text-6xl font-bold">{headerData.title}</h1>
-                    <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-gray-200">{headerData.subtitle}</p>
+        <div className="projects-page">
+            <header className="projects-header">
+                <div className="projects-header-bg" style={headerStyle}></div>
+                <div className="projects-header-content">
+                    <h1>{headerData.title}</h1>
+                    <p>{headerData.subtitle}</p>
                 </div>
             </header>
             
-            <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-                 <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-10 text-left">
-                     {projectsData.map((item: ProjectItemProps, index: number) => (
-                         <ProjectCard key={index} {...item} />
+            <main className="projects-main-content">
+                 <Breadcrumb links={breadcrumbs} />
+
+                 <section className="projects-filters">
+                    <h3 className="projects-filters-title">{t('projects.filters.title')}</h3>
+                    <div className="projects-filters-buttons">
+                        <button
+                            onClick={() => setActiveCategory('all')}
+                            className={`filter-button ${activeCategory === 'all' ? 'active' : ''}`}
+                        >
+                            {t('projects.filters.all')}
+                        </button>
+                        {Object.keys(categories).map(key => (
+                            <button
+                                key={key}
+                                onClick={() => setActiveCategory(key)}
+                                className={`filter-button ${activeCategory === key ? 'active' : ''}`}
+                            >
+                                {categories[key]}
+                            </button>
+                        ))}
+                    </div>
+                 </section>
+
+                 <div className="projects-grid">
+                     {filteredProjects.map((project: Project, index: number) => (
+                         <Card
+                            key={index}
+                            variant="simple"
+                            imageUrl={project.imgSrc}
+                            category={categories[project.categoryKey]}
+                            title={project.title}
+                            description={project.description}
+                            link={project.link}
+                            buttonText={t('projects.learnMore')}
+                         />
                      ))}
                  </div>
+                 {filteredProjects.length === 0 && (
+                    <div className="projects-no-results">
+                        <p>No Projects Found</p>
+                        <p>There are no projects in this category yet.</p>
+                    </div>
+                 )}
+
+                 {githubProjects.length > 0 && githubHeader && (
+                     <section className="projects-github-section">
+                        <div className="projects-section-header">
+                             <h2 className="projects-section-title">{githubHeader.title}</h2>
+                             <p className="projects-section-subtitle">{githubHeader.subtitle}</p>
+                             <div className="projects-section-divider"></div>
+                        </div>
+                         <div className="projects-grid">
+                            {githubProjects.map((repo, index) => <GitHubRepoCard key={index} {...repo} />)}
+                        </div>
+                     </section>
+                 )}
             </main>
         </div>
     );

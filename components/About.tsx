@@ -1,85 +1,114 @@
 import React from 'react';
 import { useI18n } from '../i18n/useI18n';
 import LinkedinIcon from './icons/LinkedinIcon';
+import Breadcrumb from './Breadcrumb';
+import type { BreadcrumbLink } from '../types';
+import HeroV2 from './HeroV2';
+import CardGrid from './CardGrid';
+import GitHubUserCard from './GitHubUserCard';
+import Timeline from './Timeline';
+import { SwissFlagIcon, GermanyFlagIcon, FranceFlagIcon, UKFlagIcon } from './index';
+import '../styles/About.css';
 
-const About: React.FC = () => {
+interface AboutProps {
+    breadcrumbs: BreadcrumbLink[];
+}
+
+const About: React.FC<AboutProps> = ({ breadcrumbs }) => {
     const { t } = useI18n();
-    const skills = t('about.skills.items') || [];
-    const journey = t('about.journey.items') || [];
-    
-    const headerStyle = {
-        backgroundImage: `url('https://raw.githubusercontent.com/OwnOptic/Website-storage/main/The%20Future%20of%20Work.294Z.png')`
-    };
+    const aboutData = t('about');
+
+    if (!aboutData || !aboutData.heroV2 || !aboutData.header) return null;
+
+    const { header, heroV2, intro, journey, skills, cardGrid, github, latestProject } = aboutData;
 
     const handleNav = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
         e.preventDefault();
         window.location.hash = path;
     };
 
+    const journeyItems = (journey.items || []).map((item: any) => ({
+        title: item.role,
+        subtitle: item.company,
+        period: item.period,
+        description: [item.description],
+        imageUrl: item.imageUrl,
+        techStack: item.techStack,
+    }));
+
     return (
         <div>
-             <header className="relative h-[45vh] min-h-[350px] flex items-center justify-center text-center text-white">
-                <div className="absolute inset-0 bg-cover bg-center brightness-50" style={headerStyle}></div>
-                <div className="relative z-10 p-4">
-                    <h1 className="text-4xl md:text-6xl font-bold">{t('about.header.title')}</h1>
-                    <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-gray-200">{t('about.header.subtitle')}</p>
-                </div>
-            </header>
+            <HeroV2 
+                variant="full-centered-gradient"
+                imageUrl={heroV2.imageUrl}
+                title={header.title}
+                subtitle={header.subtitle}
+            />
 
-            <main className="bg-white">
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-                    <section className="grid md:grid-cols-[250px_1fr] gap-12 items-center text-center md:text-left mb-16">
+            <main className="about-page-main">
+                <div className="about-page-container">
+                    <Breadcrumb links={breadcrumbs} />
+                    <section className="about-intro-section">
                          <div>
                             <img 
                                 src="https://github.com/OwnOptic/Website-storage/blob/main/img%20cv.jpg?raw=true"
                                 alt="Elliot Margot"
-                                className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover shadow-lg mx-auto border-4 border-white"
+                                className="about-profile-image"
                                 loading="lazy"
                                 width="224"
                                 height="224"
                             />
                         </div>
-                        <div>
-                            <h3 className="text-2xl font-semibold text-[var(--primary-text)] mb-4">{t('about.intro.title')}</h3>
-                            <p className="text-[var(--secondary-text)] leading-[1.7] text-[1.1rem]">
-                                {t('about.intro.p1')}
+                        <div className="about-intro-content">
+                            <h3 className="about-intro-title">{intro.title}</h3>
+                            <p className="about-intro-text">
+                                {intro.p1}
                             </p>
-                             <div className="flex justify-center md:justify-start space-x-4 mt-6">
-                                <a href="https://www.linkedin.com/in/elliot-margot-52742a156/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-gray-500 hover:text-[var(--interactive-blue)] transition-colors duration-200">
+                             <div className="about-socials">
+                                <a href="https://www.linkedin.com/in/elliot-margot-52742a156/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="about-social-link">
                                     <LinkedinIcon className="w-8 h-8" />
                                 </a>
+                                <SwissFlagIcon className="w-8 h-8" title="Swiss" />
+                                <GermanyFlagIcon className="w-8 h-8" title="German"/>
+                                <FranceFlagIcon className="w-8 h-8" title="French" />
+                                <UKFlagIcon className="w-8 h-8" title="English"/>
                             </div>
                         </div>
                     </section>
 
-                    <section className="py-16 border-t border-gray-200">
-                        <h2 className="text-[2.441rem] font-bold text-[var(--primary-text)] mb-12 text-center">{t('about.journey.title')}</h2>
-                         <div className="relative pl-8 before:content-[''] before:absolute before:left-2 before:top-2 before:bottom-2 before:w-1 before:bg-gray-200 before:rounded-full">
-                            {journey.map((item: any, index: number) => (
-                                <div key={index} className="relative mb-8">
-                                    <div className="absolute -left-7 top-1.5 w-5 h-5 bg-[var(--interactive-blue)] rounded-full border-4 border-white"></div>
-                                    <h4 className="font-bold text-lg text-[var(--primary-text)]">{item.role}</h4>
-                                    <p className="text-sm text-[var(--secondary-text)] font-semibold mb-2">{item.company}</p>
-                                    <p className="text-[var(--secondary-text)]">{item.description}</p>
-                                </div>
-                            ))}
-                        </div>
-                        <div className="flex justify-center gap-4 mt-12">
-                            <a href="#/experience" onClick={(e) => handleNav(e, '#/experience')} className="bg-gray-100 text-[var(--primary-text)] font-semibold py-3 px-6 rounded-[4px] hover:bg-gray-200 transition-colors duration-200">{t('about.journey.ctaExperience')}</a>
-                            <a href="#/education" onClick={(e) => handleNav(e, '#/education')} className="bg-gray-100 text-[var(--primary-text)] font-semibold py-3 px-6 rounded-[4px] hover:bg-gray-200 transition-colors duration-200">{t('about.journey.ctaEducation')}</a>
+                    <section>
+                        <h2 className="about-section-title">{journey.title}</h2>
+                        <Timeline items={journeyItems} />
+                        <div className="about-cta-container">
+                            <a href="#/experience" onClick={(e) => handleNav(e, '#/experience')} className="about-cta-button">{journey.ctaExperience}</a>
+                            <a href="#/education" onClick={(e) => handleNav(e, '#/education')} className="about-cta-button">{journey.ctaEducation}</a>
                         </div>
                     </section>
 
-                    <section className="py-16 border-t border-gray-200">
-                        <h2 className="text-[2.441rem] font-bold text-[var(--primary-text)] mb-12 text-center">{t('about.skills.title')}</h2>
-                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {skills.map((skill: any, index: number) => (
-                                <div key={index} className="bg-gray-50 p-6 rounded-lg border border-gray-200 hover:shadow-md hover:-translate-y-1 transition-all duration-300">
-                                    <h4 className="font-bold text-lg text-[var(--primary-text)] mb-2">{skill.name}</h4>
-                                    <p className="text-sm text-[var(--secondary-text)]">{skill.description}</p>
-                                </div>
-                            ))}
-                        </div>
+                    {latestProject && (
+                        <section className="about-section-center">
+                            <h2 className="about-section-title">{latestProject.title}</h2>
+                             <div className="latest-project-card">
+                                <h3>{latestProject.subtitle}</h3>
+                                <p>{latestProject.description}</p>
+                            </div>
+                        </section>
+                    )}
+
+                    {github && (
+                        <section className="about-section-center">
+                           <h2 className="about-section-title">{github.title}</h2>
+                           <GitHubUserCard {...github.profile} />
+                       </section>
+                    )}
+
+                    <section>
+                         {skills && cardGrid && (
+                            <CardGrid 
+                                title={skills.title}
+                                cards={cardGrid.cards}
+                            />
+                        )}
                     </section>
                 </div>
             </main>

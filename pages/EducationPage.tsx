@@ -1,9 +1,14 @@
 import React from 'react';
 import Education from '../components/Education';
+import type { BreadcrumbLink } from '../types';
 
-const EducationPage: React.FC = () => {
+interface EducationPageProps {
+    breadcrumbs: BreadcrumbLink[];
+}
+
+const EducationPage: React.FC<EducationPageProps> = ({ breadcrumbs }) => {
     return (
-        <Education />
+        <Education breadcrumbs={breadcrumbs} />
     );
 };
 

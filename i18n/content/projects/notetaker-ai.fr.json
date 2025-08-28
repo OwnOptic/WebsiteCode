@@ -1,0 +1,72 @@
+{
+    "title": "NoteTaker AI : Prise de Notes Intelligente et Gestion de Connaissances",
+    "subtitle": "Un espace de travail intelligent, privé et fonctionnant hors ligne, qui utilise l'IA générative pour transcrire, résumer et organiser vos notes.",
+    "heroImageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756108979/The_Seamless_Integration.657Z_wosybg.png",
+    "overview": {
+        "industry": "Logiciel de Productivité",
+        "timeline": "Projet Open Source",
+        "techStack": "React, TypeScript, API Gemini, IndexedDB"
+    },
+    "content": [
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Concept de Haut Niveau"
+        },
+        {
+            "type": "html",
+            "value": "<p>NoteTaker AI est une <strong>application de prise de notes intelligente, axée sur la confidentialité et capable de fonctionner hors ligne</strong>, qui agit comme un 'second cerveau' pour l'utilisateur. Elle transforme les informations non structurées provenant de réunions et de documents en connaissances organisées et accessibles grâce à la puissance de l'IA générative. Elle est conçue pour le professionnel, l'étudiant, le chercheur ou le créatif soucieux de sa vie privée qui traite un grand volume d'informations et souhaite un outil qui l'aide activement à donner du sens.</p>"
+        },
+        {
+            "type": "icon-feature-list",
+            "variant": "two-columns",
+            "items": [
+                { "icon": "CheckShieldIcon", "title": "Confidentialité et Propriété Absolues", "description": "Toutes vos données sont stockées exclusivement dans l'IndexedDB de votre navigateur. Il n'y a pas de serveur backend. Nous ne voyons ni ne stockons jamais vos notes. Vous êtes propriétaire de vos données." },
+                { "icon": "MobileIcon", "title": "Accès Hors Ligne Ininterrompu", "description": "L'application est entièrement fonctionnelle sans connexion Internet. Les notes peuvent être créées, modifiées et organisées hors ligne. Les fonctionnalités d'IA sont mises en file d'attente et s'exécutent lorsque vous êtes de nouveau en ligne." },
+                { "icon": "BrainIcon", "title": "Organisation par l'IA", "description": "Tire parti de l'API Google Gemini pour comprendre, organiser et enrichir vos notes, transformant automatiquement le texte brut en connaissances structurées." }
+            ]
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Fonctionnalités Principales"
+        },
+        {
+            "type": "html",
+            "value": "<h4>Analyse par l'IA</h4><p>Lorsqu'une note est créée ou qu'une réunion est transcrite, l'IA analyse automatiquement le contenu pour fournir une suite d'informations :</p><ul><li><strong>Catégorisation Automatique :</strong> L'IA attribue un projet et un sujet à chaque note.</li><li><strong>Résumés :</strong> Génère des résumés concis et détaillés pour les longues notes et réunions.</li><li><strong>Extraction de Tâches :</strong> Extrait les actions à entreprendre de votre texte pour que vous n'oubliez rien.</li><li><strong>Personnes Clés et Décisions :</strong> Identifie les personnes mentionnées et met en évidence les décisions clés prises.</li><li><strong>Étiquetage Intelligent :</strong> Attribue des étiquettes pertinentes pour un filtrage facile et la découverte de contenu connexe.</li></ul><h4>Outils de Productivité</h4><ul><li><strong>Transcription en Direct :</strong> Capturez les conversations en temps réel avec la fonction 'Démarrer une réunion'.</li><li><strong>Téléchargement de Fichiers & OCR :</strong> Téléchargez des PDF, des images ou des fichiers DOCX. L'IA effectue une reconnaissance optique de caractères et les organise en notes.</li><li><strong>Recherche Avancée :</strong> Recherchez dans les titres, le contenu, les résumés et les étiquettes pour trouver n'importe quoi instantanément.</li></ul>"
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Architecture Technique : Une Approche Axée sur la Confidentialité"
+        },
+        {
+            "type": "html",
+            "value": "<p>L'application est une pure application monopage (SPA) sans serveur backend propriétaire. Toute la logique, le rendu et la gestion des données se font dans le navigateur de l'utilisateur.</p>"
+        },
+        {
+            "type": "learning-box",
+            "title": "Stockage de Données Local-First",
+            "content": "<p>Toutes les données de l'utilisateur (notes, projets, clés API) résident entièrement sur la machine locale de l'utilisateur dans le stockage sandboxed <strong>IndexedDB</strong> du navigateur. C'est le fondement du modèle de confidentialité et de fonctionnement hors ligne de l'application. L'application peut fonctionner complètement sans connexion Internet.</p>"
+        },
+        {
+            "type": "code",
+            "language": "typescript",
+            "theme": "window",
+            "code": "import { openDB } from 'idb';\n\nconst dbPromise = openDB('NoteTakerDB', 1, {\n  upgrade(db) {\n    db.createObjectStore('notes', { keyPath: 'id' });\n    db.createObjectStore('projects', { keyPath: 'id' });\n    db.createObjectStore('userSettings', { keyPath: 'id' });\n  },\n});\n\n// Toutes les opérations de données sont locales, garantissant la confidentialité et l'accès hors ligne."
+        },
+        {
+            "type": "html",
+            "value": "<p>La couche de service IA est la seule passerelle pour toutes les interactions IA. Le contenu des notes est envoyé du navigateur de l'utilisateur directement à l'API Google Gemini via HTTPS. Il n'est jamais transmis via un serveur tiers, garantissant une connexion sécurisée et privée entre l'utilisateur et le modèle IA.</p>"
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Statut du Projet et Avenir"
+        },
+        {
+            "type": "html",
+            "value": "<p>NoteTaker AI est actuellement un projet conceptuel open-source. L'objectif est de fournir un outil de productivité puissant et respectueux de la vie privée qui tire parti des meilleures technologies web modernes et de l'IA générative. Les plans futurs incluent la mise en œuvre d'un mode IA local-first utilisant des modèles comme Llama 3 via Ollama, et l'expansion de la Suite de Productivité pour Étudiants avec des fonctionnalités plus avancées.</p>"
+        }
+    ]
+}

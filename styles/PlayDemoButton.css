@@ -1,0 +1,81 @@
+@keyframes shine-effect {
+    0% { transform: translateX(-150%) skewX(-25deg); }
+    100% { transform: translateX(150%) skewX(-25deg); }
+}
+
+.play-demo-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: white;
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.4);
+    transform: perspective(1px) translateZ(0);
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background-image: linear-gradient(to right, #6d28d9, #7c3aed, #a78bfa);
+}
+
+.play-demo-button.small {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.875rem;
+}
+.play-demo-button.small .play-icon {
+    width: 0.875rem;
+    height: 0.875rem;
+}
+
+.play-demo-button.default {
+    padding: 0.625rem 1.75rem;
+    font-size: 1rem;
+}
+.play-demo-button.default .play-icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+.play-demo-button.large {
+    padding: 0.75rem 2.25rem;
+    font-size: 1.125rem;
+}
+.play-demo-button.large .play-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.play-demo-button:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 7px 20px rgba(124, 58, 237, 0.5);
+}
+
+.play-demo-button:active {
+    transform: translateY(0) scale(0.98);
+    box-shadow: 0 2px 10px rgba(124, 58, 237, 0.3);
+}
+
+.shine-effect {
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+    transform: skewX(-25deg);
+    opacity: 0;
+}
+
+.play-demo-button:hover .shine-effect {
+    opacity: 1;
+    animation: shine-effect 1s ease-in-out;
+}
+
+.play-icon {
+    margin-right: 0.5rem;
+    transition: transform 0.3s ease-in-out;
+}

@@ -1,9 +1,14 @@
 import React from 'react';
 import Certificates from '../components/Certificates';
+import type { BreadcrumbLink } from '../types';
 
-const CertificatesPage: React.FC = () => {
+interface CertificatesPageProps {
+    breadcrumbs: BreadcrumbLink[];
+}
+
+const CertificatesPage: React.FC<CertificatesPageProps> = ({ breadcrumbs }) => {
     return (
-        <Certificates />
+        <Certificates breadcrumbs={breadcrumbs} />
     );
 };
 

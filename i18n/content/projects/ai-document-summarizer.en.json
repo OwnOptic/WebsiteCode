@@ -1,0 +1,50 @@
+
+{
+    "title": "AI-Powered Document Summarizer",
+    "subtitle": "A practical tool that uses Generative AI to summarize long technical documents, reports, and articles, showcasing advanced NLP capabilities.",
+    "heroImageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109013/Gemini_Generated_Image_kmtfcgkmtfcgkmtf_huaq2v.png",
+    "overview": {
+        "industry": "AI Tools",
+        "timeline": "2 Weeks",
+        "techStack": "Generative AI, Power Automate, AI Builder"
+    },
+    "content": [
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "The Problem: Information Overload"
+        },
+        {
+            "type": "html",
+            "value": "<p>In many professional fields, staying up-to-date requires reading through dense, lengthy documents. This 'information overload' is a significant drain on productivity. This project aimed to solve that problem by creating a simple yet powerful tool to distill long-form text into concise, easy-to-digest summaries.</p>"
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "The Solution: An Automated Summarization Engine"
+        },
+        {
+            "type": "html",
+            "value": "<p>The solution is a Power Automate flow that can be triggered in multiple ways (e.g., by an email, a file drop in OneDrive, or a button in a Power App). The core of the flow uses the AI Builder 'Create text with GPT on Azure OpenAI Service' action. The flow reads the text content from the source document and passes it to the model with a carefully crafted prompt.</p>"
+        },
+        {
+            "type": "learning-box",
+            "title": "The Power of Prompt Engineering",
+            "content": "<p>The quality of the summary is highly dependent on the prompt. The prompt was engineered to instruct the AI to act as a subject matter expert and to extract not just a general summary, but also key takeaways and potential action items, providing a much richer output than a simple paragraph.</p>"
+        },
+        {
+            "type": "code",
+            "language": "text",
+            "code": "You are an expert business analyst. Summarize the following document in three distinct sections:\n1. A concise, one-paragraph summary of the entire document.\n2. A bulleted list of the top 5 key takeaways.\n3. A bulleted list of potential action items for the management team."
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Project Outcome"
+        },
+        {
+            "type": "html",
+            "value": "<p>The result is a versatile tool that can be integrated into various business workflows. It significantly reduces the time required to understand complex documents, allowing professionals to make faster, more informed decisions. This project serves as a powerful example of how Generative AI can be practically applied to solve common business challenges and boost productivity.</p>"
+        }
+    ]
+}

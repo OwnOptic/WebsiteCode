@@ -1,0 +1,59 @@
+{
+    "title": "Interactive Showcase: Gemini Rush",
+    "subtitle": "A real-time stress test of the Gemini 2.5 Flash model's instant binary decision-making capabilities, wrapped in a polished cyberpunk runner game.",
+    "heroImageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756108973/gemini_run_card_image_szjysh.png",
+    "interactiveComponent": "AIDinoGame",
+    "overview": {
+        "industry": "AI Showcase",
+        "timeline": "2 Days (Overhaul)",
+        "techStack": "React, Gemini 2.5 Flash API, Canvas API"
+    },
+    "content": [
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Project Goal: The Instant Binary Decision"
+        },
+        {
+            "type": "html",
+            "value": "<p>The primary goal of this rebranded project, <b>Gemini Rush</b>, was to create a compelling, high-stakes test for a specific AI capability: instant binary decision-making. In many real-world applications—from industrial robotics to high-frequency trading—an AI agent must make simple, correct choices with the lowest possible latency. This game was designed to simulate that exact scenario.</p><p>Click the 'Launch Demo' button below to play. You can toggle the AI on and off at any time to see if you can beat the machine's reaction time!</p>"
+        },
+        {
+            "type": "demo-button"
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "How It Works: A Low-Latency Loop"
+        },
+        {
+            "type": "html",
+            "value": "<p>The logic is a tight, efficient loop. At each frame where a decision is needed, the game state is simplified into a minimal text prompt describing the distance to the next obstacle. This context is sent to the Gemini 2.5 Flash model with a strict instruction: respond with only 'JUMP' or 'WAIT'.</p><p>This isn't a test of deep reasoning; it's a test of pure speed. By constraining the problem, we can focus on measuring the model's raw response time, a critical factor for any real-time application.</p>"
+        },
+        {
+            "type": "learning-box",
+            "title": "The Need for Speed: `thinkingBudget: 0`",
+            "content": "<p>The most critical part of this demo is the API configuration: `thinkingConfig: { thinkingBudget: 0 }`. This instructs the Gemini 2.5 Flash model to respond immediately without any extra 'thinking' time. This is a key pattern for any application where speed is more important than a nuanced, lengthy response, making it perfect for tasks like real-time control or low-latency classification.</p>"
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "The Code: Prompting for Speed"
+        },
+        {
+            "type": "code",
+            "language": "typescript",
+            "theme": "window",
+            "code": "import { GoogleGenAI } from \"@google/genai\";\n\nconst ai = new GoogleGenAI({ apiKey: process.env.API_KEY });\n\nconst response = await ai.models.generateContent({\n  model: 'gemini-2.5-flash',\n  contents: `Respond with only 'JUMP' or 'WAIT'. State: Obstacle at 150px. Player velocity 0.`,\n  config: {\n    // Critical for real-time gaming: disable thinking for instant response.\n    thinkingConfig: { thinkingBudget: 0 }\n  },\n});\n\nconst action = response.text.trim(); // Returns 'JUMP' or 'WAIT'"
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "UI/UX Overhaul: From Dino to Droid"
+        },
+        {
+            "type": "html",
+            "value": "<p>To better match the high-tech nature of the experiment, the game received a complete visual overhaul with a 'cyberpunk glitch' aesthetic. This included designing a new running bot sprite, creating 'data-glitch' obstacles, and implementing a dynamic, parallax-scrolling background to create a more immersive sense of speed and urgency.</p>"
+        }
+    ]
+}

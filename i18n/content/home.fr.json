@@ -1,49 +1,96 @@
+
 {
   "hero": {
     "name": "Elliot Margot",
     "subtitle": "Conseil expert en IA & Power Platform. Je conçois et déploie des solutions d'IA Générative et d'automatisation personnalisées qui génèrent de réels résultats commerciaux."
   },
   "homePage": {
+    "animatedHero": {
+      "title": "Elliot Margot",
+      "subtitle": "Conseil expert en IA & Power Platform. Je conçois et déploie des solutions d'IA Générative et d'automatisation personnalisées qui génèrent de réels résultats commerciaux.",
+      "buttonText": "Découvrir mes projets",
+      "buttonLink": "#/projects"
+    },
     "expertise": {
       "title": "Mon Expertise Principale",
       "items": [
         {
+          "icon": "BrainIcon",
           "title": "Solutions d'IA Personnalisées",
-          "description": "Je crée et déploie des chatbots et agents virtuels intelligents avec Copilot Studio et l'IA Générative pour améliorer la productivité interne et le service client."
+          "description": "De créer et déploie des chatbots et agents virtuels intelligents avec Copilot Studio et l'IA Générative pour améliorer la productivité interne et le service client."
         },
         {
+          "icon": "PowerPlatformIcon",
           "title": "Automatisation Intelligente",
-          "description": "Je conçois des automatisations de processus métier (BPA) puissantes avec Power Automate pour rationaliser les flux, réduire les tâches manuelles et connecter les systèmes."
+          "description": "De conçevoir des automatisations de processus métier (BPA) puissantes avec Power Automate pour rationaliser les flux, réduire les tâches manuelles et connecter les systèmes."
         },
         {
+          "icon": "StrategyIcon",
           "title": "Stratégie & Conseil en IA",
-          "description": "Je fournis des conseils stratégiques et développe des feuilles de route IA pour garantir que les investissements dans Power Platform et l'IA Générative s'alignent sur les objectifs métier."
+          "description": "De fournir des conseils stratégiques et développe des feuilles de route IA pour garantir que les investissements dans Power Platform et l'IA s'alignent sur les objectifs métier."
         }
       ]
     },
+    "approach": {
+      "imagePosition": "left",
+      "imageUrl": "http://res.cloudinary.com/dapoc7ekn/image/upload/v1756109023/AI_as_an_Intuitive_Conductor.057Z_jojk8o.png",
+      "category": "Mon Approche",
+      "title": "Relier la Stratégie et la Technologie",
+      "text": [
+        "Je crois que les solutions d'IA les plus puissantes naissent d'une compréhension approfondie de la stratégie d'entreprise. Mon approche consiste à agir comme un pont entre vos objectifs stratégiques et les possibilités techniques de l'IA et de l'automatisation.",
+        "En me concentrant sur des cas d'usage pratiques qui génèrent un retour sur investissement mesurable, j'aide les organisations à passer de l'expérimentation à une véritable transformation numérique, en veillant à ce que chaque solution soit non seulement technologiquement avancée, mais aussi parfaitement alignée sur votre vision de la croissance."
+      ],
+      "button": {
+        "text": "Explorer les Cas d'Usage",
+        "href": "#/use-cases"
+      }
+    },
     "projects": {
       "title": "Travaux en Vedette",
-      "learnMore": "En savoir plus",
-      "items": [
+      "cards": [
         {
-          "imgSrc": "https://raw.githubusercontent.com/OwnOptic/Website-storage/main/Gemini_Generated_Image_449bsw449bsw449b.png",
+          "variant": "project-overview-light",
+          "layout": "large",
+          "imageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756108999/Regulation_and_Law_ai_theme_e73iho.png",
+          "category": "Stratégie IA & Éthique",
           "title": "Stratégie d'Éthique de l'IA pour l'Assurance",
-          "description": "Un projet stratégique analysant les implications éthiques de l'IA dans l'assurance, fournissant une feuille de route pour une automatisation juste utilisant les principes de l'IA responsable.",
+          "description": "Une analyse stratégique des implications éthiques de l'IA, livrant une feuille de route pour une automatisation juste et non biaisée dans le traitement des sinistres et la souscription.",
+          "timeline": "3 Semaines",
+          "techStack": ["BrainIcon", "StrategyIcon"],
           "link": "#/projects/ai-ethics-insurance"
         },
         {
-          "imgSrc": "https://raw.githubusercontent.com/OwnOptic/Website-storage/main/AI%20Hackathon%20lighthouse.jfif",
-          "title": "Hackathon IA : Assistant d'Assurance Gagnant",
-          "description": "Une preuve de concept lauréate d'un hackathon pour un assistant d'IA Générative, conçu pour aider les agents d'assurance à trouver des informations complexes.",
-          "link": "#/projects/ai-hackathon-google"
+          "variant": "project-overview-light",
+          "imageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109025/AI_Dungeon_Explorer_The_Great_Escape_mo3kmq.png",
+          "category": "Démos IA Interactives",
+          "title": "Explorateur de Donjon IA : La Grande Évasion",
+          "description": "Un jeu interactif présentant la capacité de Gemini à résoudre des énigmes complexes nécessitant un raisonnement stratégique.",
+          "timeline": "3 Semaines",
+          "techStack": ["ReactIcon", "GeminiIcon"],
+          "link": "#/projects/ai-dungeon-explorer"
         },
         {
-          "imgSrc": "https://raw.githubusercontent.com/OwnOptic/Website-storage/main/AI%20onboarding%20agent%20-%20header.png",
-          "title": "Playbook de l'Assistant d'Intégration IA",
-          "description": "Un article détaillant la stratégie pour transformer l'intégration des employés avec un assistant IA personnalisé construit sur Power Platform.",
-          "link": "#/blog/playbook-ai-onboarding-assistant"
+          "variant": "project-overview-light",
+          "imageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756108974/it_helpdesk_chaos_cartoon_wacn1r.png",
+          "category": "Automatisation Intelligente",
+          "title": "Projet Deskmate : Agent IA pour ServiceNow",
+          "description": "Une preuve de concept pour un agent d'IA Générative qui diagnostique les problèmes des utilisateurs et crée des tickets détaillés dans ServiceNow, réduisant les temps de résolution.",
+          "timeline": "2 Semaines",
+          "techStack": ["CopilotStudioIcon", "PowerAutomateIcon", "GeminiIcon"],
+          "link": "#/projects/deskmate-helpdesk-agent"
         }
       ]
+    },
+    "github": {
+      "title": "Mes Contributions Open Source",
+      "profile": {
+        "username": "OwnOptic",
+        "avatarUrl": "https://github.com/OwnOptic.png",
+        "bio": "Consultant IA chez Witivio, un partenaire Microsoft. Passionné par l'exploitation de l'IA pour la transformation des entreprises et les solutions innovantes.",
+        "followers": "12",
+        "following": "20",
+        "profileUrl": "https://github.com/OwnOptic"
+      }
     }
   }
 }

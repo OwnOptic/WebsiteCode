@@ -1,33 +1,75 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useI18n } from '../i18n/useI18n';
 import ProjectDetailLayout from '../components/ProjectDetailLayout';
+import type { BreadcrumbLink } from '../types';
+import * as analytics from '../analytics';
 
-const ProjectDetailPage: React.FC<{ slug: string }> = ({ slug }) => {
-    const { t } = useI18n();
-    const projectData = t(`projects.details.${slug}`);
+interface ProjectDetailPageProps {
+    slug: string;
+    breadcrumbs: BreadcrumbLink[];
+}
 
-    const handleNav = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
-        e.preventDefault();
-        window.location.hash = path;
-    };
+const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ slug, breadcrumbs }) => {
+    const { language } = useI18n();
+    const [project, setProject] = useState<any>(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
 
-    if (!projectData || typeof projectData !== 'object') {
-        return (
-            <div className="flex items-center justify-center min-h-[calc(100vh-200px)] text-center px-4 py-24">
-                <div>
-                    <h1 className="text-4xl font-bold text-[var(--primary-text)] mb-4">Project Not Found</h1>
-                    <p className="text-lg text-[var(--secondary-text)] max-w-md mx-auto">
-                        Sorry, we couldn't find the project you were looking for. It might have been moved or the link is incorrect.
-                    </p>
-                    <a href="#/projects" onClick={(e) => handleNav(e, '#/projects')} className="mt-8 inline-block bg-[var(--interactive-blue)] text-white font-semibold py-3 px-6 rounded-[4px] hover:bg-[var(--interactive-hover)] transition-colors duration-200">
-                        &larr; Back to All Projects
-                    </a>
-                </div>
-            </div>
-        );
+    useEffect(() => {
+        const fetchProjectData = async () => {
+            setLoading(true);
+            setError(null);
+            try {
+                const response = await fetch(`/i18n/content/projects/${slug}.${language}.json`);
+                if (!response.ok) {
+                    throw new Error(`Project not found: ${slug}`);
+                }
+                const data = await response.json();
+                setProject(data);
+
+                // SEO & Analytics
+                const pageTitle = `${data.title} | Elliot Margot`;
+                document.title = pageTitle;
+                
+                const metaDescription = document.querySelector('meta[name="description"]');
+                if (metaDescription) {
+                    metaDescription.setAttribute('content', data.subtitle);
+                }
+
+                const baseUrl = 'https://www.e-margot.ch/';
+                document.querySelector('meta[property="og:title"]')?.setAttribute('content', pageTitle);
+                document.querySelector('meta[property="og:description"]')?.setAttribute('content', data.subtitle);
+                document.querySelector('meta[property="og:image"]')?.setAttribute('content', data.heroImageUrl);
+                document.querySelector('meta[property="og:url"]')?.setAttribute('content', `${baseUrl}${window.location.hash}`);
+                document.querySelector('meta[name="twitter:title"]')?.setAttribute('content', pageTitle);
+                document.querySelector('meta[name="twitter:description"]')?.setAttribute('content', data.subtitle);
+                document.querySelector('meta[name="twitter:image"]')?.setAttribute('content', data.heroImageUrl);
+
+
+                analytics.trackPageView(window.location.hash, data.title);
+
+            } catch (err) {
+                setError((err as Error).message);
+                console.error("Failed to fetch project:", err);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchProjectData();
+    }, [slug, language]);
+
+    if (loading) {
+        return <div>Loading project...</div>;
     }
 
-    return <ProjectDetailLayout project={projectData} />;
+    if (error) {
+        return <div>Error: {error}</div>;
+    }
+    
+    const updatedBreadcrumbs = [...breadcrumbs, { label: project.title }];
+
+    return <ProjectDetailLayout project={project} breadcrumbs={updatedBreadcrumbs} />;
 };
 
 export default ProjectDetailPage;

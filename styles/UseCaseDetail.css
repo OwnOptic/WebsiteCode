@@ -1,0 +1,193 @@
+.use-case-modal-header {
+    position: sticky;
+    top: 0;
+    background-color: var(--primary-background);
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+.use-case-modal-header h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary-text);
+    padding-right: 1rem;
+}
+@media (min-width: 768px) {
+    .use-case-modal-header h3 {
+        font-size: 1.5rem;
+    }
+}
+.use-case-modal-header button {
+    color: var(--secondary-text);
+    font-size: 2.25rem;
+    line-height: 1;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.use-case-modal-header button:hover {
+    color: var(--primary-text);
+}
+
+.use-case-modal-content {
+    padding: 1.5rem;
+    overflow-y: auto;
+}
+@media (min-width: 768px) {
+    .use-case-modal-content {
+        padding: 2rem;
+    }
+}
+
+.use-case-modal-metadata {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+.metadata-pill {
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+}
+.metadata-pill.industry {
+    background-color: var(--surface-background);
+    color: var(--secondary-text);
+}
+.metadata-pill.tech-level {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+:root.dark .metadata-pill.tech-level {
+    background-color: #1e3a8a;
+    color: #bfdbfe;
+}
+
+
+.use-case-modal-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.use-case-modal-sections h4 {
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: var(--primary-text);
+    margin-bottom: 0.5rem;
+}
+.use-case-modal-sections p {
+    color: var(--secondary-text);
+    line-height: 1.6;
+}
+
+.roi-corner {
+    background-color: var(--surface-background);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--secondary-text);
+    overflow-x: auto;
+    white-space: pre-wrap;
+}
+.roi-corner code {
+    display: block;
+    background-color: var(--border-color);
+    color: var(--primary-text);
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-family: monospace;
+    font-size: 0.75rem;
+}
+
+.interactive-demo-container {
+    margin-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    padding-top: 2rem;
+}
+
+.implementation-guide-container {
+    margin-top: 2rem;
+}
+.implementation-guide-details {
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+}
+.implementation-guide-details summary {
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: var(--primary-text);
+    padding: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none; /* Hide default marker */
+}
+.implementation-guide-details summary:hover {
+    background-color: var(--surface-background);
+}
+.implementation-guide-details summary::-webkit-details-marker {
+    display: none;
+}
+.implementation-guide-details .chevron-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    transition: transform 0.2s;
+}
+.implementation-guide-details[open] .chevron-icon {
+    transform: rotate(180deg);
+}
+
+.implementation-guide-content {
+    padding: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+.implementation-guide-content.prose h5 {
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-text);
+}
+.implementation-guide-content.prose p, .implementation-guide-content.prose li {
+    color: var(--secondary-text);
+}
+.implementation-guide-content.prose ol, .implementation-guide-content.prose ul {
+    margin-left: 1rem;
+    padding-left: 1rem;
+}
+.implementation-guide-content.prose strong {
+    color: var(--primary-text);
+}
+
+.use-case-modal-footer {
+    position: sticky;
+    bottom: 0;
+    background-color: var(--surface-background);
+    padding: 1rem;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: flex-end;
+}
+.share-button {
+    background-color: var(--interactive-blue);
+    color: white;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+}
+.share-button:hover {
+    background-color: var(--interactive-hover);
+}

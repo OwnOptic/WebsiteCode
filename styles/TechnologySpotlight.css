@@ -1,0 +1,78 @@
+.tech-spotlight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2.5rem 0;
+}
+
+.tech-spotlight-card {
+    background-color: var(--surface-background);
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-spotlight-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.07), 0 8px 10px -6px rgba(0,0,0,0.07);
+}
+
+.tech-spotlight-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--interactive-blue), var(--primary-brand-orange));
+    opacity: 0;
+    transform: scaleX(0);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    transform-origin: center;
+}
+
+.tech-spotlight-card:hover::before {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.tech-spotlight-icon-wrapper {
+    margin: 0 auto 1.5rem auto;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    background-color: var(--primary-background);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -2px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.tech-spotlight-card:hover .tech-spotlight-icon-wrapper {
+    transform: scale(1.1);
+}
+
+.tech-spotlight-icon-wrapper svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    color: var(--interactive-blue);
+}
+
+.tech-spotlight-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary-text);
+    margin-bottom: 0.75rem;
+}
+
+.tech-spotlight-description {
+    font-size: 0.95rem;
+    color: var(--secondary-text);
+    line-height: 1.6;
+}

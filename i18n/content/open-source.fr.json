@@ -1,0 +1,23 @@
+{
+    "header": {
+        "title": "Logiciels Open Source",
+        "subtitle": "Une collection de mes projets open source, disponibles pour la collaboration et l'utilisation sur GitHub.",
+        "imageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109042/Coding_and_Development_ai.305Z_v2cnk1.png"
+    },
+    "items": [
+        {
+            "imgSrc": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756108974/it_helpdesk_chaos_cartoon_wacn1r.png",
+            "title": "Projet Deskmate : Agent IA pour ServiceNow",
+            "description": "Une preuve de concept démontrant comment un agent d'IA Générative peut diagnostiquer les problèmes des utilisateurs, créer des tickets détaillés et réduire les temps de résolution dans ServiceNow.",
+            "link": "#/projects/deskmate-helpdesk-agent",
+            "categoryKey": "Open Source"
+        },
+        {
+            "imgSrc": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756147928/Gemini_Generated_Image_atp77qatp77qatp7_ozh5jd.png",
+            "title": "NoteTaker AI : Prise de Notes Intelligente",
+            "description": "Un espace de travail intelligent, privé et fonctionnant hors ligne, qui utilise l'IA générative pour transcrire, résumer et organiser vos notes.",
+            "link": "#/projects/notetaker-ai",
+            "categoryKey": "Open Source"
+        }
+    ]
+}

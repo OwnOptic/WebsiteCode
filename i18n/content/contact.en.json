@@ -7,12 +7,6 @@
       "email": "Your Email",
       "message": "Your Message",
       "submit": "Send Message"
-    },
-    "status": {
-      "sending": "Sending...",
-      "success": "Thank you! Your message has been sent successfully.",
-      "error": "Please fill in all fields.",
-      "apiError": "Sorry, there was an error sending your message. Please try again later."
     }
   }
 }

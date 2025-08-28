@@ -28,17 +28,29 @@
       "title": "Bibliothèque de Cas d'Usage IA | Portfolio d'Elliot Margot",
       "description": "Explorez une bibliothèque complète de cas d'usage réels en IA et Automatisation, présentant des applications pratiques de l'IA Générative, Copilot Studio et Power Automate."
     },
-    "blog": {
-      "title": "Blog | Perspectives sur l'IA Générative & l'Automatisation par Elliot Margot",
-      "description": "Lisez mes derniers articles sur l'IA Générative, l'automatisation des processus, Microsoft Power Platform et l'avenir de la technologie d'entreprise."
-    },
     "projects": {
       "title": "Projets | Portfolio IA d'Elliot Margot",
       "description": "Une collection de projets clés et d'articles de fond démontrant des applications pratiques de la stratégie IA, de l'IA Générative et de l'automatisation Power Platform."
     },
+    "openSource": {
+      "title": "Projets Open Source | Elliot Margot",
+      "description": "Explorez mes projets de logiciels open source. Les contributions et collaborations sont les bienvenues."
+    },
     "techStack": {
       "title": "Ma Stack Technologique | Expertise IA & Power Platform",
       "description": "Un aperçu des plateformes, technologies et méthodologies que j'utilise pour créer des solutions d'IA et d'automatisation des processus métier d'entreprise."
+    },
+    "blog": {
+      "title": "Médias & Analyses | Elliot Margot",
+      "description": "Explorez des analyses et des articles sur la stratégie IA, l'IA Générative, Power Platform et l'automatisation des processus métier."
+    },
+    "notFound": {
+        "title": "404 - Page Introuvable | Elliot Margot",
+        "description": "La page que vous recherchez n'existe pas. Veuillez retourner à la page d'accueil ou explorer certains de mes projets phares."
+    },
+    "sitemap": {
+      "title": "Plan du Site | Portfolio d'Elliot Margot",
+      "description": "Une liste complète de toutes les pages disponibles sur le site, y compris les projets, les articles et les informations professionnelles."
     }
   },
   "nav": {
@@ -49,10 +61,58 @@
     "education": "Formation",
     "certificates": "Certificats",
     "useCases": "Cas d'Usage",
-    "blog": "Blog",
     "projects": "Projets",
-    "techStack": "Stack Tech"
+    "openSource": "Open Source",
+    "techStack": "Stack Tech",
+    "blog": "Médias",
+    "reportBug": "Signaler un bug",
+    "sitemap": "Plan du site"
   },
+  "contactButton": "Contact",
+  "navItems": [
+    { "name": "Accueil", "href": "#/", "dropdown": null },
+    {
+      "name": "À propos de moi",
+      "href": "#/about",
+      "dropdown": {
+        "links": [
+          { "name": "Aperçu", "href": "#/about", "subLinks": null },
+          { "name": "Expérience", "href": "#/experience", "subLinks": null },
+          { "name": "Formation", "href": "#/education", "subLinks": null },
+          { "name": "Certificats", "href": "#/certificates", "subLinks": null }
+        ]
+      }
+    },
+    { "name": "Cas d'Usage", "href": "#/use-cases", "dropdown": null },
+    {
+      "name": "Projets",
+      "href": "#/projects",
+      "dropdown": {
+        "links": [
+          { "name": "Aperçu des Projets", "href": "#/projects", "subLinks": null },
+          {
+            "name": "Démos Interactives",
+            "href": "#/projects?category=interactive-ai-demos",
+            "subLinks": [
+              { "name": "Gemini Rush", "href": "#/projects/ai-dino-game" }
+            ]
+          },
+          { "name": "Étude de Cas : Ce Site Web", "href": "#/projects/making-of-website", "subLinks": null },
+          { "name": "Playbook Assistant IA", "href": "#/projects/ultimate-ai-assistant-playbook", "subLinks": null }
+        ],
+        "featured": {
+          "image": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109025/AI_Dungeon_Explorer_The_Great_Escape_mo3kmq.png",
+          "alt": "Illustration du jeu AI Dungeon Explorer",
+          "title": "En vedette : Explorateur de Donjon IA",
+          "description": "Une démo jouable où une IA Gemini résout des énigmes complexes à plusieurs étapes dans un donjon.",
+          "link": "#/projects/ai-dungeon-explorer",
+          "linkText": "Jouer à la Démo"
+        }
+      }
+    },
+    { "name": "Open Source", "href": "#/open-source", "dropdown": null },
+    { "name": "Stack Tech", "href": "#/tech-stack", "dropdown": null }
+  ],
   "footer": {
     "copyright": "© {year} Elliot Margot. Tous droits réservés.",
     "siteMap": "Plan du site",
@@ -99,26 +159,46 @@
       "cases": "Cas"
     }
   },
-  "blog": {
-    "header": {
-      "title": "Blog",
-      "subtitle": "Perspectives sur l'IA, l'automatisation des processus et la technologie d'entreprise"
-    },
-    "readMore": "Lire l'article",
-    "filterByTag": "Filtrer par Tag",
-    "allTags": "Tous les Tags",
-    "noResults": "Aucun article trouvé correspondant à vos critères.",
-    "backToAll": "← Retour à tous les articles",
-    "searchPlaceholder": "Rechercher des articles...",
-    "relatedPostsTitle": "Vous pourriez aussi aimer"
-  },
   "projects": {
-    "learnMore": "En savoir plus"
+    "filters": {
+      "title": "Filtrer par Catégorie",
+      "all": "Toutes les Catégories"
+    },
+    "categories": {
+      "ai-strategy-ethics": "Stratégie IA & Éthique",
+      "gen-ai-llms": "IA Générative & LLMs",
+      "intelligent-automation": "Automatisation Intelligente",
+      "interactive-ai-demos": "Démos IA Interactives",
+      "web-app-dev": "Développement Web & App",
+      "thought-leadership": "Leadership & Playbooks"
+    }
+  },
+   "blog": {
+    "header": {
+        "title": "Médias & Analyses",
+        "subtitle": "Partage d'idées et engagement avec la communauté technologique à travers des articles, des podcasts et des événements."
+    },
+    "filterByTag": "Filtrer par Tag",
+    "allTags": "Tous",
+    "searchPlaceholder": "Rechercher des articles...",
+    "readMore": "Lire l'Article",
+    "noResults": "Aucun article trouvé.",
+    "backToAll": "Retour à tous les articles",
+    "relatedPostsTitle": "Lectures Connexes"
   },
   "geminiBot": {
-    "headerTitle": "EllioBot",
+    "headerTitle": "ElliotBot",
     "placeholder": "Posez des questions sur mon expérience, mes compétences...",
-    "initialMessage": "Bonjour ! Je suis EllioBot, votre guide IA pour le portfolio d'Elliot Margot. Comment puis-je vous aider aujourd'hui ?"
+    "initialMessage": "Bonjour ! Je suis ElliotBot, votre guide IA pour le portfolio d'Elliot Margot. Comment puis-je vous aider aujourd'hui ?",
+    "proactive": {
+      "projectPage": "Je vois que vous consultez le projet '{title}'. Je peux répondre à des questions spécifiques à ce sujet, ou vous pouvez me demander de vous montrer des cas d'usage similaires. Que souhaitez-vous faire ? ✨",
+      "useCasesPage": "Vous explorez la bibliothèque de cas d'usage ! N'hésitez pas à me demander de trouver des cas d'usage pour un secteur spécifique, comme 'montre-moi des cas d'usage pour l'assurance'. 🚀"
+    },
+    "reportBugConfirmation": "J'ai ouvert votre client de messagerie avec le rapport de bug. Veuillez le vérifier et l'envoyer. Merci pour votre aide ! 🐞"
+  },
+  "bugReport": {
+    "subject": "Rapport de Bug du Site Portfolio",
+    "bodyTemplate": "Bonjour Elliot,\n\nJe souhaite signaler un bug. Voici les détails :\n\n**URL de la Page :**\n[Veuillez entrer l'URL de la page où vous avez trouvé le bug]\n\n**Étapes pour Reproduire :**\n1. Aller à...\n2. Cliquer sur...\n3. Faire défiler jusqu'à...\n\n**Résultat Attendu :**\n[Qu'est-ce que vous vous attendiez à voir ?]\n\n**Résultat Actuel :**\n[Qu'est-ce qui s'est réellement passé ?]\n\n**Détails Supplémentaires (Navigateur, Appareil, etc.) :**\n[Toute autre information qui pourrait être utile]\n\nMerci !"
   },
   "invoiceDemo": {
     "title": "Traitement Automatisé des Factures",
@@ -128,13 +208,39 @@
     "processing": "Traitement avec Gemini...",
     "extractedDataTitle": "Données Extraites"
   },
+  "churnPredictionDemo": {
+    "title": "Simulation de Prédiction de Churn",
+    "description": "Ceci est une démonstration fictive. Cliquez sur 'Lancer la Prédiction de Churn' pour simuler comment un modèle d'IA analyse les données des abonnés pour identifier les individus à haut risque de résiliation.",
+    "runButton": "Lancer la Prédiction de Churn",
+    "runningButton": "Analyse en cours...",
+    "analyzedButton": "Analyse Terminée",
+    "subscribersTitle": "Exemple de Données d'Abonnés",
+    "table": {
+      "id": "ID",
+      "name": "Nom",
+      "tier": "Niveau",
+      "lastActive": "Dernière Activité",
+      "risk": "Risque de Churn",
+      "reason": "Raison Générée par l'IA"
+    },
+    "status": {
+      "low": "Faible",
+      "high": "Élevé"
+    },
+    "reasons": {
+      "reason1": "Baisse significative de l'engagement sur les 30 derniers jours.",
+      "reason2": "L'inactivité du compte dépasse le seuil de 40 jours."
+    }
+  },
     "contact": {
     "status": {
-      "generating": "Génération du message...",
-      "redirecting": "Redirection...",
-      "success": "Succès ! Veuillez vérifier votre client de messagerie pour envoyer.",
-      "error": "Veuillez remplir tous les champs.",
-      "apiError": "Impossible de générer l'e-mail. Veuillez réessayer."
+      "error": "Veuillez remplir tous les champs."
+    }
+  },
+  "sitemap": {
+    "header": {
+        "title": "Plan du Site",
+        "subtitle": "Une liste complète de toutes les pages et ressources disponibles sur le site."
     }
   }
 }

@@ -1,10 +1,29 @@
+
 {
   "certificates": {
     "header": {
       "title": "Certificates & Diplomas",
       "subtitle": "A continuous pursuit of knowledge, blending business acumen with practical, real-world applications in Project Management, AI, and Cybersecurity."
     },
+    "heroV2": {
+      "imageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756108979/The_Seamless_Integration.657Z_wosybg.png"
+    },
     "timeline": [
+      {
+        "category": "Microsoft Platform",
+        "items": [
+          {
+            "name": "Microsoft 365 Certified: Fundamentals",
+            "level": "Fundamentals",
+            "url": "https://learn.microsoft.com/en-us/users/elliotmargot-2110/credentials/certification/microsoft-365-fundamentals?tab=credentials-tab"
+          },
+          {
+            "name": "Agent Academy - Recruit - Microsoft 365 & Power Platform Community",
+            "level": "Community",
+            "url": "https://www.credly.com/badges/75796f27-101b-4f9a-a250-a10e19591566/public_url"
+          }
+        ]
+      },
       {
         "category": "Project Management",
         "items": [
@@ -19,9 +38,8 @@
         ]
       },
       {
-        "category": "Artificial Intelligence (AI) & Machine Learning (ML)",
+        "category": "AI & Machine Learning",
         "items": [
-          { "name": "Coursera AI Professional Profile", "level": "Advanced", "url": "https://www.coursera.org/learner/elliot-margot-ai-pro" },
           { "name": "Introduction to Generative AI Learning Path", "level": "Advanced", "url": "https://coursera.org/verify/specialization/KS2DCZRW9KJ0" },
           { "name": "IBM AI Workflow: Feature Engineering and Bias Detection", "level": "Advanced", "url": "https://coursera.org/verify/IGJ4CFCPGOND" },
           { "name": "IBM AI Workflow: Data Analysis and Hypothesis Testing", "level": "Advanced", "url": "https://coursera.org/verify/G417607041IP" },

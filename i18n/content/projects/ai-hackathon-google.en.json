@@ -1,41 +1,81 @@
+
 {
     "title": "Google Hackathon: AI-Powered Insurance Assistant",
-    "subtitle": "A hackathon-winning proof-of-concept for a Generative AI assistant, built with Copilot Studio, designed to help insurance agents find complex policy information instantly.",
-    "heroImageUrl": "https://lh6.googleusercontent.com/lJrKFGBWYuOj3Ke2TKc0rp7eWavkuufdoNb0sdDNtXtykahUROcMi5Ncx8xeuqEWVk4ymi4L4g_YG4K69Fzn4rBMW7mGa4q9rnxRHJIEWLcoF0d4fjlx-97kWamkiQpWurarxef7irw=w16383",
+    "subtitle": "A hackathon-winning proof-of-concept for a Generative AI assistant designed to help insurance agents find complex policy information instantly.",
+    "heroImageUrl": "http://res.cloudinary.com/dapoc7ekn/image/upload/v1756109025/AI_Hackathon_lighthouse_jatpre.jpg",
     "overview": {
-        "client": "Google & Assura Hackathon",
         "industry": "Insurance",
         "timeline": "48 Hours",
-        "techStack": "Copilot Studio, Generative AI"
+        "techStack": "Vertex AI, Gemini 1.5 Pro, GCP"
     },
-    "contentSections": [
+    "content": [
         {
-            "title": "Introduction",
-            "htmlContent": "<p>During the Assura AI Hackathon, our team tackled the challenge of creating innovative solutions to enhance user experience within the insurance domain. We designed and developed a Proof of Concept (POC) chatbot aimed at simplifying the complex process of selecting the right insurance plan, leveraging AI, and specifically utilizing the Gemini 1.5 Pro model, to provide personalized recommendations. Infrastructure was provided by Google Cloud Platform (GCP).</p>"
+            "type": "heading",
+            "level": 3,
+            "text": "The Challenge: Information Overload for Insurance Agents"
         },
         {
-            "title": "Problem Statement",
-            "htmlContent": "<p>Choosing the appropriate insurance policy can be overwhelming for many users due to the diverse range of options, technical jargon, and lack of personalized guidance. Users often struggle to navigate through different plans, resulting in confusion, frustration, and potentially selecting an unsuitable plan for their specific needs.</p><img src=\"https://lh6.googleusercontent.com/Uqlb1gzNd7c8wfV9aAmwNm0mPpsqyciFuW3NSOjRmip4qzjDIdxCzD1bk1iKZXXNSPZSqRC8VdC5xy3szZkxP9TY8jdAo4uGBPpLp0Mc4-kP31j4sfttPqAcWmdR5eJMhvwZFjRC544ZsXDf0XTczGgoj2FOdwW0Crs0cvPgK7jdHGqnfPDDxQ=w1280\" alt=\"Team photo at the hackathon\" class=\"my-8 rounded-lg shadow-md\">"
+            "type": "html",
+            "value": "<p>Insurance agents face a significant challenge: navigating vast and complex policy documents to find specific information for clients. This process is often time-consuming, inefficient, and can lead to inconsistent answers. During a fast-paced 48-hour hackathon hosted by Google, our team was challenged to build an innovative solution to address this critical pain point for a major insurance provider.</p>"
         },
         {
-            "title": "Our Solution",
-            "htmlContent": "<p>Our POC chatbot offers an AI-powered conversational interface that guides users through a step-by-step process to identify their specific insurance needs. By asking a series of targeted questions and analyzing user responses, leveraging the Gemini 1.5 Pro model, the chatbot provides personalized insurance recommendations, simplifying the complex decision-making process.</p><img src=\"https://lh4.googleusercontent.com/hJvrreWlMh0Vzsc07tkxAWuPmNj20E_wZmFH4IKh7cHZeD5xTCxXpq5jZwrEILlX8R_z1ezEeexPv618XuJX5gJEfD6SvJi1Sl470ru4woXz11A9Z-oYSoFafIEL2wKSBStPD-U6PIKZy55r0RKW-Xo5wsiJKWIfg7K22Xy9ZlEjkdWiKysuNg=w1280\" alt=\"Presentation slide from the hackathon\" class=\"my-8 rounded-lg shadow-md\">"
+            "type": "heading",
+            "level": 3,
+            "text": "The Solution: An AI-Powered Agent Assistant"
         },
         {
-            "title": "Key Features & Functionality",
-            "htmlContent": "<ul><li><strong>Conversational Interface:</strong> Utilizes natural language processing (NLP), powered by Gemini 1.5 Pro, to understand user inquiries and provide context-aware responses.</li><li><strong>Personalized Recommendations:</strong> Analyzes user responses to identify suitable insurance policies based on their specific needs, budget, and risk profile.</li><li><strong>Simplified Explanations:</strong> Explains complex insurance terms in simple and easy-to-understand language.</li><li><strong>Interactive Guidance:</strong> Walks users through a structured decision-making process using interactive prompts.</li><li><strong>Multiple Languages:</strong> The chatbot is built to support French, English, and German, enhancing accessibility and user experience.</li><li><strong>Data-Driven:</strong> Leverages a large database of insurance policies to accurately match the best policies to the user needs.</li></ul>"
+            "type": "html",
+            "value": "<p>Our solution was a Proof of Concept (POC) for a sophisticated AI assistant, built on Google Cloud Platform. The assistant provides a simple conversational interface where an agent can ask complex questions in natural language (e.g., 'What is the coverage for water damage in a basement for policy number 12345?') and receive an instant, accurate, and source-cited answer. By leveraging the advanced reasoning capabilities of the Gemini 1.5 Pro model in Vertex AI, our assistant could understand context, query a knowledge base of policy documents, and synthesize clear, reliable answers.</p>"
         },
         {
-            "title": "Design & Development Process",
-            "htmlContent": "<p>Our team followed an iterative approach to design and development, focusing on user-centered design principles. We used agile methodologies to rapidly prototype and test the chatbot, incorporating feedback from users and adapting accordingly. We primarily leveraged the Gemini 1.5 Pro model for its advanced capabilities.</p><img src=\"https://lh3.googleusercontent.com/7btILvNMCSpBztyi4hjd6jRbHp5Zr--xeaL56Ztu5_IR378cQ4q1gVuEvqU1fJxJmGLuXdbTlCdnB1GwQLX6evh1x4SnFDd78-xQo5T_aDog_O9seXPC-9GgBGA-c2xOPIIkjuQ-oUqvL-UjLXlLIJWvO-7-LlWn2AZUyKFc8UybOjpvlebCjw=w1280\" alt=\"Group working at the hackathon\" class=\"my-8 rounded-lg shadow-md\">"
+            "type": "image",
+            "variant": "simple-caption",
+            "src": "http://res.cloudinary.com/dapoc7ekn/image/upload/v1756109028/AI_hackathon_presentaiton_s9rjhc.png",
+            "alt": "Presenting the solution at the hackathon",
+            "caption": "Presenting our AI-powered solution to the judges at the Google Hackathon."
         },
         {
-            "title": "Outcomes & Results",
-            "htmlContent": "<p>Although still in the Proof of Concept phase, our chatbot effectively demonstrated its ability to provide users with personalized insurance recommendations while simplifying the decision-making process, leveraging the power of Gemini 1.5 Pro. The chatbot provided accurate solutions and was seen as user-friendly in initial tests.</p>"
+            "type": "heading",
+            "level": 3,
+            "text": "Design & Development Process"
         },
         {
-            "title": "Lessons Learned",
-            "htmlContent": "<p>This hackathon experience provided valuable insights into the challenges and opportunities of developing AI-powered solutions for the insurance industry. We learned the importance of understanding user needs, iterating rapidly, using advanced models like Gemini 1.5 Pro, and using robust methods for user feedback. We are also now aware of the complexities of working in a cross-functional team to develop a product rapidly.</p>"
+            "type": "html",
+            "value": "<p>Working under intense time pressure, our cross-functional team adopted a rapid, agile approach. We started with a design thinking session to deeply understand the user's (the insurance agent's) needs. We then moved quickly to prototype the conversational flow and build the backend on GCP. The process involved setting up a secure knowledge base with sample policy documents and fine-tuning the Gemini model's system prompt to ensure it delivered precise and trustworthy responses, crucial for a regulated industry like insurance.</p>"
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Key Features & Functionality"
+        },
+        {
+            "type": "html",
+            "value": "<ul><li><strong>Natural Language Queries:</strong> Allows agents to ask questions conversationally, just as they would to a human expert.</li><li><strong>Context-Aware Responses:</strong> The Gemini 1.5 Pro model understands the nuances of insurance jargon and provides contextually relevant answers.</li><li><strong>Source-Cited Information:</strong> Every answer is backed by a direct reference to the source policy document, ensuring auditability and trust.</li><li><strong>Multi-Language Support:</strong> The POC was designed to be multilingual (French, English, German) to support a diverse agent workforce.</li></ul>"
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Results & Outcome"
+        },
+        {
+            "type": "html",
+            "value": "<p>Our project was a resounding success, earning our team the top prize at the hackathon. The POC effectively demonstrated a significant potential for ROI by drastically reducing the time agents spend searching for information, thereby increasing their capacity to serve clients. The judges were particularly impressed with the solution's accuracy, its focus on explainability (citing sources), and its immediate applicability to a real-world business problem.</p>"
+        },
+        {
+            "type": "image",
+            "variant": "simple-caption",
+            "src": "http://res.cloudinary.com/dapoc7ekn/image/upload/v1756109026/AI_hackathon_our_group_jbudvq.png",
+            "alt": "Our winning team at the Google AI Hackathon",
+            "caption": "Our team celebrating the win after a fast-paced and collaborative 48 hours."
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Lessons Learned"
+        },
+        {
+            "type": "html",
+            "value": "<p>The hackathon was an incredible learning experience. It highlighted the power of Generative AI to solve complex enterprise challenges when grounded in a specific, high-value use case. We also learned the importance of rapid iteration and the critical need for robust system prompting to ensure the AI operates within safe and reliable boundaries, especially in a compliance-heavy environment.</p>"
         }
     ]
 }

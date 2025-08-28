@@ -1,0 +1,115 @@
+
+{
+    "title": "Étude de Cas : La Création de ce Site Web",
+    "subtitle": "Une analyse approfondie de l'architecture, de la technologie et du processus de développement de ce portfolio, construit avec React, TypeScript et l'API Gemini.",
+    "heroImageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109046/Gemini_Generated_Image_5at9q35at9q35at9_sklnd1.png",
+    "overview": {
+        "industry": "Développement Web",
+        "timeline": "4 Semaines",
+        "techStack": "React, TypeScript, API Gemini, CMS Headless"
+    },
+    "content": [
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Objectifs et Vision du Projet"
+        },
+        {
+            "type": "html",
+            "value": "<p>La vision principale de ce portfolio était de créer more qu'un simple CV numérique. L'objectif était de construire une application web monopage (SPA) moderne, professionnelle et performante qui non seulement présente mon travail, mais sert également de démonstration vivante de mes capacités techniques. Les objectifs clés comprenaient :</p><ul><li><b>Expérience Utilisateur Moderne :</b> Un design épuré, réactif et esthétique qui fonctionne parfaitement sur tous les appareils.</li><li><b>Haute Performance :</b> Des temps de chargement rapides et une navigation fluide pour maintenir l'engagement des utilisateurs.</li><li><b>Contenu Dynamique et Évolutif :</b> Une architecture qui permet des mises à jour de contenu faciles et l'ajout de nouveaux projets sans modification du code.</li><li><b>Intégration IA Avancée :</b> Pour présenter des applications pratiques de l'API Google Gemini dans un contexte réel.</li><li><b>Support Bilingue :</b> Une internationalisation (i18n) complète pour servir le contenu en anglais et en français de manière transparente.</li></ul>"
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Architecture de Base : Une Approche CMS Headless"
+        },
+        {
+            "type": "html",
+            "value": "<p>Le site web est construit comme une SPA React en utilisant TypeScript pour la sécurité des types et la robustesse. À la base, il emploie une architecture 'CMS headless'. Au lieu de coder en dur le contenu dans les composants, tous les textes et données sont stockés dans des fichiers JSON dans le répertoire <code>/i18n/content/</code>.</p>"
+        },
+        {
+            "type": "image",
+            "variant": "simple-caption",
+            "src": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756108979/The_Seamless_Integration.657Z_wosybg.png",
+            "alt": "Graphique abstrait représentant l'intégration transparente des systèmes",
+            "caption": "L'architecture du site est conçue pour une intégration transparente entre le contenu et les composants."
+        },
+        {
+            "type": "html",
+            "value": "<p>Un Contexte React personnalisé, le <code>I18nProvider</code>, agit comme un agrégateur de contenu central. Lorsque l'utilisateur change de langue, ce fournisseur récupère dynamiquement tous les fichiers JSON pertinents, les fusionne en un seul objet de contenu et le rend disponible dans toute l'application via le hook <code>useI18n</code>. Ce puissant modèle découple complètement le code de l'application de son contenu, rendant le site incroyablement facile à maintenir et à faire évoluer.</p>"
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Chaîne d'Outils de Développement"
+        },
+        {
+            "type": "technology-spotlight",
+            "technologies": [
+                { "name": "VS Code", "description": "Mon éditeur de code principal, personnalisé pour une efficacité maximale dans le développement web et IA." },
+                { "name": "Postman", "description": "Un outil indispensable pour tester et interagir avec les API, crucial pour l'intégration de Gemini." },
+                { "name": "GitHub", "description": "Essentiel pour un contrôle de version robuste, la collaboration et la gestion du code du projet." }
+            ]
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Fonctionnalité Clé : Intégration de l'API Gemini"
+        },
+        {
+            "type": "html",
+            "value": "<p>Une caractéristique centrale de ce portfolio est l'intégration de l'API Google Gemini pour démontrer diverses capacités de l'IA :</p>"
+        },
+        {
+            "type": "image",
+            "variant": "simple-caption",
+            "src": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109013/Gemini_Generated_Image_nt5ubknt5ubknt5u_pourlr.png",
+            "alt": "Graphique abstrait généré par l'IA avec des couleurs vives",
+            "caption": "L'API Gemini alimente plusieurs fonctionnalités interactives et intelligentes à travers le portfolio."
+        },
+        {
+            "type": "html",
+            "value": "<ul><li><b>ElliotBot (Co-pilote IA) :</b> Un chatbot contextuel qui utilise une instruction système détaillée et des réponses en streaming pour agir comme un guide IA pour le portfolio. Il tire parti de l'utilisation d'outils pour effectuer des actions comme la navigation et le filtrage en fonction des demandes conversationnelles de l'utilisateur.</li><li><b>Démos Interactives :</b> Des projets comme la démo de <b>Traitement Automatisé des Factures</b> mettent en valeur les capacités multimodales de Gemini, en envoyant une image et une instruction textuelle pour extraire des données JSON structurées.</li><li><b>Joueur IA en Temps Réel :</b> Le jeu <b>AI Glitch Run</b> démontre la prise de décision à faible latence, où le modèle Gemini 2.5 Flash traite l'état du jeu à chaque image et renvoie une action ('JUMP' ou 'WAIT'), configuré pour une vitesse maximale en désactivant la réflexion.</li></ul>"
+        },
+        {
+            "type": "pro-tip",
+            "content": "Lors de la conception d'un site axé sur le contenu, l'abstraction de votre contenu dans une structure de type CMS (même de simples fichiers JSON) dès le départ est un énorme avantage à long terme pour la maintenabilité et l'évolutivité."
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Stratégie de SEO et de Performance"
+        },
+        {
+            "type": "html",
+            "value": "<p>Pour une SPA, assurer une indexation correcte par les moteurs de recherche est essentiel. La logique de routage dans <code>App.tsx</code> met à jour dynamiquement le <code>titre</code> et la <code>méta-description</code> de la page à chaque changement de navigation. De plus, elle injecte des données structurées (JSON-LD) dans l'en-tête de la page, fournissant aux moteurs de recherche un contexte riche pour chaque page, y compris les études de cas de projets individuels. Cela garantit que chaque élément de contenu est individuellement indexable et optimisé pour la recherche.</p>"
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Foire Aux Questions"
+        },
+        {
+            "type": "faq-accordion",
+            "items": [
+                {
+                    "question": "Comment le contenu est-il géré ?",
+                    "answer": "<p>Tout le contenu, des détails du projet aux articles de blog, est géré dans des fichiers JSON, agissant comme un CMS sans tête. Cela découple le contenu du code, rendant les mises à jour rapides et faciles sans avoir besoin de redéployer l'application.</p>"
+                },
+                {
+                    "question": "L'intégration de l'IA Gemini est-elle coûteuse ?",
+                    "answer": "<p>L'application est conçue pour être très rentable. Des fonctionnalités comme 'AI Glitch Run' utilisent des modèles à faible latence et à faible coût. Le chatbot utilise le streaming pour gérer efficacement l'utilisation des jetons. Toutes les démos interactives sont conçues pour illustrer des concepts avec un minimum d'appels API.</p>"
+                },
+                {
+                    "question": "Quelle a été la partie la plus difficile dans la construction de ce site ?",
+                    "answer": "<p>L'aspect le plus difficile a été d'architecturer le système de rendu de contenu dynamique de manière propre et évolutive. S'assurer que le composant `ProjectDetailLayout` puisse afficher de manière flexible n'importe quelle combinaison de blocs de contenu — du simple texte aux démos interactives — a nécessité une planification minutieuse de la carte des composants et de la structure des données JSON.</p>"
+                }
+            ]
+        },
+        {
+            "type": "article-carousel",
+            "title": "Continuer à Explorer",
+            "itemSlugs": [ "ai-dino-game", "ultimate-ai-assistant-playbook", "ai-onboarding-assistant-playbook", "ai-ethics-insurance" ]
+        }
+    ]
+}

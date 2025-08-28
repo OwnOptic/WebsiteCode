@@ -1,9 +1,14 @@
 import React from 'react';
 import Experience from '../components/Experience';
+import type { BreadcrumbLink } from '../types';
 
-const ExperiencePage: React.FC = () => {
+interface ExperiencePageProps {
+    breadcrumbs: BreadcrumbLink[];
+}
+
+const ExperiencePage: React.FC<ExperiencePageProps> = ({ breadcrumbs }) => {
     return (
-        <Experience />
+        <Experience breadcrumbs={breadcrumbs} />
     );
 };
 

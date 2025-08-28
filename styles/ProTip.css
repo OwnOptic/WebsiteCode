@@ -1,0 +1,43 @@
+.pro-tip-box {
+    background-color: var(--surface-background);
+    border: 1px solid var(--border-color);
+    border-left: 5px solid var(--interactive-blue);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin: 2.5rem 0;
+    display: flex;
+    gap: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03), 0 2px 4px -2px rgba(0,0,0,0.03);
+}
+:root.dark .pro-tip-box {
+    background-color: rgba(99, 102, 241, 0.05);
+    border-color: rgba(99, 102, 241, 0.2);
+    border-left-color: var(--interactive-blue);
+}
+
+.pro-tip-icon-wrapper {
+    flex-shrink: 0;
+}
+
+.pro-tip-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--interactive-blue);
+}
+
+.pro-tip-content {
+    flex-grow: 1;
+}
+
+.pro-tip-header {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary-text);
+}
+
+.pro-tip-text {
+    font-size: 1rem;
+    color: var(--secondary-text);
+    margin-top: 0.25rem;
+    line-height: 1.6;
+}

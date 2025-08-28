@@ -1,0 +1,65 @@
+{
+    "title": "Component Library Showcase",
+    "subtitle": "A live demonstration of new, reusable components added to the website's dynamic page builder.",
+    "heroImageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109044/Data_Point_Bokeh_q2zg6q.png",
+    "overview": {
+        "industry": "Web Development",
+        "timeline": "Continuous",
+        "techStack": "React, TypeScript, CSS"
+    },
+    "content": [
+        {
+            "type": "html",
+            "value": "<p>This entire page is rendered dynamically from a single JSON file. By adding new components to the central library, we can easily create rich, varied layouts without writing new page-specific code. Below are some of the latest additions.</p>"
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Myth vs. Fact Component"
+        },
+        {
+            "type": "html",
+            "value": "<p>This component is designed to clearly and attractively distinguish between a common myth and a factual clarification using distinct color-coding.</p>"
+        },
+        {
+            "type": "myth-vs-fact",
+            "myth": "AI is going to take over all human jobs.",
+            "fact": "AI is a tool designed to augment human capabilities, automating repetitive tasks and freeing up people for more strategic work."
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Pro Tip Component"
+        },
+        {
+            "type": "html",
+            "value": "<p>A visually distinct callout box for highlighting key insights and making important advice stand out from regular text.</p>"
+        },
+        {
+            "type": "pro-tip",
+            "content": "Start with a smaller, clean dataset to iterate faster on a new AI model. This helps you find issues before scaling up."
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "FAQ Accordion"
+        },
+        {
+            "type": "html",
+            "value": "<p>A clean, modern accordion for displaying question-and-answer content with smooth open/close animations.</p>"
+        },
+        {
+            "type": "faq-accordion",
+            "items": [
+                {
+                    "question": "How long does an AI implementation project take?",
+                    "answer": "<p>Project timelines vary based on complexity, but a typical pilot project can range from 4 to 12 weeks. We provide a detailed timeline after the initial discovery phase.</p>"
+                },
+                {
+                    "question": "What kind of data do we need to provide?",
+                    "answer": "<p>The data required depends on the problem we're solving. It can range from structured data like sales figures to unstructured data like customer emails. We'll guide you through the data collection and preparation process.</p>"
+                }
+            ]
+        }
+    ]
+}

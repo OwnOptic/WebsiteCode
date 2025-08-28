@@ -1,0 +1,50 @@
+
+{
+    "title": "Synthétiseur de Documents par IA",
+    "subtitle": "Un outil pratique qui utilise l'IA Générative pour résumer de longs documents techniques, rapports et articles, démontrant des capacités avancées en NLP.",
+    "heroImageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109013/Gemini_Generated_Image_kmtfcgkmtfcgkmtf_huaq2v.png",
+    "overview": {
+        "industry": "Outils IA",
+        "timeline": "2 Semaines",
+        "techStack": "IA Générative, Power Automate, AI Builder"
+    },
+    "content": [
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Le Problème : La Surcharge d'Information"
+        },
+        {
+            "type": "html",
+            "value": "<p>Dans de nombreux domaines professionnels, rester à jour nécessite de lire des documents denses et longs. Cette 'surcharge d'information' est une perte de productivité importante. Ce projet visait à résoudre ce problème en créant un outil simple mais puissant pour distiller des textes longs en résumés concis et faciles à digérer.</p>"
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "La Solution : Un Moteur de Synthèse Automatisé"
+        },
+        {
+            "type": "html",
+            "value": "<p>La solution est un flux Power Automate qui peut être déclenché de plusieurs manières (par exemple, par un e-mail, un dépôt de fichier dans OneDrive ou un bouton dans une Power App). Le cœur du flux utilise l'action AI Builder 'Créer du texte avec GPT sur Azure OpenAI Service'. Le flux lit le contenu textuel du document source et le transmet au modèle avec un prompt soigneusement élaboré.</p>"
+        },
+        {
+            "type": "learning-box",
+            "title": "La Puissance de l'Ingénierie de Prompt",
+            "content": "<p>La qualité du résumé dépend fortement du prompt. Le prompt a été conçu pour demander à l'IA d'agir en tant qu'expert du domaine et d'extraire non seulement un résumé général, mais aussi les points clés à retenir et les actions potentielles, fournissant un résultat beaucoup plus riche qu'un simple paragraphe.</p>"
+        },
+        {
+            "type": "code",
+            "language": "text",
+            "code": "Vous êtes un analyste d'affaires expert. Résumez le document suivant en trois sections distinctes :\n1. Un résumé concis d'un paragraphe de l'ensemble du document.\n2. Une liste à puces des 5 principaux points à retenir.\n3. Une liste à puces des actions potentielles pour l'équipe de direction."
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Résultat du Projet"
+        },
+        {
+            "type": "html",
+            "value": "<p>Le résultat est un outil polyvalent qui peut être intégré dans divers flux de travail métier. Il réduit considérablement le temps nécessaire pour comprendre des documents complexes, permettant aux professionnels de prendre des décisions plus rapides et mieux informées. Ce projet est un excellent exemple de la manière dont l'IA Générative peut être appliquée de manière pratique pour résoudre des défis commerciaux courants et augmenter la productivité.</p>"
+        }
+    ]
+}

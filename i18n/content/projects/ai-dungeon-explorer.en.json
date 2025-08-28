@@ -1,0 +1,63 @@
+{
+    "title": "Interactive Showcase: AI Dungeon Explorer",
+    "subtitle": "A demonstration of advanced AI reasoning, where the Gemini 2.5 Flash model solves multi-step, objective-based puzzles in a dynamic dungeon environment.",
+    "heroImageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109025/AI_Dungeon_Explorer_The_Great_Escape_mo3kmq.png",
+    "interactiveComponent": "DungeonExplorer",
+    "overview": {
+        "industry": "AI Showcase",
+        "timeline": "3 Weeks (incl. Refactor)",
+        "techStack": "React, Gemini 2.5 Flash API, Canvas API"
+    },
+    "content": [
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Project Goal: From Reaction to Strategic Reasoning"
+        },
+        {
+            "type": "html",
+            "value": "<p>While 'Gemini Rush' was a test of raw reaction speed, <b>AI Dungeon Explorer</b> was designed to showcase a more sophisticated AI capability: multi-step, objective-based reasoning. The goal was to create a scenario where the AI couldn't just react to the next immediate obstacle, but had to understand complex rules and plan a sequence of actions to solve a puzzle.</p><p>Click 'Launch Demo' to try the puzzles yourself or toggle the AI on to watch it solve them. The AI's logic is now more stable and reliable, allowing it to better navigate challenges that require planning several moves in advance.</p>"
+        },
+        {
+            "type": "demo-button"
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "The Challenge: Complex Puzzle Mechanics"
+        },
+        {
+            "type": "html",
+            "value": "<p>To truly test the AI's limits, the game includes several complex puzzle mechanics that require strategic thinking:</p><ul><li><b>Traps:</b> These tiles reset the player's position, forcing the AI to learn avoidance and find alternative paths.</li><li><b>Pushable Blocks & Switches:</b> The AI must understand that pushing a block onto a switch is required to open a distant door.</li><li><b>Teleporters:</b> These introduce non-linear navigation, requiring the AI to understand spatial jumps to find the optimal route.</li></ul>"
+        },
+        {
+            "type": "learning-box",
+            "title": "The Power of In-Context Learning",
+            "content": "<p>This demo is a powerful example of in-context learning. We haven't fine-tuned a special model for this game. Instead, we are giving a general-purpose model, Gemini 2.5 Flash, all the context and rules it needs within the prompt itself. Its ability to understand these arbitrary rules and apply them to solve the puzzle showcases the incredible flexibility of modern large language models.</p>"
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "The Code: Prompting for Strategy"
+        },
+        {
+            "type": "html",
+            "value": "<p>The prompt is the most critical piece of this project. Following a major reliability refactor, the prompt has been simplified and made more direct to guide the AI toward a valid action, ensuring a more stable and bug-free demonstration.</p>"
+        },
+        {
+            "type": "code",
+            "language": "text",
+            "theme": "window",
+            "code": "You are a puzzle-solving AI controlling a player (P) in a grid-based dungeon. Your goal is to reach the Exit (E).\n\nRULES:\n- '.' is an empty space. '#' is a wall.\n- 'k' is a key. You need one key to open a locked door 'd'.\n- 'b' is a block you can push. 's' is a switch. Pushing 'b' onto 's' opens doors.\n- 't' is a trap that resets you. Avoid it.\n- 'T' is a teleporter to another 'T'.\n\nCURRENT STATE:\nGrid:\n#######\n#P..k.#\n#.#d#.#\n#...#E#\n#######\nKeys: 0\n\nAnalyze the state and provide the single best next move to reach the exit. Your response must be only one of the following words: UP, DOWN, LEFT, RIGHT."
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Project Outcome"
+        },
+        {
+            "type": "html",
+            "value": "<p>AI Dungeon Explorer successfully demonstrates the next level of AI capability. It proves that with the right prompting and a clear representation of the environment, a model like Gemini 2.5 Flash can perform complex, multi-step reasoning to solve logic puzzles. This has profound implications for enterprise automation, where AI agents could be tasked with navigating complex business processes with multiple dependencies, not just performing simple, repetitive tasks.</p>"
+        }
+    ]
+}

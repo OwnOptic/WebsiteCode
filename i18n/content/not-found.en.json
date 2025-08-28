@@ -1,0 +1,13 @@
+{
+  "notFound": {
+    "title": "404",
+    "subtitle": "Page Not Found",
+    "text": "Oops! The page you're looking for seems to have taken a different path. Let's get you back on track.",
+    "buttonText": "Go to Homepage",
+    "suggestionsTitle": "Here are some suggestions you might find interesting:",
+    "projectSlugs": [
+      "ai-dungeon-explorer",
+      "ultimate-ai-assistant-playbook"
+    ]
+  }
+}

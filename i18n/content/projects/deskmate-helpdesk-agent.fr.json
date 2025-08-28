@@ -1,0 +1,103 @@
+
+{
+    "title": "Projet Deskmate : L'Agent de Support Informatique IA pour ServiceNow",
+    "subtitle": "Une preuve de concept démontrant comment un agent d'IA Générative peut diagnostiquer les problèmes des utilisateurs, créer des tickets détaillés et réduire les temps de résolution dans ServiceNow.",
+    "heroImageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756108974/it_helpdesk_chaos_cartoon_wacn1r.png",
+    "overview": {
+        "industry": "Gestion des Services Informatiques",
+        "timeline": "2 Semaines",
+        "techStack": "Gemini 2.5 Flash, Power Automate, API ServiceNow"
+    },
+    "content": [
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Le Problème : Le Centre de Support Informatique Débordé"
+        },
+        {
+            "type": "html",
+            "value": "<p>Les centres de support informatique sont le système nerveux central de toute entreprise moderne, mais ils sont souvent débordés. Une part importante de leur charge de travail consiste en des problèmes à volume élevé et à faible complexité, comme les réinitialisations de mot de passe ou le dépannage de base. Le processus manuel où un utilisateur décrit son problème, un agent l'interprète, puis crée un ticket structuré dans un système comme ServiceNow est inefficace et crée un goulot d'étranglement frustrant pour les employés et le personnel informatique.</p>"
+        },
+        {
+            "type": "image",
+            "variant": "simple-caption",
+            "src": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109048/a_shadowy_figure_manipulating_data_streams_bias_ujp1tu.png",
+            "alt": "Une visualisation abstraite de flux de données manipulés, représentant l'inefficacité des processus.",
+            "caption": "Les centres d'assistance traditionnels ont souvent du mal à gérer des volumes élevés de demandes répétitives."
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "La Solution : Deskmate, Votre Agent IA de Niveau 1"
+        },
+        {
+            "type": "html",
+            "value": "<p>Le projet Deskmate est une preuve de concept pour un agent IA intelligent qui agit comme un spécialiste du support de niveau 1, 24h/24 et 7j/7. Intégré directement dans Microsoft Teams via Copilot Studio, Deskmate engage les utilisateurs dans une conversation naturelle pour diagnostiquer leur problème, recueille les détails nécessaires, puis utilise Power Automate pour créer un ticket parfaitement formaté et détaillé directement dans ServiceNow, en l'attribuant à la bonne équipe.</p>"
+        },
+        {
+            "type": "image",
+            "variant": "simple-caption",
+            "src": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756108991/ItHelpdeskAgentDEMO_x2vjme.gif",
+            "alt": "Démo de l'Agent de Support Informatique IA",
+            "caption": "Une démonstration de l'agent IA Deskmate diagnostiquant le problème d'un utilisateur dans Microsoft Teams."
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Architecture Technique"
+        },
+        {
+            "type": "html",
+            "value": "<p>La solution est construite sur une architecture moderne et sans serveur qui combine une interface conversationnelle avec un puissant moteur d'automatisation. Cela permet un système évolutif, maintenable et très efficace.</p>"
+        },
+        {
+            "type": "image",
+            "variant": "simple-caption",
+            "src": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109002/Structure_of_IT_Helpdesk_code_hhhuyh.png",
+            "alt": "Diagramme architectural de l'Agent de Support Informatique.",
+            "caption": "Un aperçu de haut niveau des composants de la solution."
+        },
+        {
+            "type": "html",
+            "value": "<ul><li><b>Copilot Studio :</b> Fournit l'interface conversationnelle orientée utilisateur au sein de Microsoft Teams.</li><li><b>API Gemini 2.5 Flash :</b> Alimente la compréhension du langage naturel (NLU) et le raisonnement. L'IA analyse le problème de l'utilisateur et extrait les entités clés comme l'application concernée et l'urgence.</li><li><b>Power Automate :</b> Agit comme la couche d'orchestration, connectant le Copilot à l'API de ServiceNow.</li><li><b>API ServiceNow :</b> L'API REST utilisée pour créer et mettre à jour les tickets d'incident dans la plateforme de gestion des services informatiques.</li></ul>"
+        },
+        {
+            "type": "learning-box",
+            "title": "La Puissance du Prompt Système",
+            "content": "<p>La clé de l'efficacité de Deskmate réside dans son prompt système. En fournissant à l'IA une personnalité claire, des instructions détaillées et des exemples du format de sortie souhaité, nous pouvons la guider pour créer des tickets structurés de haute qualité à chaque fois. Cela réduit le besoin d'une logique d'analyse complexe et garantit que les données envoyées à ServiceNow sont toujours propres et cohérentes.</p>"
+        },
+        {
+            "type": "code",
+            "language": "text",
+            "theme": "window",
+            "code": "Vous êtes 'Deskmate', un agent de support informatique pour ServiceNow. Votre but est de comprendre le problème de l'utilisateur et de créer un ticket structuré. D'abord, posez des questions pour clarifier le problème. Ensuite, résumez les détails du ticket pour confirmation avant de le créer.\n\nFormat du Ticket :\n{\n  \"caller_id\": \"email_utilisateur\",\n  \"short_description\": \"[Résumez le problème principal]\",\n  \"description\": \"[Fournissez un récit détaillé du problème de l'utilisateur]\",\n  \"urgency\": \"[1-Haute, 2-Moyenne, 3-Basse]\",\n  \"assignment_group\": \"[Déduire du problème, ex: 'Matériel', 'Logiciel', 'Réseau']\"\n}"
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Dépôt du Projet"
+        },
+        {
+            "type": "html",
+            "value": "<p>La preuve de concept complète, y compris le backend Python pour l'agent Gemini, est disponible sur GitHub. Vous pouvez explorer le code pour voir l'implémentation détaillée du moteur NLU, du gestionnaire de dialogue et de l'intégration ServiceNow.</p>"
+        },
+        {
+            "type": "github-repo",
+            "repoName": "servicenow-gemini-agent-helpdesk",
+            "description": "Une preuve de concept démontrant comment un agent d'IA Générative peut diagnostiquer les problèmes des utilisateurs et créer des tickets détaillés dans ServiceNow.",
+            "stars": "15",
+            "forks": "3",
+            "language": "TypeScript",
+            "repoUrl": "https://github.com/OwnOptic/servicenow-gemini-agent-helpdesk"
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Impact Commercial et Prochaines Étapes"
+        },
+        {
+            "type": "html",
+            "value": "<p>Le POC Deskmate démontre avec succès une opportunité significative d'améliorer l'efficacité du support informatique. En automatisant la création de tickets de niveau 1, le système peut réduire les temps de résolution, améliorer la qualité des données d'incident et libérer les agents humains pour qu'ils se concentrent sur des problèmes plus complexes. La prochaine étape serait d'étendre les capacités de l'agent pour inclure des étapes de dépannage automatisées et la résolution directe des problèmes courants, renforçant ainsi sa valeur en tant que membre d'équipe numérique.</p>"
+        }
+    ]
+}

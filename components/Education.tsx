@@ -1,105 +1,56 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { useI18n } from '../i18n/useI18n';
-import BookIcon from './icons/BookIcon';
+import Breadcrumb from './Breadcrumb';
+import type { BreadcrumbLink } from '../types';
+import HeroV2 from './HeroV2';
+import Timeline from './Timeline';
+import '../styles/AboutSubpage.css';
 
-const Education: React.FC = () => {
+interface EducationProps {
+    breadcrumbs: BreadcrumbLink[];
+}
+
+const Education: React.FC<EducationProps> = ({ breadcrumbs }) => {
     const { t } = useI18n();
-    const educationData = t('education.timeline') || [];
-    const headerData = t('education.header');
+    const educationData = t('education');
     
-    const timelineRef = useRef<HTMLDivElement>(null);
-    const [visibleItems, setVisibleItems] = useState<Set<number>>(new Set());
+    if (!educationData || !educationData.heroV2 || !educationData.header) return null;
 
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        const index = parseInt(entry.target.getAttribute('data-index') || '0', 10);
-                        setVisibleItems(prev => new Set(prev).add(index));
-                        observer.unobserve(entry.target);
-                    }
-                });
-            },
-            { threshold: 0.1 }
-        );
+    const { header, heroV2, timeline, cta } = educationData;
 
-        const elements = timelineRef.current?.querySelectorAll('.education-block');
-        if (elements) {
-            elements.forEach(el => observer.observe(el));
-        }
-        
-        return () => {
-            if (elements) {
-                elements.forEach(el => observer.unobserve(el));
-            }
-        };
-    }, [educationData]);
-
-    const headerStyle = {
-        backgroundImage: `url('https://raw.githubusercontent.com/OwnOptic/Website-storage/main/Gemini_Generated_Image_t5gj2nt5gj2nt5gj.png')`
+    const timelineItems = (timeline || []).map((item: any) => ({
+        title: item.degree,
+        subtitle: item.institution,
+        period: item.period,
+        description: item.points,
+        imageUrl: item.imageUrl,
+    }));
+    
+    const handleNav = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
+        e.preventDefault();
+        window.location.hash = path;
     };
 
     return (
         <div>
-            <style>
-            {`
-            .education-block {
-                opacity: 0;
-                transform: translateY(20px);
-                transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-            }
-            .education-block.visible {
-                opacity: 1;
-                transform: translateY(0);
-            }
-            .education-block li::before {
-                content: '✓';
-                position: absolute;
-                left: 0;
-                top: 1px;
-                color: var(--interactive-blue);
-                font-weight: 700;
-                transition: transform 0.3s ease-out;
-            }
-            .education-block .group:hover li::before {
-                transform: scale(1.2);
-            }
-            `}
-            </style>
-            <header className="relative h-[45vh] min-h-[350px] flex items-center justify-center text-center text-white">
-                <div className="absolute inset-0 bg-cover bg-center brightness-50" style={headerStyle}></div>
-                <div className="relative z-10 p-4">
-                    <h1 className="text-4xl md:text-6xl font-bold">{headerData.title}</h1>
-                    <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-gray-200">{headerData.subtitle}</p>
-                </div>
-            </header>
+             <HeroV2 
+                variant="full-centered-gradient"
+                imageUrl={heroV2.imageUrl}
+                title={header.title}
+                subtitle={header.subtitle}
+            />
             
-            <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-                <div ref={timelineRef} className="relative before:content-[''] before:absolute before:left-[28px] before:top-0 before:bottom-0 before:w-1 before:bg-[var(--surface-background)] before:rounded-full">
-                    {educationData.map((item: any, index: number) => (
-                        <div 
-                            key={index} 
-                            data-index={index}
-                            className={`education-block relative mb-12 ${visibleItems.has(index) ? 'visible' : ''}`} 
-                            style={{ transitionDelay: `${index * 150}ms` }}>
-                            <div className="absolute left-0 top-8 h-14 w-14 bg-white border-4 border-[var(--surface-background)] rounded-full flex items-center justify-center z-10 group-hover:border-[var(--interactive-blue)] transition-colors duration-300">
-                               <BookIcon className="w-7 h-7 text-[var(--secondary-text)] group-hover:text-[var(--interactive-blue)] transition-colors duration-300" />
-                            </div>
-                            <div className="ml-24 group">
-                                <div className="p-8 bg-white border border-[var(--border-color)] rounded-lg custom-shadow hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                                    <h3 className="text-2xl md:text-3xl font-semibold text-[var(--primary-text)] mb-1">{item.degree}</h3>
-                                    <h4 className="text-lg text-[var(--secondary-text)] mb-4">{item.institution} | {item.period}</h4>
-                                    <ul className="list-none p-0 m-0 space-y-3">
-                                        {item.points.map((point: string, pIndex: number) => (
-                                            <li key={pIndex} className="relative pl-7 text-[var(--secondary-text)] leading-relaxed">{point}</li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+            <main className="subpage-main-container">
+                <Breadcrumb links={breadcrumbs} />
+                <Timeline items={timelineItems} />
+
+                {cta && cta.href && (
+                    <div className="subpage-cta-container">
+                        <a href={cta.href} onClick={(e) => handleNav(e, cta.href)} className="subpage-cta-button">
+                            {cta.text}
+                        </a>
+                    </div>
+                )}
             </main>
         </div>
     );

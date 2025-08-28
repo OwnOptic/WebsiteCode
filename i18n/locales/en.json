@@ -28,17 +28,29 @@
       "title": "AI Use Case Library | Elliot Margot's Portfolio",
       "description": "Explore a comprehensive library of real-world AI and Automation use cases, showcasing practical applications of Generative AI, Copilot Studio, and Power Automate."
     },
-    "blog": {
-      "title": "Blog | Insights on Generative AI & Automation by Elliot Margot",
-      "description": "Read my latest articles on Generative AI, process automation, Microsoft Power Platform, and the future of enterprise technology."
-    },
     "projects": {
       "title": "Projects | Elliot Margot's AI Portfolio",
       "description": "A curated collection of key projects and thought leadership pieces demonstrating practical applications of AI strategy, Generative AI, and Power Platform automation."
     },
+    "openSource": {
+      "title": "Open Source Projects | Elliot Margot",
+      "description": "Explore my open source software projects. Contributions and collaborations are welcome."
+    },
     "techStack": {
       "title": "My Tech Stack | AI & Power Platform Expertise",
       "description": "A curated overview of the core platforms, technologies, and methodologies I use to build enterprise-grade AI and business process automation solutions."
+    },
+    "blog": {
+      "title": "Media & Insights | Elliot Margot",
+      "description": "Explore insights and articles on AI strategy, Generative AI, Power Platform, and business process automation."
+    },
+    "notFound": {
+        "title": "404 - Page Not Found | Elliot Margot",
+        "description": "The page you are looking for does not exist. Please navigate back to the homepage or explore some of my featured projects."
+    },
+    "sitemap": {
+      "title": "Sitemap | Elliot Margot's Portfolio",
+      "description": "A complete list of all pages available on the website, including projects, articles, and professional information."
     }
   },
   "nav": {
@@ -49,10 +61,58 @@
     "education": "Education",
     "certificates": "Certificates",
     "useCases": "Use Cases",
-    "blog": "Blog",
     "projects": "Projects",
-    "techStack": "Tech Stack"
+    "openSource": "Open Source",
+    "techStack": "Tech Stack",
+    "blog": "Media",
+    "reportBug": "Report a bug",
+    "sitemap": "Sitemap"
   },
+  "contactButton": "Contact",
+  "navItems": [
+    { "name": "Home", "href": "#/", "dropdown": null },
+    {
+      "name": "About Me",
+      "href": "#/about",
+      "dropdown": {
+        "links": [
+          { "name": "About Me Overview", "href": "#/about", "subLinks": null },
+          { "name": "Experience", "href": "#/experience", "subLinks": null },
+          { "name": "Education", "href": "#/education", "subLinks": null },
+          { "name": "Certificates", "href": "#/certificates", "subLinks": null }
+        ]
+      }
+    },
+    { "name": "Use Cases", "href": "#/use-cases", "dropdown": null },
+    {
+      "name": "Projects",
+      "href": "#/projects",
+      "dropdown": {
+        "links": [
+          { "name": "Projects Overview", "href": "#/projects", "subLinks": null },
+          {
+            "name": "Interactive Showcases",
+            "href": "#/projects?category=interactive-ai-demos",
+            "subLinks": [
+              { "name": "Gemini Rush", "href": "#/projects/ai-dino-game" }
+            ]
+          },
+          { "name": "Case Study: This Website", "href": "#/projects/making-of-website", "subLinks": null },
+          { "name": "AI Assistant Playbook", "href": "#/projects/ultimate-ai-assistant-playbook", "subLinks": null }
+        ],
+        "featured": {
+          "image": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109025/AI_Dungeon_Explorer_The_Great_Escape_mo3kmq.png",
+          "alt": "AI Dungeon Explorer game artwork",
+          "title": "Featured: AI Dungeon Explorer",
+          "description": "A playable demo where a Gemini AI solves complex, multi-step puzzles in a dungeon environment.",
+          "link": "#/projects/ai-dungeon-explorer",
+          "linkText": "Play the Demo"
+        }
+      }
+    },
+    { "name": "Open Source", "href": "#/open-source", "dropdown": null },
+    { "name": "Tech Stack", "href": "#/tech-stack", "dropdown": null }
+  ],
   "footer": {
     "copyright": "© {year} Elliot Margot. All Rights Reserved.",
     "siteMap": "Site Map",
@@ -99,26 +159,46 @@
       "cases": "Cases"
     }
   },
-  "blog": {
-    "header": {
-      "title": "Blog",
-      "subtitle": "Insights on AI, Process Automation, and Business Technology"
-    },
-    "readMore": "Read Article",
-    "filterByTag": "Filter by Tag",
-    "allTags": "All Tags",
-    "noResults": "No posts found matching your criteria.",
-    "backToAll": "← Back to All Posts",
-    "searchPlaceholder": "Search articles...",
-    "relatedPostsTitle": "You Might Also Like"
-  },
   "projects": {
-    "learnMore": "Learn More"
+    "filters": {
+      "title": "Filter by Category",
+      "all": "All Categories"
+    },
+    "categories": {
+      "ai-strategy-ethics": "AI Strategy & Ethics",
+      "gen-ai-llms": "Generative AI & LLMs",
+      "intelligent-automation": "Intelligent Automation",
+      "interactive-ai-demos": "Interactive AI Demos",
+      "web-app-dev": "Web & App Development",
+      "thought-leadership": "Thought Leadership & Playbooks"
+    }
+  },
+   "blog": {
+    "header": {
+        "title": "Media & Insights",
+        "subtitle": "Sharing insights and engaging with the technology community through articles, podcasts, and events."
+    },
+    "filterByTag": "Filter by Tag",
+    "allTags": "All",
+    "searchPlaceholder": "Search articles...",
+    "readMore": "Read Article",
+    "noResults": "No articles found.",
+    "backToAll": "Back to All Articles",
+    "relatedPostsTitle": "Related Reading"
   },
   "geminiBot": {
-    "headerTitle": "EllioBot",
+    "headerTitle": "ElliotBot",
     "placeholder": "Ask about my experience, skills, or projects...",
-    "initialMessage": "Hello! I'm EllioBot, your AI guide to Elliot Margot's portfolio. How can I help you today?"
+    "initialMessage": "Hello! I'm ElliotBot, your AI guide to Elliot Margot's portfolio. How can I help you today?",
+    "proactive": {
+      "projectPage": "I see you're looking at the '{title}' project. I can answer specific questions about it, or you can ask me to show you related use cases. What would you like to do? ✨",
+      "useCasesPage": "You're exploring the Use Case Library! Feel free to ask me to find use cases for a specific industry, like 'show me insurance use cases'. 🚀"
+    },
+    "reportBugConfirmation": "I've opened your email client with the bug report. Please review and send it. Thanks for your help! 🐞"
+  },
+  "bugReport": {
+    "subject": "Bug Report from Portfolio Website",
+    "bodyTemplate": "Hello Elliot,\n\nI'd like to report a bug. Here are the details:\n\n**Page URL:**\n[Please enter the URL of the page where you found the bug]\n\n**Steps to Reproduce:**\n1. Go to...\n2. Click on...\n3. Scroll to...\n\n**Expected Result:**\n[What did you expect to happen?]\n\n**Actual Result:**\n[What actually happened?]\n\n**Additional Details (Browser, Device, etc.):**\n[Any other information that might be helpful]\n\nThanks!"
   },
   "invoiceDemo": {
     "title": "Automated Invoice Processing",
@@ -128,13 +208,39 @@
     "processing": "Processing with Gemini...",
     "extractedDataTitle": "Extracted Data"
   },
+  "churnPredictionDemo": {
+    "title": "Simulated Churn Prediction",
+    "description": "This is a mock demonstration. Click 'Run Churn Prediction' to simulate how an AI model analyzes subscriber data to identify individuals at high risk of canceling their subscription.",
+    "runButton": "Run Churn Prediction",
+    "runningButton": "Analyzing...",
+    "analyzedButton": "Analysis Complete",
+    "subscribersTitle": "Sample Subscriber Data",
+    "table": {
+      "id": "ID",
+      "name": "Name",
+      "tier": "Tier",
+      "lastActive": "Last Active",
+      "risk": "Churn Risk",
+      "reason": "AI-Generated Reason"
+    },
+    "status": {
+      "low": "Low",
+      "high": "High"
+    },
+    "reasons": {
+      "reason1": "Significant drop in engagement over last 30 days.",
+      "reason2": "Account inactivity exceeds 40-day threshold."
+    }
+  },
   "contact": {
     "status": {
-      "generating": "Generating message...",
-      "redirecting": "Redirecting...",
-      "success": "Success! Please check your email client to send.",
-      "error": "Please fill in all fields.",
-      "apiError": "Could not generate email. Please try again."
+      "error": "Please fill in all fields."
+    }
+  },
+  "sitemap": {
+    "header": {
+        "title": "Sitemap",
+        "subtitle": "A complete list of all pages and resources available on the website."
     }
   }
 }

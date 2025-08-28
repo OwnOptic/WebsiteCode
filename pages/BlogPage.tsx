@@ -1,9 +1,14 @@
 import React from 'react';
 import BlogList from '../components/BlogList';
+import type { BreadcrumbLink } from '../types';
 
-const BlogPage: React.FC = () => {
+interface BlogPageProps {
+    breadcrumbs: BreadcrumbLink[];
+}
+
+const BlogPage: React.FC<BlogPageProps> = ({ breadcrumbs }) => {
     return (
-        <BlogList />
+        <BlogList breadcrumbs={breadcrumbs} />
     );
 };
 

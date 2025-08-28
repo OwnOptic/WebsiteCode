@@ -1,0 +1,95 @@
+{
+    "title": "The Ultimate AI Assistant Playbook",
+    "subtitle": "A strategic framework for designing and building effective AI assistants, from simple FAQ bots to proactive, enterprise-grade co-pilots.",
+    "heroImageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109004/The_AI-Powered_Assistant_mngjbj.png",
+    "overview": {
+        "industry": "AI Strategy",
+        "timeline": "Playbook",
+        "techStack": "Copilot Studio, Generative AI, Power Platform"
+    },
+    "content": [
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Introduction: Beyond the Basic Chatbot"
+        },
+        {
+            "type": "html",
+            "value": "<p>In today's business landscape, AI assistants are becoming essential tools for enhancing customer service and internal productivity. However, many organizations stop at simple, reactive FAQ bots. This playbook provides a strategic framework to help you think bigger, outlining a maturity model for evolving your AI assistants from basic information providers into proactive, value-driving co-pilots that can perform complex actions and anticipate user needs.</p>"
+        },
+        {
+            "type": "linkedin-article-button",
+            "text": "Read the Full Playbook on LinkedIn",
+            "href": "https://www.linkedin.com/pulse/ultimate-ai-assistant-playbook-step-by-step-guide-elliot-margot-wwfqe/?trackingId=zxpKxyU7Tsqlh5X0anHnMQ%3D%3D"
+        },
+        {
+            "type": "image",
+            "variant": "simple-caption",
+            "src": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756108974/The_Data-Driven_Decision_zbbm66.png",
+            "alt": "Abstract visualization of data flowing into a decision-making process.",
+            "caption": "Moving from simple bots to data-driven, intelligent assistants."
+        },
+        {
+            "type": "key-stat-block",
+            "value": "+25%",
+            "title": "Customer Satisfaction",
+            "description": "Increase in CSAT achieved on a related AI assistant project by improving first-contact resolution."
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "The Three Tiers of AI Assistants"
+        },
+        {
+            "type": "html",
+            "value": "<p>To build a successful AI strategy, it's crucial to understand the different levels of capability. I've broken this down into a simple 'Three Tiers' model. Each tier builds upon the last, adding new layers of intelligence, integration, and business value.</p>"
+        },
+        {
+            "type": "image",
+            "variant": "decorative-frame",
+            "src": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756108994/Masterful_and_Fun_cymg3w.png",
+            "alt": "Diagram showing the three tiers of AI assistants."
+        },
+        {
+            "type": "card-grid",
+            "cards": [
+                {
+                    "variant": "simple",
+                    "imageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756108991/Informational_Assistant_dd1cyn.png",
+                    "category": "Tier 1: The Knower",
+                    "title": "Informational Assistant",
+                    "description": "Answers questions by connecting to a trusted knowledge base (SharePoint, websites) using Generative AI to find and summarize information in natural language.",
+                    "link": "#/use-cases#uc03",
+                    "buttonText": "See Example"
+                },
+                {
+                    "variant": "simple",
+                    "imageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109019/Action-Oriented_Assistant_pg20om.png",
+                    "category": "Tier 2: The Doer",
+                    "title": "Action-Oriented Assistant",
+                    "description": "Performs tasks for the user by triggering Power Automate flows (plugins) to interact with other systems via APIs, such as looking up an order or creating a ticket.",
+                    "link": "#/use-cases#uc22",
+                    "buttonText": "See Example"
+                },
+                {
+                    "variant": "simple",
+                    "imageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756108995/Proactive_Co-Pilot_ph0pia.png",
+                    "category": "Tier 3: The Thinker",
+                    "title": "Proactive Co-Pilot",
+                    "description": "Anticipates user needs by monitoring business events. Uses scheduled flows and Generative AI to decide on the best action and notify users proactively.",
+                    "link": "#/use-cases#uc29",
+                    "buttonText": "See Example"
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Conclusion: Building for Business Value"
+        },
+        {
+            "type": "html",
+            "value": "<p>By understanding these three tiers, you can create a strategic roadmap for your AI assistant program. Start with a high-value Tier 1 use case to build momentum, then progressively add Tier 2 and Tier 3 capabilities to create a truly transformative co-pilot that delivers significant and measurable business value.</p>"
+        }
+    ]
+}

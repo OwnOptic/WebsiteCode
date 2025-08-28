@@ -1,49 +1,96 @@
+
 {
   "hero": {
     "name": "Elliot Margot",
     "subtitle": "Expert AI & Power Platform consulting. I design and deploy custom Generative AI and automation solutions that drive real business results."
   },
   "homePage": {
+    "animatedHero": {
+      "title": "Elliot Margot",
+      "subtitle": "Expert AI & Power Platform consulting. I design and deploy custom Generative AI and automation solutions that drive real business results.",
+      "buttonText": "Explore My Work",
+      "buttonLink": "#/projects"
+    },
     "expertise": {
       "title": "My Core Expertise",
       "items": [
         {
+          "icon": "BrainIcon",
           "title": "Custom AI Solutions",
-          "description": "I build and deploy intelligent chatbots and virtual agents with Copilot Studio and Generative AI to enhance both internal productivity and external customer service."
+          "description": "To build and deploy intelligent chatbots and virtual agents with Copilot Studio and Generative AI to enhance both internal productivity and external customer service."
         },
         {
+          "icon": "PowerPlatformIcon",
           "title": "Intelligent Automation",
-          "description": "I design powerful business process automations (BPA) using Power Automate to streamline workflows, reduce manual tasks, and connect disparate systems."
+          "description": "To design powerful business process automations (BPA) using Power Automate to streamline workflows, reduce manual tasks, and connect disparate systems."
         },
         {
+          "icon": "StrategyIcon",
           "title": "AI Strategy & Consulting",
-          "description": "I provide strategic guidance, lead client workshops, and develop AI roadmaps to ensure technology investments in Power Platform and Generative AI align with business goals."
+          "description": "To provide strategic guidance, lead client workshops, and develop AI roadmaps to ensure technology investments in Power Platform and Generative AI align with business goals."
         }
       ]
     },
+    "approach": {
+      "imagePosition": "left",
+      "imageUrl": "http://res.cloudinary.com/dapoc7ekn/image/upload/v1756109023/AI_as_an_Intuitive_Conductor.057Z_jojk8o.png",
+      "category": "My Approach",
+      "title": "Bridging Strategy and Technology",
+      "text": [
+        "I believe the most powerful AI solutions are born from a deep understanding of business strategy. My approach is to act as a bridge between your strategic goals and the technical possibilities of AI and automation.",
+        "By focusing on practical use cases that deliver measurable ROI, I help organizations move from experimentation to true digital transformation, ensuring every solution is not just technologically advanced, but also perfectly aligned with your vision for growth."
+      ],
+      "button": {
+        "text": "Explore Use Cases",
+        "href": "#/use-cases"
+      }
+    },
     "projects": {
       "title": "Featured Work",
-      "learnMore": "Learn More",
-      "items": [
+      "cards": [
         {
-          "imgSrc": "https://raw.githubusercontent.com/OwnOptic/Website-storage/main/Gemini_Generated_Image_449bsw449bsw449b.png",
+          "variant": "project-overview-light",
+          "layout": "large",
+          "imageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756108999/Regulation_and_Law_ai_theme_e73iho.png",
+          "category": "AI Strategy & Ethics",
           "title": "AI Ethics Strategy for Insurance",
-          "description": "A strategic analysis of AI's ethical implications in insurance, delivering a roadmap for fair and unbiased automation in claims and underwriting.",
+          "description": "A strategic analysis of AI's ethical implications, delivering a roadmap for fair and unbiased automation in claims processing and underwriting.",
+          "timeline": "3 Weeks",
+          "techStack": ["BrainIcon", "StrategyIcon"],
           "link": "#/projects/ai-ethics-insurance"
         },
         {
-          "imgSrc": "https://raw.githubusercontent.com/OwnOptic/Website-storage/main/AI%20Hackathon%20lighthouse.jfif",
-          "title": "AI Hackathon: Winning Insurance Assistant",
-          "description": "A hackathon-winning proof-of-concept for a Generative AI assistant designed to help insurance agents find complex policy information instantly.",
-          "link": "#/projects/ai-hackathon-google"
+          "variant": "project-overview-light",
+          "imageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109025/AI_Dungeon_Explorer_The_Great_Escape_mo3kmq.png",
+          "category": "Interactive AI Demos",
+          "title": "AI Dungeon Explorer: The Great Escape",
+          "description": "An interactive game showcasing Gemini's ability to solve complex, multi-step puzzles requiring strategic reasoning.",
+          "timeline": "3 Weeks",
+          "techStack": ["ReactIcon", "GeminiIcon"],
+          "link": "#/projects/ai-dungeon-explorer"
         },
         {
-          "imgSrc": "https://raw.githubusercontent.com/OwnOptic/Website-storage/main/AI%20onboarding%20agent%20-%20header.png",
-          "title": "The AI Onboarding Assistant Playbook",
-          "description": "An article detailing the strategy and architecture for transforming employee onboarding with a custom AI-powered assistant built on Power Platform.",
-          "link": "#/blog/playbook-ai-onboarding-assistant"
+          "variant": "project-overview-light",
+          "imageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756108974/it_helpdesk_chaos_cartoon_wacn1r.png",
+          "category": "Intelligent Automation",
+          "title": "Project Deskmate: AI ServiceNow Agent",
+          "description": "A proof-of-concept for a Generative AI agent that diagnoses user issues and creates detailed tickets in ServiceNow, slashing resolution times.",
+          "timeline": "2 Weeks",
+          "techStack": ["CopilotStudioIcon", "PowerAutomateIcon", "GeminiIcon"],
+          "link": "#/projects/deskmate-helpdesk-agent"
         }
       ]
+    },
+    "github": {
+      "title": "My Open Source Contributions",
+      "profile": {
+        "username": "OwnOptic",
+        "avatarUrl": "https://github.com/OwnOptic.png",
+        "bio": "AI Consultant at Witivio, a Microsoft Partner. Passionate about leveraging AI for business transformation and innovative solutions.",
+        "followers": "12",
+        "following": "20",
+        "profileUrl": "https://github.com/OwnOptic"
+      }
     }
   }
 }

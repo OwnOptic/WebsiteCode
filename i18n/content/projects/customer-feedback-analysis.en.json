@@ -1,0 +1,52 @@
+
+{
+    "title": "Automated Customer Feedback Analysis",
+    "subtitle": "A system using Power Automate and Azure AI Language to analyze sentiment, extract key topics, and categorize customer feedback from various channels automatically.",
+    "heroImageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756108994/Masterful_and_Fun_cymg3w.png",
+    "overview": {
+        "industry": "Business Intelligence",
+        "timeline": "3 Weeks",
+        "techStack": "Power Automate, Azure AI, Power BI"
+    },
+    "content": [
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "The Challenge: The Untapped Goldmine of Feedback"
+        },
+        {
+            "type": "html",
+            "value": "<p>Companies receive a constant stream of customer feedback from surveys, support tickets, and social media. This data is a goldmine of insights, but manually reading and categorizing it is an impossible task. As a result, valuable trends, emerging issues, and customer sentiment are often missed.</p>"
+        },
+        {
+            "type": "quote",
+            "text": "Data is the new oil. It's valuable, but if unrefined it cannot really be used.",
+            "author": "Clive Humby"
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "The Solution: An AI-Powered Analysis Pipeline"
+        },
+        {
+            "type": "html",
+            "value": "<p>This solution automates the entire feedback analysis process. A Power Automate flow acts as the central orchestrator, triggered whenever new feedback is received. The flow sends the text to Azure AI Language services for analysis.</p><ul><li><b>Sentiment Analysis:</b> Determines if the feedback is positive, negative, or neutral.</li><li><b>Key Phrase Extraction:</b> Identifies the main topics being discussed (e.g., 'shipping times', 'product quality').</li><li><b>Language Detection:</b> Automatically detects the language of the feedback.</li></ul><p>The enriched data is then stored in a central repository (like a Dataverse table) and visualized in a Power BI dashboard, providing a real-time view of customer sentiment and emerging trends.</p>"
+        },
+        {
+            "type": "image",
+            "variant": "simple-caption",
+            "src": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756108974/The_Data-Driven_Decision_zbbm66.png",
+            "alt": "A graphic representing data-driven decision making.",
+            "caption": "Visualizing feedback data in Power BI transforms raw text into actionable business intelligence."
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Business Impact"
+        },
+        {
+            "type": "html",
+            "value": "<p>This automated system transforms unstructured feedback into actionable intelligence. It allows product managers, marketers, and customer service leaders to:</p><ul><li><b>Identify Problems Proactively:</b> A sudden spike in negative sentiment about a specific feature can be identified and addressed immediately.</li><li><b>Understand Customer Needs:</b> Discover what features or services customers are asking for most often.</li><li><b>Track Sentiment Over Time:</b> Measure the impact of new product launches or policy changes on customer satisfaction.</li></ul><p>By automating the analysis, the company can move from being reactive to proactive, making data-driven decisions that improve the customer experience and drive business growth.</p>"
+        }
+    ]
+}

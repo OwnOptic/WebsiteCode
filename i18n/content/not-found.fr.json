@@ -1,0 +1,13 @@
+{
+  "notFound": {
+    "title": "404",
+    "subtitle": "Page Introuvable",
+    "text": "Oups ! La page que vous recherchez semble avoir pris un autre chemin. Remettons-vous sur la bonne voie.",
+    "buttonText": "Aller à l'accueil",
+    "suggestionsTitle": "Voici quelques suggestions qui pourraient vous intéresser :",
+    "projectSlugs": [
+      "ai-dungeon-explorer",
+      "ultimate-ai-assistant-playbook"
+    ]
+  }
+}

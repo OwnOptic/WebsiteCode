@@ -1,36 +1,122 @@
+
 {
-    "projects": {
-        "header": {
-            "title": "Projects & Articles",
-            "subtitle": "A collection of key projects and thought leadership pieces demonstrating practical applications of AI and automation strategy."
+    "header": {
+        "title": "Projects & Articles",
+        "subtitle": "A collection of key projects and thought leadership pieces demonstrating practical applications of AI and automation strategy."
+    },
+    "githubHeader": {
+        "title": "Featured GitHub Projects",
+        "subtitle": "A selection of open source projects and experiments."
+    },
+    "learnMore": "Learn More",
+    "items": [
+        {
+            "imgSrc": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109046/Gemini_Generated_Image_5at9q35at9q35at9_sklnd1.png",
+            "title": "Case Study: The Making of This Website",
+            "description": "A deep dive into the architecture, technology, and development process behind this portfolio, built with React, TypeScript, and the Gemini API.",
+            "link": "#/projects/making-of-website",
+            "slug": "making-of-website",
+            "categoryKey": "web-app-dev"
         },
-        "items": [
-            {
-                "imgSrc": "https://raw.githubusercontent.com/OwnOptic/Website-storage/main/Gemini_Generated_Image_449bsw449bsw449b.png",
-                "title": "AI Ethics Strategy for Insurance",
-                "description": "A strategic project analyzing the ethical implications of AI in insurance, delivering a roadmap for fair and unbiased automation in claims processing and underwriting using responsible AI principles.",
-                "link": "#/projects/ai-ethics-insurance",
-                "slug": "ai-ethics-insurance"
-            },
-            {
-                "imgSrc": "https://raw.githubusercontent.com/OwnOptic/Website-storage/main/AI%20Hackathon%20lighthouse.jfif",
-                "title": "AI Hackathon: Winning Insurance Assistant",
-                "description": "A hackathon-winning proof-of-concept for a Generative AI assistant, built with Copilot Studio, designed to help insurance agents find complex policy information instantly.",
-                "link": "#/projects/ai-hackathon-google",
-                "slug": "ai-hackathon-google"
-            },
-            {
-                "imgSrc": "https://raw.githubusercontent.com/OwnOptic/Website-storage/main/The%20Digital%20Conductor.881Z.png",
-                "title": "Automated Invoice Processing Demo",
-                "description": "An interactive demonstration of a Power Automate flow that uses multimodal Generative AI to read and extract structured data from invoices, showcasing advanced BPA capabilities.",
-                "link": "#/use-cases#uc21"
-            },
-            {
-                "imgSrc": "https://raw.githubusercontent.com/OwnOptic/Website-storage/main/AI%20onboarding%20agent%20-%20header.png",
-                "title": "The AI Onboarding Assistant Playbook",
-                "description": "An article detailing the strategy for transforming employee onboarding into a streamlined and efficient experience with a custom AI-powered assistant built on Power Platform.",
-                "link": "#/blog/playbook-ai-onboarding-assistant"
-            }
-        ]
-    }
+        {
+            "layout": "large",
+            "imgSrc": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756108979/The_Seamless_Integration.657Z_wosybg.png",
+            "title": "NoteTaker AI: Intelligent Note-Taking & Knowledge Management",
+            "description": "A privacy-first, offline-capable, intelligent workspace that uses generative AI to transcribe, summarize, and organize your notes.",
+            "link": "#/projects/notetaker-ai",
+            "slug": "notetaker-ai",
+            "categoryKey": "web-app-dev"
+        },
+        {
+            "imgSrc": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756108973/gemini_run_card_image_szjysh.png",
+            "title": "Interactive Showcase: Gemini Rush",
+            "description": "A rebranded, polished, playable showcase testing the instant binary decision-making of the Gemini 2.5 Flash AI in real-time.",
+            "link": "#/projects/ai-dino-game",
+            "slug": "ai-dino-game",
+            "categoryKey": "interactive-ai-demos"
+        },
+         {
+            "imgSrc": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109044/Data_Point_Bokeh_q2zg6q.png",
+            "title": "Component Library Showcase",
+            "description": "A live demonstration of new, reusable components added to the website's dynamic page builder, including new hero styles and interactive cards.",
+            "link": "#/projects/component-showcase",
+            "slug": "component-showcase",
+            "categoryKey": "web-app-dev"
+        },
+        {
+            "layout": "large",
+            "imgSrc": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109004/The_AI-Powered_Assistant_mngjbj.png",
+            "title": "The Ultimate AI Assistant Playbook",
+            "description": "A strategic framework for designing and building effective AI assistants, from simple FAQ bots to proactive, enterprise-grade co-pilots.",
+            "link": "#/projects/ultimate-ai-assistant-playbook",
+            "slug": "ultimate-ai-assistant-playbook",
+            "categoryKey": "thought-leadership"
+        },
+        {
+            "imgSrc": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109031/AI_onboarding_agent_-_header_e5gnbt.png",
+            "title": "Playbook: The AI Onboarding Assistant",
+            "description": "A deep-dive, step-by-step guide on building an enterprise-grade onboarding solution using Copilot Studio and Power Automate.",
+            "link": "#/projects/ai-onboarding-assistant-playbook",
+            "slug": "ai-onboarding-assistant-playbook",
+            "categoryKey": "thought-leadership"
+        },
+        {
+            "imgSrc": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109047/Gemini_Generated_Image_449bsw449bsw449b_xuoa7t.png",
+            "title": "AI Ethics Strategy for Insurance",
+            "description": "A strategic project analyzing the ethical implications of AI in insurance, delivering a roadmap for fair and unbiased automation in claims processing and underwriting using responsible AI principles.",
+            "link": "#/projects/ai-ethics-insurance",
+            "slug": "ai-ethics-insurance",
+            "categoryKey": "ai-strategy-ethics"
+        },
+        {
+            "imgSrc": "http://res.cloudinary.com/dapoc7ekn/image/upload/v1756109025/AI_Hackathon_lighthouse_jatpre.jpg",
+            "title": "AI Hackathon: Winning Insurance Assistant",
+            "description": "A hackathon-winning proof-of-concept for a Generative AI assistant, built on Google Cloud Platform with Vertex AI, designed to help insurance agents find complex policy information instantly.",
+            "link": "#/projects/ai-hackathon-google",
+            "slug": "ai-hackathon-google",
+            "categoryKey": "gen-ai-llms"
+        },
+        {
+            "imgSrc": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756108974/it_helpdesk_chaos_cartoon_wacn1r.png",
+            "title": "Project Deskmate: AI ServiceNow Agent",
+            "description": "A proof-of-concept demonstrating how a Generative AI agent can diagnose user issues, create detailed tickets, and slash resolution times in ServiceNow.",
+            "link": "#/projects/deskmate-helpdesk-agent",
+            "slug": "deskmate-helpdesk-agent",
+            "categoryKey": "intelligent-automation"
+        },
+        {
+            "imgSrc": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109025/AI_Dungeon_Explorer_The_Great_Escape_mo3kmq.png",
+            "title": "AI Dungeon Explorer: The Great Escape",
+            "description": "An interactive game showcasing Gemini's ability to solve complex, multi-step puzzles requiring strategic reasoning and planning.",
+            "link": "#/projects/ai-dungeon-explorer",
+            "slug": "ai-dungeon-explorer",
+            "categoryKey": "interactive-ai-demos"
+        },
+        {
+            "imgSrc": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109013/Gemini_Generated_Image_kmtfcgkmtfcgkmtf_huaq2v.png",
+            "title": "AI-Powered Document Summarizer",
+            "description": "A tool using Generative AI to summarize long technical documents, reports, and articles, showcasing advanced NLP capabilities.",
+            "link": "#/projects/ai-document-summarizer",
+            "slug": "ai-document-summarizer",
+            "categoryKey": "intelligent-automation"
+        },
+        {
+            "imgSrc": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756108994/Masterful_and_Fun_cymg3w.png",
+            "title": "Automated Customer Feedback Analysis",
+            "description": "A system using Azure AI Language to analyze sentiment, extract key topics, and categorize customer feedback from various channels.",
+            "link": "#/projects/customer-feedback-analysis",
+            "slug": "customer-feedback-analysis",
+            "categoryKey": "intelligent-automation"
+        }
+    ],
+    "githubProjects": [
+        {
+          "repoName": "servicenow-gemini-agent-helpdesk",
+          "description": "A proof-of-concept demonstrating how a Generative AI agent can diagnose user issues and create detailed tickets in ServiceNow.",
+          "stars": "15",
+          "forks": "3",
+          "language": "TypeScript",
+          "repoUrl": "https://github.com/OwnOptic/servicenow-gemini-agent-helpdesk"
+        }
+    ]
 }

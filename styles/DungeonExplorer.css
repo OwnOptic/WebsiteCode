@@ -1,0 +1,224 @@
+.dungeon-container {
+    background-color: #0d1117; /* GitHub Dark BG */
+    padding: 1rem;
+    border-radius: 0.75rem;
+    border: 1px solid #30363d;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.5rem;
+    align-items: start;
+    font-family: 'Roboto Mono', monospace;
+    color: #c9d1d9; /* Light gray text */
+    max-width: 900px;
+    margin: auto;
+}
+
+.game-area {
+    width: min-content;
+    height: min-content;
+    border: 4px solid #30363d;
+    border-radius: 8px;
+    background-color: #010409;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5), 0 0 15px rgba(56, 139, 253, 0.2);
+}
+
+.dungeon-container canvas {
+    display: block;
+}
+
+.dungeon-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 280px;
+}
+
+.dungeon-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #58a6ff; /* GitHub Blue */
+    text-align: center;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #30363d;
+}
+
+.dungeon-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #161b22;
+    border-radius: 0.5rem;
+    border: 1px solid #30363d;
+}
+
+.dungeon-controls > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dungeon-controls label {
+    font-weight: 600;
+}
+
+.dungeon-controls select, .dungeon-controls button {
+    background-color: #21262d;
+    color: #c9d1d9;
+    border: 1px solid #30363d;
+    border-radius: 0.375rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 600;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.dungeon-controls select:hover, .dungeon-controls button:hover {
+    background-color: #30363d;
+    border-color: #8b949e;
+}
+
+.dungeon-status {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem 1rem;
+    color: #8b949e;
+    font-weight: 600;
+    background-color: #161b22;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #30363d;
+}
+.status-label {
+    color: #c9d1d9;
+}
+.status-message {
+    grid-column: span 2;
+    text-align: center;
+    min-height: 24px;
+}
+
+.win-message {
+    font-weight: bold;
+    color: #3fb950;
+    text-shadow: 0 0 5px #3fb950;
+}
+
+.ai-message {
+    font-weight: bold;
+    color: #58a6ff;
+    animation: pulse 1.5s infinite;
+}
+
+.dungeon-legend {
+    background-color: #161b22;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #30363d;
+}
+.dungeon-legend h4 {
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #30363d;
+}
+
+.legend-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.legend-tile {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 2px;
+    border: 1px solid #4a5568;
+}
+
+.legend-tile.player { background-color: #4299e1; }
+.legend-tile.exit { background-color: #48bb78; }
+.legend-tile.key { background-color: #f6e05e; }
+.legend-tile.door { background-color: #f56565; }
+.legend-tile.block { background-color: #a0aec0; }
+.legend-tile.switch { background-color: #718096; }
+.legend-tile.trap { background-color: #e53e3e; }
+.legend-tile.teleport { border: 2px dashed #9f7aea; }
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+/* Toggle Switch CSS */
+.ai-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #4a5568;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #388bfd;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #388bfd;
+}
+
+input:checked + .slider:before {
+  transform: translateX(16px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

@@ -1,0 +1,23 @@
+{
+    "header": {
+        "title": "Open Source Software",
+        "subtitle": "A collection of my open source projects, available for collaboration and use on GitHub.",
+        "imageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109042/Coding_and_Development_ai.305Z_v2cnk1.png"
+    },
+    "items": [
+        {
+            "imgSrc": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756108974/it_helpdesk_chaos_cartoon_wacn1r.png",
+            "title": "Project Deskmate: AI ServiceNow Agent",
+            "description": "A proof-of-concept demonstrating how a Generative AI agent can diagnose user issues, create detailed tickets, and slash resolution times in ServiceNow.",
+            "link": "#/projects/deskmate-helpdesk-agent",
+            "categoryKey": "Open Source"
+        },
+        {
+            "imgSrc": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756147928/Gemini_Generated_Image_atp77qatp77qatp7_ozh5jd.png",
+            "title": "NoteTaker AI: Intelligent Note-Taking",
+            "description": "A privacy-first, offline-capable, intelligent workspace that uses generative AI to transcribe, summarize, and organize your notes.",
+            "link": "#/projects/notetaker-ai",
+            "categoryKey": "Open Source"
+        }
+    ]
+}

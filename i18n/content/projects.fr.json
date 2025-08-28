@@ -1,36 +1,122 @@
+
 {
-    "projects": {
-        "header": {
-            "title": "Projets & Articles",
-            "subtitle": "Une collection de projets clés et d'articles de fond démontrant les applications pratiques de la stratégie d'IA et d'automatisation."
+    "header": {
+        "title": "Projets & Articles",
+        "subtitle": "Une collection de projets clés et d'articles de fond démontrant les applications pratiques de la stratégie d'IA et d'automatisation."
+    },
+    "githubHeader": {
+        "title": "Projets GitHub en Vedette",
+        "subtitle": "Une sélection de projets open source et d'expérimentations."
+    },
+    "learnMore": "En savoir plus",
+    "items": [
+        {
+            "imgSrc": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109046/Gemini_Generated_Image_5at9q35at9q35at9_sklnd1.png",
+            "title": "Étude de Cas : La Création de ce Site Web",
+            "description": "Une analyse approfondie de l'architecture, de la technologie et du processus de développement de ce portfolio, construit avec React, TypeScript et l'API Gemini.",
+            "link": "#/projects/making-of-website",
+            "slug": "making-of-website",
+            "categoryKey": "web-app-dev"
         },
-        "items": [
-            {
-                "imgSrc": "https://raw.githubusercontent.com/OwnOptic/Website-storage/main/Gemini_Generated_Image_449bsw449bsw449b.png",
-                "title": "Stratégie d'Éthique de l'IA pour l'Assurance",
-                "description": "Un projet stratégique analysant les implications éthiques de l'IA dans l'assurance, fournissant une feuille de route pour une automatisation juste utilisant les principes de l'IA responsable.",
-                "link": "#/projects/ai-ethics-insurance",
-                "slug": "ai-ethics-insurance"
-            },
-            {
-                "imgSrc": "https://raw.githubusercontent.com/OwnOptic/Website-storage/main/AI%20Hackathon%20lighthouse.jfif",
-                "title": "Hackathon IA : Assistant d'Assurance Gagnant",
-                "description": "Une preuve de concept lauréate d'un hackathon pour un assistant à IA Générative, construit avec Copilot Studio, pour aider les agents d'assurance à trouver des informations complexes.",
-                "link": "#/projects/ai-hackathon-google",
-                "slug": "ai-hackathon-google"
-            },
-            {
-                "imgSrc": "https://raw.githubusercontent.com/OwnOptic/Website-storage/main/The%20Digital%20Conductor.881Z.png",
-                "title": "Démo de Traitement Automatisé des Factures",
-                "description": "Une démonstration interactive d'un flux Power Automate qui utilise l'IA Générative multimodale pour lire et extraire des données structurées de factures, illustrant des capacités de BPA avancées.",
-                "link": "#/use-cases#uc21"
-            },
-            {
-                "imgSrc": "https://raw.githubusercontent.com/OwnOptic/Website-storage/main/AI%20onboarding%20agent%20-%20header.png",
-                "title": "Le Playbook de l'Assistant d'Intégration IA",
-                "description": "Un article détaillant la stratégie pour transformer l'intégration des employés en une expérience rationalisée avec un assistant IA personnalisé construit sur Power Platform.",
-                "link": "#/blog/playbook-ai-onboarding-assistant"
-            }
-        ]
-    }
+        {
+            "layout": "large",
+            "imgSrc": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756108979/The_Seamless_Integration.657Z_wosybg.png",
+            "title": "NoteTaker AI : Prise de Notes Intelligente et Gestion de Connaissances",
+            "description": "Un espace de travail intelligent, privé et fonctionnant hors ligne, qui utilise l'IA générative pour transcrire, résumer et organiser vos notes.",
+            "link": "#/projects/notetaker-ai",
+            "slug": "notetaker-ai",
+            "categoryKey": "web-app-dev"
+        },
+        {
+            "imgSrc": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756108973/gemini_run_card_image_szjysh.png",
+            "title": "Démo Interactive : Gemini Rush",
+            "description": "Une démo jouable, repensée et peaufinée, testant la prise de décision binaire instantanée de l'IA Gemini 2.5 Flash en temps réel.",
+            "link": "#/projects/ai-dino-game",
+            "slug": "ai-dino-game",
+            "categoryKey": "interactive-ai-demos"
+        },
+        {
+            "imgSrc": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109044/Data_Point_Bokeh_q2zg6q.png",
+            "title": "Vitrine de la Bibliothèque de Composants",
+            "description": "Une démonstration en direct des nouveaux composants réutilisables ajoutés au constructeur de pages dynamique du site, y compris de nouveaux styles de héros et des cartes interactives.",
+            "link": "#/projects/component-showcase",
+            "slug": "component-showcase",
+            "categoryKey": "web-app-dev"
+        },
+        {
+            "layout": "large",
+            "imgSrc": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109004/The_AI-Powered_Assistant_mngjbj.png",
+            "title": "Le Playbook Ultime de l'Assistant IA",
+            "description": "Un cadre stratégique pour la conception et la création d'assistants IA efficaces, des simples bots FAQ aux copilotes proactifs de niveau entreprise.",
+            "link": "#/projects/ultimate-ai-assistant-playbook",
+            "slug": "ultimate-ai-assistant-playbook",
+            "categoryKey": "thought-leadership"
+        },
+        {
+            "imgSrc": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109031/AI_onboarding_agent_-_header_e5gnbt.png",
+            "title": "Playbook : L'Assistant d'Intégration IA",
+            "description": "Un guide détaillé, étape par étape, pour construire une solution d'intégration d'entreprise en utilisant Copilot Studio et Power Automate.",
+            "link": "#/projects/ai-onboarding-assistant-playbook",
+            "slug": "ai-onboarding-assistant-playbook",
+            "categoryKey": "thought-leadership"
+        },
+        {
+            "imgSrc": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109047/Gemini_Generated_Image_449bsw449bsw449b_xuoa7t.png",
+            "title": "Stratégie d'Éthique de l'IA pour l'Assurance",
+            "description": "Un projet stratégique analysant les implications éthiques de l'IA dans l'assurance, fournissant une feuille de route pour une automatisation juste utilisant les principes de l'IA responsable.",
+            "link": "#/projects/ai-ethics-insurance",
+            "slug": "ai-ethics-insurance",
+            "categoryKey": "ai-strategy-ethics"
+        },
+        {
+            "imgSrc": "http://res.cloudinary.com/dapoc7ekn/image/upload/v1756109025/AI_Hackathon_lighthouse_jatpre.jpg",
+            "title": "Hackathon IA : Assistant d'Assurance Gagnant",
+            "description": "Une preuve de concept lauréate d'un hackathon pour un assistant à IA Générative, construit sur Google Cloud Platform avec Vertex AI, pour aider les agents d'assurance à trouver des informations complexes.",
+            "link": "#/projects/ai-hackathon-google",
+            "slug": "ai-hackathon-google",
+            "categoryKey": "gen-ai-llms"
+        },
+        {
+            "imgSrc": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756108974/it_helpdesk_chaos_cartoon_wacn1r.png",
+            "title": "Projet Deskmate : Agent IA pour ServiceNow",
+            "description": "Une preuve de concept démontrant comment un agent d'IA Générative peut diagnostiquer les problèmes des utilisateurs et créer des tickets détaillés dans ServiceNow.",
+            "link": "#/projects/deskmate-helpdesk-agent",
+            "slug": "deskmate-helpdesk-agent",
+            "categoryKey": "intelligent-automation"
+        },
+        {
+            "imgSrc": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109025/AI_Dungeon_Explorer_The_Great_Escape_mo3kmq.png",
+            "title": "Explorateur de Donjon IA : La Grande Évasion",
+            "description": "Un jeu interactif présentant la capacité de Gemini à résoudre des énigmes complexes à plusieurs étapes nécessitant un raisonnement et une planification stratégiques.",
+            "link": "#/projects/ai-dungeon-explorer",
+            "slug": "ai-dungeon-explorer",
+            "categoryKey": "interactive-ai-demos"
+        },
+        {
+            "imgSrc": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109013/Gemini_Generated_Image_kmtfcgkmtfcgkmtf_huaq2v.png",
+            "title": "Synthétiseur de Documents par IA",
+            "description": "Un outil utilisant l'IA Générative pour résumer de longs documents techniques, rapports et articles, démontrant des capacités PNL avancées.",
+            "link": "#/projects/ai-document-summarizer",
+            "slug": "ai-document-summarizer",
+            "categoryKey": "intelligent-automation"
+        },
+        {
+            "imgSrc": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756108994/Masterful_and_Fun_cymg3w.png",
+            "title": "Analyse Automatisée des Retours Clients",
+            "description": "Un système utilisant Azure AI Language pour analyser les sentiments, extraire les sujets clés et catégoriser les retours clients de divers canaux.",
+            "link": "#/projects/customer-feedback-analysis",
+            "slug": "customer-feedback-analysis",
+            "categoryKey": "intelligent-automation"
+        }
+    ],
+    "githubProjects": [
+        {
+          "repoName": "servicenow-gemini-agent-helpdesk",
+          "description": "Une preuve de concept démontrant comment un agent d'IA Générative peut diagnostiquer les problèmes des utilisateurs et créer des tickets détaillés dans ServiceNow.",
+          "stars": "15",
+          "forks": "3",
+          "language": "TypeScript",
+          "repoUrl": "https://github.com/OwnOptic/servicenow-gemini-agent-helpdesk"
+        }
+    ]
 }

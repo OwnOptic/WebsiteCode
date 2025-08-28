@@ -1,10 +1,29 @@
+
 {
   "certificates": {
     "header": {
       "title": "Certificats & Diplômes",
       "subtitle": "Une quête continue de connaissances, alliant sens des affaires et applications pratiques en gestion de projet, IA et cybersécurité."
     },
+    "heroV2": {
+      "imageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756108979/The_Seamless_Integration.657Z_wosybg.png"
+    },
     "timeline": [
+      {
+        "category": "Plateforme Microsoft",
+        "items": [
+          {
+            "name": "Microsoft 365 Certified: Fundamentals",
+            "level": "Fondamentaux",
+            "url": "https://learn.microsoft.com/en-us/users/elliotmargot-2110/credentials/certification/microsoft-365-fundamentals?tab=credentials-tab"
+          },
+          {
+            "name": "Agent Academy - Recruit - Communauté Microsoft 365 & Power Platform",
+            "level": "Communauté",
+            "url": "https://www.credly.com/badges/75796f27-101b-4f9a-a250-a10e19591566/public_url"
+          }
+        ]
+      },
       {
         "category": "Gestion de Projet",
         "items": [
@@ -19,13 +38,12 @@
         ]
       },
       {
-        "category": "Intelligence Artificielle (IA) & Apprentissage Automatique (ML)",
+        "category": "IA & Machine Learning",
         "items": [
-          { "name": "Profil Professionnel IA Coursera", "level": "Avancé", "url": "https://www.coursera.org/learner/elliot-margot-ai-pro" },
           { "name": "Parcours d'Apprentissage Introduction à l'IA Générative", "level": "Avancé", "url": "https://coursera.org/verify/specialization/KS2DCZRW9KJ0" },
-          { "name": "IBM AI Workflow : Ingénierie des Caractéristiques et Détection de Biais", "level": "Avancé", "url": "https://coursera.org/verify/IGJ4CFCPGOND" },
+          { "name": "IBM AI Workflow : Ingénierie des Fonctionnalités et Détection de Biais", "level": "Avancé", "url": "https://coursera.org/verify/IGJ4CFCPGOND" },
           { "name": "IBM AI Workflow : Analyse de Données et Test d'Hypothèses", "level": "Avancé", "url": "https://coursera.org/verify/G417607041IP" },
-          { "name": "IBM AI Workflow : Apprentissage Automatique, Reconnaissance Visuelle et NLP", "level": "Avancé", "url": "https://coursera.org/verify/F7F5WFH0IOWZ" },
+          { "name": "IBM AI Workflow : Machine Learning, Reconnaissance Visuelle et NLP", "level": "Avancé", "url": "https://coursera.org/verify/F7F5WFH0IOWZ" },
           { "name": "IBM AI Workflow : Priorités Commerciales et Ingestion de Données", "level": "Avancé", "url": "https://coursera.org/verify/MYLB9HWMMMYK" },
           { "name": "IBM AI Workflow : Déploiement de Modèles d'Entreprise", "level": "Avancé", "url": "https://coursera.org/verify/3Y2RPNIF4ZO0" },
           { "name": "Praticien IBM Enterprise Design Thinking", "level": "Intermédiaire", "url": "https://www.credly.com/go/xzOKue6A" },
@@ -43,9 +61,9 @@
         "category": "Gestion de Produit",
         "items": [
           { "name": "IA Générative : Dynamisez Votre Carrière en Gestion de Produit", "level": "Avancé", "url": "https://coursera.org/verify/SVLXBAMYBP9W" },
-          { "name": "Gestion de Produit : Créer des Produits Basés sur l'IA", "level": "Débutant", "url": "https://coursera.org/verify/DRZDCQIOPNQM" },
-          { "name": "Gestion de Produit : Fondamentaux & Collaboration avec les Parties Prenantes", "level": "Débutant", "url": "https://coursera.org/verify/705DGLWY1T20" },
-          { "name": "Gestion de Produit : Stratégie et Plan de Produit Initial", "level": "Débutant", "url": "https://coursera.org/verify/J37Z8C29PBIP" },
+          { "name": "Gestion de Produit : Construire des Produits Basés sur l'IA", "level": "Débutant", "url": "https://coursera.org/verify/DRZDCQIOPNQM" },
+          { "name": "Gestion de Produit : Fondamentaux et Collaboration avec les Parties Prenantes", "level": "Débutant", "url": "https://coursera.org/verify/705DGLWY1T20" },
+          { "name": "Gestion de Produit : Stratégie et Plan de Produit Initials", "level": "Débutant", "url": "https://coursera.org/verify/J37Z8C29PBIP" },
           { "name": "Gestion de Produit : Une Introduction", "level": "Débutant", "url": "https://coursera.org/verify/35ZW4RI212KZ" },
           { "name": "Gestion de Produit : Développer et Livrer un Nouveau Produit", "level": "Débutant", "url": "https://coursera.org/verify/AQGJWELV0QP9" }
         ]

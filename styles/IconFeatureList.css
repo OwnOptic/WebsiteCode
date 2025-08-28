@@ -1,0 +1,108 @@
+/* --- Base Styles --- */
+.feature-item-icon-wrapper {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+}
+.feature-item-icon-wrapper svg,
+.feature-icon-wrapper svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+/* --- Variant: two-columns (used on HomePage) --- */
+.feature-list-container {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    text-align: center;
+}
+.feature-list-title {
+    font-size: 2.441rem;
+    font-weight: 700;
+    color: var(--primary-text);
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+.feature-list-divider {
+    width: 6rem;
+    height: 4px;
+    background-color: var(--interactive-blue);
+    margin: 0 auto 3rem auto;
+}
+.feature-list-grid {
+    display: grid;
+    gap: 2.5rem;
+}
+@media (min-width: 768px) {
+    .feature-list-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.feature-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.feature-card:hover {
+    transform: translateY(-0.5rem);
+}
+.feature-icon-wrapper {
+    display: inline-block;
+    padding: 1rem;
+    background-color: var(--interactive-blue);
+    color: white;
+    border-radius: 9999px;
+    margin-bottom: 1.5rem;
+}
+.feature-card-title {
+    font-size: 1.563rem;
+    font-weight: 600;
+    color: var(--primary-text);
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+.feature-card-description {
+    color: var(--secondary-text);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* --- Variant: single-column --- */
+.feature-list-single-col {
+    width: 100%;
+    max-width: 42rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+.feature-item-single-col {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+.feature-item-icon-wrapper {
+    height: 4rem;
+    width: 4rem;
+    background-color: #eff6ff; /* blue-50 */
+    color: #2563eb; /* text-blue-600 */
+}
+.feature-item-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827; /* text-gray-900 */
+}
+.feature-item-description {
+    margin-top: 0.5rem;
+    color: #4b5563; /* text-gray-600 */
+}

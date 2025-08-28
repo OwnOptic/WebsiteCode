@@ -1,5 +1,7 @@
 import React from 'react';
 import { useI18n } from '../i18n/useI18n';
+import GithubIcon from './icons/GithubIcon';
+import '../styles/Footer.css';
 
 const Footer: React.FC = () => {
     const { t } = useI18n();
@@ -26,50 +28,53 @@ const Footer: React.FC = () => {
     };
 
     return (
-        <footer className="bg-[var(--footer-background)] text-[var(--footer-text)] py-16 px-6">
-            <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
+        <footer className="footer">
+            <div className="footer-container">
                 {/* Column 1: Name & Copyright */}
-                <div>
-                    <h3 className="text-2xl font-bold mb-2">Elliot Margot</h3>
-                    <p className="text-sm text-[var(--footer-copyright)]">{t('footer.copyright', { year: currentYear.toString() })}</p>
-                     <div className="flex items-center justify-center md:justify-start gap-5 mt-6">
+                <div className="footer-column">
+                    <h3 className="footer-title">Elliot Margot</h3>
+                    <p className="footer-copyright">{t('footer.copyright', { year: currentYear.toString() })}</p>
+                     <div className="footer-socials">
                         {socialLogos.map(logo => (
-                            <a key={logo.alt} href={logo.href} target="_blank" rel="noopener noreferrer" title={logo.title}>
+                            <a key={logo.alt} href={logo.href} target="_blank" rel="noopener noreferrer" title={logo.title} className="footer-social-link">
                                 <img 
                                     src={logo.src} 
                                     alt={logo.alt} 
-                                    className="h-10 w-auto transition-transform duration-200 ease-in-out hover:scale-110"
+                                    className="footer-social-image"
                                     loading="lazy"
                                     width="40"
                                     height="40"
                                 />
                             </a>
                         ))}
+                         <a href="https://github.com/OwnOptic" target="_blank" rel="noopener noreferrer" title="Visit Elliot Margot's GitHub" className="footer-social-link github">
+                            <GithubIcon className="footer-social-icon" />
+                        </a>
                     </div>
                 </div>
 
                 {/* Column 2: Site Map */}
-                <div>
-                    <h4 className="text-lg font-semibold mb-4">{t('footer.siteMap')}</h4>
-                    <nav className="flex flex-col space-y-2">
-                        <a href="#/" onClick={(e) => handleNav(e, '#/')} className="text-[var(--footer-copyright)] hover:text-white transition-colors">{t('nav.home')}</a>
-                        <a href="#/about" onClick={(e) => handleNav(e, '#/about')} className="text-[var(--footer-copyright)] hover:text-white transition-colors">{t('nav.about')}</a>
-                        <a href="#/use-cases" onClick={(e) => handleNav(e, '#/use-cases')} className="text-[var(--footer-copyright)] hover:text-white transition-colors">{t('nav.useCases')}</a>
-                        <a href="#/blog" onClick={(e) => handleNav(e, '#/blog')} className="text-[var(--footer-copyright)] hover:text-white transition-colors">{t('nav.blog')}</a>
-                        <a href="#/projects" onClick={(e) => handleNav(e, '#/projects')} className="text-[var(--footer-copyright)] hover:text-white transition-colors">{t('nav.projects')}</a>
-                        <a href="#/tech-stack" onClick={(e) => handleNav(e, '#/tech-stack')} className="text-[var(--footer-copyright)] hover:text-white transition-colors">{t('nav.techStack')}</a>
-                        <a href="#/contact" onClick={(e) => handleNav(e, '#/contact')} className="text-[var(--footer-copyright)] hover:text-white transition-colors">{t('nav.contact')}</a>
+                <div className="footer-column">
+                    <h4 className="footer-subtitle">{t('footer.siteMap')}</h4>
+                    <nav className="footer-sitemap">
+                        <a href="#/" onClick={(e) => handleNav(e, '#/')} className="footer-sitemap-link">{t('nav.home')}</a>
+                        <a href="#/about" onClick={(e) => handleNav(e, '#/about')} className="footer-sitemap-link">{t('nav.about')}</a>
+                        <a href="#/use-cases" onClick={(e) => handleNav(e, '#/use-cases')} className="footer-sitemap-link">{t('nav.useCases')}</a>
+                        <a href="#/projects" onClick={(e) => handleNav(e, '#/projects')} className="footer-sitemap-link">{t('nav.projects')}</a>
+                        <a href="#/tech-stack" onClick={(e) => handleNav(e, '#/tech-stack')} className="footer-sitemap-link">{t('nav.techStack')}</a>
+                        <a href="#/contact" onClick={(e) => handleNav(e, '#/contact')} className="footer-sitemap-link">{t('nav.contact')}</a>
+                        <a href="#/sitemap" onClick={(e) => handleNav(e, '#/sitemap')} className="footer-sitemap-link">{t('nav.sitemap')}</a>
                     </nav>
                 </div>
 
                 {/* Column 3: Contact Me CTA */}
-                 <div>
-                    <h4 className="text-lg font-semibold mb-4">{t('footer.contactMe.title')}</h4>
-                    <p className="text-sm text-[var(--footer-copyright)] mb-6">{t('footer.contactMe.description')}</p>
+                 <div className="footer-column">
+                    <h4 className="footer-subtitle">{t('footer.contactMe.title')}</h4>
+                    <p className="footer-cta-description">{t('footer.contactMe.description')}</p>
                      <a 
                         href="#/contact" 
                         onClick={(e) => handleNav(e, '#/contact')} 
-                        className="inline-block bg-[var(--interactive-blue)] text-white font-semibold py-3 px-6 rounded-[4px] hover:bg-[var(--interactive-hover)] transition-colors duration-200 cursor-pointer text-[0.875rem]"
+                        className="footer-cta-button"
                     >
                         {t('footer.contactMe.buttonText')}
                     </a>

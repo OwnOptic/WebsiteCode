@@ -1,0 +1,122 @@
+.contact-section {
+    background-color: var(--surface-background);
+}
+
+.contact-container {
+    max-width: var(--container-max-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1.5rem;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact-title {
+    font-size: 2.441rem;
+    font-weight: 700;
+    color: var(--primary-text);
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.contact-subtitle {
+    color: var(--secondary-text);
+    font-size: 1.125rem;
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-divider {
+    width: 6rem;
+    height: 4px;
+    background-color: var(--interactive-blue);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+}
+
+.contact-form-wrapper {
+    max-width: 48rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--primary-background);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+@media (min-width: 768px) {
+    .contact-form-wrapper {
+        padding: 3rem;
+    }
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-form-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+@media (min-width: 768px) {
+    .contact-form-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.contact-input, .contact-textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    transition: box-shadow 0.2s;
+    background-color: var(--primary-background);
+    color: var(--primary-text);
+}
+.contact-input:focus, .contact-textarea:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 2px var(--interactive-blue);
+    border-color: var(--interactive-blue);
+}
+
+.contact-submit-wrapper {
+    text-align: center;
+}
+
+.contact-submit-button {
+    background-color: var(--interactive-blue);
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+    transform: scale(1);
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact-submit-button:hover {
+    background-color: var(--interactive-hover);
+    transform: scale(1.05);
+}
+.contact-submit-button:disabled {
+    background-color: #9ca3af;
+    transform: scale(1);
+    cursor: not-allowed;
+}
+@media (min-width: 768px) {
+    .contact-submit-button {
+        width: auto;
+    }
+}

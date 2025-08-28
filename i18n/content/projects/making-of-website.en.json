@@ -1,0 +1,115 @@
+
+{
+    "title": "Case Study: The Making of This Website",
+    "subtitle": "A deep dive into the architecture, technology, and development process behind this portfolio, built with React, TypeScript, and the Gemini API.",
+    "heroImageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109046/Gemini_Generated_Image_5at9q35at9q35at9_sklnd1.png",
+    "overview": {
+        "industry": "Web Development",
+        "timeline": "4 Weeks",
+        "techStack": "React, TypeScript, Gemini API, Headless CMS"
+    },
+    "content": [
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Project Goals & Vision"
+        },
+        {
+            "type": "html",
+            "value": "<p>The primary vision for this portfolio was to create more than just a digital resume. The goal was to build a modern, professional, and performant single-page application (SPA) that not only showcases my work but also serves as a live demonstration of my technical capabilities. Key objectives included:</p><ul><li><b>Modern User Experience:</b> A clean, responsive, and aesthetically pleasing design that works flawlessly on all devices.</li><li><b>High Performance:</b> Fast load times and smooth navigation to keep users engaged.</li><li><b>Dynamic & Scalable Content:</b> An architecture that allows for easy content updates and the addition of new projects without code changes.</li><li><b>Advanced AI Integration:</b> To showcase practical applications of the Google Gemini API in a real-world setting.</li><li><b>Bilingual Support:</b> Full internationalization (i18n) to serve content in both English and French seamlessly.</li></ul>"
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Core Architecture: A Headless CMS Approach"
+        },
+        {
+            "type": "html",
+            "value": "<p>The website is built as a React SPA using TypeScript for type safety and robustness. At its core, it employs a 'headless CMS' architecture. Instead of hardcoding content into components, all text and data are stored in JSON files within the <code>/i18n/content/</code> directory.</p>"
+        },
+        {
+            "type": "image",
+            "variant": "simple-caption",
+            "src": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756108979/The_Seamless_Integration.657Z_wosybg.png",
+            "alt": "Abstract graphic representing seamless integration of systems",
+            "caption": "The site's architecture is designed for seamless integration between content and components."
+        },
+        {
+            "type": "html",
+            "value": "<p>A custom React Context, the <code>I18nProvider</code>, acts as a central content aggregator. When the user switches languages, this provider dynamically fetches all relevant JSON files, merges them into a single content object, and makes it available throughout the application via the <code>useI18n</code> hook. This powerful pattern completely decouples the application's code from its content, making the site incredibly easy to maintain and scale.</p>"
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Development Toolchain"
+        },
+        {
+            "type": "technology-spotlight",
+            "technologies": [
+                { "name": "VS Code", "description": "My primary code editor, customized for maximum efficiency in web and AI development." },
+                { "name": "Postman", "description": "An indispensable tool for testing and interacting with APIs, crucial for the Gemini integration." },
+                { "name": "GitHub", "description": "Essential for robust version control, collaboration, and managing the project codebase." }
+            ]
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Key Feature: Gemini API Integration"
+        },
+        {
+            "type": "html",
+            "value": "<p>A central feature of this portfolio is the integration of the Google Gemini API to demonstrate various AI capabilities:</p>"
+        },
+        {
+            "type": "image",
+            "variant": "simple-caption",
+            "src": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109013/Gemini_Generated_Image_nt5ubknt5ubknt5u_pourlr.png",
+            "alt": "Abstract AI generated graphic with vibrant colors",
+            "caption": "The Gemini API powers multiple interactive and intelligent features across the portfolio."
+        },
+        {
+            "type": "html",
+            "value": "<ul><li><b>ElliotBot (AI Co-Pilot):</b> A context-aware chatbot that uses a detailed system prompt and streaming responses to act as an AI guide for the portfolio. It leverages tool-use to perform actions like navigation and filtering based on the user's conversational requests.</li><li><b>Interactive Demos:</b> Projects like the <b>Automated Invoice Processing</b> demo showcase Gemini's multimodal capabilities, sending an image and a text prompt to extract structured JSON data.</li><li><b>Real-Time AI Player:</b> The <b>AI Glitch Run</b> game demonstrates low-latency decision-making, where the Gemini 2.5 Flash model processes the game state on each frame and returns an action ('JUMP' or 'WAIT'), configured for maximum speed by disabling thinking.</li></ul>"
+        },
+        {
+            "type": "pro-tip",
+            "content": "When designing a content-driven site, abstracting your content into a CMS-like structure (even simple JSON files) from the start is a huge long-term win for maintainability and scalability."
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "SEO & Performance Strategy"
+        },
+        {
+            "type": "html",
+            "value": "<p>For an SPA, ensuring proper search engine indexing is critical. The routing logic in <code>App.tsx</code> dynamically updates the page's <code>title</code> and <code>meta description</code> on every navigation change. Furthermore, it injects structured data (JSON-LD) into the page header, providing search engines with rich context for every page, including individual project case studies. This ensures that every piece of content is individually indexable and optimized for search.</p>"
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Frequently Asked Questions"
+        },
+        {
+            "type": "faq-accordion",
+            "items": [
+                {
+                    "question": "How is the content managed?",
+                    "answer": "<p>All content, from project details to blog posts, is managed in JSON files, acting like a headless CMS. This decouples the content from the code, making updates fast and easy without needing to redeploy the application.</p>"
+                },
+                {
+                    "question": "Is the Gemini AI integration expensive?",
+                    "answer": "<p>The application is designed to be very cost-effective. Features like the 'AI Glitch Run' use low-latency, low-cost models. The chatbot uses streaming to manage token usage efficiently. All interactive demos are designed to illustrate concepts with minimal API calls.</p>"
+                },
+                {
+                    "question": "What was the hardest part of building this site?",
+                    "answer": "<p>The most challenging aspect was architecting the dynamic content rendering system in a clean and scalable way. Ensuring the `ProjectDetailLayout` component could flexibly render any combination of content blocks—from simple text to interactive demos—required careful planning of the component map and the JSON data structure.</p>"
+                }
+            ]
+        },
+        {
+            "type": "article-carousel",
+            "title": "Continue Exploring",
+            "itemSlugs": [ "ai-dino-game", "ultimate-ai-assistant-playbook", "ai-onboarding-assistant-playbook", "ai-ethics-insurance" ]
+        }
+    ]
+}

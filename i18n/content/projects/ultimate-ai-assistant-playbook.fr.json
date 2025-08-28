@@ -1,0 +1,95 @@
+{
+    "title": "Le Playbook Ultime de l'Assistant IA",
+    "subtitle": "Un cadre stratégique pour la conception et la création d'assistants IA efficaces, des simples bots FAQ aux copilotes proactifs de niveau entreprise.",
+    "heroImageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109004/The_AI-Powered_Assistant_mngjbj.png",
+    "overview": {
+        "industry": "Stratégie IA",
+        "timeline": "Playbook",
+        "techStack": "Copilot Studio, IA Générative, Power Platform"
+    },
+    "content": [
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Introduction : Au-delà du Chatbot de Base"
+        },
+        {
+            "type": "html",
+            "value": "<p>Dans le paysage commercial actuel, les assistants IA deviennent des outils essentiels pour améliorer le service client et la productivité interne. Cependant, de nombreuses organisations s'arrêtent à de simples bots FAQ réactifs. Ce playbook fournit un cadre stratégique pour vous aider à voir plus grand, en décrivant un modèle de maturité pour faire évoluer vos assistants IA de simples fournisseurs d'informations à des copilotes proactifs, générateurs de valeur, capables d'effectuer des actions complexes et d'anticiper les besoins des utilisateurs.</p>"
+        },
+        {
+            "type": "linkedin-article-button",
+            "text": "Lire le Playbook Complet sur LinkedIn",
+            "href": "https://www.linkedin.com/pulse/ultimate-ai-assistant-playbook-step-by-step-guide-elliot-margot-wwfqe/?trackingId=zxpKxyU7Tsqlh5X0anHnMQ%3D%3D"
+        },
+        {
+            "type": "image",
+            "variant": "simple-caption",
+            "src": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756108974/The_Data-Driven_Decision_zbbm66.png",
+            "alt": "Visualisation abstraite de données circulant dans un processus de prise de décision.",
+            "caption": "Passer de simples bots à des assistants intelligents basés sur les données."
+        },
+        {
+            "type": "key-stat-block",
+            "value": "+25%",
+            "title": "Satisfaction Client",
+            "description": "Augmentation du CSAT obtenue sur un projet d'assistant IA connexe en améliorant la résolution au premier contact."
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Les Trois Niveaux d'Assistants IA"
+        },
+        {
+            "type": "html",
+            "value": "<p>Pour élaborer une stratégie d'IA réussie, il est crucial de comprendre les différents niveaux de capacité. J'ai décomposé cela en un modèle simple de 'Trois Niveaux'. Chaque niveau s'appuie sur le précédent, ajoutant de nouvelles couches d'intelligence, d'intégration et de valeur commerciale.</p>"
+        },
+        {
+            "type": "image",
+            "variant": "decorative-frame",
+            "src": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756108994/Masterful_and_Fun_cymg3w.png",
+            "alt": "Diagramme montrant les trois niveaux d'assistants IA."
+        },
+        {
+            "type": "card-grid",
+            "cards": [
+                {
+                    "variant": "simple",
+                    "imageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756108991/Informational_Assistant_dd1cyn.png",
+                    "category": "Niveau 1 : Le Savant",
+                    "title": "Assistant Informationnel",
+                    "description": "Répond aux questions en se connectant à une base de connaissances de confiance (SharePoint, sites web) en utilisant l'IA Générative pour trouver et résumer les informations.",
+                    "link": "#/use-cases#uc03",
+                    "buttonText": "Voir un exemple"
+                },
+                {
+                    "variant": "simple",
+                    "imageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109019/Action-Oriented_Assistant_pg20om.png",
+                    "category": "Niveau 2 : L'Acteur",
+                    "title": "Assistant Orienté Action",
+                    "description": "Effectue des tâches pour l'utilisateur en déclenchant des flux Power Automate (plugins) pour interagir avec d'autres systèmes via des API, comme consulter une commande ou créer un ticket.",
+                    "link": "#/use-cases#uc22",
+                    "buttonText": "Voir un exemple"
+                },
+                {
+                    "variant": "simple",
+                    "imageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756108995/Proactive_Co-Pilot_ph0pia.png",
+                    "category": "Niveau 3 : Le Penseur",
+                    "title": "Copilote Proactif",
+                    "description": "Anticipe les besoins des utilisateurs en surveillant les événements métier. Utilise des flux planifiés et l'IA Générative pour décider de la meilleure action et notifier les utilisateurs.",
+                    "link": "#/use-cases#uc29",
+                    "buttonText": "Voir un exemple"
+                }
+            ]
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Conclusion : Construire pour la Valeur Commerciale"
+        },
+        {
+            "type": "html",
+            "value": "<p>En comprenant ces trois niveaux, vous pouvez créer une feuille de route stratégique pour votre programme d'assistants IA. Commencez par un cas d'usage de Niveau 1 à forte valeur pour créer une dynamique, puis ajoutez progressivement des capacités de Niveau 2 et 3 pour créer un copilote véritablement transformateur qui apporte une valeur commerciale significative et mesurable.</p>"
+        }
+    ]
+}

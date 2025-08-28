@@ -3,47 +3,111 @@ import { useI18n } from '../i18n/useI18n';
 import PlatformIcon from './icons/PlatformIcon';
 import CloudIcon from './icons/CloudIcon';
 import DevToolsIcon from './icons/DevToolsIcon';
+import Breadcrumb from './Breadcrumb';
+import type { BreadcrumbLink } from '../types';
+import {
+    CopilotStudioIcon,
+    PowerAutomateIcon,
+    PowerAppsIcon,
+    AzureIcon,
+    GeminiIcon,
+    ReactIcon,
+    SharePointIcon,
+    GoogleCloudIcon,
+    MicrosoftCopilotIcon,
+    GitHubCopilotIcon,
+    DataverseIcon,
+    IndustryIcon,
+    GithubIcon,
+    VsCodeIcon,
+    PostmanIcon,
+    AiBuilderIcon,
+    PowerFxIcon,
+    PowerPlatformIcon,
+    AiStudioIcon,
+    CognitiveSearchIcon,
+    TextTranslationIcon,
+    AiAssistedCodingIcon
+} from './index';
+import '../styles/TechStack.css';
 
-const iconMap: { [key: string]: React.ReactNode } = {
+const categoryIconMap: { [key: string]: React.ReactNode } = {
     'PlatformIcon': <PlatformIcon className="w-8 h-8" />,
     'CloudIcon': <CloudIcon className="w-8 h-8" />,
     'DevToolsIcon': <DevToolsIcon className="w-8 h-8" />
 };
 
-const TechStack: React.FC = () => {
+const techIconMap: { [key: string]: React.ReactNode } = {
+    'Microsoft Power Automate': <PowerAutomateIcon />,
+    'Microsoft Copilot Studio': <CopilotStudioIcon />,
+    'Microsoft Power Apps': <PowerAppsIcon />,
+    'Microsoft SharePoint': <SharePointIcon />,
+    'Dataverse': <DataverseIcon />,
+    'Microsoft Azure AI': <AzureIcon />,
+    'Google Cloud Platform': <GoogleCloudIcon />,
+    'Google Gemini API': <GeminiIcon />,
+    'Microsoft Copilot': <MicrosoftCopilotIcon />,
+    'GitHub Copilot': <GitHubCopilotIcon />,
+    'React & TypeScript': <ReactIcon />,
+    'GitHub': <GithubIcon />,
+    'VS Code': <VsCodeIcon />,
+    'Postman': <PostmanIcon />,
+    'Microsoft AI Builder': <AiBuilderIcon />,
+    'Power Fx': <PowerFxIcon />,
+    'Microsoft Power Platform': <PowerPlatformIcon />,
+    'Azure AI Studio': <AiStudioIcon />,
+    'Azure AI Search': <CognitiveSearchIcon />,
+    'Azure AI Translator': <TextTranslationIcon />,
+    'AI Assisted Coding': <AiAssistedCodingIcon />,
+    'Codage Assisté par IA': <AiAssistedCodingIcon />
+};
+
+interface TechStackProps {
+    breadcrumbs: BreadcrumbLink[];
+}
+
+const TechStack: React.FC<TechStackProps> = ({ breadcrumbs }) => {
     const { t } = useI18n();
     const headerData = t('techStack.header');
     const categories = t('techStack.categories') || [];
 
     const headerStyle = {
-        backgroundImage: `url('https://raw.githubusercontent.com/OwnOptic/Website-storage/main/The%20Digital%20Conductor.881Z.png')`
+        backgroundImage: `url('${headerData.imageUrl}')`
     };
 
     return (
-        <div className="bg-[var(--surface-background)] min-h-screen">
-            <header className="relative h-[45vh] min-h-[350px] flex items-center justify-center text-center text-white">
-                <div className="absolute inset-0 bg-cover bg-center brightness-50" style={headerStyle}></div>
-                <div className="relative z-10 p-4">
-                    <h1 className="text-4xl md:text-6xl font-bold">{headerData.title}</h1>
-                    <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-gray-200">{headerData.subtitle}</p>
+        <div className="tech-stack-page">
+            <header className="tech-stack-header">
+                <div className="tech-stack-header-bg" style={headerStyle}></div>
+                <div className="tech-stack-header-content">
+                    <h1>{headerData.title}</h1>
+                    <p>{headerData.subtitle}</p>
                 </div>
             </header>
             
-            <main className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-                <div className="space-y-16">
+            <main className="tech-stack-main-content">
+                <Breadcrumb links={breadcrumbs} />
+                <div className="tech-stack-categories-container">
                     {categories.map((category: any, index: number) => (
                         <section key={index}>
-                            <div className="flex items-center mb-8">
-                                <div className="bg-white p-4 rounded-full shadow-md mr-4 text-[var(--interactive-blue)]">
-                                    {iconMap[category.icon]}
+                            <div className="tech-stack-category-header">
+                                <div className="tech-stack-category-icon">
+                                    {categoryIconMap[category.icon]}
                                 </div>
-                                <h2 className="text-3xl font-bold text-[var(--primary-text)]">{category.title}</h2>
+                                <h2>{category.title}</h2>
                             </div>
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <div className="tech-stack-grid">
                                 {category.items.map((item: any, itemIndex: number) => (
-                                    <div key={itemIndex} className="bg-white p-6 rounded-lg custom-shadow transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-                                        <h3 className="text-xl font-semibold text-[var(--primary-text)] mb-2">{item.name}</h3>
-                                        <p className="text-[var(--secondary-text)] leading-relaxed">{item.description}</p>
+                                    <div key={itemIndex} className="tech-stack-card">
+                                        <div className="tech-stack-card-header">
+                                            {techIconMap[item.name] && (
+                                                <div className="tech-stack-item-icon">
+                                                    {techIconMap[item.name]}
+                                                </div>
+                                            )}
+                                            <h3>{item.name}</h3>
+                                        </div>
+                                        <p>{item.description}</p>
                                     </div>
                                 ))}
                             </div>

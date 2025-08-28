@@ -4,8 +4,8 @@ declare global {
   }
 }
 
-// Placeholder Measurement ID - replace with your actual ID
-const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX';
+// [PRODUCTION CHECKLIST] Replace with your actual Google Analytics Measurement ID
+const GA_MEASUREMENT_ID = 'YOUR_GA_MEASUREMENT_ID_HERE';
 
 /**
  * Initializes the analytics service.

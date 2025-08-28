@@ -1,104 +1,181 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
+import type { BreadcrumbLink } from '../types';
+import Breadcrumb from './Breadcrumb';
+import AIDinoGame from './AIDinoGame';
+import ConflictCheckDemo from './ConflictCheckDemo';
+import DungeonExplorer from './DungeonExplorer';
+import GameModal from './GameModal';
+import InvoiceDemo from './InvoiceDemo';
+import LearningBox from './LearningBox';
+import CodeBlock from './CodeBlock';
+import KeyStatBox from './KeyStatBox';
+import QuoteBox from './QuoteBox';
+import FeatureComparisonTable from './FeatureComparisonTable';
+import FaqAccordion from './FaqAccordion';
+import ProcessSteps from './ProcessSteps';
+import AuthorBio from './AuthorBio';
+import ClientTestimonial from './ClientTestimonial';
+import MythVsFact from './MythVsFact';
+import TechnologySpotlight from './TechnologySpotlight';
+import KeyStatBlock from './KeyStatBlock';
+import ProTip from './ProTip';
+import WarningBox from './WarningBox';
+import ArticleCarousel from './ArticleCarousel';
+import { Card } from './Card';
+import CardGrid from './CardGrid';
+import FeaturedArticle from './FeaturedArticle';
+import IconFeatureList from './IconFeatureList';
+import OverlappingCard from './OverlappingCard';
+import TextImage from './TextImage';
+import ImageComponent from './ImageComponent';
+import VideoComponent from './VideoComponent';
+import GitHubRepoCard from './GitHubRepoCard';
+import HeroV2 from './HeroV2';
+import DemoCard from './DemoCard';
+import PillBreadcrumb from './PillBreadcrumb';
+import LinkedInArticleButton from './LinkedInArticleButton';
+import IndustryIcon from './icons/IndustryIcon';
+import TimelineIcon from './icons/TimelineIcon';
+import TechStackIcon from './icons/TechStackIcon';
+import '../styles/BlogTheme.css';
+import '../styles/Demos.css';
 
-// Helper to create URL-friendly slugs
-const toSlug = (text: string) => {
-  return text.toLowerCase()
-    .replace(/ & /g, '-')
-    .replace(/[^\w-]+/g, '')
-    .replace(/--+/g, '-');
+// Map of interactive component names to their actual React components
+const interactiveComponentMap: { [key: string]: React.FC } = {
+    AIDinoGame,
+    InvoiceDemo,
+    ConflictCheckDemo,
+    DungeonExplorer,
 };
 
+// Map of content block types to their renderer components
+const contentComponentMap: { [key: string]: React.FC<any> } = {
+    'heading': ({ level, text, key }) => {
+        const Tag = `h${level}` as keyof JSX.IntrinsicElements;
+        return <Tag key={key}>{text}</Tag>;
+    },
+    'html': ({ value, key }) => <div key={key} dangerouslySetInnerHTML={{ __html: value }} />,
+    'code': ({ language, code, theme, key }) => <CodeBlock key={key} language={language} code={code} theme={theme} />,
+    'learning-box': ({ title, content, key }) => (
+        <LearningBox key={key} title={title}>
+            <div dangerouslySetInnerHTML={{ __html: content }} />
+        </LearningBox>
+    ),
+    'key-stat': ({ value, label, key }) => <KeyStatBox key={key} value={value} label={label} />,
+    'quote': ({ text, author, source, key }) => <QuoteBox key={key} text={text} author={author} source={source} />,
+    'demo-button': ({ onClick, key }) => (
+        <div className="demo-button-container">
+            <button onClick={onClick} className="demo-launcher-button" key={key}>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6"><path fillRule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.647c1.295.742 1.295 2.545 0 3.286L7.279 20.99c-1.25.717-2.779-.217-2.779-1.643V5.653Z" clipRule="evenodd" /></svg>
+                Launch Interactive Demo
+            </button>
+        </div>
+    ),
+    'feature-comparison-table': (props) => <FeatureComparisonTable {...props} />,
+    'faq-accordion': (props) => <FaqAccordion {...props} />,
+    'process-steps': (props) => <ProcessSteps {...props} />,
+    'author-bio': (props) => <AuthorBio {...props} />,
+    'client-testimonial': (props) => <ClientTestimonial {...props} />,
+    'myth-vs-fact': (props) => <MythVsFact {...props} />,
+    'technology-spotlight': (props) => <TechnologySpotlight {...props} />,
+    'key-stat-block': (props) => <KeyStatBlock {...props} />,
+    'pro-tip': (props) => <ProTip {...props} />,
+    'warning-box': (props) => <WarningBox {...props} />,
+    'article-carousel': (props) => <ArticleCarousel {...props} />,
+    'card': (props) => <Card {...props} />,
+    'card-grid': (props) => <CardGrid {...props} />,
+    'featured-article': (props) => <FeaturedArticle {...props} />,
+    'icon-feature-list': (props) => <IconFeatureList {...props} />,
+    'overlapping-card': (props) => <OverlappingCard {...props} />,
+    'text-image': (props) => <TextImage {...props} />,
+    'image': (props) => <div className="component-wrapper"><ImageComponent {...props} /></div>,
+    'video': (props) => <div className="component-wrapper"><VideoComponent {...props} /></div>,
+    'hero-v2': (props) => <HeroV2 {...props} />,
+    'demo-card': (props) => <div className="component-wrapper"><DemoCard {...props} /></div>,
+    'pill-breadcrumb': (props) => <PillBreadcrumb {...props} />,
+    'linkedin-article-button': (props) => <LinkedInArticleButton {...props} />,
+    'github-repo': (props) => <div className="my-8 max-w-md mx-auto"><GitHubRepoCard {...props} /></div>,
+};
 
-const ProjectDetailLayout: React.FC<{ project: any }> = ({ project }) => {
-    const contentRef = useRef<HTMLDivElement>(null);
-    
-    // Ensure project and its properties exist
-    if (!project || !project.overview || !project.contentSections) {
-        return null; // or render a loading/error state
+interface ProjectDetailLayoutProps {
+    project: any;
+    breadcrumbs: BreadcrumbLink[];
+    children?: React.ReactNode;
+}
+
+const ProjectDetailLayout: React.FC<ProjectDetailLayoutProps> = ({ project, breadcrumbs, children }) => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    if (!project) {
+        return null;
     }
 
-    const { title, subtitle, heroImageUrl, overview, contentSections } = project;
-    
-    const overviewItems = [
-        { label: 'Industry', value: overview.industry },
-        { label: 'Timeline', value: overview.timeline },
-        { label: 'Tech Stack', value: overview.techStack }
-    ];
+    const { title, subtitle, heroImageUrl, overview, content, interactiveComponent } = project;
+    const InteractiveComponent = interactiveComponent ? interactiveComponentMap[interactiveComponent] : null;
+
+    const overviewItems = overview ? [
+        { label: 'Industry', value: overview.industry, icon: <IndustryIcon className="w-6 h-6" /> },
+        { label: 'Timeline', value: overview.timeline, icon: <TimelineIcon className="w-6 h-6" /> },
+        { label: 'Tech Stack', value: overview.techStack, icon: <TechStackIcon className="w-6 h-6" /> }
+    ] : [];
+
+    const renderContentBlock = (block: any, index: number) => {
+        const Component = contentComponentMap[block.type];
+        if (!Component) return null;
+
+        const props = {
+            ...block,
+            key: index,
+            onClick: block.type === 'demo-button' && InteractiveComponent ? () => setIsModalOpen(true) : undefined,
+        };
+        
+        return <Component {...props} />;
+    };
 
     return (
-        <div className="bg-white">
-            {/* Hero Section */}
-            <header className="relative h-[50vh] min-h-[400px] flex items-center justify-center text-center text-white">
-                <div 
-                    className="absolute inset-0 bg-cover bg-center"
-                    style={{ backgroundImage: `url('${heroImageUrl}')` }}
-                >
-                    <div className="absolute inset-0 bg-black opacity-60"></div>
-                </div>
-                <div className="relative z-10 p-4 max-w-4xl mx-auto">
-                    <h1 className="text-4xl md:text-6xl font-bold leading-tight">{title}</h1>
-                    <p className="mt-4 text-lg md:text-xl text-gray-200">{subtitle}</p>
-                </div>
-            </header>
-
-            {/* Main Content */}
-            <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-                <div ref={contentRef}>
-                     {/* Overview Card */}
-                    <div className="bg-[var(--surface-background)] p-6 rounded-lg border border-[var(--border-color)] mb-12">
-                        <h3 className="text-xl font-semibold text-[var(--primary-text)] mb-4 border-b pb-3">Project Overview</h3>
-                        <ul className="space-y-3 text-sm">
-                            {overviewItems.map(item => (
-                                <li key={item.label} className="flex justify-between items-center py-1">
-                                    <span className="font-semibold text-[var(--primary-text)]">{item.label}</span>
-                                    <span className="text-[var(--secondary-text)] text-right">{item.value}</span>
-                                </li>
-                            ))}
-                        </ul>
+        <>
+            <div className="blog-theme">
+                <header className="project-header">
+                    <div 
+                        className="project-header-bg"
+                        style={{ backgroundImage: `url('${heroImageUrl}')` }}
+                    >
+                        <div className="project-header-overlay"></div>
                     </div>
-                    <article className="prose lg:prose-lg max-w-none">
-                         <style>
-                            {`
-                            .prose h2, .prose h3 {
-                                color: var(--primary-text);
-                                margin-bottom: 1em;
-                                margin-top: 2.5em;
-                                scroll-margin-top: 120px;
-                            }
-                             .prose h2:first-of-type {
-                                margin-top: 0;
-                            }
-                            .prose p, .prose li {
-                                color: var(--secondary-text);
-                                line-height: 1.7;
-                            }
-                            .prose img {
-                                margin-top: 2em;
-                                margin-bottom: 2em;
-                                border-radius: 0.5rem;
-                                box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-                            }
-                            .prose iframe {
-                                width: 100%;
-                                aspect-ratio: 16 / 9;
-                                border-radius: 0.5rem;
-                                box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-                            }
-                            `}
-                        </style>
-                        {contentSections.map((section: any, index: number) => {
-                            const sectionId = toSlug(section.title);
-                            return (
-                                <section key={index} id={sectionId}>
-                                    <h2>{section.title}</h2>
-                                    <div dangerouslySetInnerHTML={{ __html: section.htmlContent }}></div>
-                                </section>
-                            );
-                        })}
-                    </article>
-                </div>
-            </main>
-        </div>
+                    <div className="project-header-content">
+                        <h1>{title}</h1>
+                        <p>{subtitle}</p>
+                    </div>
+                </header>
+
+                <article className="project-article-container">
+                    <Breadcrumb links={breadcrumbs} />
+
+                    {overview && (
+                        <section className="project-metadata">
+                            {overviewItems.map((item) => (
+                                <div key={item.label} className="metadata-item">
+                                    <div className="metadata-icon">{item.icon}</div>
+                                    <div>
+                                        <h4 className="metadata-label">{item.label}</h4>
+                                        <p className="metadata-value">{item.value}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </section>
+                    )}
+                    
+                    <div className="prose">
+                        {children || (content && content.map((block: any, index: number) => renderContentBlock(block, index)))}
+                    </div>
+                </article>
+            </div>
+            {isModalOpen && InteractiveComponent && (
+                <GameModal onClose={() => setIsModalOpen(false)}>
+                    <InteractiveComponent />
+                </GameModal>
+            )}
+        </>
     );
 };
 

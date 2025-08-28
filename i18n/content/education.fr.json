@@ -1,46 +1,58 @@
+
 {
   "education": {
     "header": {
       "title": "Formation",
       "subtitle": "Mon parcours académique a été une quête continue de connaissances et le fondement de ma croissance professionnelle, alliant sens des affaires et applications pratiques du monde réel."
     },
+     "heroV2": {
+      "imageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109003/The_Abstract_Brain_of_AI_ngzbnq.png"
+    },
     "timeline": [
       {
-        "degree": "Bachelor of Arts en Management",
-        "institution": "Webster University, Genève",
-        "period": "Août 2019 – Mai 2021",
+        "degree": "Bachelor of Arts en Management, Mineure en Marketing",
+        "institution": "Webster University, Genève, Suisse",
+        "period": "2019 – 2021",
         "points": [
-          "Diplômé avec mention, spécialisé en planification stratégique et stratégie marketing.",
-          "Obtention d'une mineure en Marketing, développant une base solide en comportement du consommateur et analyse de marché.",
-          "Projet de thèse axé sur l'impact de la transformation numérique sur les modèles de service client."
-        ]
+          "Diplômé avec mention, spécialisé en planification stratégique et sur l'impact de la transformation numérique sur les modèles de service client."
+        ],
+        "imageUrl": "https://geneva.webster.edu/images/homepage/webster_geneva_rgb_blue_yellow-new-2024.jpg",
+        "techStack": ["Planification Stratégique", "Stratégie Marketing", "Comportement du Consommateur", "Analyse de Marché", "Transformation Numérique"]
       },
       {
-        "degree": "Études en Administration des Affaires",
-        "institution": "Université de Fribourg, Fribourg",
-        "period": "Octobre 2017 – Janvier 2019",
+        "degree": "Administration des Affaires (1ère et 2ème Année)",
+        "institution": "Université de Fribourg, Fribourg, Suisse",
+        "period": "2017 – 2019",
         "points": [
-          "Cours fondamentaux en économie, comptabilité et droit des affaires.",
-          "Obtention de crédits ECTS pour la poursuite des études supérieures."
-        ]
+          "Cours fondamentaux en économie, comptabilité et droit des affaires, constituant une base solide pour un diplôme en management."
+        ],
+        "imageUrl": "https://cdn.unifr.ch/uf/v2.4.3/gfx/logo.png",
+        "techStack": ["Économie", "Principes de Comptabilité", "Droit des Affaires", "Crédits ECTS"]
       },
       {
-        "degree": "Études en Psychologie",
-        "institution": "Université de Leiden, Pays-Bas",
-        "period": "Octobre 2015 – Juin 2016",
+        "degree": "Première Année d'Études en Psychologie",
+        "institution": "Université de Leiden, Leiden, Pays-Bas",
+        "period": "2015 – 2016",
         "points": [
-          "Exploration des principes du comportement humain et des processus cognitifs.",
-          "Cours suivis dans des domaines tels que la psychologie du développement et les méthodes de recherche."
-        ]
+          "Exploration des principes du comportement humain et des processus cognitifs, jetant les bases de la compréhension de la conception centrée sur l'utilisateur."
+        ],
+        "imageUrl": "https://huisstijl.leidenuniv.nl/assets/files/ul-algemeen-internationaal-rgb-color.png",
+        "techStack": ["Psychologie Cognitive", "Comportement Humain", "Méthodes de Recherche", "Psychologie du Développement"]
       },
       {
         "degree": "Baccalauréat Irlandais",
         "institution": "St. Columba's College, Dublin, Irlande",
         "period": "2011 – 2015",
         "points": [
-          "Obtention du baccalauréat irlandais, offrant une base solide pour l'enseignement supérieur."
-        ]
+          "Obtention du baccalauréat irlandais, offrant une solide base multidisciplinaire pour l'enseignement supérieur."
+        ],
+        "imageUrl": "https://www.stcolumbas.ie/wp-content/uploads/2017/04/College-Crest-Large.jpg",
+        "techStack": ["Études Pluridisciplinaires", "Littérature Anglaise", "Histoire", "Sciences"]
       }
-    ]
+    ],
+    "cta": {
+        "text": "Voir Tous les Certificats Professionnels",
+        "href": "#/certificates"
+    }
   }
 }

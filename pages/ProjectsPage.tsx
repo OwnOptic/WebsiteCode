@@ -1,9 +1,14 @@
 import React from 'react';
 import Projects from '../components/Projects';
+import type { BreadcrumbLink } from '../types';
 
-const ProjectsPage: React.FC = () => {
+interface ProjectsPageProps {
+    breadcrumbs: BreadcrumbLink[];
+}
+
+const ProjectsPage: React.FC<ProjectsPageProps> = ({ breadcrumbs }) => {
     return (
-        <Projects />
+        <Projects breadcrumbs={breadcrumbs} />
     );
 };
 

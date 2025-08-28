@@ -13,14 +13,39 @@ export const I18nContext = createContext<I18nContextType | undefined>(undefined)
 
 const toCamelCase = (str: string): string => str.replace(/-([a-z])/g, g => g[1].toUpperCase());
 
+const isObject = (item: any): item is Record<string, any> => {
+    return (item && typeof item === 'object' && !Array.isArray(item));
+};
+
+const mergeDeep = (target: any, ...sources: any[]): any => {
+    if (!sources.length) return target;
+    const source = sources.shift();
+
+    if (isObject(target) && isObject(source)) {
+        for (const key in source) {
+            if (isObject(source[key])) {
+                if (!target[key]) {
+                    Object.assign(target, { [key]: {} });
+                }
+                mergeDeep(target[key], source[key]);
+            } else {
+                Object.assign(target, { [key]: source[key] });
+            }
+        }
+    }
+
+    return mergeDeep(target, ...sources);
+};
+
+
 const loadAndMergeTranslations = async (lang: Language) => {
     try {
         const uiStringsPath = `/i18n/locales/${lang}.json`;
         const uiResponse = await fetch(uiStringsPath);
         if (!uiResponse.ok) throw new Error(`Failed to load UI strings for ${lang}`);
-        const translations = await uiResponse.json();
+        let translations = await uiResponse.json();
 
-        const contentPaths = ['about', 'blog', 'certificates', 'contact', 'education', 'experience', 'home', 'projects', 'tech-stack'];
+        const contentPaths = ['about', 'certificates', 'contact', 'education', 'experience', 'home', 'projects', 'tech-stack', 'open-source', 'not-found'];
         
         const contentPromises = contentPaths.map(path =>
             fetch(`/i18n/content/${path}.${lang}.json`)
@@ -35,13 +60,12 @@ const loadAndMergeTranslations = async (lang: Language) => {
         allPageContent.forEach((content, index) => {
             const pathKey = contentPaths[index];
             const contentRootKey = toCamelCase(pathKey);
-            if (pathKey === 'home') {
-                Object.assign(translations, content);
+
+            if (pathKey === 'home' || pathKey === 'not-found') {
+                 translations = mergeDeep(translations, content);
             } else {
-                 if (!translations[contentRootKey]) {
-                    translations[contentRootKey] = {};
-                }
-                Object.assign(translations[contentRootKey], content[contentRootKey]);
+                const contentToMerge = content[contentRootKey] || content;
+                translations[contentRootKey] = mergeDeep(translations[contentRootKey] || {}, contentToMerge);
             }
         });
 
@@ -53,29 +77,20 @@ const loadAndMergeTranslations = async (lang: Language) => {
         ];
         const useCasePromises = useCaseFiles.map(file =>
             fetch(`/i18n/content/use-cases/${file}.${lang}.json`)
-                .then(res => res.ok ? res.json() : { catalogue: [] })
+                .then(res => {
+                    if (!res.ok) return { catalogue: [] };
+                    return res.json().catch(err => {
+                        console.error(`Failed to parse JSON for ${file}.${lang}.json`, err);
+                        return { catalogue: [] };
+                    });
+                })
         );
         const allUseCases = await Promise.all(useCasePromises);
         if (!translations.useCases) translations.useCases = {};
         translations.useCases.catalogue = allUseCases.flatMap(uc => uc.catalogue || []);
         
-        // Fetch individual project detail files
-        if (translations.projects && translations.projects.items) {
-            translations.projects.details = {};
-            const projectSlugs = translations.projects.items.map((item: any) => item.slug).filter(Boolean);
-            const projectDetailPromises = projectSlugs.map((slug: string) => 
-                fetch(`/i18n/content/projects/${slug}.${lang}.json`)
-                    .then(res => res.ok ? res.json() : null)
-                    .then(data => ({ slug, data }))
-            );
-
-            const projectDetails = await Promise.all(projectDetailPromises);
-            projectDetails.forEach(({ slug, data }) => {
-                if (data) {
-                    translations.projects.details[slug] = data;
-                }
-            });
-        }
+        // Removed pre-fetching of individual project files to fix loading bug and improve performance.
+        // Individual project pages now fetch their own content.
 
         return translations;
 

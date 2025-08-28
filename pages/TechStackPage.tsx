@@ -1,9 +1,14 @@
 import React from 'react';
 import TechStack from '../components/TechStack';
+import type { BreadcrumbLink } from '../types';
 
-const TechStackPage: React.FC = () => {
+interface TechStackPageProps {
+    breadcrumbs: BreadcrumbLink[];
+}
+
+const TechStackPage: React.FC<TechStackPageProps> = ({ breadcrumbs }) => {
     return (
-        <TechStack />
+        <TechStack breadcrumbs={breadcrumbs} />
     );
 };
 

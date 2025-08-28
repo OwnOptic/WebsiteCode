@@ -1,0 +1,35 @@
+.linkedin-button-container {
+    display: flex;
+    justify-content: center;
+    margin: 2.5rem 0;
+}
+
+.linkedin-article-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 0.875rem 2rem;
+    background-color: #0077B5; /* LinkedIn Blue */
+    color: white;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 15px rgba(0, 119, 181, 0.3);
+}
+
+.linkedin-article-button:hover {
+    background-color: #005E90;
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 7px 20px rgba(0, 119, 181, 0.4);
+}
+
+.linkedin-article-button:active {
+    transform: translateY(0) scale(1);
+}
+
+.linkedin-button-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}

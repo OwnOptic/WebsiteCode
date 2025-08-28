@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://www.e-margot.ch/sitemap.txt

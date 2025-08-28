@@ -1,0 +1,52 @@
+
+{
+    "title": "Analyse Automatisée des Retours Clients",
+    "subtitle": "Un système utilisant Power Automate et Azure AI Language pour analyser les sentiments, extraire les sujets clés et catégoriser automatiquement les retours clients.",
+    "heroImageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756108994/Masterful_and_Fun_cymg3w.png",
+    "overview": {
+        "industry": "Business Intelligence",
+        "timeline": "3 Semaines",
+        "techStack": "Power Automate, Azure AI, Power BI"
+    },
+    "content": [
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Le Défi : La Mine d'Or Inexploitée des Retours Clients"
+        },
+        {
+            "type": "html",
+            "value": "<p>Les entreprises reçoivent un flux constant de retours clients via des enquêtes, des tickets de support et les réseaux sociaux. Ces données sont une mine d'or d'informations, mais leur lecture et leur catégorisation manuelles sont une tâche impossible. Par conséquent, des tendances précieuses, des problèmes émergents et le sentiment des clients sont souvent manqués.</p>"
+        },
+        {
+            "type": "quote",
+            "text": "La donnée est le nouveau pétrole. Elle a de la valeur, mais si elle n'est pas raffinée, elle ne peut pas vraiment être utilisée.",
+            "author": "Clive Humby"
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "La Solution : Un Pipeline d'Analyse Alimenté par l'IA"
+        },
+        {
+            "type": "html",
+            "value": "<p>Cette solution automatise l'ensemble du processus d'analyse des retours. Un flux Power Automate agit comme l'orchestrateur central, déclenché chaque fois qu'un nouveau retour est reçu. Le flux envoie le texte aux services Azure AI Language pour analyse.</p><ul><li><b>Analyse des Sentiments :</b> Détermine si le retour est positif, négatif ou neutre.</li><li><b>Extraction de Phrases Clés :</b> Identifie les principaux sujets abordés (par exemple, 'délais de livraison', 'qualité du produit').</li><li><b>Détection de la Langue :</b> Détecte automatiquement la langue du retour.</li></ul><p>Les données enrichies sont ensuite stockées dans un référentiel central (comme une table Dataverse) et visualisées dans un tableau de bord Power BI, offrant une vue en temps réel du sentiment des clients et des tendances émergentes.</p>"
+        },
+        {
+            "type": "image",
+            "variant": "simple-caption",
+            "src": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756108974/The_Data-Driven_Decision_zbbm66.png",
+            "alt": "Un graphique représentant la prise de décision basée sur les données.",
+            "caption": "La visualisation des données de feedback dans Power BI transforme le texte brut en intelligence d'affaires exploitable."
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Impact Commercial"
+        },
+        {
+            "type": "html",
+            "value": "<p>Ce système automatisé transforme les retours non structurés en intelligence exploitable. Il permet aux chefs de produit, aux marketeurs et aux responsables du service client de :</p><ul><li><b>Identifier les Problèmes de Manière Proactive :</b> Une augmentation soudaine du sentiment négatif concernant une fonctionnalité spécifique peut être identifiée et traitée immédiatement.</li><li><b>Comprendre les Besoins des Clients :</b> Découvrir quelles fonctionnalités ou services les clients demandent le plus souvent.</li><li><b>Suivre l'Évolution des Sentiments :</b> Mesurer l'impact des lancements de nouveaux produits ou des changements de politique sur la satisfaction client.</li></ul><p>En automatisant l'analyse, l'entreprise peut passer d'une approche réactive à une approche proactive, en prenant des décisions basées sur les données qui améliorent l'expérience client et stimulent la croissance de l'entreprise.</p>"
+        }
+    ]
+}

@@ -1,19 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useI18n } from '../i18n/useI18n';
 import * as analytics from '../analytics';
 import BrandLogo from './icons/BrandLogo';
+import BugIcon from './icons/BugIcon';
+import SearchIcon from './icons/SearchIcon';
+import SunIcon from './icons/SunIcon';
+import MoonIcon from './icons/MoonIcon';
+import SearchModal from './SearchModal';
+import '../styles/Header.css';
 
-const Logo = () => (
-    <div className="flex items-center cursor-pointer">
-        <BrandLogo className="h-10 w-auto" />
-    </div>
-);
-
-const LanguageSwitcher: React.FC<{ isScrolled: boolean; isHomePage: boolean }> = ({ isScrolled, isHomePage }) => {
+const LanguageSwitcher: React.FC = () => {
     const { language, setLanguage } = useI18n();
-    const textColor = isScrolled || !isHomePage ? 'text-[var(--primary-text)]' : 'text-white';
-    const separatorColor = isScrolled || !isHomePage ? 'text-gray-300' : 'text-gray-400';
-    const textShadow = isScrolled || !isHomePage ? '' : '[text-shadow:0_1px_3px_rgba(0,0,0,0.5)]';
 
     const handleLanguageChange = (lang: 'en' | 'fr') => {
         setLanguage(lang);
@@ -21,19 +18,19 @@ const LanguageSwitcher: React.FC<{ isScrolled: boolean; isHomePage: boolean }> =
     };
 
     return (
-        <div className={`flex items-center space-x-1 text-sm font-semibold ${textColor} ${textShadow}`}>
+        <div className="language-switcher">
             <button
                 onClick={() => handleLanguageChange('en')}
-                className={`transition-colors duration-200 rounded-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-transparent focus:ring-[var(--interactive-blue)] ${language === 'en' ? 'text-[var(--interactive-blue)]' : `hover:text-[var(--interactive-blue)]`}`}
+                className={`language-button ${language === 'en' ? 'active' : ''}`}
                 aria-pressed={language === 'en'}
                 aria-label="Switch to English"
             >
                 EN
             </button>
-            <span className={separatorColor}>/</span>
+            <span className="language-separator">/</span>
             <button
                 onClick={() => handleLanguageChange('fr')}
-                className={`transition-colors duration-200 rounded-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-transparent focus:ring-[var(--interactive-blue)] ${language === 'fr' ? 'text-[var(--interactive-blue)]' : `hover:text-[var(--interactive-blue)]`}`}
+                className={`language-button ${language === 'fr' ? 'active' : ''}`}
                 aria-pressed={language === 'fr'}
                 aria-label="Switch to French"
             >
@@ -43,156 +40,216 @@ const LanguageSwitcher: React.FC<{ isScrolled: boolean; isHomePage: boolean }> =
     );
 };
 
-const Header: React.FC<{ currentRoute: string }> = ({ currentRoute }) => {
+interface HeaderProps {
+    currentRoute: string;
+    onReportBug: () => void;
+    theme: string;
+    toggleTheme: () => void;
+}
+
+const Header: React.FC<HeaderProps> = ({ currentRoute, onReportBug, theme, toggleTheme }) => {
     const { t } = useI18n();
-    const [isScrolled, setIsScrolled] = useState(false);
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isSearchOpen, setIsSearchOpen] = useState(false);
+    const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+    const [activeMobileAccordion, setActiveMobileAccordion] = useState<number | null>(null);
+    const navRef = useRef<HTMLElement>(null);
 
-    const isHomePage = currentRoute === '#/';
-    const isAboutSectionActive = ['#/about', '#/experience', '#/education', '#/certificates'].includes(currentRoute);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 80);
-        };
-        
-        if (isHomePage) {
-            handleScroll(); // Set initial state
-            window.addEventListener('scroll', handleScroll);
-        } else {
-            setIsScrolled(true);
-        }
-        
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, [isHomePage]);
+    const navItems = t('navItems') || [];
 
     const handleNav = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
         e.preventDefault();
         window.location.hash = path;
-        setIsMenuOpen(false);
-        setIsAboutDropdownOpen(false);
+        setIsMobileMenuOpen(false);
+        setActiveDropdown(null);
+    };
+    
+    const handleDropdownToggle = (itemName: string) => {
+        setActiveDropdown(prev => (prev === itemName ? null : itemName));
     };
 
-    const navClass = (isScrolled || !isHomePage)
-        ? 'bg-white shadow-md' 
-        : 'bg-transparent';
-        
-    const textShadow = isScrolled || !isHomePage ? '' : '[text-shadow:0_1px_3px_rgba(0,0,0,0.5)]';
+    const handleReportBug = () => {
+        analytics.trackEvent('report_bug_click', { placement: 'header' });
+        onReportBug();
+        setIsMobileMenuOpen(false);
+    };
 
-    const getLinkClass = (path: string, type: 'desktop' | 'mobile') => {
-        const isActive = currentRoute === path || (path === '#/blog' && currentRoute.startsWith('#/blog/'));
-        const baseDesktop = isScrolled || !isHomePage ? 'text-[var(--primary-text)]' : 'text-white';
-        const activeDesktop = 'text-[var(--interactive-blue)] font-semibold';
-        const hoverDesktop = 'hover:text-[var(--interactive-blue)]';
-        
-        const baseMobile = 'text-gray-700 block py-2 text-center';
-        const activeMobile = 'text-[var(--interactive-blue)] font-semibold';
-        const hoverMobile = 'hover:text-[var(--interactive-blue)]';
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (navRef.current && !navRef.current.contains(event.target as Node)) {
+                setActiveDropdown(null);
+            }
+        };
 
-        if(type === 'desktop') {
-            return `text-[0.875rem] font-semibold transition-colors duration-200 cursor-pointer ${baseDesktop} ${textShadow} ${isActive ? activeDesktop : hoverDesktop}`;
-        }
-        return `text-[0.875rem] font-semibold transition-colors duration-200 cursor-pointer ${baseMobile} ${isActive ? activeMobile : hoverMobile}`;
-    }
-    
-    const getDropdownTriggerClass = (type: 'desktop' | 'mobile') => {
-        const baseDesktop = isScrolled || !isHomePage ? 'text-[var(--primary-text)]' : 'text-white';
-        const activeDesktop = 'text-[var(--interactive-blue)] font-semibold';
-        const hoverDesktop = 'hover:text-[var(--interactive-blue)]';
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
 
-        const baseMobile = 'text-gray-700 w-full text-center py-2';
-        const activeMobile = 'text-[var(--interactive-blue)] font-semibold';
+    useEffect(() => {
+        const handleScroll = () => {
+            setActiveDropdown(null);
+        };
 
-        if(type === 'desktop') {
-             return `flex items-center gap-1 text-[0.875rem] font-semibold transition-colors duration-200 cursor-pointer ${baseDesktop} ${textShadow} ${isAboutSectionActive ? activeDesktop : hoverDesktop}`;
-        }
-        return `flex items-center justify-center gap-1 text-[0.875rem] font-semibold transition-colors duration-200 cursor-pointer ${baseMobile} ${isAboutSectionActive ? activeMobile : ''}`;
-    }
+        window.addEventListener('scroll', handleScroll, { passive: true });
 
-    const aboutLinks = (isMobile: boolean) => (
-        <>
-            <a href="#/about" onClick={(e) => handleNav(e, '#/about')} className={isMobile ? getLinkClass('#/about', 'mobile') : 'block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[var(--interactive-blue)]'}>{t('nav.about')}</a>
-            <a href="#/experience" onClick={(e) => handleNav(e, '#/experience')} className={isMobile ? getLinkClass('#/experience', 'mobile') : 'block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[var(--interactive-blue)]'}>{t('nav.experience')}</a>
-            <a href="#/education" onClick={(e) => handleNav(e, '#/education')} className={isMobile ? getLinkClass('#/education', 'mobile') : 'block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[var(--interactive-blue)]'}>{t('nav.education')}</a>
-            <a href="#/certificates" onClick={(e) => handleNav(e, '#/certificates')} className={isMobile ? getLinkClass('#/certificates', 'mobile') : 'block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-[var(--interactive-blue)]'}>{t('nav.certificates')}</a>
-        </>
-    );
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
-    const desktopNav = (
-        <>
-            <a href="#/" onClick={(e) => handleNav(e, '#/')} className={getLinkClass('#/', 'desktop')}>{t('nav.home')}</a>
-            <div 
-                className="relative"
-                onMouseEnter={() => setIsAboutDropdownOpen(true)}
-                onMouseLeave={() => setIsAboutDropdownOpen(false)}
-            >
-                <button className={getDropdownTriggerClass('desktop')}>
-                    {t('nav.about')}
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
-                </button>
-                {isAboutDropdownOpen && (
-                    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-48 bg-white rounded-md shadow-lg py-1 ring-1 ring-black ring-opacity-5 z-20">
-                        {aboutLinks(false)}
-                    </div>
-                )}
-            </div>
-            <a href="#/use-cases" onClick={(e) => handleNav(e, '#/use-cases')} className={getLinkClass('#/use-cases', 'desktop')}>{t('nav.useCases')}</a>
-            <a href="#/blog" onClick={(e) => handleNav(e, '#/blog')} className={getLinkClass('#/blog', 'desktop')}>{t('nav.blog')}</a>
-            <a href="#/projects" onClick={(e) => handleNav(e, '#/projects')} className={getLinkClass('#/projects', 'desktop')}>{t('nav.projects')}</a>
-            <a href="#/contact" onClick={(e) => handleNav(e, '#/contact')} className={`bg-[var(--interactive-blue)] text-white font-semibold py-3 px-6 rounded-[4px] hover:bg-[var(--interactive-hover)] transition-colors duration-200 cursor-pointer w-full md:w-auto text-center text-[0.875rem] ${isScrolled || !isHomePage ? '' : 'shadow-lg'}`}>{t('nav.contact')}</a>
-        </>
-    );
-    
-    const mobileNav = (
-         <>
-            <a href="#/" onClick={(e) => handleNav(e, '#/')} className={getLinkClass('#/', 'mobile')}>{t('nav.home')}</a>
-             <details className="w-full text-center">
-                <summary className={getDropdownTriggerClass('mobile')}>
-                    {t('nav.about')}
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
-                </summary>
-                <div className="pt-2 pb-2 bg-gray-50">
-                    {aboutLinks(true)}
-                </div>
-            </details>
-            <a href="#/use-cases" onClick={(e) => handleNav(e, '#/use-cases')} className={getLinkClass('#/use-cases', 'mobile')}>{t('nav.useCases')}</a>
-            <a href="#/blog" onClick={(e) => handleNav(e, '#/blog')} className={getLinkClass('#/blog', 'mobile')}>{t('nav.blog')}</a>
-            <a href="#/projects" onClick={(e) => handleNav(e, '#/projects')} className={getLinkClass('#/projects', 'mobile')}>{t('nav.projects')}</a>
-            <a href="#/contact" onClick={(e) => handleNav(e, '#/contact')} className="bg-[var(--interactive-blue)] text-white font-semibold py-3 px-6 rounded-[4px] hover:bg-[var(--interactive-hover)] transition-colors duration-200 cursor-pointer w-full md:w-auto text-center text-[0.875rem]">{t('nav.contact')}</a>
-        </>
-    )
 
     return (
-        <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out ${navClass}`}>
-            <div className="container mx-auto px-6 py-3 flex justify-between items-center">
-                <a href="#/" onClick={(e) => handleNav(e, '#/')}>
-                    <Logo />
-                </a>
-                <nav className="hidden md:flex items-center space-x-8">
-                    {desktopNav}
-                    <LanguageSwitcher isScrolled={isScrolled} isHomePage={isHomePage} />
+        <>
+            {/* --- Desktop & Tablet Navigation --- */}
+            <header className="header-desktop">
+                <nav className="header-desktop-nav" ref={navRef}>
+                    <div className="header-desktop-container">
+                        <a href="#/" onClick={(e) => handleNav(e, '#/')}>
+                            <BrandLogo className="brand-logo-desktop" />
+                        </a>
+
+                        <ul className="main-nav-list">
+                            {navItems.map((item: any) => (
+                                <li
+                                    key={item.name}
+                                    className="nav-item"
+                                >
+                                    {item.dropdown ? (
+                                         <button onClick={() => handleDropdownToggle(item.name)} className="nav-link-button">
+                                            {item.name}
+                                            <svg className={`dropdown-arrow ${activeDropdown === item.name ? 'active' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                                        </button>
+                                    ) : (
+                                        <a href={item.href} onClick={(e) => handleNav(e, item.href)} className="nav-link">
+                                            {item.name}
+                                        </a>
+                                    )}
+                                   
+                                    {item.dropdown && (
+                                        <div className={`dropdown-menu ${item.dropdown.featured ? 'featured' : ''} ${activeDropdown === item.name ? 'open' : ''}`}>
+                                            <div className={`dropdown-grid ${item.dropdown.featured ? 'featured' : ''}`}>
+                                                <div>
+                                                    <ul className="dropdown-links">
+                                                        {item.dropdown.links.map((link: any) => (
+                                                            <li key={link.name} className="sub-nav-item">
+                                                                <a href={link.href} onClick={(e) => handleNav(e, link.href)} className="dropdown-link">
+                                                                    {link.name}
+                                                                </a>
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                </div>
+                                                {item.dropdown.featured && (
+                                                    <a href={item.dropdown.featured.link} onClick={(e) => handleNav(e, item.dropdown.featured.link)} className="featured-item">
+                                                        <img src={item.dropdown.featured.image} alt={item.dropdown.featured.alt} className="featured-image-bg" />
+                                                        <div className="featured-item-overlay"></div>
+                                                        <div className="featured-item-text-content">
+                                                            <h5 className="featured-title">{item.dropdown.featured.title}</h5>
+                                                            <p className="featured-description">{item.dropdown.featured.description}</p>
+                                                            <span className="featured-link">
+                                                                {item.dropdown.featured.linkText}
+                                                                <svg className="featured-link-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
+                                                            </span>
+                                                        </div>
+                                                    </a>
+                                                )}
+                                            </div>
+                                        </div>
+                                    )}
+                                </li>
+                            ))}
+                        </ul>
+                        <div className="header-actions">
+                            <button onClick={() => setIsSearchOpen(true)} className="search-button" title="Search" aria-label="Search">
+                                <SearchIcon className="w-5 h-5" />
+                            </button>
+                             <button onClick={handleReportBug} className="bug-report-button" title={t('nav.reportBug')} aria-label={t('nav.reportBug')}>
+                                <BugIcon className="w-5 h-5" />
+                            </button>
+                            <button onClick={toggleTheme} className="theme-toggle-button" title="Toggle theme" aria-label="Toggle theme">
+                                {theme === 'light' ? <MoonIcon className="w-5 h-5" /> : <SunIcon className="w-5 h-5" />}
+                            </button>
+                             <a href="#/contact" onClick={(e) => handleNav(e, '#/contact')} className="contact-button-desktop">
+                                {t('contactButton')}
+                            </a>
+                            <LanguageSwitcher />
+                        </div>
+                    </div>
                 </nav>
-                <div className="md:hidden flex items-center gap-4">
-                    <LanguageSwitcher isScrolled={isScrolled} isHomePage={isHomePage} />
-                    <button onClick={() => setIsMenuOpen(!isMenuOpen)} className={`${isScrolled || !isHomePage ? 'text-[var(--primary-text)]' : 'text-white'} ${textShadow} focus:outline-none`} aria-expanded={isMenuOpen} aria-controls="mobile-menu">
-                        <span className="sr-only">Open main menu</span>
-                        <svg className="h-6 w-6" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
-                            {isMenuOpen ? <path d="M6 18L18 6M6 6l12 12" /> : <path d="M4 6h16M4 12h16m-7 6h7"></path>}
-                        </svg>
-                    </button>
+            </header>
+
+            {/* --- Mobile Navigation --- */}
+            <header className="header-mobile">
+                <div className="header-mobile-container">
+                    <a href="#/" onClick={(e) => handleNav(e, '#/')}>
+                        <BrandLogo className="brand-logo-mobile" />
+                    </a>
+                    <div className="mobile-actions">
+                        <LanguageSwitcher />
+                        <button onClick={() => setIsSearchOpen(true)} className="search-button" title="Search" aria-label="Search">
+                            <SearchIcon className="w-5 h-5" />
+                        </button>
+                        <button onClick={toggleTheme} className="theme-toggle-button" title="Toggle theme" aria-label="Toggle theme">
+                            {theme === 'light' ? <MoonIcon className="w-5 h-5" /> : <SunIcon className="w-5 h-5" />}
+                        </button>
+                        <button onClick={() => setIsMobileMenuOpen(true)} className="burger-button" aria-label="Open mobile menu">
+                            <svg className="burger-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                        </button>
+                    </div>
                 </div>
-            </div>
-             {isMenuOpen && (
-                <div id="mobile-menu" className="md:hidden bg-white shadow-lg">
-                    <nav className="flex flex-col items-center space-y-4 p-4">
-                       {mobileNav}
-                    </nav>
-                </div>
-            )}
-        </header>
+
+                <div className={`mobile-overlay ${isMobileMenuOpen ? 'open' : ''}`} onClick={() => setIsMobileMenuOpen(false)}></div>
+                
+                <nav className={`mobile-menu ${isMobileMenuOpen ? 'open' : ''}`}>
+                    <div className="mobile-menu-header">
+                        <h3 className="mobile-menu-title">Navigation</h3>
+                        <button onClick={() => setIsMobileMenuOpen(false)} className="close-button" aria-label="Close mobile menu">
+                            <svg className="close-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                        </button>
+                    </div>
+                    <div className="mobile-menu-content">
+                        <ul>
+                            {navItems.map((item: any, index: number) => (
+                                <li key={`mobile-nav-${item.name}`} className="mobile-nav-item">
+                                    {item.dropdown ? (
+                                        <>
+                                            <button onClick={() => setActiveMobileAccordion(activeMobileAccordion === index ? null : index)} className={`mobile-accordion-button ${activeMobileAccordion === index ? 'active' : ''}`}>
+                                                {item.name}
+                                                <svg className={`mobile-accordion-arrow ${activeMobileAccordion === index ? 'active' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                                            </button>
+                                            <div className={`mobile-accordion-panel ${activeMobileAccordion === index ? 'open' : ''}`}>
+                                                <div className="mobile-accordion-inner">
+                                                    <ul className="mobile-dropdown-links">
+                                                        {item.dropdown.links.map((link: any) => (
+                                                            <li key={link.name}>
+                                                                <a href={link.href} onClick={(e) => handleNav(e, link.href)} className="mobile-dropdown-link">{link.name}</a>
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </>
+                                    ) : (
+                                        <a href={item.href} onClick={(e) => handleNav(e, item.href)} className="mobile-nav-link">{item.name}</a>
+                                    )}
+                                </li>
+                            ))}
+                        </ul>
+                        <a href="#" onClick={(e) => { e.preventDefault(); handleReportBug(); }} className="bug-report-button-mobile">
+                            <BugIcon className="w-5 h-5" />
+                            {t('nav.reportBug')}
+                        </a>
+                        <a href="#/contact" onClick={(e) => handleNav(e, '#/contact')} className="contact-button-mobile">
+                            {t('contactButton')}
+                        </a>
+                    </div>
+                </nav>
+            </header>
+            
+            <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
+        </>
     );
 };
 

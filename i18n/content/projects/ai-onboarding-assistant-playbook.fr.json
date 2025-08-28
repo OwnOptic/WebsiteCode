@@ -1,0 +1,110 @@
+{
+    "title": "Playbook : L'Assistant d'Intégration IA",
+    "subtitle": "Un guide étape par étape pour construire une solution d'intégration d'entreprise avec Copilot Studio et Power Automate.",
+    "heroImageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109031/AI_onboarding_agent_-_header_e5gnbt.png",
+    "overview": {
+        "industry": "Solutions intersectorielles",
+        "timeline": "Playbook",
+        "techStack": "Copilot Studio, Power Automate, AI Builder"
+    },
+    "content": [
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "L'Histoire de l'Intégration : L'Expérience d'un Manager"
+        },
+        {
+            "type": "html",
+            "value": "<p>Sarah, une manager très occupée, doit intégrer un nouveau membre dans son équipe, Mark. Au lieu d'une liste de contrôle manuelle de 20 étapes, elle utilise l'« Assistant d'Intégration IA » dans Microsoft Teams.</p><ol><li><b>La Demande :</b> Sarah commence une discussion : « Je dois intégrer un nouvel employé. »</li><li><b>L'Interaction :</b> L'agent demande le CV de Mark. Après l'avoir téléchargé, l'IA extrait ses informations, que Sarah confirme rapidement. Elle fournit son titre de poste et sa date de début.</li><li><b>L'Automatisation :</b> Dès que Sarah confirme les détails, l'agent lance le processus complet en arrière-plan. Mark reçoit un e-mail professionnel et personnalisé avec son contrat, qu'il peut signer sur son téléphone en quelques secondes, créant une excellente première impression. Une fois signé, son compte M365 est créé, un ticket est ouvert pour son équipement informatique et tous les services concernés sont informés.</li><li><b>La Résolution :</b> Une heure plus tard, Sarah reçoit un seul e-mail confirmant que tout le processus est terminé. Une tâche qui prenait auparavant une demi-journée a été accomplie en deux minutes de conversation.</li></ol>"
+        },
+        {
+            "type": "linkedin-article-button",
+            "text": "Lire le Playbook Complet sur LinkedIn",
+            "href": "https://www.linkedin.com/pulse/playbook-ai-onboarding-assistant-elliot-margot-4ukuc/?trackingId=Gkih8%2BIlS1%2BQiFXZbc31uQ%3D%3D"
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Aperçu de la Solution"
+        },
+        {
+            "type": "html",
+            "value": "<p>Cette solution se compose de trois phases principales, alimentées par un ensemble de composants interconnectés.</p>"
+        },
+        {
+            "type": "image",
+            "variant": "simple-caption",
+            "src": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109030/AI_onboarding_agent_-_Coversation_flow_ekt7sq.png",
+            "alt": "Diagramme montrant le flux de conversation de l'agent d'intégration IA",
+            "caption": "Cartographie du flux conversationnel pour une expérience utilisateur transparente."
+        },
+        {
+            "type": "html",
+            "value": "<h3>Composants Clés :</h3><ul><li>1 Agent Copilot Studio : L'interface conversationnelle pour le manager.</li><li>4 Flux Power Automate : Le moteur d'automatisation pour toutes les tâches en arrière-plan.</li><li>1 Modèle AI Builder : L'intelligence pour lire et comprendre les CV.</li></ul><h3>Les Trois Phases :</h3><ol><li><b>Extraction de Données :</b> L'agent reçoit le CV et utilise l'IA pour extraire les informations du nouvel employé.</li><li><b>Génération de Contrat :</b> L'agent utilise les informations confirmées pour créer et envoyer le contrat de travail pour signature.</li><li><b>Intégration de l'Utilisateur :</b> Une fois le contrat signé, des flux automatisés créent le compte M365 de l'utilisateur et informent tous les services concernés.</li></ol>"
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Le Guide de Mise en Œuvre"
+        },
+        {
+            "type": "html",
+            "value": "<p>Ce module fournit des instructions détaillées pour construire l'ensemble de la solution.</p>"
+        },
+        {
+            "type": "heading",
+            "level": 4,
+            "text": "Étape 1 : Entraîner l'IA à Lire les CV (AI Builder)"
+        },
+        {
+            "type": "html",
+            "value": "<p>C'est l'intelligence qui lit le CV de Mark après que Sarah l'a téléchargé.</p><ol><li>Accédez au portail Power Apps et sélectionnez AI Builder > Explorer.</li><li>Choisissez le modèle « Extraire des informations personnalisées de documents ».</li><li>Définissez les champs que vous souhaitez que l'IA trouve : Nom complet, E-mail personnel, Numéro de téléphone, Adresse personnelle.</li><li>Téléchargez au moins cinq exemples de CV et étiquetez les documents en surlignant le texte qui correspond à chaque champ.</li><li>Une fois étiqueté, Entraînez et Publiez votre modèle.</li></ol>"
+        },
+        {
+            "type": "image",
+            "variant": "simple-caption",
+            "src": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109028/AI_onboarding_agent_-_AI_Builder_model_vgmhbj.png",
+            "alt": "Configuration du modèle AI Builder",
+            "caption": "Entraînement du modèle AI Builder pour extraire avec précision les données des CV."
+        },
+        {
+            "type": "heading",
+            "level": 4,
+            "text": "Étape 2 : Automatiser le Flux de Travail Complet (Power Automate)"
+        },
+        {
+            "type": "html",
+            "value": "<p>La solution repose sur une série de flux Power Automate interconnectés qui gèrent tout, de la génération de contrats à la création d'utilisateurs. Un flux parent est déclenché par le Copilot, qui appelle ensuite des flux enfants pour effectuer des tâches spécifiques, créant une architecture modulaire et maintenable.</p>"
+        },
+        {
+            "type": "technology-spotlight",
+            "technologies": [
+                { "name": "Microsoft AI Builder", "description": "Utilisé pour créer un modèle de traitement de documents personnalisé qui extrait des données structurées de CV non structurés." },
+                { "name": "Power Fx", "description": "Utilisé dans Power Apps et Copilot Studio pour la logique low-code, comme la validation des entrées utilisateur avant de déclencher un flux." }
+            ]
+        },
+        {
+            "type": "image",
+            "variant": "simple-caption",
+            "src": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109034/AI_onboarding_agent_Flow1_exqdav.png",
+            "alt": "Diagramme des flux Power Automate",
+            "caption": "L'architecture de flux parent et enfant garantit une automatisation modulaire et évolutive."
+        },
+        {
+            "type": "heading",
+            "level": 4,
+            "text": "Étape 3 : Construire l'Interface Conversationnelle (Copilot Studio)"
+        },
+        {
+            "type": "html",
+            "value": "<p>Enfin, nous construisons l'agent Copilot avec lequel Sarah interagira dans Teams. Cela implique de créer un sujet qui guide le manager à travers le processus, appelle les flux Power Automate en tant que plugins et fournit un retour clair à chaque étape.</p>"
+        },
+        {
+            "type": "image",
+            "variant": "simple-caption",
+            "src": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109029/AI_onboarding_agent_-_conversation_Sarah_qoitcy.png",
+            "alt": "Conversation finale avec l'Assistant d'Intégration IA",
+            "caption": "L'interaction utilisateur finale, transformant un processus complexe en une simple conversation."
+        }
+    ]
+}

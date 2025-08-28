@@ -1,0 +1,65 @@
+{
+    "title": "Vitrine de la Bibliothèque de Composants",
+    "subtitle": "Une démonstration en direct des nouveaux composants réutilisables ajoutés au constructeur de pages dynamique du site web.",
+    "heroImageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109044/Data_Point_Bokeh_q2zg6q.png",
+    "overview": {
+        "industry": "Développement Web",
+        "timeline": "Continu",
+        "techStack": "React, TypeScript, CSS"
+    },
+    "content": [
+        {
+            "type": "html",
+            "value": "<p>Cette page entière est rendue dynamiquement à partir d'un seul fichier JSON. En ajoutant de nouveaux composants à la bibliothèque centrale, nous pouvons facilement créer des mises en page riches et variées sans écrire de nouveau code spécifique à la page. Vous trouverez ci-dessous quelques-unes des dernières additions.</p>"
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Composant Mythe vs Fait"
+        },
+        {
+            "type": "html",
+            "value": "<p>Ce composant est conçu pour distinguer clairement et de manière attrayante un mythe courant d'une clarification factuelle en utilisant un code couleur distinct.</p>"
+        },
+        {
+            "type": "myth-vs-fact",
+            "myth": "L'IA va remplacer tous les emplois humains.",
+            "fact": "L'IA est un outil conçu pour augmenter les capacités humaines, en automatisant les tâches répétitives et en libérant les gens pour un travail plus stratégique."
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Composant Conseil de Pro"
+        },
+        {
+            "type": "html",
+            "value": "<p>Un encadré visuellement distinct pour mettre en évidence des informations clés et faire ressortir les conseils importants du texte ordinaire.</p>"
+        },
+        {
+            "type": "pro-tip",
+            "content": "Commencez avec un jeu de données plus petit et propre pour itérer plus rapidement sur un nouveau modèle d'IA. Cela vous aide à trouver les problèmes avant de passer à plus grande échelle."
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Accordéon FAQ"
+        },
+        {
+            "type": "html",
+            "value": "<p>Un accordéon moderne et épuré pour afficher du contenu de type questions-réponses avec des animations d'ouverture/fermeture fluides.</p>"
+        },
+        {
+            "type": "faq-accordion",
+            "items": [
+                {
+                    "question": "Combien de temps dure un projet de mise en œuvre d'IA ?",
+                    "answer": "<p>Les délais des projets varient en fonction de la complexité, mais un projet pilote typique peut durer de 4 à 12 semaines. Nous fournissons un calendrier détaillé après la phase de découverte initiale.</p>"
+                },
+                {
+                    "question": "Quel type de données devons-nous fournir ?",
+                    "answer": "<p>Les données requises dépendent du problème que nous résolvons. Cela peut aller de données structurées comme les chiffres de vente à des données non structurées comme les e-mails des clients. Nous vous guiderons tout au long du processus de collecte et de préparation des données.</p>"
+                }
+            ]
+        }
+    ]
+}

@@ -1,42 +1,47 @@
+
 {
     "techStack": {
         "header": {
             "title": "Ma Stack Technologique",
-            "subtitle": "Les plateformes, outils et méthodologies que j'utilise pour créer des solutions d'entreprise efficaces et évolutives."
+            "subtitle": "Les plateformes, outils et méthodologies que j'utilise pour créer des solutions d'entreprise efficaces et évolutives.",
+            "imageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756108976/The_Digital_Conductor.881Z_tfzwmx.png"
         },
         "categories": [
             {
                 "title": "Plateformes Principales & IA",
                 "icon": "PlatformIcon",
                 "items": [
-                    { "name": "Microsoft Power Automate", "description": "Mon outil principal pour orchestrer des automatisations de processus métier (BPA) complexes, construire des intégrations d'API robustes et fournir des solutions de flux de travail évolutives." },
+                    { "name": "Microsoft Power Platform", "description": "La suite complète d'outils low-code que j'utilise pour créer des solutions métier de bout en bout, incluant applications, automatisations, bots et analyses." },
                     { "name": "Microsoft Copilot Studio", "description": "Utilisé pour créer des assistants IA conversationnels d'entreprise et des copilotes personnalisés qui exploitent des plugins d'IA Générative pour effectuer des actions complexes." },
+                    { "name": "Microsoft AI Builder", "description": "Intégration de modèles d'IA pré-construits dans Power Apps et Power Automate pour des tâches comme le traitement de documents, la prédiction et la détection d'objets." },
+                    { "name": "Microsoft Power Automate", "description": "Mon outil principal pour orchestrer des automatisations de processus métier (BPA) complexes, construire des intégrations d'API robustes et fournir des solutions de flux de travail évolutives." },
                     { "name": "Microsoft Power Apps", "description": "Pour créer des applications low-code personnalisées qui servent d'interfaces intuitives pour des flux de travail automatisés sophistiqués et la gestion de données." },
-                    { "name": "Microsoft Azure AI", "description": "Tirer parti de services comme Azure OpenAI et Azure AI Language pour ajouter une intelligence avancée, telle que la compréhension du langage naturel, aux solutions d'entreprise." },
-                    { "name": "API Google Gemini", "description": "Intégration de capacités d'IA Générative et multimodale de pointe pour des tâches comme la génération de contenu et l'extraction de données structurées à partir d'images." },
                     { "name": "Dataverse", "description": "Pour créer des modèles de données évolutifs et sécurisés qui fournissent une base robuste pour les solutions Power Platform d'entreprise, garantissant l'intégrité des données." }
                 ]
             },
             {
-                "title": "Frontend & Outils de Développement",
+                "title": "Cloud & Services IA",
                 "icon": "CloudIcon",
                 "items": [
-                    { "name": "React & TypeScript", "description": "La base pour construire des interfaces utilisateur et des applications web modernes, performantes et sécurisées, garantissant une expérience utilisateur de haute qualité." },
-                    { "name": "HTML5 & CSS3", "description": "Technologies web de base utilisées pour structurer le contenu sémantiquement et créer des designs réactifs, accessibles et visuellement attrayants." },
-                    { "name": "TailwindCSS", "description": "Un framework CSS utilitaire qui permet un développement rapide de l'interface utilisateur et un style cohérent sans quitter le HTML." },
-                    { "name": "Git & GitHub", "description": "Essentiel pour un contrôle de version robuste, une collaboration d'équipe efficace et la gestion des bases de code via des branches et des pull requests." },
-                    { "name": "VS Code", "description": "Mon éditeur de code principal, hautement personnalisé pour une efficacité maximale dans le développement web, Power Platform et IA." },
-                    { "name": "Postman", "description": "Un outil indispensable pour tester, documenter et interagir avec les API RESTful, crucial pour la phase d'intégration de tout projet d'automatisation." }
+                    { "name": "Azure AI Studio", "description": "Développer et gérer des solutions d'IA générative, y compris l'ingénierie des prompts, l'évaluation de modèles et la création de copilotes personnalisés avec une interface unifiée pro-code." },
+                    { "name": "Azure AI Search", "description": "Implémentation de la recherche sécurisée et optimisée par l'IA sur les données d'entreprise, permettant une récupération d'informations avancée pour les applications d'IA générative." },
+                    { "name": "Azure AI Translator", "description": "Intégration de capacités de traduction de texte en temps réel dans les applications et les flux de travail pour prendre en charge des expériences utilisateur multilingues." },
+                    { "name": "Google Cloud Platform", "description": "Exploitation de services comme Vertex AI pour construire, déployer et mettre à l'échelle des modèles de machine learning, et pour accéder à de puissantes capacités d'IA Générative." },
+                    { "name": "API Google Gemini", "description": "Intégration de capacités d'IA Générative et multimodale de pointe pour des tâches comme la génération de contenu et l'extraction de données structurées à partir d'images." },
+                    { "name": "Microsoft Copilot", "description": "Extension et personnalisation de Microsoft 365 Copilot pour créer des expériences IA sur mesure qui sont profondément intégrées dans le flux de travail au sein de Teams, Outlook, et plus encore." }
                 ]
             },
             {
-                "title": "Méthodologies Stratégiques",
+                "title": "Frontend & Outils de Développement",
                 "icon": "DevToolsIcon",
                 "items": [
-                    { "name": "Agile & Scrum", "description": "Appliquer l'état d'esprit Agile et le cadre Scrum pour livrer des projets de manière itérative, garantissant un retour continu et une livraison de valeur rapide." },
-                    { "name": "Product Ownership", "description": "Prendre en charge la vision du produit, gérer et prioriser le backlog, et prendre des décisions basées sur les données pour maximiser la valeur commerciale et le ROI." },
-                    { "name": "Design Thinking", "description": "Utiliser une approche centrée sur l'humain pour la résolution de problèmes, axée sur l'empathie, l'idéation et le prototypage rapide pour créer des solutions que les utilisateurs aiment." },
-                    { "name": "Process Mining & Analyse", "description": "Exploiter les données pour analyser et visualiser les processus métier, permettant l'identification des goulots d'étranglement et des opportunités d'automatisation à fort impact." }
+                    { "name": "React & TypeScript", "description": "La base pour construire des interfaces utilisateur et des applications web modernes, performantes et sécurisées, garantissant une expérience utilisateur de haute qualité." },
+                    { "name": "GitHub", "description": "Essentiel pour un contrôle de version robuste, une collaboration d'équipe efficace et la gestion des bases de code via des branches et des pull requests." },
+                    { "name": "GitHub Copilot", "description": "Un programmeur en binôme IA qui accélère le développement en suggérant du code et des fonctions entières en temps réel, directement dans l'éditeur de code." },
+                    { "name": "Codage Assisté par IA", "description": "Utilisation d'outils basés sur l'IA pour accélérer le développement, améliorer la qualité du code et automatiser les tâches de codage répétitives, permettant un flux de travail plus efficace et innovant." },
+                    { "name": "VS Code", "description": "Mon éditeur de code principal, hautement personnalisé pour une efficacité maximale dans le développement web, Power Platform et IA." },
+                    { "name": "Postman", "description": "Un outil indispensable pour tester, documenter et interagir avec les API RESTful, crucial pour la phase d'intégration de tout projet d'automatisation." },
+                    { "name": "Power Fx", "description": "Utilisation du langage low-code de type Excel pour créer de la logique et du comportement dans les Power Apps, permettant un développement rapide de fonctionnalités complexes." }
                 ]
             }
         ]

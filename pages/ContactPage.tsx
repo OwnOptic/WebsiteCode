@@ -1,10 +1,15 @@
 import React from 'react';
 import Contact from '../components/Contact';
+import type { BreadcrumbLink } from '../types';
 
-const ContactPage: React.FC = () => {
+interface ContactPageProps {
+    breadcrumbs: BreadcrumbLink[];
+}
+
+const ContactPage: React.FC<ContactPageProps> = ({ breadcrumbs }) => {
     return (
         <div className="py-24 md:py-36">
-            <Contact />
+            <Contact breadcrumbs={breadcrumbs} />
         </div>
     );
 };

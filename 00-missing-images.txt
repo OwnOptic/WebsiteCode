@@ -1,0 +1,109 @@
+# Image Generation Backlog & Audit Report
+
+This document lists all key hero images and visual assets that are mismatched, placeholders, or are still being served from GitHub. Each entry includes a detailed "hyper prompt" designed for AI image generation models like Imagen to create a perfect, on-brand visual for its specific context.
+
+---
+
+## Image Overhaul Backlog
+
+This section details images that require replacement due to being placeholders, generic, or contextually mismatched.
+
+---
+
+### 1. Education Page Hero
+
+- **Location:** `EducationPage` Hero Section (`HeroV2` component)
+- **Current URL:** `https://raw.githubusercontent.com/OwnOptic/Website-storage/main/AI%20as%20a%20Knowledge%20River.967Z.png`
+- **Analysis:** The 'knowledge river' concept is acceptable, but the current image is too abstract and lacks a professional, academic feel suitable for an education page.
+- **Hyper Prompt:**
+  "**Subject:** A minimalist architectural photograph of a modern university library or lecture hall. Focus on clean lines, natural light, and a sense of structured knowledge.
+  **Style:** High-end architectural photography, minimalist, clean aesthetic.
+  **Composition:** Symmetrical, one-point perspective shot looking down a row of empty seats or bookshelves.
+  **Lighting:** Bright, natural sunlight streaming through large windows, creating soft shadows.
+  **Color Palette:** Muted tones, light wood, concrete, with accents of the brand's indigo (`#4f46e5`).
+  **Atmosphere:** Scholarly, professional, calm, inspiring, and structured.
+  **Technical Details:** Photorealistic, 4K, shot on a Sony A7IV with a wide-angle lens.
+  **Negative Prompts:** no people, no books with visible text, no clutter."
+
+---
+
+### 2. Certificates Page Hero
+
+- **Location:** `CertificatesPage` Hero Section (`HeroV2` component)
+- **Current URL:** `https://raw.githubusercontent.com/OwnOptic/Website-storage/main/The%20Seamless%20Integration.657Z.png`
+- **Analysis:** This image is completely unrelated to the topic of certificates and professional qualifications. It needs a replacement that visually represents achievement and validation.
+- **Hyper Prompt:**
+  "**Subject:** An abstract, artistic representation of digital certificates or credentials. Visualize them as glowing, semi-transparent glass plaques with holographic checkmarks, arranged neatly in a row receding into the distance with a shallow depth of field.
+  **Style:** 3D render, minimalist, high-tech, professional.
+  **Composition:** Low-angle shot looking up at the row of plaques.
+  **Lighting:** Soft, internal light from the plaques, with glowing accents in brand indigo and orange, against a dark, clean background.
+  **Atmosphere:** Accomplished, professional, validated, secure, modern.
+  **Technical Details:** 4K, hyperrealistic render, depth of field, subtle reflections.
+  **Negative Prompts:** no text, no paper certificates, no ribbons or medals."
+
+---
+
+### 3. Tech Stack Page Hero
+
+- **Location:** `TechStackPage` Header Background
+- **Current URL:** `https://raw.githubusercontent.com/OwnOptic/Website-storage/main/The%20Digital%20Conductor.881Z.png`
+- **Analysis:** The image is generic and doesn't specifically relate to a technology stack. It needs a more fitting visual.
+- **Hyper Prompt:**
+  "**Subject:** An abstract 3D visualization of interconnected technology logos and code snippets forming a complex, glowing network. Feature logos for React, Power Automate, and Gemini prominently.
+  **Style:** Data visualization, 3D render, high-tech.
+  **Composition:** A dynamic, orbiting view of the network structure.
+  **Lighting:** Volumetric light with glows emanating from the nodes and connections, using brand indigo and orange.
+  **Atmosphere:** Complex, interconnected, modern, and powerful.
+  **Technical Details:** 4K, depth of field, rendered in Octane.
+  **Negative Prompts:** no people, avoid clutter."
+
+---
+
+### 4. Component Showcase Hero
+
+- **Location:** `ProjectDetailPage` Hero for "Component Showcase"
+- **Current URL:** `https://raw.githubusercontent.com/OwnOptic/Website-storage/main/Data%20Point%20Bokeh.png`
+- **Analysis:** Too generic. The image should visually represent UI components and web design.
+- **Hyper Prompt:**
+  "**Subject:** An abstract, deconstructed view of a UI design system. Show floating, semi-transparent cards, buttons, and icons in a clean, organized 3D space.
+  **Style:** Minimalist, 3D render, high-end UI/UX aesthetic.
+  **Composition:** A dynamic, layered arrangement with a clear sense of depth and organization.
+  **Lighting:** Soft, ambient studio lighting.
+  **Color Palette:** Use the website's color palette: indigo (`#4f46e5`), orange (`#F26F21`), and grays.
+  **Atmosphere:** Organized, clean, professional, and creative.
+  **Technical Details:** 4K, hyperrealistic render, shallow depth of field.
+  **Negative Prompts:** no text, no code, no people."
+
+---
+---
+
+## Audit: All GitHub-Hosted Images
+
+The following is a complete list of image assets currently being served from GitHub. For optimal performance and reliability, these should be migrated to a dedicated CDN like Cloudinary.
+
+- `https://raw.githubusercontent.com/OwnOptic/Website-storage/main/The%20AI-Powered%20Assistant.png`
+- `https://github.com/OwnOptic.png`
+- `https://github.com/OwnOptic/Website-storage/blob/main/img%20cv.jpg?raw=true`
+- `https://raw.githubusercontent.com/OwnOptic/Website-storage/main/AI%20as%20a%20Knowledge%20River.967Z.png`
+- `https://raw.githubusercontent.com/OwnOptic/Website-storage/main/The%20Seamless%20Integration.657Z.png`
+- `https://raw.githubusercontent.com/OwnOptic/Website-storage/main/Data%20Point%20Bokeh.png`
+- `https://raw.githubusercontent.com/OwnOptic/Website-storage/main/AI%20onboarding%20agent%20-%20header.png`
+- `https://raw.githubusercontent.com/OwnOptic/Website-storage/main/AI%20Dungeon%20Explorer%20The%20Great%20Escape.png?raw=true`
+- `https://raw.githubusercontent.com/OwnOptic/Website-storage/main/Gemini_Generated_Image_nt5ubknt5ubknt5u.png`
+- `https://raw.githubusercontent.com/OwnOptic/Website-storage/ff65d9efcef377d1618afc2031cf07fc842b2b6d/Regulation%20and%20Law_ai_theme.png`
+- `https://raw.githubusercontent.com/OwnOptic/Website-storage/main/Augmented%20Intelligence.png`
+- `https://raw.githubusercontent.com/OwnOptic/Website-storage/main/AI%20hackathon%20presentaiton.png`
+- `https://raw.githubusercontent.com/OwnOptic/Website-storage/main/AI%20hackathon%20our%20group.png`
+- `https://raw.githubusercontent.com/OwnOptic/Website-storage/main/The%20Data-Driven%20Decision.png`
+- `https://raw.githubusercontent.com/OwnOptic/Website-storage/main/Masterful%20and%20Fun.png`
+- `https://raw.githubusercontent.com/OwnOptic/Website-storage/main/Informational%20Assistant.jpg`
+- `https://raw.githubusercontent.com/OwnOptic/Website-storage/main/Action-Oriented%20Assistant.jpg`
+- `https://raw.githubusercontent.com/OwnOptic/Website-storage/main/Proactive%20Co-Pilot.jpg`
+- `https://raw.githubusercontent.com/OwnOptic/Website-storage/main/AI%20onboarding%20agent%20-%20Coversation%20flow.png`
+- `https://raw.githubusercontent.com/OwnOptic/Website-storage/main/AI%20onboarding%20agent%20-%20AI%20Builder%20model%20.png`
+- `https://raw.githubusercontent.com/OwnOptic/Website-storage/main/AI%20onboarding%20agent%20Flow1.png`
+- `https://raw.githubusercontent.com/OwnOptic/Website-storage/main/AI%20onboarding%20agent%20-%20conversation%20Sarah.png`
+- `https://raw.githubusercontent.com/OwnOptic/Website-storage/main/The%20Digital%20Conductor.881Z.png`
+- `https://raw.githubusercontent.com/OwnOptic/Website-storage/6bbb88efb6b1e043e740ac2e9f3de37a4aaa5fb8/ItHelpdeskAgentDEMO.gif`
+- `https://raw.githubusercontent.com/OwnOptic/Website-storage/6bbb88efb6b1e043e740ac2e9f3de37a4aaa5fb8/Structure%20of%20IT%20Helpdesk%20code.png`
+- `https://raw.githubusercontent.com/OwnOptic/Website-storage/main/Human-Bot%20Interaction.png`

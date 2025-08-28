@@ -1,49 +1,77 @@
+
 {
   "experience": {
     "header": {
       "title": "Expérience Professionnelle",
       "subtitle": "Mon parcours professionnel a été façonné par un engagement envers la croissance, l'innovation et une concentration sur des résultats percutants."
     },
+     "heroV2": {
+      "imageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109048/a_shadowy_figure_manipulating_data_streams_bias_ujp1tu.png"
+    },
     "timeline": [
       {
-        "role": "Consultant IA & Power Platform",
-        "company": "Witivio, Lausanne",
-        "period": "Août 2024 – Aujourd'hui",
+        "role": "Consultant IA",
+        "company": "Witivio - AI Solutions for Microsoft Teams",
+        "period": "Avril 2025 – Aujourd'hui",
         "points": [
-          "Concevoir et déployer des solutions d'IA d'entreprise, entraînant une réduction moyenne de 30% du traitement manuel pour les clients clés.",
-          "Architecturer et créer des Copilots personnalisés dans Microsoft Teams qui servent plus de 10 000 utilisateurs, améliorant l'accès à l'information et le self-service des employés.",
-          "Animer des ateliers stratégiques avec les clients pour identifier des opportunités d'automatisation à forte valeur, contribuant à une croissance de 20% du pipeline de projets.",
-          "Se spécialiser dans l'intégration de modèles d'IA générative pour résoudre des problèmes commerciaux complexes."
-        ]
+          "Engagé en tant que consultant à temps plein spécialisé dans la mise en œuvre et le développement de solutions impliquant des Agents IA et la Microsoft Power Platform.",
+          "Concevoir et architecturer des solutions personnalisées exploitant les capacités de l'IA et la suite Power Platform (Power Apps, Power Automate, Power BI) pour répondre aux défis spécifiques des clients.",
+          "Gérer les relations et la communication avec les clients tout au long du cycle de vie du projet, en garantissant l'alignement avec les objectifs et une livraison réussie.",
+          "Collaborer avec les clients et les équipes internes pour recueillir les exigences, définir la portée du projet et fournir des solutions de transformation numérique sur mesure.",
+          "Fournir une expertise technique et un soutien lors du déploiement et des phases post-implémentation.",
+          "Rechercher et évaluer en continu les tendances émergentes en matière d'IA et de technologies Microsoft pour améliorer les offres de services et les résultats pour les clients."
+        ],
+        "imageUrl": "https://www.salon-intranet.com/logo/7efb633c8de1d45logo-hd_witivio.png",
+        "techStack": ["Agents IA", "Microsoft Power Platform", "Power Apps", "Power Automate", "Power BI", "Gestion de la Relation Client", "Transformation Numérique"]
       },
       {
         "role": "Product Owner ChatBot & Responsable des Tests",
         "company": "Assura, Lausanne",
-        "period": "Avril 2023 – Juillet 2024",
+        "period": "Avril 2023 – Avril 2025",
         "points": [
-          "Détenu la vision produit et la feuille de route pour un chatbot IA, augmentant la satisfaction client de 25% et réduisant le volume du centre d'appels de 15%.",
-          "Géré le cycle de vie du produit de bout en bout, obtenant une amélioration de 3x de la résolution au premier contact et une précision de reconnaissance d'intention de 96%.",
-          "Dirigé les cérémonies Agile/DevOps et collaboré avec les parties prenantes pour générer une augmentation des ventes de 43% grâce à des campagnes intégrées au chatbot."
-        ]
+          "Défini la vision produit et la feuille de route du Chatbot Assura, en utilisant la recherche utilisateur et l'analyse concurrentielle pour identifier des améliorations basées sur l'IA, ce qui a entraîné une augmentation de 25% de la satisfaction client.",
+          "Géré le cycle de vie de bout en bout du Chatbot (idéation, conception, sélection du modèle d'IA, formation, test), obtenant une amélioration de 3x de la résolution au premier contact et une précision de 81-96%.",
+          "Dirigé l'affinage du backlog et la planification des sprints (DevOps, Agile), en collaboration avec les concepteurs UX et les parties prenantes, générant une augmentation des ventes de 43%.",
+          "Surveillé les métriques de performance, identifiant les opportunités d'optimisation et augmentant l'interaction utilisateur de 2x.",
+          "Contribué à ce qu'Assura obtienne la #1 App, le #1 Flux de Souscription en Ligne et les 3èmes Meilleurs Services en Ligne sur le marché de l'assurance suisse."
+        ],
+        "imageUrl": "https://images.seeklogo.com/logo-png/46/2/assura-logo-png_seeklogo-462524.png",
+        "techStack": ["Gestion de Produit IA", "Stratégie de Roadmap", "Agile/DevOps", "Conception UX", "Métriques de Performance", "Gestion des Parties Prenantes"]
       },
       {
         "role": "Conseiller en Assurance Digitale",
         "company": "Assura, Lausanne",
-        "period": "Juin 2021 – Mars 2023",
+        "period": "Juin 2021 – Avril 2023",
         "points": [
-          "Fourni un support client multilingue, en utilisant le NLP pour réduire les temps de réponse du LiveChat de 10%.",
-          "Amélioré la qualité des interactions client et augmenté le NPS de 5% en développant des modèles de LiveChat multilingues.",
-          "Réalisé des UAT et fourni un support post-lancement à haut volume pour un nouveau portail client."
-        ]
+          "Fourni un support client (téléphone, LiveChat - français, anglais, allemand) en utilisant le NLP pour améliorer les messages LiveChat, réduisant les temps de réponse de 10%.",
+          "Développé et maintenu des modèles de messages LiveChat, améliorant la qualité de l'interaction client et augmentant le NPS de 5%.",
+          "Utilisé les retours clients et l'analyse de données avec un modèle d'IA hébergé localement pour améliorer les points faibles. Réalisé des UAT et fourni un support post-lancement.",
+          "Développé des guides de support utilisateur et maintenu la base de connaissances."
+        ],
+        "imageUrl": "https://images.seeklogo.com/logo-png/46/2/assura-logo-png_seeklogo-462524.png",
+        "techStack": ["Support Client", "NLP", "Analyse de Données", "UAT", "Base de Connaissances"]
       },
       {
-        "role": "Soldat Sanitaire (Spécialiste)",
+        "role": "Service Militaire - Soldat Sanitaire",
         "company": "Armée Suisse",
-        "period": "Mars 2017 – Aujourd'hui",
+        "period": "Présent",
         "points": [
-          "Soutenir la santé et l'efficacité opérationnelle d'une unité d'artillerie en combinant des compétences médicales et de télécommunication.",
-          "Fournir un soutien logistique et médical essentiel dans des situations de haute pression."
-        ]
+          "Formation de base rigoureuse, développant la discipline, l'esprit d'équipe et la résilience sous pression.",
+          "Spécialisation en tant que soldat sanitaire, acquérant des compétences en premiers secours, en intervention médicale d'urgence et en soins aux patients en conditions de terrain."
+        ],
+        "imageUrl": "https://prod-vtgch-hcms-sdweb.imgix.net//2024/01/26/3c226193-7bf2-4942-923a-f6f5166c12e2.png?w=2400&auto=format",
+        "techStack": ["Discipline", "Esprit d'équipe", "Résilience", "Intervention d'Urgence", "Premiers Secours"]
+      },
+      {
+        "role": "Stage – Assistant de direction",
+        "company": "Campus One SARL",
+        "period": "Août 2020 – Mai 2021",
+        "points": [
+          "Fourni un soutien administratif, informatique et technique pour les opérations quotidiennes, gérant les relations clients dans un environnement multiculturel.",
+          "Contribué au portefeuille de marques et aux marques déposées."
+        ],
+        "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple112/v4/9c/76/7d/9c767da0-2c47-2274-30ec-a6f5fa991835/AppIcon-0-0-1x_U007emarketing-0-0-0-10-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/256x256bb.jpg",
+        "techStack": ["Support Administratif", "Support Informatique", "Relations Clients", "Gestion de Marque"]
       }
     ]
   }

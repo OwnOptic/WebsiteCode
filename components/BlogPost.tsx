@@ -6,11 +6,13 @@ interface Post {
     slug: string;
     title: string;
     author: string;
-    date: string;
+    publishDate: string;
+    readTime: string;
     imageUrl: string;
     summary: string;
-    content: string;
+    content?: string; // Content is optional
     tags: string[];
+    externalUrl: string;
 }
 
 const RelatedPostCard: React.FC<{ post: Post }> = ({ post }) => {
@@ -22,7 +24,7 @@ const RelatedPostCard: React.FC<{ post: Post }> = ({ post }) => {
     return (
         <a href={`#/blog/${post.slug}`} onClick={(e) => handleNav(e, `#/blog/${post.slug}`)} className="block group">
             <div className="bg-white rounded-lg overflow-hidden custom-shadow flex flex-col h-full transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
-                <img src={post.imageUrl} alt={post.title} className="w-full h-48 object-cover" loading="lazy" />
+                <img src={post.imageUrl} alt={post.title} className="w-full h-56 object-cover" loading="lazy" />
                 <div className="p-4 flex flex-col flex-grow">
                     <h4 className="text-lg font-semibold text-[var(--primary-text)] mb-2 leading-tight flex-grow">{post.title}</h4>
                     <span className="text-sm font-semibold text-[var(--interactive-blue)] group-hover:text-[var(--interactive-hover)] transition-colors self-start mt-2">
@@ -42,6 +44,28 @@ const BlogPost: React.FC<{ slug: string }> = ({ slug }) => {
 
     useEffect(() => {
         if (post) {
+            const pageTitle = `${post.title} | Elliot Margot`;
+            // Set document title and meta description for SEO
+            document.title = pageTitle;
+            const metaDescription = document.querySelector('meta[name="description"]');
+            if (metaDescription) {
+                metaDescription.setAttribute('content', post.summary);
+            }
+
+            // Update Open Graph and Twitter meta tags
+            const baseUrl = 'https://www.e-margot.ch/';
+            document.querySelector('meta[property="og:title"]')?.setAttribute('content', pageTitle);
+            document.querySelector('meta[property="og:description"]')?.setAttribute('content', post.summary);
+            document.querySelector('meta[property="og:image"]')?.setAttribute('content', post.imageUrl);
+            document.querySelector('meta[property="og:url"]')?.setAttribute('content', `${baseUrl}${window.location.hash}`);
+            document.querySelector('meta[name="twitter:title"]')?.setAttribute('content', pageTitle);
+            document.querySelector('meta[name="twitter:description"]')?.setAttribute('content', post.summary);
+            document.querySelector('meta[name="twitter:image"]')?.setAttribute('content', post.imageUrl);
+
+            // Track page view for analytics
+            analytics.trackPageView(window.location.hash, post.title);
+            
+            // Track specific event for viewing a blog post
             analytics.trackEvent('view_blog_post', {
                 post_slug: post.slug,
                 post_title: post.title,
@@ -91,7 +115,7 @@ const BlogPost: React.FC<{ slug: string }> = ({ slug }) => {
                 <div className="relative h-full flex flex-col items-center justify-center text-center text-white p-4">
                     <h1 className="text-3xl md:text-5xl font-bold max-w-4xl">{post.title}</h1>
                     <div className="mt-4 text-lg text-gray-200">
-                        <span>By {post.author}</span> &bull; <span>{post.date}</span>
+                        <span>By {post.author}</span> &bull; <span>{post.publishDate}</span>
                     </div>
                 </div>
             </header>
@@ -131,7 +155,11 @@ const BlogPost: React.FC<{ slug: string }> = ({ slug }) => {
                     }
                     `}
                     </style>
-                    <div className="whitespace-pre-wrap font-sans" dangerouslySetInnerHTML={{ __html: post.content }}></div>
+                    {post.content ? (
+                        <div className="whitespace-pre-wrap font-sans" dangerouslySetInnerHTML={{ __html: post.content }}></div>
+                    ) : (
+                        <p>{post.summary}</p>
+                    )}
                 </article>
 
                 {relatedPosts.length > 0 && (

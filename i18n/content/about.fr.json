@@ -1,12 +1,16 @@
+
 {
   "about": {
     "header": {
       "title": "À propos de moi",
-      "subtitle": "Un consultant IA multilingue qui stimule l'innovation avec des données et des solutions sur mesure"
+      "subtitle": "Un Product Owner IA multilingue qui stimule l'innovation avec des données et des solutions sur mesure"
+    },
+     "heroV2": {
+        "imageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109047/Gemini_Generated_Image_449bsw449bsw449b_xuoa7t.png"
     },
     "intro": {
-      "title": "Un consultant IA axé sur les résultats...",
-      "p1": "...avec une expérience avérée dans l'architecture et le déploiement de solutions d'IA et d'automatisation à fort impact. Mon expertise consiste à transformer des défis commerciaux complexes en systèmes évolutifs et intelligents en utilisant la Microsoft Power Platform et l'IA Générative. Je m'épanouis à combler le fossé entre les possibilités techniques et les objectifs stratégiques, en dirigeant des équipes interfonctionnelles pour fournir des résultats mesurables et piloter la transformation numérique."
+      "title": "Mon Objectif :",
+      "p1": "Obtenir un poste stimulant de Product Owner IA où je peux mettre à profit mon expertise en IA/ML, méthodologies agiles et prise de décision basée sur les données pour développer des produits innovants, centrés sur l'utilisateur et alimentés par l'IA, afin de générer un impact commercial significatif."
     },
     "journey": {
       "title": "Mon Parcours",
@@ -14,32 +18,109 @@
       "ctaEducation": "Voir ma Formation",
       "items": [
         {
-          "role": "Consultant IA & Power Platform",
-          "company": "Witivio, Lausanne | Août 2024 – Aujourd'hui",
-          "description": "Conception et déploiement de solutions d'IA Générative d'entreprise pour des clients clés à travers l'Europe."
+          "role": "Consultant IA",
+          "company": "Witivio",
+          "period": "Avril 2024 – Aujourd'hui",
+          "description": "Spécialisé dans la mise en œuvre de solutions d'Agents IA et de Microsoft Power Platform, la conception d'architectures personnalisées, la gestion des relations clients et la conduite de la transformation numérique.",
+          "imageUrl": "https://www.salon-intranet.com/logo/7efb633c8de1d45logo-hd_witivio.png",
+          "techStack": ["Agents IA", "Power Platform", "Gestion Client"]
         },
         {
           "role": "Product Owner ChatBot & Responsable des Tests",
-          "company": "Assura, Lausanne | Avril 2023 – Juillet 2024",
-          "description": "Responsable de la vision produit et de la feuille de route pour un chatbot à IA Générative, augmentant la satisfaction client de 25%."
+          "company": "Assura, Lausanne",
+          "period": "Avril 2023 – Aujourd'hui",
+          "description": "Défini la vision produit pour le Chatbot d'Assura, en utilisant la recherche utilisateur pour identifier des améliorations basées sur l'IA, ce qui a entraîné une augmentation de 25% de la satisfaction client et une hausse des ventes de 43%.",
+          "imageUrl": "https://images.seeklogo.com/logo-png/46/2/assura-logo-png_seeklogo-462524.png",
+          "techStack": ["Gestion de Produit IA", "Agile/DevOps", "Stratégie Produit"]
         },
         {
           "role": "Conseiller en Assurance Digitale",
-          "company": "Assura, Lausanne | Juin 2021 – Mars 2023",
-          "description": "Interaction directe avec les clients, compréhension de leurs besoins et maîtrise des outils numériques pour l'automatisation des processus."
+          "company": "Assura, Lausanne",
+          "period": "Juin 2021 – Avril 2023",
+          "description": "Fourni un support client multilingue, en utilisant le NLP pour améliorer les messages LiveChat et réduire les temps de réponse de 10%, ce qui a contribué à une augmentation de 5% du NPS.",
+          "imageUrl": "https://images.seeklogo.com/logo-png/46/2/assura-logo-png_seeklogo-462524.png",
+           "techStack": ["Support Client", "NLP", "Analyse de Données"]
+        },
+        {
+            "role": "Stage – Assistant de direction",
+            "company": "Campus One SARL",
+            "period": "Août 2020 – Mai 2021",
+            "description": "Fourni un soutien administratif, informatique et technique pour les opérations quotidiennes, gérant les relations clients dans un environnement multiculturel.",
+            "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple112/v4/9c/76/7d/9c767da0-2c47-2274-30ec-a6f5fa991835/AppIcon-0-0-1x_U007emarketing-0-0-0-10-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/256x256bb.jpg",
+            "techStack": ["Support Administratif", "Support IT", "Relations Clients"]
         }
       ]
     },
+     "latestProject": {
+      "title": "Projet Récent",
+      "subtitle": "Google Hackathon : Assistant d'Assurance IA",
+      "description": "Dirigé une équipe dans le développement d'une preuve de concept (POC) de chatbot IA utilisant Gemini 1.5 Pro sur Google Cloud Platform en 2 jours. Défini les fonctionnalités, les exigences en matière de données et l'interface utilisateur. Développé et testé le modèle IA, fournissant des recommandations d'assurance personnalisées."
+    },
+    "github": {
+      "title": "Mes Contributions Open Source",
+      "profile": {
+        "username": "OwnOptic",
+        "avatarUrl": "https://github.com/OwnOptic.png",
+        "bio": "Consultant IA chez Witivio, un partenaire Microsoft. Passionné par l'exploitation de l'IA pour la transformation des entreprises et les solutions innovantes.",
+        "followers": "12",
+        "following": "20",
+        "profileUrl": "https://github.com/OwnOptic"
+      }
+    },
     "skills": {
-      "title": "Compétences et Atouts Clés",
-      "items": [
-        { "name": "IA Générative & LLMs", "description": "Expert en conception et mise en œuvre de solutions avec l'IA Générative, y compris l'ingénierie de prompts et le développement de Copilots personnalisés." },
-        { "name": "Microsoft Power Platform", "description": "Maîtrise avancée de Power Automate, Copilot Studio et Power Apps pour l'automatisation et les applications d'entreprise." },
-        { "name": "Stratégie & Conseil en IA", "description": "Animation d'ateliers clients pour définir la stratégie IA, identifier les cas d'usage et créer des feuilles de route exploitables pour la transformation numérique." },
-        { "name": "Product Ownership Agile", "description": "Expertise avérée en matière de vision produit, de gestion du backlog et de direction de sprints de développement pour livrer de la valeur de manière incrémentale." },
-        { "name": "Automatisation des Processus Métier (BPA)", "description": "Vaste expérience dans l'analyse, la refonte et l'automatisation de flux de travail métier complexes de bout en bout." },
-        { "name": "Intégration de Systèmes", "description": "Compétent pour connecter des systèmes hétérogènes via des API afin de créer des processus automatisés unifiés et transparents." }
-      ]
+      "title": "Compétences et Atouts Clés"
+    },
+    "cardGrid": {
+        "cards": [
+            {
+                "variant": "simple",
+                "category": "Compétence Principale",
+                "title": "IA & Machine Learning",
+                "description": "Deep Learning, NLP, Vision par Ordinateur, IA Générative, MLOps, Analyse de Données, Test d'Hypothèses et Détection de Biais.",
+                "buttonText": "Voir les Projets",
+                "link": "#/projects?category=gen-ai-llms"
+            },
+            {
+                "variant": "simple",
+                "category": "Compétence Principale",
+                "title": "Gestion de Produit IA",
+                "description": "Expertise en Stratégie, Développement de Feuille de Route, Gestion de Backlog, Priorisation, Agile/Scrum et Prise de Décision Basée sur les Données.",
+                "buttonText": "Voir l'Expérience",
+                "link": "#/experience"
+            },
+            {
+                "variant": "simple",
+                "category": "Compétence Principale",
+                "title": "Compétences Techniques",
+                "description": "Conception UX/UI, DevOps, Web Mastering, Reporting de Performance et Intégration d'API avec des plateformes comme Google Cloud et WordPress.",
+                "buttonText": "Voir la Stack Tech",
+                "link": "#/tech-stack"
+            },
+            {
+                "variant": "simple",
+                "category": "Compétence Principale",
+                "title": "Outils & Frameworks",
+                "description": "Maîtrise de TensorFlow, PyTorch, scikit-learn, AWS AI Services, Azure AI Services, outils MLOps et la suite MS Office.",
+                "buttonText": "Voir la Stack Tech",
+                "link": "#/tech-stack"
+            },
+            {
+                "variant": "simple",
+                "category": "Compétence Principale",
+                "title": "Expertise en Test",
+                "description": "Spécialisé en Planification et Exécution de Tests, UAT, Tests E2E, Tests Fonctionnels et Automatisation des Tests.",
+                "buttonText": "Voir l'Expérience",
+                "link": "#/experience"
+            },
+            {
+                "variant": "simple",
+                "category": "Compétence Principale",
+                "title": "Langues",
+                "description": "Maîtrise native de l'allemand, de l'anglais et du français, permettant une communication efficace dans des environnements multiculturels.",
+                "buttonText": "Me Contacter",
+                "link": "#/contact"
+            }
+        ]
     }
   }
 }

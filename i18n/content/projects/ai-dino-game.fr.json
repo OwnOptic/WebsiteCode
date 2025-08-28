@@ -1,0 +1,63 @@
+{
+    "title": "Démo Interactive : Gemini Rush",
+    "subtitle": "Un test de stress en temps réel des capacités de prise de décision binaire instantanée du modèle Gemini 2.5 Flash, dans un jeu de course cyberpunk soigné.",
+    "heroImageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756108973/gemini_run_card_image_szjysh.png",
+    "interactiveComponent": "AIDinoGame",
+    "overview": {
+        "industry": "Démo IA",
+        "timeline": "2 Jours (Refonte)",
+        "techStack": "React, API Gemini 2.5 Flash, API Canvas"
+    },
+    "content": [
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Objectif du Projet : La Décision Binaire Instantanée"
+        },
+        {
+            "type": "html",
+            "value": "<p>L'objectif principal de ce projet rebaptisé, <b>Gemini Rush</b>, était de créer un test convaincant et à enjeux élevés pour une capacité spécifique de l'IA : la prise de décision binaire instantanée. Dans de nombreuses applications réelles — de la robotique industrielle au trading à haute fréquence — un agent IA doit faire des choix simples et corrects avec la latence la plus faible possible. Ce jeu a été conçu pour simuler exactement ce scénario.</p><p>Cliquez sur le bouton 'Lancer la Démo' ci-dessous pour jouer. Vous pouvez activer et désactiver l'IA à tout moment pour voir si vous pouvez battre le temps de réaction de la machine !</p>"
+        },
+        {
+            "type": "demo-button"
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Comment Ça Marche : Une Boucle à Faible Latence"
+        },
+        {
+            "type": "html",
+            "value": "<p>La logique est une boucle serrée et efficace. À chaque image où une décision est nécessaire, l'état du jeu est simplifié en une instruction textuelle minimale décrivant la distance jusqu'au prochain obstacle. Ce contexte est envoyé au modèle Gemini 2.5 Flash avec une instruction stricte : répondre uniquement par 'JUMP' ou 'WAIT'.</p><p>Ce n'est pas un test de raisonnement profond ; c'est un test de pure vitesse. En contraignant le problème, nous pouvons nous concentrer sur la mesure du temps de réponse brut du modèle, un facteur critique pour toute application en temps réel.</p>"
+        },
+        {
+            "type": "learning-box",
+            "title": "Le Besoin de Vitesse : `thinkingBudget: 0`",
+            "content": "<p>La partie la plus critique de cette démo est la configuration de l'API : `thinkingConfig: { thinkingBudget: 0 }`. Cela demande au modèle Gemini 2.5 Flash de répondre immédiatement sans temps de 'réflexion' supplémentaire. C'est un modèle clé pour toute application où la vitesse est plus importante qu'une réponse nuancée et longue, ce qui le rend parfait pour des tâches comme le contrôle en temps réel ou la classification à faible latence.</p>"
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Le Code : Prompting pour la Vitesse"
+        },
+        {
+            "type": "html",
+            "value": "<p>L'appel API via le SDK `@google/genai` est simple et ciblé, mettant en évidence la configuration critique pour atteindre les performances en temps réel du jeu.</p>"
+        },
+        {
+            "type": "code",
+            "language": "typescript",
+            "theme": "window",
+            "code": "import { GoogleGenAI } from \"@google/genai\";\n\nconst ai = new GoogleGenAI({ apiKey: process.env.API_KEY });\n\nconst response = await ai.models.generateContent({\n  model: 'gemini-2.5-flash',\n  contents: `Répondez uniquement par 'JUMP' ou 'WAIT'. État : Obstacle à 150px. Vélocité du joueur 0.`,\n  config: {\n    // Crucial pour le jeu en temps réel : désactiver la réflexion pour une réponse instantanée.\n    thinkingConfig: { thinkingBudget: 0 }\n  },\n});\n\nconst action = response.text.trim(); // Retourne 'JUMP' ou 'WAIT'"
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Refonte UI/UX : Du Dino au Droïde"
+        },
+        {
+            "type": "html",
+            "value": "<p>Pour mieux correspondre à la nature high-tech de l'expérience, le jeu a bénéficié d'une refonte visuelle complète avec une esthétique 'cyberpunk glitch'. Cela comprenait la conception d'un nouveau sprite de robot coureur, la création d'obstacles de type 'glitch de données', et la mise en œuvre d'un arrière-plan dynamique à défilement parallaxe pour créer un sentiment de vitesse et d'urgence plus immersif.</p>"
+        }
+    ]
+}

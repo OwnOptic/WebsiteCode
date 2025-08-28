@@ -1,0 +1,458 @@
+All Image Details - Consolidated
+Batch 1
+ID: img-batch1-2
+Title: Vibrant Outdoor Landscape
+URL: https://res.cloudinary.com/dapoc7ekn/image/upload/v1756113734/cld-sample-2.jpg
+Description: This image likely showcases a vibrant outdoor landscape, rich with natural colors and textures. It could be used to evoke a sense of serenity, adventure, or the beauty of nature. The composition is clean and visually appealing, making it suitable for various creative projects.
+ID: img-batch1-3
+Title: Abstract Artistic Composition
+URL: https://res.cloudinary.com/dapoc7ekn/image/upload/v1756113734/cld-sample-3.jpg
+Description: This resource appears to be another generic sample image, probably showcasing diverse subjects or abstract concepts. It could be part of a collection designed for website backgrounds or promotional materials. The high resolution implies a focus on visual impact and detail.
+ID: img-batch1-5
+Title: Stylized Everyday Object
+URL: https://res.cloudinary.com/dapoc7ekn/image/upload/v1756113734/cld-sample-5.jpg
+Description: This sample image seems to offer a visually appealing snapshot, perhaps of an everyday object or a stylized environment. It's likely intended to demonstrate image hosting capabilities or act as a versatile placeholder. The balanced lighting suggests professional photography.
+ID: img-batch1-1
+Title: General Photographic Example
+URL: https://res.cloudinary.com/dapoc7ekn/image/upload/v1756113734/cld-sample.jpg
+Description: This image serves as a foundational sample, possibly featuring a general subject that highlights common photographic principles. It's often used as a default or example for new users exploring an image management platform. Its straightforward nature makes it easily adaptable.
+ID: img-batch1-4
+Title: Thematic Stock Photo
+URL: https://res.cloudinary.com/dapoc7ekn/image/upload/v1756113734/cld-sample-4.jpg
+Description: This image is likely another diverse example from a stock photography set, showcasing a different theme or perspective. It might illustrate a concept such as teamwork, technology, or nature, depending on its specific content. The image quality suggests readiness for commercial use.
+ID: img-batch1-6
+Title: Al-Generated Website Development Scene
+URL: https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109050/gemini_2.5_pro_making_my_website_y00gyp.png
+Description: This Gemini 2.5 Pro generated image illustrates a dynamic scene of website development, perhaps showing code interfaces, digital elements, and creative processes. It highlights the collaboration between Al and human design in creating digital experiences. The visual metaphors capture the essence of building a modern website.
+ID: img-batch1-7
+Title: Microsoft 365 Power Platform Recruitment Poster
+URL: https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109049/agent-academy-recruit-microsoft-365-power-platform-_jbbwyr.png
+Description: This image is a recruitment poster for an Agent Academy focused on Microsoft 365 and the Power Platform. It features branding and imagery designed to attract professionals interested in these Microsoft technologies. The poster aims to communicate opportunities for growth and skill development.
+ID: img-batch1-8
+Title: Shadowy Figure Manipulating Data Streams
+URL: https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109048/a_shadowy_figure_manipulating_data_streams_bias_ujp1tu.png
+Description: This compelling image depicts a shadowy figure actively manipulating data streams, symbolizing the concept of data bias or hidden influence. The visual narrative creates a sense of intrigue and caution around the integrity of information. It's a powerful representation of the subtle ways data can be altered.
+ID: img-batch1-9
+Title: Abstract Al Creation by Gemini
+URL: https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109047/Gemini_Generated_Image_449bsw449bsw449b_xuoa7t.png
+Description: This image is an abstract creation by Gemini, showcasing the Al's capacity for imaginative and unique visual output. It likely combines various colors, shapes, and forms in an intriguing, non-representational way. The artwork demonstrates the creative potential of advanced generative Al models.
+ID: img-batch1-10
+Title: Complex Al-Generated Art
+URL: https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109046/Gemini_Generated_Image_5at9q35at9q35at9_sklnd1.png
+Description: This image presents a complex piece of Al-generated art, characterized by its intricate details and sophisticated visual elements. It reflects Gemini's ability to produce highly developed and unique artistic works. The artwork invites viewers to explore its multifaceted composition and artistic depth.
+
+Batch 2
+ID: img-batch2-1
+Title: Serene Mountain Lake View
+URL: https://placehold.co/1870x1250/007bff/ffffff?text=Mountain+Lake
+Description: This image likely captures a serene mountain lake, with reflections of towering peaks and a clear sky. It evokes a sense of tranquility and the grandeur of nature. Such a picture could be used for travel blogs, nature documentaries, or calming visual backdrops.
+ID: img-batch2-2
+Title: Urban Cityscape at Dusk
+URL: https://placehold.co/1870x1250/333333/ffffff?text=Cityscape+Dusk
+Description: Featuring an urban cityscape at dusk, this image would showcase the glowing lights of buildings and the bustling energy of metropolitan life. The transitioning light from day to night often creates a dramatic and dynamic visual. It's perfect for conveying modern progress, city living, or architectural themes.
+ID: img-batch2-3
+Title: Close-up of Digital Circuitry
+URL: https://placehold.co/1870x1250/800080/ffffff?text=Digital+Circuitry
+Description: This image focuses on a close-up of intricate digital circuitry, highlighting the complex patterns and connections of modern electronics. It represents technology, innovation, and the underlying structure of digital systems. Ideal for tech websites, engineering presentations, or illustrating concepts of data flow.
+ID: img-batch2-4
+Title: Person Working on Laptop in Cafe
+URL: https://placehold.co/1870x1250/f0e68c/000000?text=Cafe+Work
+Description: This picture portrays a person engrossed in work on a laptop within the cozy ambiance of a cafe. It captures the modern remote work lifestyle and the blend of productivity with a relaxed setting. The image is suitable for articles on remote work, freelancing, or digital nomadism.
+ID: img-batch2-5
+Title: Vibrant Abstract Paint Splash
+URL: https://placehold.co/1870x1250/ff4500/ffffff?text=Paint+Splash
+Description: A vibrant abstract paint splash forms the core of this image, bursting with dynamic colors and fluid motion. It conveys creativity, energy, and artistic expression. This type of visual is often used for art and design platforms, marketing campaigns, or as a striking background element.
+ID: img2-batch2-6
+Title: Futuristic Architectural Interior
+URL: https://placehold.co/1870x1250/4682b4/ffffff?text=Futuristic+Interior
+Description: This image presents a sleek, futuristic architectural interior, characterized by minimalist design, clean lines, and innovative lighting. It evokes a sense of advanced technology and modern living. Ideal for design firms, sci-fi concepts, or showcasing contemporary spaces.
+ID: img-batch2-7
+Title: Healthy Food Arrangement
+URL: https://placehold.co/1870x1250/9acd32/ffffff?text=Healthy+Food
+Description: An appealing arrangement of healthy food items, possibly fresh fruits, vegetables, and grains, is the subject of this image. It promotes wellness, nutrition, and a balanced lifestyle. This visual is perfect for health blogs, diet programs, or culinary websites.
+ID: img-batch2-8
+Title: Diverse Group Collaboration
+URL: https://placehold.co/1870x1250/ffdab9/000000?text=Team+Collaboration
+Description: This image depicts a diverse group of individuals collaborating effectively, possibly in an office or creative workspace. It symbolizes teamwork, inclusivity, and shared success. Suitable for corporate websites, HR materials, or articles on workplace dynamics.
+ID: img-batch2-9
+Title: Starry Night Sky with Constellations
+URL: https://placehold.co/1870x1250/191970/ffffff?text=Starry+Night
+Description: A breathtaking view of a starry night sky, with visible constellations, is captured in this image. It inspires wonder, exploration, and the vastness of the cosmos. This type of image is perfect for astronomy sites, educational content, or meditative backdrops.
+ID: img-batch2-10
+Title: Vintage Camera on Wooden Desk
+URL: https://placehold.co/1870x1250/cd853f/ffffff?text=Vintage+Camera
+Description: This charming image features a vintage camera resting on a rustic wooden desk, possibly alongside other classic photographic accessories. It evokes nostalgia, the art of photography, and a timeless aesthetic. Ideal for photography enthusiasts, retro-themed designs, or creative blogs.
+
+Batch 3
+ID: img-batch3-1
+Title: Golden Hour Wheat Field
+URL: https://placehold.co/1870x1250/b8860b/ffffff?text=Wheat+Field
+Description: This image captures a vast wheat field bathed in the warm, soft light of the golden hour. The glowing hues and gentle sway of the wheat create a picturesque and calming scene. It's ideal for themes of harvest, nature's bounty, or tranquil rural life.
+ID: img-batch3-2
+Title: Modern Office Workspace
+URL: https://placehold.co/1870x1250/a9a9a9/ffffff?text=Office+Workspace
+Description: Featuring a clean and organized modern office workspace, this image highlights productivity and efficiency. It typically includes elements like laptops, minimalist decor, and natural light. This visual is perfect for corporate websites, business articles, or showcasing a professional environment.
+ID: img-batch3-3
+Title: Abstract Geometric Patterns
+URL: https://placehold.co/1870x1250/483d8b/ffffff?text=Geometric+Patterns
+Description: This image showcases intricate abstract geometric patterns, playing with symmetry, lines, and shapes. The design can be captivating and modern, offering a visually stimulating backdrop. It's often used in design portfolios, architectural concepts, or contemporary art displays.
+ID: img-batch3-4
+Title: Coffee Beans Close-up
+URL: https://placehold.co/1870x1250/654321/ffffff?text=Coffee+Beans
+Description: A detailed close-up of roasted coffee beans, emphasizing their rich texture and deep colors. The image evokes the aroma and essence of freshly brewed coffee. It's a great visual for coffee shops, food blogs, or product photography.
+ID: img-batch3-5
+Title: Person Meditating by the Ocean
+URL: https://placehold.co/1870x1250/20b2aa/ffffff?text=Ocean+Meditation
+Description: This serene image depicts a person meditating calmly by the ocean, with the vast sea and horizon in the background. It conveys a sense of peace, mindfulness, and connection with nature. Perfect for wellness platforms, spiritual blogs, or stress relief resources.
+ID: img-batch3-6
+Title: Vintage Record Player
+URL: https://placehold.co/1870x1250/8b4513/ffffff?text=Record+Player
+Description: A charming image of a vintage record player, possibly with a classic vinyl record spinning. It evokes nostalgia, a love for music, and a retro aesthetic. Ideal for music enthusiasts, antique collectors, or themed graphic designs.
+ID: img-batch3-7
+Title: High-Tech Server Room
+URL: https://placehold.co/1870x1250/4682b4/ffffff?text=Server+Room
+Description: This image presents a high-tech server room, filled with rows of glowing machines and complex cabling. It represents data, connectivity, and the infrastructure of the digital world. Suitable for IT companies, cybersecurity presentations, or illustrating cloud computing.
+ID: img-batch3-8
+Title: Colorful Hot Air Balloons
+URL: https://placehold.co/1870x1250/ff6347/ffffff?text=Hot+Air+Balloons
+Description: A vibrant image of colorful hot air balloons gracefully ascending into a clear sky, perhaps during a festival. It symbolizes adventure, freedom, and a sense of wonder. This visual is perfect for travel agencies, event promotions, or inspiring creative projects.
+ID: img-batch3-9
+Title: Macro Shot of a Leaf
+URL: https://placehold.co/1870x1250/3cb371/ffffff?text=Macro+Leaf
+Description: This close-up macro shot of a leaf reveals intricate details of its veins and texture, highlighting nature's delicate beauty. It emphasizes growth, vitality, and the natural world. Ideal for scientific publications, nature studies, or botanical designs.
+ID: img-batch3-10
+Title: Children Playing Outdoors
+URL: https://placehold.co/1870x1250/ffdead/000000?text=Children+Playing
+Description: An endearing image of children happily playing outdoors, capturing their energy, joy, and innocence. It evokes themes of childhood, family, and outdoor activities. This picture is suitable for educational materials, family-focused websites, or lifestyle blogs.
+
+Batch 4
+ID: img-batch4-1
+Title: Rustic Forest Path
+URL: https://placehold.co/1870x1250/8b4513/ffffff?text=Forest+Path
+Description: This image features a serene, rustic path winding through a dense forest, dappled with sunlight filtering through the trees. It evokes a sense of adventure, peaceful solitude, and connection with nature. This visual is perfect for nature-themed content, outdoor recreation, or tranquil backdrops.
+ID: img-batch4-2
+Title: Modern Abstract Sculpture
+URL: https://placehold.co/1870x1250/708090/ffffff?text=Abstract+Sculpture
+Description: Showcasing a sleek, modern abstract sculpture, this image highlights contemporary art and innovative design. Its unique form and textures challenge perception and add a touch of sophistication. Ideal for art galleries, design studios, or cultural event promotions.
+ID: img-batch4-3
+Title: Aerial View of Farmland
+URL: https://placehold.co/1870x1250/daa520/ffffff?text=Farmland+Aerial
+Description: This image provides a stunning aerial view of expansive farmland, with geometric patterns of fields and winding roads. It illustrates the beauty of agricultural landscapes and human interaction with the environment. Perfect for environmental studies, agricultural businesses, or documentary visuals.
+ID: img-batch4-4
+Title: Close-up of Vintage Books
+URL: https://placehold.co/1870x1250/a0522d/ffffff?text=Vintage+Books
+Description: A charming close-up of a stack of vintage books, with worn covers and aged pages, suggesting stories untold. It evokes nostalgia, a love for literature, and the timeless appeal of knowledge. This visual is great for libraries, bookstores, or educational websites.
+ID: img-batch4-5
+Title: Scientist Working in Lab
+URL: https://placehold.co/1870x1250/008080/ffffff?text=Lab+Scientist
+Description: This image captures a scientist intently working in a laboratory, surrounded by beakers, test tubes, and complex equipment. It represents innovation, research, and scientific discovery. Ideal for academic institutions, biotech companies, or science communication.
+ID: img-batch4-6
+Title: Sunrise over a Coastal Town
+URL: https://placehold.co/1870x1250/f4a460/000000?text=Coastal+Sunrise
+Description: A beautiful sunrise illuminates a quaint coastal town, casting golden light over the houses and the calm sea. It evokes feelings of peace, new beginnings, and the beauty of coastal living. This image is perfect for travel guides, tourism websites, or inspirational content.
+ID: img-batch4-7
+Title: Person Practicing Yoga
+URL: https://placehold.co/1870x1250/b0c4de/000000?text=Yoga+Practice
+Description: This image shows a person gracefully practicing yoga, possibly in a studio or a peaceful outdoor setting. It symbolizes balance, wellness, and mental tranquility. Suitable for yoga studios, fitness blogs, or health and mindfulness platforms.
+ID: img-batch4-8
+Title: Financial Data Visualization
+URL: https://placehold.co/1870x1250/2f4f4f/ffffff?text=Financial+Data
+Description: Featuring a dynamic financial data visualization, this image uses charts and graphs to represent complex economic information. It conveys analysis, growth, and strategic planning. Ideal for financial institutions, business reports, or data analytics presentations.
+ID: img-batch4-9
+Title: Colorful Street Art Mural
+URL: https://placehold.co/1870x1250/dc143c/ffffff?text=Street+Art
+Description: This image captures a vibrant and expressive street art mural, showcasing urban creativity and cultural expression. The bold colors and intricate details tell a story of artistic freedom. Perfect for art blogs, city guides, or modern design inspiration.
+ID: img-batch4-10
+Title: Freshly Baked Bread
+URL: https://placehold.co/1870x1250/d2b48c/000000?text=Baked+Bread
+Description: A close-up of a rustic, freshly baked loaf of bread, with a golden crust and inviting texture. It evokes warmth, comfort, and the simple pleasures of homemade food. This visual is great for bakeries, culinary blogs, or food-related marketing.
+
+Batch 5
+ID: img-batch5-1
+Title: Dynamic Sports Action Shot
+URL: https://placehold.co/1870x1250/ff4500/ffffff?text=Sports+Action
+Description: This image captures a dynamic moment in sports, showcasing an athlete in peak performance and intense focus. The blur of motion and sharp focus on the subject convey energy and excitement. It's ideal for sports brands, fitness content, or illustrating themes of competition and achievement.
+ID: img-batch5-2
+Title: Cozy Living Room Interior
+URL: https://placehold.co/1870x1250/d3d3d3/000000?text=Living+Room
+Description: Featuring a cozy living room interior, this image highlights comfortable furniture, warm lighting, and inviting decor. It evokes a sense of relaxation, home, and personal comfort. This visual is perfect for interior design portfolios, real estate listings, or lifestyle blogs.
+ID: img-batch5-3
+Title: Macro Shot of Water Droplets
+URL: https://placehold.co/1870x1250/add8e6/000000?text=Water+Droplets
+Description: This image is a stunning macro shot of water droplets, showcasing their perfect spherical shapes and reflective surfaces. It emphasizes purity, freshness, and the intricate details of nature. Ideal for scientific photography, environmental campaigns, or abstract art.
+ID: img-batch5-4
+Title: Person Enjoying a Sunset Beach Walk
+URL: https://placehold.co/1870x1250/f08080/ffffff?text=Beach+Sunset
+Description: This serene image depicts a person enjoying a peaceful walk along a beach during sunset, with warm colors painting the sky and water. It conveys tranquility, relaxation, and the beauty of coastal evenings. Great for travel agencies, wellness content, or romantic themes.
+ID: img-batch5-5
+Title: Vintage Map with Compass
+URL: https://placehold.co/1870x1250/b08f6f/ffffff?text=Vintage+Map
+Description: A classic vintage map spread out, possibly with an old compass, evokes a sense of exploration and history. It suggests adventure, discovery, and a journey into the past. This visual is perfect for history enthusiasts, travel blogs, or decorative purposes.
+ID: img-batch5-6
+Title: Modern City Skyline at Night
+URL: https://placehold.co/1870x1250/1c1c1c/ffffff?text=City+Night
+Description: This image captures a breathtaking modern city skyline at night, with countless lights illuminating the buildings and reflecting on the water. It represents urban vibrancy, technological advancement, and the energy of metropolitan life. Ideal for tourism, business, or architectural showcases.
+ID: img-batch5-7
+Title: Fresh Garden Vegetables Harvest
+URL: https://placehold.co/1870x1250/5cb85c/ffffff?text=Garden+Harvest
+Description: An appealing image of a fresh harvest of garden vegetables, showcasing a bounty of colorful and nutritious produce. It promotes healthy eating, sustainable living, and the joys of gardening. Suitable for farmers' markets, healthy food blogs, or culinary magazines.
+ID: img-batch5-8
+Title: Business Meeting in a Conference Room
+URL: https://placehold.co/1870x1250/6a5acd/ffffff?text=Business+Meeting
+Description: This image shows a professional business meeting taking place in a modern conference room, with participants engaged in discussion. It symbolizes collaboration, strategic planning, and corporate interaction. Perfect for corporate communications, consulting firms, or professional development content.
+ID: img-batch5-9
+Title: Star Trails Photography
+URL: https://placehold.co/1870x1250/0f0f0f/ffffff?text=Star+Trails
+Description: A mesmerizing image of star trails, created by long-exposure photography, showing the apparent motion of stars across the night sky. It inspires awe, contemplation, and the wonders of the universe. This visual is ideal for astronomy, artistic photography, or philosophical themes.
+ID: img-batch5-10
+Title: Delicious Dessert Presentation
+URL: https://placehold.co/1870x1250/ffd700/000000?text=Dessert+Plate
+Description: This mouth-watering image features a beautifully presented delicious dessert, possibly an elaborate cake or pastry. It evokes indulgence, culinary artistry, and the pleasure of sweet treats. Great for patisseries, food stylists, or dessert recipe blogs.
+
+Batch 6
+ID: img-batch6-1
+Title: Ancient Roman Ruins
+URL: https://placehold.co/1870x1250/8b0000/ffffff?text=Roman+Ruins
+Description: This powerful image showcases the majestic ruins of ancient Roman architecture, standing as a testament to a bygone era. It evokes history, grandeur, and the passage of time. Ideal for historical documentaries, educational materials, or travel guides to archaeological sites.
+ID: img-batch6-2
+Title: Minimalist White Workspace
+URL: https://placehold.co/1870x1250/f5f5f5/000000?text=White+Workspace
+Description: Featuring a minimalist white workspace, this image emphasizes cleanliness, simplicity, and focused productivity. The uncluttered environment promotes clear thinking and efficient work habits. This visual is perfect for modern design blogs, productivity apps, or home office inspiration.
+ID: img-batch6-3
+Title: Abstract Light Trails
+URL: https://placehold.co/1870x1250/000080/ffffff?text=Light+Trails
+Description: This image captures abstract light trails, created by long-exposure photography of moving lights, forming vibrant and dynamic patterns. It conveys energy, motion, and artistic expression. Often used in conceptual art, automotive advertising, or futuristic designs.
+ID: img-batch6-4
+Title: Freshly Brewed Coffee Cup
+URL: https://placehold.co/1870x1250/4a2c00/ffffff?text=Coffee+Cup
+Description: A comforting image of a freshly brewed cup of coffee, perhaps with steam rising, promises warmth and a delightful aroma. It evokes morning rituals, breaks, and quiet moments of enjoyment. This visual is great for cafes, lifestyle blogs, or product marketing.
+ID: img-batch6-5
+Title: Person Hiking in a National Park
+URL: https://placehold.co/1870x1250/228b22/ffffff?text=Hiking+National+Park
+Description: This inspiring image depicts a person hiking through a beautiful national park, surrounded by stunning natural scenery. It encourages outdoor adventure, exploration, and a connection with wilderness. Perfect for outdoor gear brands, travel blogs, or environmental organizations.
+ID: img-batch6-6
+Title: Vintage Typewriter on Desk
+URL: https://placehold.co/1870x1250/b0c4de/000000?text=Typewriter
+Description: A charming image of a vintage typewriter resting on a classic wooden desk, suggesting creativity and traditional writing. It evokes nostalgia, the craft of storytelling, and a timeless approach to communication. Ideal for writers, literary blogs, or retro-themed designs.
+ID: img-batch6-7
+Title: Data Center Infrastructure
+URL: https://placehold.co/1870x1250/696969/ffffff?text=Data+Center
+Description: This image displays the complex infrastructure of a data center, featuring rows of servers and flashing lights. It symbolizes robust technology, massive data storage, and the backbone of the digital world. Suitable for cloud services, IT solutions, or technology company websites.
+ID: img-batch6-8
+Title: Friends Enjoying a Picnic
+URL: https://placehold.co/1870x1250/f0e68c/000000?text=Picnic+Friends
+Description: An idyllic image of friends enjoying a picnic outdoors, laughing and sharing food in a sunny setting. It conveys happiness, friendship, and the simple pleasures of communal gatherings. This visual is perfect for lifestyle blogs, event promotions, or social media content.
+ID: img-batch6-9
+Title: Aurora Borealis (Northern Lights)
+URL: https://placehold.co/1870x1250/483d8b/ffffff?text=Aurora+Borealis
+Description: A spectacular image of the Aurora Borealis, with vibrant green and purple lights dancing across the night sky. It showcases a natural wonder, inspiring awe and a sense of magic. Ideal for travel, scientific phenomena, or breathtaking landscape photography.
+ID: img-batch6-10
+Title: Delicious Breakfast Spread
+URL: https://placehold.co/1870x1250/f0f8ff/000000?text=Breakfast+Spread
+Description: This appetizing image features a bountiful breakfast spread, with an array of fresh and delicious food items. It evokes morning comfort, healthy eating, and the joy of starting the day well. Great for food blogs, hospitality businesses, or lifestyle magazines.
+
+Batch 7
+ID: img-batch7-1
+Title: Lush Tropical Rainforest
+URL: https://placehold.co/1870x1250/006400/ffffff?text=Tropical+Rainforest
+Description: This image transports viewers into a lush tropical rainforest, dense with vibrant foliage, exotic plants, and a sense of untouched wilderness. It emphasizes biodiversity, ecological richness, and the wonder of natural ecosystems. Ideal for environmental documentaries, conservation efforts, or exotic travel promotions.
+ID: img-batch7-2
+Title: Contemporary Art Gallery Interior
+URL: https://placehold.co/1870x1250/dcdcdc/000000?text=Art+Gallery
+Description: Featuring the sleek interior of a contemporary art gallery, this image showcases modern artworks displayed in a spacious, well-lit environment. It highlights cultural sophistication, artistic expression, and curated design. This visual is perfect for art critics, gallery websites, or cultural event promotions.
+ID: img-batch7-3
+Title: Close-up of Honeycomb
+URL: https://placehold.co/1870x1250/daa520/000000?text=Honeycomb
+Description: This intricate close-up of a honeycomb reveals its perfect hexagonal cells filled with golden honey, a marvel of natural engineering. It symbolizes nature's precision, sweetness, and the industry of bees. Ideal for organic food brands, nature studies, or abstract photography.
+ID: img-batch7-4
+Title: Person Reading a Book by Fireplace
+URL: https://placehold.co/1870x1250/8b4513/ffffff?text=Reading+Fireplace
+Description: This cozy image depicts a person comfortably reading a book by a crackling fireplace, creating a scene of warmth and quiet enjoyment. It evokes relaxation, intellectual pursuit, and the comfort of home. Great for literary blogs, cozy lifestyle content, or promoting reading.
+ID: img-batch7-5
+Title: Drone Flying over a Landscape
+URL: https://placehold.co/1870x1250/4682b4/ffffff?text=Drone+Flying
+Description: This image captures a drone in flight, soaring over a picturesque landscape, offering a bird's-eye view of the world below. It represents modern technology, aerial photography, and new perspectives. Ideal for tech companies, mapping services, or travel videography.
+ID: img-batch7-6
+Title: Vintage Cinema Marquee
+URL: https://placehold.co/1870x1250/800080/ffffff?text=Cinema+Marquee
+Description: A classic vintage cinema marquee, illuminated with glowing bulbs and announcing a film, evokes nostalgia and the magic of movies. It represents entertainment, cultural history, and the allure of storytelling. Perfect for film buffs, retro-themed designs, or event promotion.
+ID: img-batch7-7
+Title: Healthy Smoothie Ingredients
+URL: https://placehold.co/1870x1250/3cb371/ffffff?text=Smoothie+Ingredients
+Description: This vibrant image displays an assortment of healthy smoothie ingredients, such as fresh fruits, leafy greens, and superfoods, ready for blending. It promotes wellness, healthy eating, and personalized nutrition. Suitable for health food stores, dieticians, or recipe blogs.
+ID: img-batch7-8
+Title: Collaborative Brainstorming Session
+URL: https://placehold.co/1870x1250/ff8c00/ffffff?text=Brainstorming
+Description: This dynamic image shows a group of people engaged in a collaborative brainstorming session, with ideas flowing and notes on a whiteboard. It symbolizes innovation, teamwork, and creative problem-solving. Ideal for startups, design agencies, or corporate training materials.
+ID: img-batch7-9
+Title: Milky Way Galaxy View
+URL: https://placehold.co/1870x1250/191970/ffffff?text=Milky+Way
+Description: A spectacular wide-angle view of the Milky Way galaxy, stretching across the night sky with countless stars and nebulae. It inspires wonder, cosmic exploration, and humanity's place in the universe. This visual is ideal for astronomy, science education, or inspirational backdrops.
+ID: img-batch7-10
+Title: Delicious Pasta Dish
+URL: https://placehold.co/1870x1250/f0e68c/000000?text=Pasta+Dish
+Description: This appetizing image features a beautifully plated delicious pasta dish, garnished with fresh herbs and rich sauce. It evokes culinary delight, comfort food, and the artistry of Italian cuisine. Great for restaurants, food critics, or cooking blogs.
+
+Batch 8
+ID: img-batch8-1
+Title: Majestic Waterfall in Forest
+URL: https://placehold.co/1870x1250/008080/ffffff?text=Waterfall
+Description: This image captures a majestic waterfall cascading through a lush forest, creating a serene and powerful natural scene. The vibrant greenery and the force of the water evoke a sense of untouched wilderness. It's ideal for nature photography, adventure travel, or calming visual content.
+ID: img-batch8-2
+Title: Modern Art Museum Entrance
+URL: https://placehold.co/1870x1250/b0c4de/000000?text=Museum+Entrance
+Description: Featuring the grand entrance of a modern art museum, this image highlights contemporary architecture and cultural appeal. The sleek design and inviting ambiance suggest a place of artistic discovery. This visual is perfect for cultural guides, art history publications, or tourism promotions.
+ID: img-batch8-3
+Title: Close-up of Dew on Spiderweb
+URL: https://placehold.co/1870x1250/696969/ffffff?text=Dew+Spiderweb
+Description: This intricate close-up reveals tiny dew droplets glistening on a delicate spiderweb, a marvel of natural engineering. It emphasizes the fragile beauty of nature and the hidden details of the environment. Ideal for wildlife photography, scientific studies, or abstract artistic inspiration.
+ID: img-batch8-4
+Title: Person Writing in a Journal Outdoors
+URL: https://placehold.co/1870x1250/f0e68c/000000?text=Journaling+Outdoors
+Description: This inspiring image depicts a person calmly writing in a journal outdoors, perhaps in a park or by a quiet lake. It evokes introspection, creativity, and a connection with nature. Great for personal development blogs, creative writing prompts, or mindfulness resources.
+ID: img-batch8-5
+Title: Retro Arcade Game Machine
+URL: https://placehold.co/1870x1250/8a2be2/ffffff?text=Arcade+Machine
+Description: A vibrant image of a retro arcade game machine, glowing with colorful pixel art and classic controls. It evokes nostalgia, fun, and the golden age of gaming. This visual is perfect for gaming enthusiasts, retro-themed events, or entertainment websites.
+ID: img-batch8-6
+Title: Sunset over Desert Dunes
+URL: https://placehold.co/1870x1250/d2b48c/000000?text=Desert+Sunset
+Description: This breathtaking image captures a vibrant sunset over vast desert dunes, with long shadows stretching across the sand. The warm colors and dramatic landscape evoke a sense of adventure and natural beauty. Ideal for travel photography, environmental features, or inspiring backdrops.
+ID: img-batch8-7
+Title: Array of Spices and Herbs
+URL: https://placehold.co/1870x1250/8b4513/ffffff?text=Spices+Herbs
+Description: An appealing image showcasing a diverse array of colorful spices and fresh herbs, arranged artfully. It promotes culinary creativity, global flavors, and healthy cooking. Suitable for food blogs, gourmet markets, or cooking class advertisements.
+ID: img-batch8-8
+Title: Team Celebrating Success
+URL: https://placehold.co/1870x1250/ffdab9/000000?text=Team+Celebration
+Description: This energetic image depicts a team celebrating a success, possibly with cheers, high-fives, and a sense of shared accomplishment. It symbolizes teamwork, achievement, and positive workplace culture. Perfect for corporate presentations, motivational content, or HR materials.
+ID: img-batch8-9
+Title: Bioluminescent Plankton in Ocean
+URL: https://placehold.co/1870x1250/191970/ffffff?text=Bioluminescent+Plankton
+Description: A magical image of bioluminescent plankton glowing in the dark ocean, creating an ethereal and enchanting spectacle. It highlights the wonders of marine life and the beauty of natural phenomena. This visual is ideal for oceanography, scientific exploration, or unique travel experiences.
+ID: img-batch8-10
+Title: Freshly Baked Pastries
+URL: https://placehold.co/1870x1250/ffd700/000000?text=Baked+Pastries
+Description: This appetizing image features a selection of freshly baked pastries, with golden crusts and enticing fillings. It evokes warmth, comfort, and the delightful aromas of a bakery. Great for cafes, culinary blogs, or food styling.
+
+Batch 9
+ID: img-batch9-1
+Title: Lush Green Vineyard
+URL: https://placehold.co/1870x1250/5cb85c/ffffff?text=Vineyard
+Description: This image captures a lush green vineyard stretching across rolling hills under a clear sky, promising a bountiful harvest. It evokes themes of agriculture, fine wine, and serene rural landscapes. It's perfect for wineries, travel guides, or agricultural publications.
+ID: img-batch9-2
+Title: Modern Library Interior
+URL: https://placehold.co/1870x1250/a9a9a9/ffffff?text=Library+Interior
+Description: Featuring the sleek and organized interior of a modern library, this image highlights intellectual pursuit and quiet study. Rows of books and comfortable reading nooks create an inviting atmosphere. This visual is ideal for educational institutions, literary blogs, or architectural showcases.
+ID: img-batch9-3
+Title: Abstract Sound Waves
+URL: https://placehold.co/1870x1250/6a5acd/ffffff?text=Sound+Waves
+Description: This image displays abstract sound waves, visualized through vibrant colors and dynamic patterns, representing audio technology. It conveys communication, digital media, and the science of acoustics. Often used in music production, tech advertisements, or conceptual art.
+ID: img-batch9-4
+Title: Artisan Making Pottery
+URL: https://placehold.co/1870x1250/cd853f/ffffff?text=Artisan+Pottery
+Description: This captivating image shows an artisan's hands carefully shaping clay on a pottery wheel, a moment of focused creation. It celebrates craftsmanship, traditional arts, and the beauty of handmade objects. Great for art studios, craft blogs, or promoting local artisans.
+ID: img-batch9-5
+Title: Person Kayaking on a Lake
+URL: https://placehold.co/1870x1250/20b2aa/ffffff?text=Kayaking+Lake
+Description: This refreshing image depicts a person kayaking on a calm lake, surrounded by serene natural beauty. It encourages outdoor activities, peaceful recreation, and connection with water environments. Perfect for adventure travel, sports brands, or nature escape promotions.
+ID: img-batch9-6
+Title: Vintage Movie Camera
+URL: https://placehold.co/1870x1250/8b0000/ffffff?text=Movie+Camera
+Description: A classic vintage movie camera, with its distinctive reels and lenses, evokes the golden age of filmmaking. It represents cinematic history, storytelling, and the magic of motion pictures. Ideal for film festivals, media production companies, or retro-themed designs.
+ID: img-batch9-7
+Title: Freshly Caught Seafood
+URL: https://placehold.co/1870x1250/add8e6/000000?text=Fresh+Seafood
+Description: This appealing image features a vibrant selection of freshly caught seafood, possibly on ice or displayed at a market. It promotes healthy eating, culinary delights, and the freshness of ocean produce. Suitable for seafood restaurants, food suppliers, or gourmet cooking blogs.
+ID: img-batch9-8
+Title: Conference Presentation
+URL: https://placehold.co/1870x1250/4682b4/ffffff?text=Conference+Presentation
+Description: This professional image captures a speaker delivering a presentation at a conference, engaging a large audience. It symbolizes knowledge sharing, public speaking, and professional development. Ideal for event organizers, corporate training, or educational platforms.
+ID: img-batch9-9
+Title: Lunar Eclipse Phenomenon
+URL: https://placehold.co/1870x1250/191970/ffffff?text=Lunar+Eclipse
+Description: A dramatic image of a lunar eclipse, showcasing the moon partially or fully obscured by Earth's shadow, creating stunning celestial colors. It highlights astronomical events, the beauty of our solar system, and natural wonders. This visual is ideal for science education, space exploration, or captivating night sky photography.
+ID: img-batch9-10
+Title: Delicious Pizza Slice
+URL: https://placehold.co/1870x1250/ff6347/ffffff?text=Pizza+Slice
+Description: This mouth-watering image features a delicious slice of pizza, with melted cheese, vibrant toppings, and a perfectly cooked crust. It evokes comfort food, casual dining, and the joy of shared meals. Great for pizzerias, food delivery services, or culinary blogs.
+
+Batch 10
+ID: img-batch10-1
+Title: Cherry Blossom Trees in Spring
+URL: https://placehold.co/1870x1250/ffc0cb/000000?text=Cherry+Blossoms
+Description: This beautiful image captures delicate cherry blossom trees in full bloom during spring, painting the landscape with soft pink hues. It symbolizes renewal, beauty, and the transient nature of life. It's ideal for cultural festivals, nature photography, or inspiring seasonal themes.
+ID: img-batch10-2
+Title: Modern Kitchen Interior
+URL: https://placehold.co/1870x1250/f5f5f5/000000?text=Kitchen+Interior
+Description: Featuring a sleek and functional modern kitchen interior, this image highlights contemporary design and culinary possibilities. Stainless steel appliances, clean countertops, and smart organization create an appealing space. This visual is perfect for interior design, home improvement, or cooking-related content.
+ID: img-batch10-3
+Title: Abstract Rainbow Swirl
+URL: https://placehold.co/1870x1250/ff1493/ffffff?text=Rainbow+Swirl
+Description: This image displays an abstract rainbow swirl, with vibrant colors blending harmoniously in a dynamic, fluid motion. It conveys creativity, diversity, and a sense of playful energy. Often used in graphic design, artistic backgrounds, or children's media.
+ID: img-batch10-4
+Title: Barista Preparing Coffee
+URL: https://placehold.co/1870x1250/4a2c00/ffffff?text=Barista+Coffee
+Description: This engaging image shows a skilled barista meticulously preparing a cup of coffee, showcasing the art and precision of coffee making. It evokes craftsmanship, quality, and the rich culture of coffee. Great for cafes, coffee brands, or behind-the-scenes content.
+ID: img-batch10-5
+Title: Person Rock Climbing
+URL: https://placehold.co/1870x1250/b22222/ffffff?text=Rock+Climbing
+Description: This thrilling image depicts a person engaged in rock climbing, scaling a vertical rock face with determination and strength. It symbolizes challenge, achievement, and the spirit of adventure. Perfect for outdoor sports brands, fitness motivation, or extreme sports coverage.
+ID: img-batch10-6
+Title: Vintage Postcard Collection
+URL: https://placehold.co/1870x1250/d2b48c/000000?text=Vintage+Postcards
+Description: A charming image of a collection of vintage postcards, each with unique designs and handwritten messages from the past. It evokes nostalgia, travel memories, and the personal touch of bygone communication. Ideal for history enthusiasts, travel blogs, or decorative displays.
+ID: img-batch10-7
+Title: Gourmet Cheese Board
+URL: https://placehold.co/1870x1250/f0e68c/000000?text=Cheese+Board
+Description: This appetizing image features a lavish gourmet cheese board, complete with various cheeses, fruits, nuts, and crackers. It promotes sophisticated dining, entertaining, and culinary indulgence. Suitable for food connoisseurs, catering services, or lifestyle magazines.
+ID: img-batch10-8
+Title: Student Studying in University Library
+URL: https://placehold.co/1870x1250/b0c4de/000000?text=University+Study
+Description: This image shows a student diligently studying in a university library, surrounded by books and focused on their work. It symbolizes education, academic dedication, and intellectual growth. Ideal for educational institutions, student resources, or learning platforms.
+ID: img-batch10-9
+Title: Comet Streaking Across Sky
+URL: https://placehold.co/1870x1250/191970/ffffff?text=Comet+Sky
+Description: A dramatic image of a comet streaking across the night sky, with its glowing tail visible against the stars. It inspires wonder, astronomical observation, and the dynamic nature of the cosmos. This visual is ideal for space exploration, science education, or captivating sky phenomena.
+ID: img-batch10-10
+Title: Delicious Sushi Platter
+URL: https://placehold.co/1870x1250/add8e6/000000?text=Sushi+Platter
+Description: This aesthetically pleasing image features a beautifully arranged delicious sushi platter, with a variety of fresh rolls and sashimi. It evokes culinary artistry, healthy eating, and the exquisite flavors of Japanese cuisine. Great for sushi restaurants, food critics, or cooking blogs.
+
+Batch 11
+ID: img-batch11-1
+Title: Snow-capped Mountain Range
+URL: https://placehold.co/1870x1250/778899/ffffff?text=Snowy+Mountains
+Description: This image showcases a majestic snow-capped mountain range, with rugged peaks piercing the clouds and pristine white slopes. It evokes grandeur, resilience, and the untouched beauty of high altitudes. Ideal for winter sports, travel photography, or inspiring natural landscapes.
+ID: img-batch11-2
+Title: Urban Skatepark Scene
+URL: https://placehold.co/1870x1250/6a5acd/ffffff?text=Skatepark
+Description: Featuring a dynamic urban skatepark scene, this image captures skaters in motion, performing tricks and expressing their unique style. It embodies youth culture, freedom, and an active lifestyle. This visual is perfect for action sports brands, youth marketing, or urban lifestyle blogs.
+ID: img-batch11-3
+Title: Close-up of Vintage Camera Lens
+URL: https://placehold.co/1870x1250/4a2c00/ffffff?text=Camera+Lens
+Description: This detailed close-up focuses on a vintage camera lens, highlighting its intricate mechanics and classic design. It celebrates the art of photography and the history of optical engineering. Ideal for photography enthusiasts, antique collectors, or nostalgic visual content.
+ID: img-batch11-4
+Title: Person Writing Code on Multiple Screens
+URL: https://placehold.co/1870x1250/2f4f4f/ffffff?text=Coding+Screens
+Description: This image depicts a person intensely focused on writing code across multiple computer screens, surrounded by lines of programming. It represents software development, innovation, and the digital creation process. Great for tech companies, developer communities, or coding education.
+ID: img-batch11-5
+Title: Vibrant Coral Reef Ecosystem
+URL: https://placehold.co/1870x1250/008b8b/ffffff?text=Coral+Reef
+Description: This breathtaking image captures a vibrant coral reef teeming with diverse marine life and colorful corals. It highlights the beauty and fragility of underwater ecosystems. Perfect for marine biology, conservation efforts, or exotic diving destinations.
+ID: img-batch11-6
+Title: Old Wooden Pier at Sunset
+URL: https://placehold.co/1870x1250/8b4513/ffffff?text=Wooden+Pier
+Description: A picturesque image of an old wooden pier extending into calm waters during sunset, with warm hues reflecting on the surface. It evokes serenity, contemplation, and the timeless allure of the sea. Ideal for travel blogs, peaceful landscapes, or inspirational content.
+ID: img-batch11-7
+Title: Delicious Fruit Tart
+URL: https://placehold.co/1870x1250/ffdab9/000000?text=Fruit+Tart
+Description: This appetizing image features a beautifully crafted delicious fruit tart, bursting with fresh, colorful berries and a golden crust. It evokes culinary artistry, sweet indulgence, and the joy of gourmet desserts. Great for bakeries, food blogs, or special occasion promotions.
+ID: img-batch11-8
+Title: Modern Wind Turbines at Dusk
+URL: https://placehold.co/1870x1250/696969/ffffff?text=Wind+Turbines
+Description: This striking image displays modern wind turbines silhouetted against a twilight sky, their blades gracefully turning. It symbolizes renewable energy, environmental sustainability, and technological progress. Ideal for green energy companies, environmental advocacy, or future-focused content.
+ID: img-batch11-9
+Title: Abstract City Lights Bokeh
+URL: https://placehold.co/1870x1250/1c1c1c/ffffff?text=City+Bokeh
+Description: This image captures an abstract bokeh effect of city lights, creating a soft, blurred background of vibrant, glowing circles. It evokes the magic of urban nights and a dreamlike atmosphere. This visual is perfect for artistic photography, moody aesthetics, or background textures.

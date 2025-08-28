@@ -1,0 +1,71 @@
+.myth-fact-box {
+    background-color: var(--primary-background);
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); /* shadow-lg */
+    width: 100%;
+    max-width: 48rem; /* max-w-2xl */
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    margin: 2.5rem 0;
+}
+
+.myth-box {
+    padding: 1.25rem; /* p-5 */
+    background-color: #fef2f2; /* bg-red-50 */
+    border-left: 4px solid #ef4444; /* border-red-500 */
+}
+:root.dark .myth-box {
+    background-color: rgba(239, 68, 68, 0.1);
+    border-left-color: #f87171;
+}
+
+.fact-box {
+    padding: 1.25rem; /* p-5 */
+    background-color: #f0fdf4; /* bg-green-50 */
+    border-left: 4px solid #22c55e; /* border-green-500 */
+    border-top: 1px solid var(--border-color);
+}
+:root.dark .fact-box {
+    background-color: rgba(34, 197, 94, 0.1);
+    border-left-color: #4ade80;
+}
+
+.myth-fact-header {
+    font-weight: 700; /* font-bold */
+    letter-spacing: 0.05em; /* tracking-wide */
+    text-transform: uppercase;
+    font-size: 0.875rem; /* text-sm */
+}
+
+.myth-header {
+    color: #991b1b; /* text-red-900 */
+}
+:root.dark .myth-header {
+    color: #fca5a5;
+}
+
+.fact-header {
+    color: #14532d; /* text-green-900 */
+}
+:root.dark .fact-header {
+    color: #86efac;
+}
+
+.myth-fact-text {
+    font-size: 1rem; /* text-base */
+    margin-top: 0.25rem; /* mt-1 */
+}
+
+.myth-text {
+    color: #b91c1c; /* text-red-800 */
+}
+:root.dark .myth-text {
+    color: #fecaca;
+}
+
+.fact-text {
+    color: #166534; /* text-green-800 */
+}
+:root.dark .fact-text {
+    color: #bbf7d0;
+}

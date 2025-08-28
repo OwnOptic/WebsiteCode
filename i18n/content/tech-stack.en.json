@@ -1,42 +1,47 @@
+
 {
     "techStack": {
         "header": {
             "title": "My Tech Stack",
-            "subtitle": "The platforms, tools, and methodologies I use to build effective and scalable enterprise solutions."
+            "subtitle": "The platforms, tools, and methodologies I use to build effective and scalable enterprise solutions.",
+            "imageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756108976/The_Digital_Conductor.881Z_tfzwmx.png"
         },
         "categories": [
             {
                 "title": "Core Platforms & AI",
                 "icon": "PlatformIcon",
                 "items": [
-                    { "name": "Microsoft Power Automate", "description": "My primary tool for designing and orchestrating complex, end-to-end business process automations (BPA), building robust API integrations, and delivering scalable workflow solutions." },
+                    { "name": "Microsoft Power Platform", "description": "The complete suite of low-code tools I use to build end-to-end business solutions, including apps, automations, bots, and analytics, all connected to your data." },
                     { "name": "Microsoft Copilot Studio", "description": "Used to build enterprise-grade conversational AI assistants and custom copilots that leverage Generative AI plugins to perform complex actions and streamline user interactions." },
+                    { "name": "Microsoft AI Builder", "description": "Integrating pre-built AI models directly into Power Apps and Power Automate for tasks like document processing, prediction, and object detection without requiring data science expertise." },
+                    { "name": "Microsoft Power Automate", "description": "My primary tool for designing and orchestrating complex, end-to-end business process automations (BPA), building robust API integrations, and delivering scalable workflow solutions." },
                     { "name": "Microsoft Power Apps", "description": "For creating custom, low-code applications that serve as intuitive, user-friendly interfaces for sophisticated automated workflows and data management." },
-                    { "name": "Microsoft Azure AI", "description": "Leveraging services like Azure OpenAI and Azure AI Language to add advanced intelligence, such as natural language understanding and summarization, to enterprise solutions." },
-                    { "name": "Google Gemini API", "description": "Integrating cutting-edge multimodal and Generative AI capabilities for tasks like content generation, structured data extraction from images, and complex reasoning." },
                     { "name": "Dataverse", "description": "For creating scalable and secure data models that provide a robust foundation for enterprise-grade Power Platform solutions, ensuring data integrity and governance." }
                 ]
             },
             {
-                "title": "Frontend & Dev Tools",
+                "title": "Cloud & AI Services",
                 "icon": "CloudIcon",
                 "items": [
-                    { "name": "React & TypeScript", "description": "The foundation for building modern, performant, and type-safe user interfaces and single-page applications, ensuring a high-quality user experience." },
-                    { "name": "HTML5 & CSS3", "description": "Core web technologies used to structure content semantically and create responsive, accessible, and visually appealing designs that work across all devices." },
-                    { "name": "TailwindCSS", "description": "A utility-first CSS framework that enables rapid UI development, consistent styling, and maintainable design systems without leaving the HTML." },
-                    { "name": "Git & GitHub", "description": "Essential for robust version control, effective team collaboration, and managing codebases through branching, merging, and pull requests." },
-                    { "name": "VS Code", "description": "My primary code editor, highly customized with extensions and settings for maximum efficiency in web, Power Platform, and AI development." },
-                    { "name": "Postman", "description": "An indispensable tool for testing, documenting, and interacting with RESTful APIs, crucial for the integration phase of any automation project." }
+                    { "name": "Azure AI Studio", "description": "Developing and managing generative AI solutions, including prompt engineering, model evaluation, and building custom copilots with a unified, pro-code interface." },
+                    { "name": "Azure AI Search", "description": "Implementing secure, AI-powered search over enterprise data, enabling advanced information retrieval and knowledge mining for generative AI applications." },
+                    { "name": "Azure AI Translator", "description": "Integrating real-time text translation capabilities into applications and workflows to support multilingual user experiences and global operations." },
+                    { "name": "Google Cloud Platform", "description": "Leveraging services like Vertex AI to build, deploy, and scale machine learning models, and to access powerful Generative AI capabilities." },
+                    { "name": "Google Gemini API", "description": "Integrating cutting-edge multimodal and Generative AI capabilities for tasks like content generation, structured data extraction from images, and complex reasoning." },
+                    { "name": "Microsoft Copilot", "description": "Extending and customizing Microsoft 365 Copilot to create bespoke AI experiences that are deeply integrated into the flow of work within Teams, Outlook, and more." }
                 ]
             },
             {
-                "title": "Strategic Methodologies",
+                "title": "Frontend & Dev Tools",
                 "icon": "DevToolsIcon",
                 "items": [
-                    { "name": "Agile & Scrum", "description": "Applying the Agile mindset and Scrum framework to deliver projects iteratively, ensuring continuous feedback, stakeholder collaboration, and rapid value delivery." },
-                    { "name": "Product Ownership", "description": "Taking full ownership of the product vision, managing and prioritizing the backlog, and making data-driven decisions to maximize business value and ROI." },
-                    { "name": "Design Thinking", "description": "Utilizing a human-centric approach to problem-solving that focuses on empathy, ideation, and rapid prototyping to create solutions that users love." },
-                    { "name": "Process Mining & Analysis", "description": "Leveraging data to analyze and visualize business processes, allowing for the identification of bottlenecks, inefficiencies, and high-impact automation opportunities." }
+                    { "name": "React & TypeScript", "description": "The foundation for building modern, performant, and type-safe user interfaces and single-page applications, ensuring a high-quality user experience." },
+                    { "name": "GitHub", "description": "Essential for robust version control, effective team collaboration, and managing codebases through branching, merging, and pull requests." },
+                    { "name": "GitHub Copilot", "description": "An AI pair programmer that accelerates development by suggesting code and entire functions in real-time, directly within the code editor." },
+                    { "name": "AI Assisted Coding", "description": "Utilizing AI-powered tools to accelerate development, improve code quality, and automate repetitive coding tasks, enabling a more efficient and innovative workflow." },
+                    { "name": "VS Code", "description": "My primary code editor, highly customized with extensions and settings for maximum efficiency in web, Power Platform, and AI development." },
+                    { "name": "Postman", "description": "An indispensable tool for testing, documenting, and interacting with RESTful APIs, crucial for the integration phase of any automation project." },
+                    { "name": "Power Fx", "description": "Using the low-code, Excel-like language to build logic and behavior within Power Apps, enabling rapid development of complex functionality." }
                 ]
             }
         ]

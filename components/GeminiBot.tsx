@@ -1,29 +1,56 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { GoogleGenAI, Chat } from '@google/genai';
+import React, { useState, useEffect, useRef, Dispatch, SetStateAction } from 'react';
+import { GoogleGenAI, Chat, Part } from '@google/genai';
 import { useI18n } from '../i18n/useI18n';
-import ChatBubbleIcon from './icons/ChatBubbleIcon';
+import GeminiIcon from './icons/GeminiIcon';
 import PaperAirplaneIcon from './icons/PaperAirplaneIcon';
+import PaperclipIcon from './icons/PaperclipIcon';
 import XMarkIcon from './icons/XMarkIcon';
 import * as analytics from '../analytics';
 import BrandLogo from './icons/BrandLogo';
 import UserIcon from './icons/UserIcon';
+import ThumbsUpIcon from './icons/ThumbsUpIcon';
+import ThumbsDownIcon from './icons/ThumbsDownIcon';
+import '../styles/GeminiBot.css';
 
 interface Message {
+    id: string;
     role: 'user' | 'model';
     text: string;
+    feedback?: 'liked' | 'disliked';
 }
 
 const TypingIndicator = () => (
-    <div className="flex items-center space-x-1.5 py-2">
-        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce [animation-delay:-0.3s]"></div>
-        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce [animation-delay:-0.15s]"></div>
-        <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
+    <div className="typing-indicator">
+        <div className="typing-dot"></div>
+        <div className="typing-dot"></div>
+        <div className="typing-dot"></div>
     </div>
 );
 
+const generateProactiveSuggestion = (route: string, t: (key: string, replacements?: { [key: string]: string }) => any): string | null => {
+    if (route.startsWith('#/projects/')) {
+        const slug = route.substring('#/projects/'.length).split('?')[0];
+        const project = (t('projects.items') || []).find((p: any) => p.slug === slug);
+        if (project && t('geminiBot.proactive.projectPage')) {
+            return t('geminiBot.proactive.projectPage', { title: project.title });
+        }
+    }
+    if (route.startsWith('#/use-cases') && t('geminiBot.proactive.useCasesPage')) {
+        return t('geminiBot.proactive.useCasesPage');
+    }
+    return null;
+};
 
-const GeminiBot: React.FC = () => {
-    const [isOpen, setIsOpen] = useState(false);
+interface GeminiBotProps {
+    currentRoute: string;
+    isOpen: boolean;
+    setIsOpen: Dispatch<SetStateAction<boolean>>;
+    intent: 'default' | 'bug_report';
+    setIntent: Dispatch<SetStateAction<'default' | 'bug_report'>>;
+}
+
+
+const GeminiBot: React.FC<GeminiBotProps> = ({ currentRoute, isOpen, setIsOpen, intent, setIntent }) => {
     const [messages, setMessages] = useState<Message[]>([]);
     const [input, setInput] = useState('');
     const [isLoading, setIsLoading] = useState(false);
@@ -31,6 +58,11 @@ const GeminiBot: React.FC = () => {
     const { t, language } = useI18n();
     const chatContainerRef = useRef<HTMLDivElement>(null);
     const isInitialized = useRef(false);
+    const lastSuggestedRoute = useRef<string | null>(null);
+    const fileInputRef = useRef<HTMLInputElement>(null);
+    const [previewImage, setPreviewImage] = useState<string | null>(null);
+    const [imagePayload, setImagePayload] = useState<Part | null>(null);
+
 
     useEffect(() => {
         if (chatContainerRef.current) {
@@ -43,12 +75,14 @@ const GeminiBot: React.FC = () => {
         const useCaseIndustries = Array.from(new Set((t('useCases.catalogue') || []).map((uc: any) => uc.industry)));
         const useCaseTechs = ['Copilot Studio', 'Power Automate'];
 
-        return `You are EllioBot, an AI co-pilot for Elliot Margot's portfolio website. Your primary role is to help users by answering questions and performing actions.
+        return `You are ElliotBot, an AI co-pilot for Elliot Margot's portfolio website. Your primary role is to help users by answering questions and performing actions.
 
         RULES:
         1.  You MUST respond in the user's language, which is currently: ${language === 'en' ? 'English' : 'French'}.
         2.  For general questions, answer ONLY from the context provided below. If the answer isn't there, say you don't have that information.
         3.  To perform an action, you MUST respond with a single, valid JSON object and nothing else.
+        4.  You MUST use simple HTML for formatting when giving text answers. Specifically, use <b> for bolding, and <ul> with <li> for lists. Use <br> for line breaks. Do NOT use markdown.
+        5.  You MUST use relevant emojis to make the tone friendlier. 😃
         
         TOOLS:
 
@@ -64,6 +98,11 @@ const GeminiBot: React.FC = () => {
             -   **Valid Technologies**: "${useCaseTechs.join('", "')}"
             -   **Example 1**: User says "Show me insurance use cases". You respond: \`{"tool_name": "filterUseCases", "filters": {"industry": "Insurance"}}\`
             -   **Example 2**: User says "Find manufacturing examples using Power Automate". You respond: \`{"tool_name": "filterUseCases", "filters": {"industry": "Manufacturing", "technology": "Power Automate"}}\`
+
+        3.  **Bug Reporting Tool**: Use this to let the user report a bug via email. If the user uploads an image, you MUST analyze the image and include a detailed description of what you see in the 'description' field of your JSON response.
+            -   **tool_name**: "reportBug"
+            -   **description**: A string describing the bug the user found, including a detailed description of the attached screenshot if provided.
+            -   **Example**: User says "The project images are not loading on the homepage". You respond: \`{"tool_name": "reportBug", "description": "The project images are not loading on the homepage"}\`
 
         --- START OF CONTEXT ---
         ${getContext()}
@@ -100,41 +139,89 @@ const GeminiBot: React.FC = () => {
                 },
             });
             setChat(newChat);
-            setMessages([{ role: 'model', text: t('geminiBot.initialMessage') }]);
+            setMessages([{ role: 'model', text: t('geminiBot.initialMessage'), id: `init-${Date.now()}` }]);
         } catch (error) {
             console.error("Error initializing Gemini Chat:", error);
-            setMessages([{ role: 'model', text: "Sorry, I'm having trouble connecting right now." }]);
+            setMessages([{ role: 'model', text: "Sorry, I'm having trouble connecting right now.", id: `error-${Date.now()}` }]);
         }
     };
+    
+    useEffect(() => {
+        // Re-initialize chat only when language changes to reset context and greeting.
+        if (isInitialized.current) {
+            initializeChat();
+        }
+    }, [language]);
+    
+    useEffect(() => {
+        if (isOpen && !isInitialized.current) {
+            initializeChat();
+            isInitialized.current = true;
+        }
+    }, [isOpen]);
+
+    useEffect(() => {
+        // For bug reports, add a contextual message after initialization
+        if (isOpen && intent === 'bug_report' && messages.length > 0 && !messages.some(m => m.id.startsWith('bug-report-prompt'))) {
+             const bugReportMessage: Message = {
+                id: `bug-report-prompt-${Date.now()}`,
+                role: 'model',
+                text: t('geminiBot.bugReportPrompt') || "I see you want to report a bug. Please describe the issue you're facing, including the page and what you were trying to do."
+            };
+            setMessages(prev => [...prev, bugReportMessage]);
+            setIntent('default');
+        }
+    }, [isOpen, intent, messages, setIntent, t]);
+
+    useEffect(() => {
+        if (isOpen && messages.length > 0 && lastSuggestedRoute.current !== currentRoute) {
+            const suggestion = generateProactiveSuggestion(currentRoute, t);
+            if (suggestion) {
+                setTimeout(() => {
+                    setMessages(prev => [...prev, {
+                        id: `proactive-${Date.now()}`,
+                        role: 'model',
+                        text: suggestion,
+                    }]);
+                    lastSuggestedRoute.current = currentRoute;
+                }, 800);
+            }
+        }
+    }, [isOpen, currentRoute, t, messages.length]);
+
 
     const handleSendMessage = async (e: React.FormEvent) => {
         e.preventDefault();
-        if (!input.trim() || isLoading || !chat) return;
+        if ((!input.trim() && !imagePayload) || isLoading || !chat) return;
 
-        const userMessage: Message = { role: 'user', text: input };
+        const userMessage: Message = { role: 'user', text: input, id: `user-${Date.now()}` };
         setMessages(prev => [...prev, userMessage]);
-        analytics.trackEvent('send_gemini_bot_message', { message_length: input.trim().length });
+        analytics.trackEvent('send_gemini_bot_message', { message_length: input.trim().length, has_image: imagePayload ? 1 : 0 });
         setInput('');
+        setPreviewImage(null);
+        
         setIsLoading(true);
-
-        setMessages(prev => [...prev, { role: 'model', text: '' }]);
+        const modelMessageId = `model-${Date.now()}`;
+        setMessages(prev => [...prev, { role: 'model', text: '', id: modelMessageId }]);
 
         try {
-            const stream = await chat.sendMessageStream({ message: input });
+            const messageParts: (string | Part)[] = [input];
+            if (imagePayload) {
+                messageParts.push(imagePayload);
+            }
+            setImagePayload(null);
+
+            const stream = await chat.sendMessageStream({ message: messageParts });
             let fullResponse = '';
             for await (const chunk of stream) {
                 fullResponse += chunk.text;
-                setMessages(prev => {
-                    const newMessages = [...prev];
-                    newMessages[newMessages.length - 1].text = fullResponse;
-                    return newMessages;
-                });
+                setMessages(prev => prev.map(m => m.id === modelMessageId ? { ...m, text: fullResponse } : m));
             }
 
             try {
                 const toolCall = JSON.parse(fullResponse);
                 if (toolCall.tool_name) {
-                    executeTool(toolCall);
+                    executeTool(toolCall, modelMessageId);
                 }
             } catch (jsonError) {
                 // Not a JSON tool call, just a regular text response. Do nothing.
@@ -143,17 +230,26 @@ const GeminiBot: React.FC = () => {
         } catch (error) {
             console.error("Error sending message to Gemini:", error);
             const errorMessage = "Sorry, something went wrong. Please try again.";
-            setMessages(prev => {
-                 const newMessages = [...prev];
-                 newMessages[newMessages.length - 1].text = errorMessage;
-                 return newMessages;
-            });
+            setMessages(prev => prev.map(m => m.id === modelMessageId ? { ...m, text: errorMessage } : m));
         } finally {
             setIsLoading(false);
         }
     };
+    
+     const handleFeedback = (messageId: string, feedback: 'liked' | 'disliked') => {
+        setMessages(prevMessages =>
+            prevMessages.map(msg =>
+                msg.id === messageId ? { ...msg, feedback } : msg
+            )
+        );
+        const messageText = messages.find(m => m.id === messageId)?.text || '';
+        analytics.trackEvent('gemini_bot_feedback', {
+            rating: feedback,
+            message_text: messageText.substring(0, 100)
+        });
+    };
 
-    const executeTool = (toolCall: any) => {
+    const executeTool = (toolCall: any, modelMessageId: string) => {
         let confirmationMessage = '';
         switch (toolCall.tool_name) {
             case 'navigateTo':
@@ -171,92 +267,164 @@ const GeminiBot: React.FC = () => {
                      analytics.trackEvent('gemini_bot_tool_use', { tool_name: 'filterUseCases', filters: JSON.stringify(toolCall.filters) });
                 }
                 break;
+            case 'reportBug': {
+                const bugDescription = toolCall.description || "No description provided.";
+                const subject = encodeURIComponent(t('bugReport.subject'));
+                const bodyTemplate = t('bugReport.bodyTemplate');
+                const body = encodeURIComponent(
+                    `Hello Elliot,\n\nI'd like to report a bug found via ElliotBot.\n\n**User's Description:**\n${bugDescription}\n\n--- PRE-FILLED TEMPLATE ---\n\n${bodyTemplate}`
+                );
+                window.location.href = `mailto:elliottus12@gmail.com?subject=${subject}&body=${body}`;
+                confirmationMessage = t('geminiBot.reportBugConfirmation');
+                analytics.trackEvent('gemini_bot_tool_use', { tool_name: 'reportBug' });
+                break;
+            }
             default:
                 confirmationMessage = "I'm not sure how to do that.";
         }
-        
-        setMessages(prev => {
-             const newMessages = [...prev];
-             newMessages[newMessages.length - 1].text = confirmationMessage;
-             return newMessages;
-        });
+        setMessages(prev => prev.map(m => m.id === modelMessageId ? { ...m, text: confirmationMessage } : m));
     };
 
     const toggleOpen = () => {
         const newIsOpen = !isOpen;
         setIsOpen(newIsOpen);
-        if (newIsOpen) {
-            analytics.trackEvent('open_gemini_bot', {});
-            if (!isInitialized.current) {
-                initializeChat();
-                isInitialized.current = true;
-            }
+        analytics.trackEvent(newIsOpen ? 'open_gemini_bot' : 'close_gemini_bot', { route: currentRoute });
+    };
+
+    const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const file = e.target.files?.[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onloadend = () => {
+                const base64String = (reader.result as string).split(',')[1];
+                setPreviewImage(reader.result as string);
+                setImagePayload({
+                    inlineData: {
+                        mimeType: file.type,
+                        data: base64String
+                    }
+                });
+            };
+            reader.readAsDataURL(file);
+        }
+         // Reset file input value to allow re-uploading the same file
+        if (fileInputRef.current) {
+            fileInputRef.current.value = "";
         }
     };
 
-    useEffect(() => {
-        if (isInitialized.current && isOpen) {
-            initializeChat();
-        }
-    }, [language, isOpen]);
+    const removeImage = () => {
+        setPreviewImage(null);
+        setImagePayload(null);
+    }
 
     return (
         <>
             <button
                 onClick={toggleOpen}
-                className="fixed bottom-6 right-6 bg-[var(--interactive-blue)] text-white p-4 rounded-full shadow-lg hover:bg-[var(--interactive-hover)] transition-transform duration-200 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--interactive-blue)] z-50"
+                className="gemini-fab"
                 aria-label="Toggle chatbot"
             >
-                {isOpen ? <XMarkIcon className="w-8 h-8"/> : <ChatBubbleIcon className="w-8 h-8" />}
+                <div className={`gemini-fab-icon-wrapper ${isOpen ? 'is-open' : ''}`}>
+                    <GeminiIcon className="gemini-fab-icon gemini" />
+                    <XMarkIcon className="gemini-fab-icon x-mark" />
+                </div>
             </button>
 
             {isOpen && (
-                <div className="fixed bottom-24 right-6 w-[90vw] max-w-md h-[70vh] max-h-[600px] bg-white rounded-2xl shadow-2xl flex flex-col z-50 animate-fade-in-up border border-gray-200">
-                    <header className="bg-gray-50 p-4 rounded-t-2xl flex justify-between items-center border-b border-gray-200">
+                <div className="gemini-bot-window">
+                    <header className="gemini-bot-header">
                         <div>
-                            <h3 className="font-bold text-lg text-[var(--primary-text)]">{t('geminiBot.headerTitle')}</h3>
-                            <p className="text-sm text-[var(--secondary-text)]">AI Assistant</p>
+                            <h3 className="gemini-bot-title">{t('geminiBot.headerTitle')}</h3>
+                            <p className="gemini-bot-subtitle">AI Assistant</p>
                         </div>
                     </header>
-                    <div ref={chatContainerRef} className="flex-grow p-4 overflow-y-auto bg-[var(--surface-background)]">
-                        <div className="space-y-6">
-                            {messages.map((msg, index) => (
-                                <div key={index} className={`flex items-end gap-2.5 ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-                                    {msg.role === 'model' && (
-                                        <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center flex-shrink-0 border-2 border-white">
-                                            <BrandLogo className="w-5 h-5" />
+                    <div ref={chatContainerRef} className="gemini-bot-body">
+                        <div className="message-list">
+                            {messages.map((msg) => (
+                                <div key={msg.id} className="message-item">
+                                    <div className={`message-bubble-wrapper ${msg.role === 'user' ? 'user' : 'model'}`}>
+                                        {msg.role === 'model' && (
+                                            <div className="avatar-wrapper">
+                                                <BrandLogo className="w-5 h-5" />
+                                            </div>
+                                        )}
+                                        <div className={`message-bubble ${msg.role}`}>
+                                            {isLoading && msg.role === 'model' && msg.text === '' ? (
+                                                <TypingIndicator />
+                                            ) : (
+                                                <div className="message-text" dangerouslySetInnerHTML={{ __html: msg.text }}></div>
+                                            )}
                                         </div>
-                                    )}
-                                    <div className={`max-w-xs md:max-w-sm rounded-2xl px-4 py-3 ${msg.role === 'user' ? 'bg-[var(--interactive-blue)] text-white rounded-br-lg' : 'bg-white text-[var(--primary-text)] border border-gray-200 rounded-bl-lg'}`}>
-                                       {isLoading && msg.role === 'model' && index === messages.length - 1 && msg.text === '' ? (
-                                            <TypingIndicator />
-                                        ) : (
-                                            <p className="text-sm leading-relaxed whitespace-pre-wrap">{msg.text}</p>
+                                        {msg.role === 'user' && (
+                                            <div className="avatar-wrapper">
+                                                <UserIcon className="w-5 h-5" />
+                                            </div>
                                         )}
                                     </div>
-                                     {msg.role === 'user' && (
-                                        <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center flex-shrink-0 border-2 border-white">
-                                            <UserIcon className="w-5 h-5 text-gray-600" />
+                                    {msg.role === 'model' && msg.text && !isLoading && (
+                                        <div className="feedback-wrapper">
+                                            <button 
+                                                onClick={() => handleFeedback(msg.id, 'liked')}
+                                                disabled={!!msg.feedback}
+                                                className={`feedback-button ${msg.feedback === 'liked' ? 'liked' : ''}`}
+                                                aria-label="Good response"
+                                            >
+                                                <ThumbsUpIcon className="w-4 h-4"/>
+                                            </button>
+                                             <button 
+                                                onClick={() => handleFeedback(msg.id, 'disliked')}
+                                                disabled={!!msg.feedback}
+                                                className={`feedback-button ${msg.feedback === 'disliked' ? 'disliked' : ''}`}
+                                                aria-label="Bad response"
+                                            >
+                                                <ThumbsDownIcon className="w-4 h-4"/>
+                                            </button>
                                         </div>
                                     )}
                                 </div>
                             ))}
                         </div>
                     </div>
-                    <form onSubmit={handleSendMessage} className="p-4 border-t border-gray-200 bg-white rounded-b-2xl">
-                        <div className="flex items-center space-x-2 bg-[var(--surface-background)] rounded-lg pr-2">
+                    <form onSubmit={handleSendMessage} className="gemini-bot-form">
+                        {previewImage && (
+                            <div className="image-preview-container">
+                                <img src={previewImage} alt="Image preview" className="image-preview" />
+                                <button onClick={removeImage} type="button" className="remove-image-button" aria-label="Remove image">
+                                    <XMarkIcon />
+                                </button>
+                            </div>
+                        )}
+                        <div className="input-wrapper">
+                             <input
+                                type="file"
+                                ref={fileInputRef}
+                                onChange={handleImageUpload}
+                                accept="image/*"
+                                style={{ display: 'none' }}
+                                aria-hidden="true"
+                            />
+                            <button
+                                type="button"
+                                onClick={() => fileInputRef.current?.click()}
+                                className="attachment-button"
+                                disabled={isLoading}
+                                aria-label="Attach image"
+                            >
+                                <PaperclipIcon className="w-5 h-5" />
+                            </button>
                             <input
                                 type="text"
                                 value={input}
                                 onChange={(e) => setInput(e.target.value)}
                                 placeholder={t('geminiBot.placeholder')}
-                                className="flex-grow p-3 bg-transparent border-0 rounded-lg focus:outline-none focus:ring-0 text-sm"
+                                className="text-input"
                                 disabled={isLoading}
                             />
                             <button
                                 type="submit"
-                                className="bg-[var(--interactive-blue)] text-white p-2.5 rounded-md hover:bg-[var(--interactive-hover)] disabled:bg-gray-400 transition-colors flex-shrink-0"
-                                disabled={isLoading || !input.trim()}
+                                className="send-button"
+                                disabled={isLoading || (!input.trim() && !imagePayload)}
                                 aria-label="Send message"
                             >
                                 <PaperAirplaneIcon className="w-5 h-5" />
@@ -265,22 +433,6 @@ const GeminiBot: React.FC = () => {
                     </form>
                 </div>
             )}
-             <style>{`
-                @keyframes fade-in-up {
-                    from { opacity: 0; transform: translateY(1rem); }
-                    to { opacity: 1; transform: translateY(0); }
-                }
-                .animate-fade-in-up {
-                    animation: fade-in-up 0.3s ease-out forwards;
-                }
-                 @keyframes bounce {
-                    0%, 100% { transform: translateY(0); }
-                    50% { transform: translateY(-4px); }
-                }
-                .animate-bounce {
-                    animation: bounce 1s infinite;
-                }
-            `}</style>
         </>
     );
 };

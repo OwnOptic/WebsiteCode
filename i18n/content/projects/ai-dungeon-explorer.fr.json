@@ -1,0 +1,63 @@
+{
+    "title": "Démo Interactive : L'Explorateur de Donjon IA",
+    "subtitle": "Une démonstration du raisonnement IA avancé, où le modèle Gemini 2.5 Flash résout des énigmes logiques à plusieurs étapes dans un environnement de donjon dynamique.",
+    "heroImageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109025/AI_Dungeon_Explorer_The_Great_Escape_mo3kmq.png",
+    "interactiveComponent": "DungeonExplorer",
+    "overview": {
+        "industry": "Démo IA",
+        "timeline": "3 Semaines (incl. Refonte)",
+        "techStack": "React, API Gemini 2.5 Flash, API Canvas"
+    },
+    "content": [
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Objectif du Projet : De la Réaction au Raisonnement Stratégique"
+        },
+        {
+            "type": "html",
+            "value": "<p>Alors que 'Gemini Rush' était un test de pure vitesse de réaction, <b>L'Explorateur de Donjon IA</b> a été conçu pour présenter une capacité d'IA plus sophistiquée : le raisonnement à plusieurs étapes basé sur des objectifs. Le but était de créer un scénario où l'IA ne pouvait pas simplement réagir à l'obstacle immédiat, mais devait comprendre des règles complexes et planifier une séquence d'actions pour résoudre une énigme.</p><p>Cliquez sur 'Lancer la Démo' pour essayer les énigmes vous-même ou activez l'IA pour la voir les résoudre. La logique de l'IA est maintenant plus stable et fiable, lui permettant de mieux naviguer les défis qui nécessitent de planifier plusieurs coups à l'avance.</p>"
+        },
+        {
+            "type": "demo-button"
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Le Défi : Mécaniques d'Énigmes Complexes"
+        },
+        {
+            "type": "html",
+            "value": "<p>Pour véritablement tester les limites de l'IA, le jeu inclut plusieurs mécaniques d'énigmes complexes qui exigent une réflexion stratégique :</p><ul><li><b>Pièges :</b> Ces cases réinitialisent la position du joueur, forçant l'IA à apprendre l'évitement et à trouver des chemins alternatifs.</li><li><b>Blocs Poussables & Interrupteurs :</b> L'IA doit comprendre que pousser un bloc sur un interrupteur est nécessaire pour ouvrir une porte éloignée.</li><li><b>Téléporteurs :</b> Ceux-ci introduisent une navigation non linéaire, exigeant de l'IA qu'elle comprenne les sauts spatiaux pour trouver l'itinéraire optimal.</li></ul>"
+        },
+        {
+            "type": "learning-box",
+            "title": "La Puissance de l'Apprentissage en Contexte",
+            "content": "<p>Cette démo est un exemple puissant de l'apprentissage en contexte. Nous n'avons pas affiné un modèle spécial pour ce jeu. Au lieu de cela, nous donnons à un modèle polyvalent, Gemini 2.5 Flash, tout le contexte et les règles dont il a besoin dans le prompt lui-même. Sa capacité à comprendre ces règles arbitraires et à les appliquer pour résoudre l'énigme met en évidence l'incroyable flexibilité des grands modèles de langage modernes.</p>"
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Le Code : Prompting pour la Stratégie"
+        },
+        {
+            "type": "html",
+            "value": "<p>Le prompt est l'élément le plus critique de ce projet. Suite à une importante refonte de la fiabilité, le prompt a été simplifié et rendu plus direct pour guider l'IA vers une action valide, garantissant une démonstration plus stable et sans bug.</p>"
+        },
+        {
+            "type": "code",
+            "language": "text",
+            "theme": "window",
+            "code": "Vous êtes une IA résolvant des énigmes contrôlant un joueur (P) dans un donjon. Votre but est d'atteindre la Sortie (E).\n\nRÈGLES:\n- '.' est un espace vide. '#' est un mur.\n- 'k' est une clé. Il faut une clé pour ouvrir une porte verrouillée 'd'.\n- 'b' est un bloc que vous pouvez pousser. 's' est un interrupteur. Pousser 'b' sur 's' ouvre les portes.\n- 't' est un piège qui vous réinitialise. Évitez-le.\n- 'T' est un téléporteur vers un autre 'T'.\n\nÉTAT ACTUEL:\nGrille:\n#######\n#P..k.#\n#.#d#.#\n#...#E#\n#######\nClés: 0\n\nAnalysez l'état et donnez le meilleur prochain mouvement unique pour atteindre la sortie. Votre réponse doit être uniquement l'un des mots suivants : UP, DOWN, LEFT, RIGHT."
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Résultat du Projet"
+        },
+        {
+            "type": "html",
+            "value": "<p>L'Explorateur de Donjon IA démontre avec succès le niveau supérieur de capacité de l'IA. Il prouve qu'avec le bon prompting et une représentation claire de l'environnement, un modèle comme Gemini 2.5 Flash peut effectuer un raisonnement complexe à plusieurs étapes pour résoudre des énigmes logiques. Cela a des implications profondes pour l'automatisation en entreprise, où les agents IA pourraient être chargés de naviguer dans des processus métier complexes avec de multiples dépendances, et non plus seulement d'effectuer des tâches simples et répétitives.</p>"
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+.card-grid-section {
+    max-width: var(--container-max-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1.5rem;
+    text-align: center;
+}
+
+.card-grid-title {
+    font-size: 2.441rem;
+    font-weight: 700;
+    color: var(--primary-text);
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.card-grid-divider {
+    width: 6rem;
+    height: 4px;
+    background-color: var(--interactive-blue);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+}
+
+.card-grid {
+    display: grid;
+    gap: 2rem;
+    text-align: left;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-auto-flow: dense;
+}
+
+@media (min-width: 1024px) { /* lg */
+    .grid-item-large {
+        grid-column: span 2;
+    }
+}

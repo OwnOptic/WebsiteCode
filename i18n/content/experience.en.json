@@ -1,49 +1,77 @@
+
 {
   "experience": {
     "header": {
       "title": "Work Experience",
       "subtitle": "My professional journey has been shaped by a commitment to growth, innovation, and a focus on impactful outcomes."
     },
+    "heroV2": {
+      "imageUrl": "https://res.cloudinary.com/dapoc7ekn/image/upload/v1756109048/a_shadowy_figure_manipulating_data_streams_bias_ujp1tu.png"
+    },
     "timeline": [
       {
-        "role": "AI & Power Platform Consultant",
-        "company": "Witivio, Lausanne",
-        "period": "August 2024 – Present",
+        "role": "AI Consultant",
+        "company": "Witivio - AI Solutions for Microsoft Teams",
+        "period": "April 2025 – Present",
         "points": [
-          "Design and deploy enterprise-grade AI solutions, leading to an average 30% reduction in manual processing for key clients.",
-          "Architect and build custom Copilots in Microsoft Teams that serve over 10,000 users, improving information access and employee self-service.",
-          "Lead strategic client workshops to identify high-value automation opportunities, contributing to a 20% growth in project pipeline.",
-          "Specialize in integrating Generative AI models to solve complex business problems."
-        ]
+          "Engaged as a full-time consultant specializing in the implementation and development of solutions involving AI Agents and the Microsoft Power Platform.",
+          "Design and architect custom solutions leveraging AI capabilities and the Power Platform suite (Power Apps, Power Automate, Power BI) to address specific client challenges.",
+          "Manage client relationships and communication throughout the project lifecycle, ensuring alignment with objectives and successful delivery.",
+          "Collaborate with clients and internal teams to gather requirements, define project scope, and deliver tailored digital transformation solutions.",
+          "Provide technical expertise and support during the deployment and post-implementation phases.",
+          "Continuously research and evaluate emerging trends in AI and Microsoft technologies to enhance service offerings and client outcomes."
+        ],
+        "imageUrl": "https://www.salon-intranet.com/logo/7efb633c8de1d45logo-hd_witivio.png",
+        "techStack": ["AI Agents", "Microsoft Power Platform", "Power Apps", "Power Automate", "Power BI", "Client Relationship Management", "Digital Transformation"]
       },
       {
         "role": "Product Owner ChatBot & Testing Lead",
         "company": "Assura, Lausanne",
-        "period": "April 2023 – July 2024",
+        "period": "April 2023 – Avril 2025",
         "points": [
-          "Owned the product vision and roadmap for an AI chatbot, boosting customer satisfaction by 25% and reducing call center volume by 15%.",
-          "Managed the end-to-end product lifecycle, achieving a 3x improvement in first-contact resolution and a 96% intent recognition accuracy.",
-          "Led Agile/DevOps ceremonies and collaborated with stakeholders to drive a 43% sales uplift through chatbot-integrated campaigns."
-        ]
+          "Defined product vision and roadmap for Assura Chatbot, using user research and competitive analysis to identify AI-driven enhancements, resulting in a 25% increase in customer satisfaction.",
+          "Managed end-to-end lifecycle of Chatbot (ideation, design, AI model selection, training, testing), achieving 3x improved first query resolution and 81-96% accuracy.",
+          "Led backlog refinement and sprint planning (DevOps, Agile), collaborating with UX designers and stakeholders, driving a 43% sales uplift.",
+          "Monitored performance metrics, identifying optimization opportunities and increasing user interaction 2x.",
+          "Contributed to Assura achieving #1 App, #1 Online Subscription User Flow, and 3rd Best Online Services in the Swiss insurance market."
+        ],
+        "imageUrl": "https://images.seeklogo.com/logo-png/46/2/assura-logo-png_seeklogo-462524.png",
+        "techStack": ["AI Product Management", "Roadmap Strategy", "Agile/DevOps", "UX Design", "Performance Metrics", "Stakeholder Management"]
       },
       {
         "role": "Digital Insurance Advisor",
         "company": "Assura, Lausanne",
-        "period": "June 2021 – March 2023",
+        "period": "June 2021 – April 2023",
         "points": [
-          "Provided multilingual customer support, using NLP to reduce LiveChat response times by 10%.",
-          "Improved customer interaction quality and increased NPS by 5% by developing multilingual LiveChat templates.",
-          "Conducted UAT and provided high-volume post-launch support for a new client portal."
-        ]
+          "Provided customer support (phone, LiveChat - French, English, German) using NLP for improving LiveChat messages, reducing response times by 10%.",
+          "Developed and maintained LiveChat message templates, improving customer interaction quality and increasing NPS by 5%.",
+          "Used customer feedback and data analysis with a local hosted AI model to improve weaknesses. Conducted UAT and provided post-launch support.",
+          "Developed user support guides and maintained the knowledge base."
+        ],
+        "imageUrl": "https://images.seeklogo.com/logo-png/46/2/assura-logo-png_seeklogo-462524.png",
+        "techStack": ["Customer Support", "NLP", "Data Analysis", "UAT", "Knowledge Base"]
+      },
+       {
+        "role": "Military Service - Medical Soldier",
+        "company": "Swiss Armed Forces",
+        "period": "Present",
+        "points": [
+          "Completed rigorous basic training, developing discipline, teamwork, and resilience under pressure.",
+          "Specialized as a medical soldier (Sanitätssoldat), acquiring skills in first aid, emergency medical response, and patient care in field conditions."
+        ],
+        "imageUrl": "https://prod-vtgch-hcms-sdweb.imgix.net//2024/01/26/3c226193-7bf2-4942-923a-f6f5166c12e2.png?w=2400&auto=format",
+        "techStack": ["Discipline", "Teamwork", "Resilience", "Emergency Response", "First Aid"]
       },
       {
-        "role": "Sanitary Soldier (Specialist)",
-        "company": "Swiss Army",
-        "period": "March 2017 – Present",
+        "role": "Internship – Executive assistant",
+        "company": "Campus One SARL",
+        "period": "August 2020 – May 2021",
         "points": [
-          "Support the health and operational effectiveness of an artillery unit by combining medical and telecommunication skills.",
-          "Provide critical logistical and medical support in high-pressure situations."
-        ]
+            "Provided administrative, IT, and technical support for daily operations, managing customer relations in a multicultural environment.",
+            "Contributed to brand portfolio and trademarks."
+        ],
+        "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Purple112/v4/9c/76/7d/9c767da0-2c47-2274-30ec-a6f5fa991835/AppIcon-0-0-1x_U007emarketing-0-0-0-10-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/256x256bb.jpg",
+        "techStack": ["Administrative Support", "IT Support", "Customer Relations", "Brand Management"]
       }
     ]
   }
